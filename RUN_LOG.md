@@ -287,18 +287,31 @@ Résumé du handoff :
 
 Résumé : tableau Utilisateurs conservé et compacté, modales densifiées, libellé Accès, repère « Vous », comportements comptes/grants/sessions préservés ; contrats Web et syntaxes PASS, 5 tests Python disponibles PASS ; autres tests Python bloqués par `aiohttp`, navigateur N/A.
 
+---
+
+## GP-015 — GPT-6.1 Sol Medium — Correctif Sessions Utilisateurs
+
+- Date : 2026-10-01
+- Quota : 57 % → 54 % = **3 pts**
+- Durée : **5 min 52 s**
+- Statut : **succès**
+- Commit : `de76ac3`
+- Prompt + réponse complets : [runs/GP-015-gpt61-sol-medium-user-sessions.md](runs/GP-015-gpt61-sol-medium-user-sessions.md)
+
+Correctif unique et très borné : distinction visuelle READY/OFFLINE dans la modale Sessions, avec contrat ciblé, syntaxes, tests et manifeste.
+
 # Agrégats provisoires
 
 ## GPT-6.1 Sol Medium
 
-Trois vrais checkpoints de production :
+Quatre vrais checkpoints de production :
 
-- quota cumulé : **32 pts**
-- durée cumulée : **42 min 01 s**
-- succès : **3/3**
-- quota moyen brut : **10,67 pts/checkpoint**
+- quota cumulé : **35 pts**
+- durée cumulée : **47 min 53 s**
+- succès : **4/4**
+- quota moyen brut : **8,75 pts/checkpoint**
 
-Ces trois tâches sont de taille différente mais appartiennent au même contexte UI/UX GamePanel.
+Ces quatre tâches sont de taille différente mais appartiennent au même contexte UI/UX GamePanel. GP-015 est nettement plus petit et borné que GP-012/013/014, ce qui commence à montrer une relation entre taille du checkpoint et quota visible.
 
 ## Comparaison directe historique
 
