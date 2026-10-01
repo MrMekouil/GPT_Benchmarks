@@ -36,14 +36,14 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 | 6.0 | **GPT-6 Sol** | Medium | 5 | **5 succès** | **~46 pts** au total · ~9,2 pts/run | **28:42** |
 | 6.0 | **GPT-6 Sol** | High | 1 | **1 partiel** | **~20 pts** | **12:07** |
 | 6.0 | **GPT-6 Astra** | Low | 2 | **2 succès** | **30 pts** au total · 15 pts/run | **2:52** |
-| 6.1 | **GPT-6.1 Sol** | Medium | 4 | **4 succès** | **35 pts** au total · 8,75 pts/run | **47:53** |
+| 6.1 | **GPT-6.1 Sol** | Medium | 5 | **4 succès · 1 bloqué** | **40 pts** au total · 35 succès + 5 bloqué | **52:24** |
 
 ### Repères rapides
 
 - **A/B historique le plus propre :** GPT-6 Sol Medium = 4 pts, GPT-5.6 Sol Medium = 6 pts, GPT-6 Astra Low = 17 pts pour le même diagnostic principal.
 - **A/B fonctionnel :** GPT-6 Sol Medium = 4 pts contre GPT-6 Astra Low = 13 pts, avec la même lacune principale trouvée.
 - **GPT-6 Sol Medium en production :** deux gros checkpoints complets observés à **11 pts / 8:42** (pré-clôture) puis **22 pts / 14:13** (audit transversal d’architecture 0.3.1-E-A). Le coût varie donc fortement avec la profondeur et le périmètre.
-- **GPT-6.1 Sol Medium :** 4/4 tâches de production terminées ; la consommation varie fortement avec le périmètre (3 pts sur un petit correctif, 10–11 pts sur les gros checkpoints).
+- **GPT-6.1 Sol Medium :** 4 tâches de production terminées sur 5 tentatives observées. Les quatre succès consomment 3 à 11 pts ; GP-021 a consommé **5 pts / 4:31** puis s’est arrêté avant implémentation, faute d’environnement Linux/POSIX permettant les tests crash/locks exigés.
 - **GPT-6 Luna Medium :** quatre succès ciblés observés à **~0 pt** (analyse 6/6), **1 pt** (correctif palette en 3:42), **~0 pt visible** (Journal d’audit en 7:47) et **~0 pt visible** (validation documentaire finale en 3:19). Les trois vrais checkpoints de production Luna totalisent donc seulement **1 point visible**. Deux longues sessions bloquées ont aussi été observées. *L'effort des deux incidents n'avait pas été relevé ; un incident n'a pas de mesure de quota.*
 
 ## Résultats actuellement observés
@@ -86,8 +86,9 @@ Ces trois runs sont de vrais checkpoints de production Luna terminés après les
 | 2 | UI Supervision : compaction + responsive + diagnostic/logout + tests/manifeste | 10 pts | 10:42 | terminé, commit `622205de...` |
 | 3 | UI Utilisateurs : tableau/modales + Accès + tests/manifeste | 11 pts | 12:42 | terminé, commit `c9186373...` |
 | 4 | Correctif Sessions : READY/OFFLINE + test/manifeste | 3 pts | 5:52 | terminé, commit `de76ac3` |
+| GP-021 | 0.3.1-E-B1 : primitive transactionnelle rename + recovery/tests POSIX | **5 pts** | **4:31** | **bloqué avant implémentation**, aucun commit |
 
-Cumul GPT-6.1 Sol Medium à ce stade : **35 points**, **47 min 53 s**, **4/4 checkpoints terminés**.
+Cumul GPT-6.1 Sol Medium à ce stade : **40 points**, **52 min 24 s**, **4 succès / 1 blocage**. Les quatre tâches terminées représentent **35 points** ; GP-021 représente **5 points** de coût sans implémentation livrée.
 
 ## Lecture provisoire
 
@@ -96,7 +97,7 @@ Cumul GPT-6.1 Sol Medium à ce stade : **35 points**, **47 min 53 s**, **4/4 che
 - **GPT-6 Sol High** : un gros run multi-étapes a consommé ~20 points en 12:07 et s'est arrêté faute de quota avant la fin. Cela ne mesure pas son intelligence, mais montre le risque d'un effort High sur un long marathon.
 - **GPT-6 Astra Low** : excellente qualité, mais 13–17 points sur les deux audits comparables où Sol Medium en consommait 4.
 - **GPT-5.6 Sol Medium** : baseline fiable, mais plus coûteuse que GPT-6 Sol Medium sur le benchmark directement comparable.
-- **GPT-6.1 Sol Medium** : quatre runs GamePanel terminés. Les trois gros checkpoints consomment 10–11 points chacun ; le premier petit correctif très borné consomme 3 points. Ce signal suggère que la taille/périmètre du checkpoint influence nettement le quota, mais davantage de données restent nécessaires avant comparaison directe avec GPT-6 Sol.
+- **GPT-6.1 Sol Medium** : quatre runs GamePanel terminés et un cinquième bloqué avant implémentation. Les trois gros checkpoints UI consomment 10–11 points chacun ; le petit correctif consomme 3 points. GP-021 ajoute un signal distinct : 5 points dépensés pour un pré-audit de sûreté qui s’arrête proprement lorsque l’environnement ne permet pas les tests POSIX/crash exigés.
 
 ## Méthode
 
