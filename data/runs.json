@@ -419,6 +419,33 @@
         "Deuxième vrai checkpoint de production Luna terminé",
         "Aucun mouvement visible du quota ; la consommation réelle peut être inférieure au pas d'affichage"
       ]
+    },
+    {
+      "run_id": "GP-018",
+      "date": "2026-10-01",
+      "project": "GamePanel",
+      "model": "GPT-6 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "preclose_031",
+      "task_summary": "Pré-clôture 0.3.1 : audit global, versions, critères de sortie, tests Web/docs, état validation et manifeste",
+      "quota_before_pct": 100,
+      "quota_after_pct": 89,
+      "quota_used_points": 11,
+      "quota_approx": false,
+      "duration_seconds": 522,
+      "status": "success",
+      "commit_sha": "3de9d3a5b92c943ebc3c61086e13d90a0db1902b",
+      "quality": {
+        "summary": "Checkpoint de pré-clôture terminé ; 6 contrats Web 0.3.1 PASS ; 20/20 JS/CJS PASS ; documentation, manifeste accessible et git diff PASS ; tests Python d'intégration bloqués par aiohttp/pydantic/fcntl ; aucun code produit ni écran modifié"
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Premier gros checkpoint de production GPT-6 Sol Medium observé depuis zéro",
+        "Tâche plus large qu'un audit ciblé : resynchronisation documentaire, vérification version/candidate, critères de sortie et batterie de pré-clôture",
+        "Non comparable directement aux checkpoints UI GPT-6.1 Sol Medium, mais de taille opérationnelle proche"
+      ]
     }
   ]
 }
