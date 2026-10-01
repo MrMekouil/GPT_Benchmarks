@@ -313,18 +313,32 @@ Correctif unique et très borné : distinction visuelle READY/OFFLINE dans la mo
 
 Correctif de production très borné : palette graphite neutre appliquée uniquement sous `.users-page`, contrat ciblé et manifeste, sans modification métier ni autre écran.
 
+---
+
+## GP-017 — GPT-6 Luna Medium — Journal d’audit UI
+
+- Date : 2026-10-01
+- Quota : 53 % → 53 % = **~0 pt visible**
+- Durée : **7 min 47 s**
+- Statut : **succès**
+- Commit : `4966b61e00a21e1646f3e6dc85110dcc8ee91fca`
+- Prompt + réponse complets : [runs/GP-017-gpt6-luna-medium-audit-ui.md](runs/GP-017-gpt6-luna-medium-audit-ui.md)
+
+Harmonisation UI ciblée du Journal d’audit : suppression de l’eyebrow, densité légère, palette graphite scopée et rendu mobile en cartes, sans modification de la logique audit.
+
 # Agrégats provisoires
 
 ## GPT-6 Luna
 
-Cinq observations au total, dont deux incidents dont l'effort exact n'avait pas été relevé :
+Six observations au total, dont deux incidents dont l'effort exact n'avait pas été relevé :
 
-- succès : **2**
+- succès : **3**
 - échec avant audit : **1**
 - blocages : **2**
 - quota connu : **au moins ~6 pts** au total, avec un incident sans relevé
-- durée cumulée de toutes les observations : **1 h 39 min 53 s**
-- deux réussites Medium ciblées : **~0 pt / 40 s** sur l'analyse locale 6/6, puis **1 pt / 3:42** sur un vrai correctif de production.
+- durée cumulée de toutes les observations : **1 h 47 min 40 s**
+- trois réussites Medium ciblées : **~0 pt / 40 s** sur l'analyse locale 6/6, **1 pt / 3:42** sur le correctif palette Utilisateurs, puis **~0 pt visible / 7:47** sur l’harmonisation Journal d’audit.
+- production Luna ciblée : **2/2 succès**, **1 point visible cumulé**, **11 min 29 s**.
 
 Les blocages GP-010/011 restent à interpréter comme incidents de fiabilité d'exécution possibles, pas comme une mesure pure des capacités de raisonnement de Luna.
 
