@@ -32,7 +32,7 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 | Génération | Modèle | Effort | Runs observés | Résultats | Quota visible observé | Durée cumulée |
 |---|---|---|---:|---|---|---:|
 | 5.6 | **GPT-5.6 Sol** | Medium | 1 | **1 succès** | **6 pts** au total · 6 pts/succès | **1:50** |
-| 6.0 | **GPT-6 Luna** | Medium | 4 | **1 succès · 1 échec · 2 blocages** | ~0 pt sur le succès ciblé ; ~0 sur l'échec historique ; **~5 pts connus** sur un blocage, un autre sans relevé | **1:36:11** |
+| 6.0 | **GPT-6 Luna** | Medium* | 5 | **2 succès · 1 échec · 2 blocages** | **≥6 pts connus*** | **1:39:53** |
 | 6.0 | **GPT-6 Sol** | Medium | 3 | **3 succès** | **~13 pts** au total · ~4,33 pts/run | **5:47** |
 | 6.0 | **GPT-6 Sol** | High | 1 | **1 partiel** | **~20 pts** | **12:07** |
 | 6.0 | **GPT-6 Astra** | Low | 2 | **2 succès** | **30 pts** au total · 15 pts/run | **2:52** |
@@ -43,7 +43,7 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 - **A/B historique le plus propre :** GPT-6 Sol Medium = 4 pts, GPT-5.6 Sol Medium = 6 pts, GPT-6 Astra Low = 17 pts pour le même diagnostic principal.
 - **A/B fonctionnel :** GPT-6 Sol Medium = 4 pts contre GPT-6 Astra Low = 13 pts, avec la même lacune principale trouvée.
 - **GPT-6.1 Sol Medium :** 4/4 tâches de production terminées ; la consommation varie fortement avec le périmètre (3 pts sur un petit correctif, 10–11 pts sur les gros checkpoints).
-- **Luna :** séparer capacité de raisonnement et fiabilité d'exécution : un run ciblé parfait à ~0 pt visible, mais deux longues sessions bloquées ont ensuite été observées.
+- **GPT-6 Luna Medium :** deux succès ciblés observés à **~0 pt** (analyse 6/6) et **1 pt** (vrai correctif production en 3:42), mais aussi deux longues sessions bloquées. *L'effort des deux incidents n'avait pas été relevé ; un des deux n'a pas de mesure de quota.*
 
 ## Résultats actuellement observés
 
@@ -57,6 +57,14 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 | idem | GPT-6 Astra | Low | 17 pts | 1:42 | 2/2 bugs + preuve plus détaillée |
 | lacune fonctionnelle 0.3.0 | GPT-6 Sol | Medium | 4 pts | 1:45 | lacune exacte trouvée |
 | idem | GPT-6 Astra | Low | 13 pts | 1:10 | même lacune + preuve plus détaillée |
+
+### Run réel GPT-6 Luna Medium
+
+| Run | Tâche | Quota visible | Durée | Résultat |
+|---|---|---:|---:|---|
+| GP-016 | Palette Utilisateurs scopée `.users-page` + test/manifeste | **1 pt** | **3:42** | terminé, commit `5049d50...` |
+
+Ce run est le premier vrai correctif de production Luna terminé après les deux incidents de fiabilité observés.
 
 ### Runs réels GPT-6.1 Sol Medium
 
