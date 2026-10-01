@@ -326,7 +326,34 @@ Correctif de production très borné : palette graphite neutre appliquée unique
 
 Harmonisation UI ciblée du Journal d’audit : suppression de l’eyebrow, densité légère, palette graphite scopée et rendu mobile en cartes, sans modification de la logique audit.
 
+---
+
+## GP-018 — GPT-6 Sol Medium — Pré-clôture globale 0.3.1
+
+- Date : 2026-10-01
+- Quota : 100 % → 89 % = **11 pts**
+- Durée : **8 min 42 s**
+- Statut : **succès**
+- Commit : `3de9d3a5b92c943ebc3c61086e13d90a0db1902b`
+- Prompt + réponse complets : [runs/GP-018-gpt6-sol-medium-preclose-031.md](runs/GP-018-gpt6-sol-medium-preclose-031.md)
+
+Premier gros checkpoint de production GPT-6 Sol Medium observé depuis zéro : audit global de pré-clôture, état de validation, versions/candidate, tests Web/docs et manifeste. Aucun code produit ni écran modifié.
+
 # Agrégats provisoires
+
+## GPT-6 Sol Medium
+
+Quatre succès observés :
+
+- quota cumulé : **~24 pts**
+- durée cumulée : **14 min 29 s**
+- succès : **4/4**
+- moyenne brute : **~6 pts/run**
+- audits autonomes ciblés : **4 pts / 1:35** et **4 pts / 1:45**
+- reprise de réconciliation déjà entamée : **~5 pts / 2:27**
+- premier gros checkpoint de production depuis zéro : **11 pts / 8:42**
+
+La moyenne brute mélange des tâches de tailles très différentes. GP-018 montre que les 4–5 pts des premiers runs ne représentent pas le coût d'un gros checkpoint complet.
 
 ## GPT-6 Luna
 
