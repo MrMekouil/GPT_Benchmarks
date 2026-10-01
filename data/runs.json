@@ -499,6 +499,34 @@
         "Premier run GPT-6 Sol Medium observé à 22 points visibles",
         "Non directement comparable à GP-018 malgré le même modèle/effort car la complexité architecturale est plus élevée"
       ]
+    },
+    {
+      "run_id": "GP-021",
+      "date": "2026-10-01",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "identity_rename_b1",
+      "task_summary": "0.3.1-E-B1 : primitive transactionnelle rename d'identité d'instance avec recovery crash-safe et tests POSIX",
+      "quota_before_pct": 62,
+      "quota_after_pct": 57,
+      "quota_used_points": 5,
+      "quota_approx": false,
+      "duration_seconds": 271,
+      "status": "blocked",
+      "commit_sha": null,
+      "quality": {
+        "summary": "Objectif non atteint : B1 non implémenté ni commité. Pré-audit utile : recovery requis avant construction Orchestrator ; empreinte BeamMP dépend du drop-in contenant l'id. Environnement incapable d'exécuter les tests POSIX/crash requis."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Blocage environnemental explicite plutôt qu'échec de raisonnement démontré",
+        "aiohttp, pydantic et fcntl absents ; installation pip bloquée par le sandbox ; WSL inaccessible",
+        "Aucun commit ni push GamePanel",
+        "Le modèle a refusé d'implémenter une primitive de sûreté sans pouvoir exécuter les tests crash/locks exigés"
+      ]
     }
   ]
 }
