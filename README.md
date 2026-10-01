@@ -33,7 +33,7 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 |---|---|---|---:|---|---|---:|
 | 5.6 | **GPT-5.6 Sol** | Medium | 1 | **1 succès** | **6 pts** au total · 6 pts/succès | **1:50** |
 | 6.0 | **GPT-6 Luna** | Medium* | 6 | **3 succès · 1 échec · 2 blocages** | **≥6 pts connus*** | **1:47:40** |
-| 6.0 | **GPT-6 Sol** | Medium | 3 | **3 succès** | **~13 pts** au total · ~4,33 pts/run | **5:47** |
+| 6.0 | **GPT-6 Sol** | Medium | 4 | **4 succès** | **~24 pts** au total · ~6 pts/run | **14:29** |
 | 6.0 | **GPT-6 Sol** | High | 1 | **1 partiel** | **~20 pts** | **12:07** |
 | 6.0 | **GPT-6 Astra** | Low | 2 | **2 succès** | **30 pts** au total · 15 pts/run | **2:52** |
 | 6.1 | **GPT-6.1 Sol** | Medium | 4 | **4 succès** | **35 pts** au total · 8,75 pts/run | **47:53** |
@@ -42,6 +42,7 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 
 - **A/B historique le plus propre :** GPT-6 Sol Medium = 4 pts, GPT-5.6 Sol Medium = 6 pts, GPT-6 Astra Low = 17 pts pour le même diagnostic principal.
 - **A/B fonctionnel :** GPT-6 Sol Medium = 4 pts contre GPT-6 Astra Low = 13 pts, avec la même lacune principale trouvée.
+- **GPT-6 Sol Medium en production :** premier gros checkpoint complet observé à **11 pts / 8:42**, ce qui montre que ses anciens runs à 4–5 pts ne représentaient pas le coût d'un gros checkpoint.
 - **GPT-6.1 Sol Medium :** 4/4 tâches de production terminées ; la consommation varie fortement avec le périmètre (3 pts sur un petit correctif, 10–11 pts sur les gros checkpoints).
 - **GPT-6 Luna Medium :** trois succès ciblés observés à **~0 pt** (analyse 6/6), **1 pt** (correctif palette en 3:42) et **~0 pt visible** (Journal d’audit en 7:47). Les deux vrais checkpoints de production Luna totalisent donc seulement **1 point visible** pour **11:29**, avec la réserve liée à l’arrondi de l’interface. Deux longues sessions bloquées ont aussi été observées. *L'effort des deux incidents n'avait pas été relevé ; un des deux n'a pas de mesure de quota.*
 
@@ -57,6 +58,14 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 | idem | GPT-6 Astra | Low | 17 pts | 1:42 | 2/2 bugs + preuve plus détaillée |
 | lacune fonctionnelle 0.3.0 | GPT-6 Sol | Medium | 4 pts | 1:45 | lacune exacte trouvée |
 | idem | GPT-6 Astra | Low | 13 pts | 1:10 | même lacune + preuve plus détaillée |
+
+### Run réel GPT-6 Sol Medium
+
+| Run | Tâche | Quota visible | Durée | Résultat |
+|---|---|---:|---:|---|
+| GP-018 | Pré-clôture 0.3.1 : audit global, versions, critères de sortie, tests/docs/manifeste | **11 pts** | **8:42** | terminé, commit `3de9d3a...` |
+
+C'est le premier gros checkpoint de production GPT-6 Sol Medium observé depuis zéro. Il complète les deux audits historiques à 4 pts et la reprise de réconciliation à ~5 pts.
 
 ### Runs réels GPT-6 Luna Medium
 
@@ -81,7 +90,7 @@ Cumul GPT-6.1 Sol Medium à ce stade : **35 points**, **47 min 53 s**, **4/4 che
 ## Lecture provisoire
 
 - **GPT-6 Luna Medium** : peut être extrêmement économique sur une analyse locale très bornée, mais plusieurs problèmes de fiabilité/exécution ont aussi été observés. Ne pas confondre qualité de raisonnement et fiabilité de la session Work.
-- **GPT-6 Sol Medium** : meilleur point de référence observé sur les audits GamePanel historiques/fonctionnels testés.
+- **GPT-6 Sol Medium** : très solide sur les audits ciblés (4 pts) et désormais également validé sur un gros checkpoint de pré-clôture à 11 pts. Les coûts dépendent nettement de la taille de la tâche.
 - **GPT-6 Sol High** : un gros run multi-étapes a consommé ~20 points en 12:07 et s'est arrêté faute de quota avant la fin. Cela ne mesure pas son intelligence, mais montre le risque d'un effort High sur un long marathon.
 - **GPT-6 Astra Low** : excellente qualité, mais 13–17 points sur les deux audits comparables où Sol Medium en consommait 4.
 - **GPT-5.6 Sol Medium** : baseline fiable, mais plus coûteuse que GPT-6 Sol Medium sur le benchmark directement comparable.
