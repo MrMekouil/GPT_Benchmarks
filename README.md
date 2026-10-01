@@ -32,7 +32,7 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 | Génération | Modèle | Effort | Runs observés | Résultats | Quota visible observé | Durée cumulée |
 |---|---|---|---:|---|---|---:|
 | 5.6 | **GPT-5.6 Sol** | Medium | 1 | **1 succès** | **6 pts** au total · 6 pts/succès | **1:50** |
-| 6.0 | **GPT-6 Luna** | Medium / 2 incidents effort non relevé | 4 | **1 succès · 1 échec · 2 blocages** | ~0 pt sur le succès ciblé ; ~0 sur l'échec historique ; **~5 pts connus** sur un blocage, un autre sans relevé | **1:36:11** |
+| 6.0 | **GPT-6 Luna** | Medium | 4 | **1 succès · 1 échec · 2 blocages** | ~0 pt sur le succès ciblé ; ~0 sur l'échec historique ; **~5 pts connus** sur un blocage, un autre sans relevé | **1:36:11** |
 | 6.0 | **GPT-6 Sol** | Medium | 3 | **3 succès** | **~13 pts** au total · ~4,33 pts/run | **5:47** |
 | 6.0 | **GPT-6 Sol** | High | 1 | **1 partiel** | **~20 pts** | **12:07** |
 | 6.0 | **GPT-6 Astra** | Low | 2 | **2 succès** | **30 pts** au total · 15 pts/run | **2:52** |
