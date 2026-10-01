@@ -365,6 +365,19 @@ Checkpoint documentaire final 0.3.1 : enregistrement des PASS desktop/mobile/run
 
 Audit transversal 0.3.1-E-A : cartographie de l’identité d’instance dans l’inventaire, SQLite, runtime et intégrations, puis définition d’une architecture unique création + rename avec transaction/recovery. Aucun code fonctionnel modifié.
 
+---
+
+## GP-021 — GPT-6.1 Sol Medium — 0.3.1-E-B1 bloqué par l’environnement
+
+- Date : 2026-10-01
+- Quota : 62 % → 57 % = **5 pts**
+- Durée : **4 min 31 s**
+- Statut : **bloqué avant implémentation**
+- Commit GamePanel : **aucun**
+- Prompt + réponse complets : [runs/GP-021-gpt61-sol-medium-b1-blocked.md](runs/GP-021-gpt61-sol-medium-b1-blocked.md)
+
+Pré-audit utile mais objectif non atteint : B1 n’a pas été implémenté ni commité. Les tests crash/locks POSIX exigés n’étaient pas exécutables dans l’environnement Windows ; le modèle a arrêté plutôt que de livrer une primitive de sûreté non démontrée.
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -397,14 +410,14 @@ Les blocages GP-010/011 restent à interpréter comme incidents de fiabilité d'
 
 ## GPT-6.1 Sol Medium
 
-Quatre vrais checkpoints de production :
+Cinq observations de production :
 
-- quota cumulé : **35 pts**
-- durée cumulée : **47 min 53 s**
-- succès : **4/4**
-- quota moyen brut : **8,75 pts/checkpoint**
+- quota cumulé : **40 pts**
+- durée cumulée : **52 min 24 s**
+- résultats : **4 succès / 1 blocage**
+- moyenne brute : **8 pts/observation**
 
-Ces quatre tâches sont de taille différente mais appartiennent au même contexte UI/UX GamePanel. GP-015 est nettement plus petit et borné que GP-012/013/014, ce qui commence à montrer une relation entre taille du checkpoint et quota visible.
+Les quatre tâches terminées représentent **35 pts** ; GP-021 a consommé **5 pts** sans livrer B1. Le blocage est environnemental : tests POSIX/crash non exécutables dans le sandbox Windows. Cela ne constitue pas à lui seul un échec de raisonnement du modèle.
 
 ## Comparaison directe historique
 
