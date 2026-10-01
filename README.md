@@ -32,7 +32,7 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 | Génération | Modèle | Effort | Runs observés | Résultats | Quota visible observé | Durée cumulée |
 |---|---|---|---:|---|---|---:|
 | 5.6 | **GPT-5.6 Sol** | Medium | 1 | **1 succès** | **6 pts** au total · 6 pts/succès | **1:50** |
-| 6.0 | **GPT-6 Luna** | Medium* | 6 | **3 succès · 1 échec · 2 blocages** | **≥6 pts connus*** | **1:47:40** |
+| 6.0 | **GPT-6 Luna** | Medium* | 7 | **4 succès · 1 échec · 2 blocages** | **≥6 pts connus*** | **≥1:47:40*** |
 | 6.0 | **GPT-6 Sol** | Medium | 4 | **4 succès** | **~24 pts** au total · ~6 pts/run | **14:29** |
 | 6.0 | **GPT-6 Sol** | High | 1 | **1 partiel** | **~20 pts** | **12:07** |
 | 6.0 | **GPT-6 Astra** | Low | 2 | **2 succès** | **30 pts** au total · 15 pts/run | **2:52** |
@@ -44,7 +44,7 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 - **A/B fonctionnel :** GPT-6 Sol Medium = 4 pts contre GPT-6 Astra Low = 13 pts, avec la même lacune principale trouvée.
 - **GPT-6 Sol Medium en production :** premier gros checkpoint complet observé à **11 pts / 8:42**, ce qui montre que ses anciens runs à 4–5 pts ne représentaient pas le coût d'un gros checkpoint.
 - **GPT-6.1 Sol Medium :** 4/4 tâches de production terminées ; la consommation varie fortement avec le périmètre (3 pts sur un petit correctif, 10–11 pts sur les gros checkpoints).
-- **GPT-6 Luna Medium :** trois succès ciblés observés à **~0 pt** (analyse 6/6), **1 pt** (correctif palette en 3:42) et **~0 pt visible** (Journal d’audit en 7:47). Les deux vrais checkpoints de production Luna totalisent donc seulement **1 point visible** pour **11:29**, avec la réserve liée à l’arrondi de l’interface. Deux longues sessions bloquées ont aussi été observées. *L'effort des deux incidents n'avait pas été relevé ; un des deux n'a pas de mesure de quota.*
+- **GPT-6 Luna Medium :** quatre succès ciblés observés à **~0 pt** (analyse 6/6), **1 pt** (correctif palette en 3:42), **~0 pt visible** (Journal d’audit en 7:47) et **~0 pt visible** (validation documentaire finale, durée non fournie). Les trois vrais checkpoints de production Luna totalisent donc seulement **1 point visible**. Deux longues sessions bloquées ont aussi été observées. *L'effort des deux incidents n'avait pas été relevé ; un incident n'a pas de mesure de quota, et GP-019 n'a pas de durée fournie.*
 
 ## Résultats actuellement observés
 
@@ -73,8 +73,9 @@ C'est le premier gros checkpoint de production GPT-6 Sol Medium observé depuis 
 |---|---|---:|---:|---|
 | GP-016 | Palette Utilisateurs scopée `.users-page` + test/manifeste | **1 pt** | **3:42** | terminé, commit `5049d50...` |
 | GP-017 | Journal d’audit : palette graphite + responsive cartes mobile + contrat/manifeste | **~0 pt visible** | **7:47** | terminé, commit `4966b61...` |
+| GP-019 | Validation documentaire finale 0.3.1 + BeamMP réel + manifeste | **~0 pt visible** | **N/D** | terminé, commit `92df2a3...` |
 
-Ces deux runs sont les premiers vrais checkpoints de production Luna terminés après les incidents de fiabilité observés : **2/2 réussis**, **1 point visible cumulé**, **11:29** au total.
+Ces trois runs sont de vrais checkpoints de production Luna terminés après les incidents de fiabilité observés : **3/3 réussis**, **1 point visible cumulé**. Durée connue : **11:29**, plus GP-019 dont la durée n'a pas été fournie.
 
 ### Runs réels GPT-6.1 Sol Medium
 
