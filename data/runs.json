@@ -460,7 +460,7 @@
       "quota_after_pct": 88,
       "quota_used_points": 0,
       "quota_approx": true,
-      "duration_seconds": null,
+      "duration_seconds": 199,
       "status": "success",
       "commit_sha": "92df2a3616735521a7479efde58edfa179ffb950",
       "quality": {
@@ -469,7 +469,7 @@
       "prompt_capture": "exact",
       "response_capture": "exact",
       "notes": [
-        "Durée non fournie : le message utilisateur contient seulement 'min'",
+        "Durée corrigée par l'utilisateur : 3 min 19 s",
         "Aucun mouvement visible du quota ; la consommation réelle peut être inférieure au pas d'affichage"
       ]
     }
