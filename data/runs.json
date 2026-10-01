@@ -320,6 +320,28 @@
       },
       "prompt_capture": "exact",
       "response_capture": "exact"
+    },
+    {
+      "run_id": "GP-014",
+      "date": "2026-10-01",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "gpt61_real_work",
+      "task_summary": "Admin Utilisateurs UI : harmonisation tableau/modales, Accès, compte courant, tests et manifeste",
+      "quota_before_pct": 68,
+      "quota_after_pct": 57,
+      "quota_used_points": 11,
+      "quota_approx": false,
+      "duration_seconds": 762,
+      "status": "success",
+      "commit_sha": "c9186373341215150053c01fab7cfe8c81f414a3",
+      "quality": {
+        "summary": "Checkpoint terminé ; contrats Utilisateurs/Serveurs/Instances/Supervision PASS ; syntaxes JS/CJS PASS ; 5 tests Python disponibles PASS ; limites dues à aiohttp absent et navigateur N/A"
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact"
     }
   ]
 }

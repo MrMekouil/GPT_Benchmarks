@@ -274,18 +274,31 @@ Résumé du handoff :
 
 ---
 
+---
+
+## GP-014 — GPT-6.1 Sol Medium — Admin Utilisateurs UI
+
+- Date : 2026-10-01
+- Quota : 68 % → 57 % = **11 pts**
+- Durée : **12 min 42 s**
+- Statut : **succès**
+- Commit : `c9186373341215150053c01fab7cfe8c81f414a3`
+- Prompt + réponse complets : [runs/GP-014-gpt61-sol-medium-users.md](runs/GP-014-gpt61-sol-medium-users.md)
+
+Résumé : tableau Utilisateurs conservé et compacté, modales densifiées, libellé Accès, repère « Vous », comportements comptes/grants/sessions préservés ; contrats Web et syntaxes PASS, 5 tests Python disponibles PASS ; autres tests Python bloqués par `aiohttp`, navigateur N/A.
+
 # Agrégats provisoires
 
 ## GPT-6.1 Sol Medium
 
-Deux vrais checkpoints de production :
+Trois vrais checkpoints de production :
 
-- quota cumulé : **21 pts**
-- durée cumulée : **29 min 19 s**
-- succès : **2/2**
-- quota moyen brut : **10,5 pts/checkpoint**
+- quota cumulé : **32 pts**
+- durée cumulée : **42 min 01 s**
+- succès : **3/3**
+- quota moyen brut : **10,67 pts/checkpoint**
 
-Ces deux tâches sont de taille différente mais appartiennent au même contexte UI/UX GamePanel.
+Ces trois tâches sont de taille différente mais appartiennent au même contexte UI/UX GamePanel.
 
 ## Comparaison directe historique
 

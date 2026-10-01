@@ -44,8 +44,9 @@ La métrique la plus utile est donc :
 |---|---|---:|---:|---|
 | 1 | UI Instances : densification candidats + conflit/logout + tests/manifeste | 11 pts | 18:37 | terminé, commit `7ba38960...` |
 | 2 | UI Supervision : compaction + responsive + diagnostic/logout + tests/manifeste | 10 pts | 10:42 | terminé, commit `622205de...` |
+| 3 | UI Utilisateurs : tableau/modales + Accès + tests/manifeste | 11 pts | 12:42 | terminé, commit `c9186373...` |
 
-Cumul GPT-6.1 Sol Medium à ce stade : **21 points**, **29 min 19 s**, **2/2 checkpoints terminés**.
+Cumul GPT-6.1 Sol Medium à ce stade : **32 points**, **42 min 01 s**, **3/3 checkpoints terminés**.
 
 ## Lecture provisoire
 
@@ -54,7 +55,7 @@ Cumul GPT-6.1 Sol Medium à ce stade : **21 points**, **29 min 19 s**, **2/2 che
 - **GPT-6 Sol High** : un gros run multi-étapes a consommé ~20 points en 12:07 et s'est arrêté faute de quota avant la fin. Cela ne mesure pas son intelligence, mais montre le risque d'un effort High sur un long marathon.
 - **GPT-6 Astra Low** : excellente qualité, mais 13–17 points sur les deux audits comparables où Sol Medium en consommait 4.
 - **GPT-5.6 Sol Medium** : baseline fiable, mais plus coûteuse que GPT-6 Sol Medium sur le benchmark directement comparable.
-- **GPT-6.1 Sol Medium** : deux vrais checkpoints GamePanel conséquents terminés du premier coup ; davantage de données sont nécessaires avant comparaison directe avec GPT-6 Sol.
+- **GPT-6.1 Sol Medium** : trois vrais checkpoints GamePanel conséquents terminés ; consommation observée très stable à 10–11 points sur ces trois runs, mais davantage de données restent nécessaires avant comparaison directe avec GPT-6 Sol.
 
 ## Méthode
 
