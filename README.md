@@ -29,14 +29,14 @@ La métrique la plus utile est donc :
 
 Vue regroupée par modèle/effort, classée dans l'ordre logique des générations. Les moyennes ne sont indicatives que lorsque les tâches sont suffisamment comparables.
 
-| Génération | Modèle | Effort | Runs observés | Résultats | Quota visible observé | Durée cumulée | Lecture actuelle |
-|---|---|---|---:|---|---|---:|---|
-| 5.6 | **GPT-5.6 Sol** | Medium | 1 | **1 succès** | **6 pts** au total · 6 pts/succès | **1:50** | Baseline fiable : 2/2 bugs historiques trouvés, mais plus coûteux que GPT-6 Sol Medium sur le même A/B. |
-| 6.0 | **GPT-6 Luna** | Medium / 2 incidents effort non relevé | 4 | **1 succès · 1 échec · 2 blocages** | ~0 pt sur le succès ciblé ; ~0 sur l'échec historique ; **~5 pts connus** sur un blocage, un autre sans relevé | **1:36:11** | Peut être extrêmement économique sur une tâche locale bornée (6/6), mais la fiabilité Work observée est actuellement mauvaise. Les 2 longs blocages peuvent être liés au serveur/outillage. |
-| 6.0 | **GPT-6 Sol** | Medium | 3 | **3 succès** | **~13 pts** au total · ~4,33 pts/run | **5:47** | Meilleur point de référence actuel : deux audits autonomes à 4 pts chacun, plus une reprise de réconciliation à ~5 pts. Cette reprise n'est pas comparable à un run depuis zéro. |
-| 6.0 | **GPT-6 Sol** | High | 1 | **1 partiel** | **~20 pts** | **12:07** | Gros marathon multi-étapes interrompu avant la fin par épuisement du quota. High semble à réserver aux problèmes difficiles mais bien bornés. |
-| 6.0 | **GPT-6 Astra** | Low | 2 | **2 succès** | **30 pts** au total · 15 pts/run | **2:52** | Excellente qualité et davantage de preuves, mais 13–17 pts sur des audits où Sol Medium consommait 4 pts pour la même conclusion utile. |
-| 6.1 | **GPT-6.1 Sol** | Medium | 4 | **4 succès** | **35 pts** au total · 8,75 pts/run | **47:53** | Très fiable jusqu'ici. Trois gros checkpoints : **10–11 pts** chacun ; premier petit correctif très borné : **3 pts**. Aucun A/B direct 6.0 ↔ 6.1 encore disponible. |
+| Génération | Modèle | Effort | Runs observés | Résultats | Quota visible observé | Durée cumulée |
+|---|---|---|---:|---|---|---:|
+| 5.6 | **GPT-5.6 Sol** | Medium | 1 | **1 succès** | **6 pts** au total · 6 pts/succès | **1:50** |
+| 6.0 | **GPT-6 Luna** | Medium / 2 incidents effort non relevé | 4 | **1 succès · 1 échec · 2 blocages** | ~0 pt sur le succès ciblé ; ~0 sur l'échec historique ; **~5 pts connus** sur un blocage, un autre sans relevé | **1:36:11** |
+| 6.0 | **GPT-6 Sol** | Medium | 3 | **3 succès** | **~13 pts** au total · ~4,33 pts/run | **5:47** |
+| 6.0 | **GPT-6 Sol** | High | 1 | **1 partiel** | **~20 pts** | **12:07** |
+| 6.0 | **GPT-6 Astra** | Low | 2 | **2 succès** | **30 pts** au total · 15 pts/run | **2:52** |
+| 6.1 | **GPT-6.1 Sol** | Medium | 4 | **4 succès** | **35 pts** au total · 8,75 pts/run | **47:53** |
 
 ### Repères rapides
 
