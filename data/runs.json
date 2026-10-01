@@ -393,6 +393,32 @@
         "Premier vrai correctif de production Luna terminé après les incidents de fiabilité",
         "Tâche très bornée et limitée à la palette de l'écran Utilisateurs"
       ]
+    },
+    {
+      "run_id": "GP-017",
+      "date": "2026-10-01",
+      "project": "GamePanel",
+      "model": "GPT-6 Luna",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "luna_targeted_production",
+      "task_summary": "Journal d'audit UI : harmonisation graphite, densité légère, responsive cartes mobile, test contrat et manifeste",
+      "quota_before_pct": 53,
+      "quota_after_pct": 53,
+      "quota_used_points": 0,
+      "quota_approx": true,
+      "duration_seconds": 467,
+      "status": "success",
+      "commit_sha": "4966b61e00a21e1646f3e6dc85110dcc8ee91fca",
+      "quality": {
+        "summary": "Checkpoint terminé ; contrat Journal d'audit PASS ; node --check PASS ; git diff --check PASS ; manifeste PASS ; navigateur N/A ; aucune logique audit ni autre écran modifiés"
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Deuxième vrai checkpoint de production Luna terminé",
+        "Aucun mouvement visible du quota ; la consommation réelle peut être inférieure au pas d'affichage"
+      ]
     }
   ]
 }
