@@ -345,7 +345,7 @@ Premier gros checkpoint de production GPT-6 Sol Medium observé depuis zéro : a
 
 - Date : 2026-10-01
 - Quota : 88 % → 88 % = **~0 pt visible**
-- Durée : **non fournie**
+- Durée : **3 min 19 s**
 - Statut : **succès**
 - Commit : `92df2a3616735521a7479efde58edfa179ffb950`
 - Prompt + réponse complets : [runs/GP-019-gpt6-luna-medium-final-validation.md](runs/GP-019-gpt6-luna-medium-final-validation.md)
@@ -376,9 +376,9 @@ Sept observations au total, dont deux incidents dont l'effort exact n'avait pas 
 - échec avant audit : **1**
 - blocages : **2**
 - quota connu : **au moins ~6 pts** au total, avec un incident sans relevé
-- durée cumulée connue : **1 h 47 min 40 s**, plus GP-019 dont la durée n'a pas été fournie
-- quatre réussites Medium ciblées : **~0 pt / 40 s** sur l'analyse locale 6/6, **1 pt / 3:42** sur le correctif palette Utilisateurs, **~0 pt visible / 7:47** sur l’harmonisation Journal d’audit, puis **~0 pt visible / durée non fournie** sur la validation documentaire finale.
-- production Luna ciblée : **3/3 succès**, **1 point visible cumulé** ; durée connue **11 min 29 s**, plus GP-019 non chronométré.
+- durée cumulée : **1 h 50 min 59 s**
+- quatre réussites Medium ciblées : **~0 pt / 40 s** sur l'analyse locale 6/6, **1 pt / 3:42** sur le correctif palette Utilisateurs, **~0 pt visible / 7:47** sur l’harmonisation Journal d’audit, puis **~0 pt visible / 3:19** sur la validation documentaire finale.
+- production Luna ciblée : **3/3 succès**, **1 point visible cumulé**, **14 min 48 s**.
 
 Les blocages GP-010/011 restent à interpréter comme incidents de fiabilité d'exécution possibles, pas comme une mesure pure des capacités de raisonnement de Luna.
 
