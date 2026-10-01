@@ -472,6 +472,33 @@
         "Durée corrigée par l'utilisateur : 3 min 19 s",
         "Aucun mouvement visible du quota ; la consommation réelle peut être inférieure au pas d'affichage"
       ]
+    },
+    {
+      "run_id": "GP-020",
+      "date": "2026-10-01",
+      "project": "GamePanel",
+      "model": "GPT-6 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "identity_contract_031e",
+      "task_summary": "0.3.1-E-A : audit architecture identité d'instance, cartographie persistances/runtime, contrat création+rename, transaction/recovery",
+      "quota_before_pct": 88,
+      "quota_after_pct": 66,
+      "quota_used_points": 22,
+      "quota_approx": false,
+      "duration_seconds": 853,
+      "status": "success",
+      "commit_sha": "1a835501ff7b5a563f0b906c5b9177f407a3bdd2",
+      "quality": {
+        "summary": "Audit/contrat complet terminé ; architecture unique retenue ; références persistantes cartographiées ; stratégie transaction/recovery, règles d'id et gardes définies ; seuls WORK_STATE.md et MANIFEST.sha256 modifiés"
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Gros audit transversal d'architecture et de persistance, plus complexe qu'un checkpoint UI ou documentaire",
+        "Premier run GPT-6 Sol Medium observé à 22 points visibles",
+        "Non directement comparable à GP-018 malgré le même modèle/effort car la complexité architecturale est plus élevée"
+      ]
     }
   ]
 }
