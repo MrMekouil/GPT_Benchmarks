@@ -342,6 +342,31 @@
       },
       "prompt_capture": "exact",
       "response_capture": "exact"
+    },
+    {
+      "run_id": "GP-015",
+      "date": "2026-10-01",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "gpt61_real_work",
+      "task_summary": "Correctif ciblé Sessions Utilisateurs : READY si non révoquée, OFFLINE si révoquée, test contrat et manifeste",
+      "quota_before_pct": 57,
+      "quota_after_pct": 54,
+      "quota_used_points": 3,
+      "quota_approx": false,
+      "duration_seconds": 352,
+      "status": "success",
+      "commit_sha": "de76ac3",
+      "quality": {
+        "summary": "Correctif ciblé terminé ; contrat Utilisateurs PASS ; syntaxes JS/CJS PASS ; git diff PASS ; 5 tests Python ciblés PASS ; backend bloqué par aiohttp absent ; navigateur N/A"
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Premier run GPT-6.1 Sol Medium nettement plus petit et précisément borné ; utile pour étudier l'effet de la taille du checkpoint sur le quota"
+      ]
     }
   ]
 }
