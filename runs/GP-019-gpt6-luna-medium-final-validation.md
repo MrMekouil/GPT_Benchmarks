@@ -2,7 +2,7 @@
 
 - Date : 2026-10-01
 - Quota visible : 88 % → 88 % (**~0 point visible**)
-- Durée : **non fournie**
+- Durée : **3 min 19 s**
 - Résultat : succès
 - Commit GamePanel : `92df2a3616735521a7479efde58edfa179ffb950`
 
