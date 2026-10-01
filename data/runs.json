@@ -367,6 +367,32 @@
       "notes": [
         "Premier run GPT-6.1 Sol Medium nettement plus petit et précisément borné ; utile pour étudier l'effet de la taille du checkpoint sur le quota"
       ]
+    },
+    {
+      "run_id": "GP-016",
+      "date": "2026-10-01",
+      "project": "GamePanel",
+      "model": "GPT-6 Luna",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "luna_targeted_production",
+      "task_summary": "Correctif ciblé palette Utilisateurs : scope .users-page, tokens graphite neutres, test contrat et manifeste",
+      "quota_before_pct": 54,
+      "quota_after_pct": 53,
+      "quota_used_points": 1,
+      "quota_approx": false,
+      "duration_seconds": 222,
+      "status": "success",
+      "commit_sha": "5049d507b7150828bf7d81b541c0edaf949d9afa",
+      "quality": {
+        "summary": "Correctif ciblé terminé ; contrat Utilisateurs PASS ; node --check PASS ; git diff --check PASS ; manifeste PASS ; aucun autre écran ni logique métier modifiés"
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Premier vrai correctif de production Luna terminé après les incidents de fiabilité",
+        "Tâche très bornée et limitée à la palette de l'écran Utilisateurs"
+      ]
     }
   ]
 }
