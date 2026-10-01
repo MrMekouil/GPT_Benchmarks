@@ -352,21 +352,34 @@ Premier gros checkpoint de production GPT-6 Sol Medium observé depuis zéro : a
 
 Checkpoint documentaire final 0.3.1 : enregistrement des PASS desktop/mobile/runtime/update et du parcours BeamMP réel REQUALIFIÉ puis CONSERVÉ/SKIPPÉ, sans changement de code.
 
+---
+
+## GP-020 — GPT-6 Sol Medium — 0.3.1-E-A contrat identité d’instance
+
+- Date : 2026-10-01
+- Quota : 88 % → 66 % = **22 pts**
+- Durée : **14 min 13 s**
+- Statut : **succès**
+- Commit : `1a835501ff7b5a563f0b906c5b9177f407a3bdd2`
+- Prompt + réponse complets : [runs/GP-020-gpt6-sol-medium-identity-contract.md](runs/GP-020-gpt6-sol-medium-identity-contract.md)
+
+Audit transversal 0.3.1-E-A : cartographie de l’identité d’instance dans l’inventaire, SQLite, runtime et intégrations, puis définition d’une architecture unique création + rename avec transaction/recovery. Aucun code fonctionnel modifié.
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
 
-Quatre succès observés :
+Cinq succès observés :
 
-- quota cumulé : **~24 pts**
-- durée cumulée : **14 min 29 s**
-- succès : **4/4**
-- moyenne brute : **~6 pts/run**
+- quota cumulé : **~46 pts**
+- durée cumulée : **28 min 42 s**
+- succès : **5/5**
+- moyenne brute : **~9,2 pts/run**
 - audits autonomes ciblés : **4 pts / 1:35** et **4 pts / 1:45**
 - reprise de réconciliation déjà entamée : **~5 pts / 2:27**
-- premier gros checkpoint de production depuis zéro : **11 pts / 8:42**
+- gros checkpoints de production depuis zéro : **11 pts / 8:42** pour la pré-clôture, puis **22 pts / 14:13** pour l’audit transversal identité/persistance 0.3.1-E-A
 
-La moyenne brute mélange des tâches de tailles très différentes. GP-018 montre que les 4–5 pts des premiers runs ne représentent pas le coût d'un gros checkpoint complet.
+La moyenne brute mélange des tâches de tailles très différentes. GP-018 et GP-020 montrent surtout que les gros checkpoints eux-mêmes ne coûtent pas tous pareil : **11 pts** sur une pré-clôture globale contre **22 pts** sur un audit d’architecture/persistance beaucoup plus profond.
 
 ## GPT-6 Luna
 
