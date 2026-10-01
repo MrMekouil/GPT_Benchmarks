@@ -300,7 +300,33 @@ Résumé : tableau Utilisateurs conservé et compacté, modales densifiées, lib
 
 Correctif unique et très borné : distinction visuelle READY/OFFLINE dans la modale Sessions, avec contrat ciblé, syntaxes, tests et manifeste.
 
+---
+
+## GP-016 — GPT-6 Luna Medium — Palette Utilisateurs
+
+- Date : 2026-10-01
+- Quota : 54 % → 53 % = **1 pt**
+- Durée : **3 min 42 s**
+- Statut : **succès**
+- Commit : `5049d507b7150828bf7d81b541c0edaf949d9afa`
+- Prompt + réponse complets : [runs/GP-016-gpt6-luna-medium-users-palette.md](runs/GP-016-gpt6-luna-medium-users-palette.md)
+
+Correctif de production très borné : palette graphite neutre appliquée uniquement sous `.users-page`, contrat ciblé et manifeste, sans modification métier ni autre écran.
+
 # Agrégats provisoires
+
+## GPT-6 Luna
+
+Cinq observations au total, dont deux incidents dont l'effort exact n'avait pas été relevé :
+
+- succès : **2**
+- échec avant audit : **1**
+- blocages : **2**
+- quota connu : **au moins ~6 pts** au total, avec un incident sans relevé
+- durée cumulée de toutes les observations : **1 h 39 min 53 s**
+- deux réussites Medium ciblées : **~0 pt / 40 s** sur l'analyse locale 6/6, puis **1 pt / 3:42** sur un vrai correctif de production.
+
+Les blocages GP-010/011 restent à interpréter comme incidents de fiabilité d'exécution possibles, pas comme une mesure pure des capacités de raisonnement de Luna.
 
 ## GPT-6.1 Sol Medium
 
