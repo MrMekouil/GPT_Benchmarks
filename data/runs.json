@@ -446,6 +446,32 @@
         "Tâche plus large qu'un audit ciblé : resynchronisation documentaire, vérification version/candidate, critères de sortie et batterie de pré-clôture",
         "Non comparable directement aux checkpoints UI GPT-6.1 Sol Medium, mais de taille opérationnelle proche"
       ]
+    },
+    {
+      "run_id": "GP-019",
+      "date": "2026-10-01",
+      "project": "GamePanel",
+      "model": "GPT-6 Luna",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "luna_targeted_production",
+      "task_summary": "Validation documentaire finale 0.3.1 : desktop/mobile/update réels, BeamMP requalifié puis conservé/skippé, docs et manifeste",
+      "quota_before_pct": 88,
+      "quota_after_pct": 88,
+      "quota_used_points": 0,
+      "quota_approx": true,
+      "duration_seconds": null,
+      "status": "success",
+      "commit_sha": "92df2a3616735521a7479efde58edfa179ffb950",
+      "quality": {
+        "summary": "Checkpoint documentaire final terminé ; validations desktop/mobile/update réelles enregistrées ; BeamMP REQUALIFIÉ PASS puis CONSERVÉ/SKIPPÉ PASS ; aucun code applicatif modifié"
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Durée non fournie : le message utilisateur contient seulement 'min'",
+        "Aucun mouvement visible du quota ; la consommation réelle peut être inférieure au pas d'affichage"
+      ]
     }
   ]
 }
