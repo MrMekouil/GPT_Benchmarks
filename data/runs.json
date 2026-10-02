@@ -744,6 +744,34 @@
         "Aucun code production modifié",
         "Validation Ubuntu du scénario POSIX intégré encore à rejouer"
       ]
+    },
+    {
+      "run_id": "GP-030",
+      "date": "2026-10-02",
+      "project": "GamePanel",
+      "model": "GPT-6 Luna",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "luna_targeted_production",
+      "task_summary": "0.3.1-E-C regression follow-up : mettre à jour le contrat manuel 0.3.06 pour path + identité bornée E-C",
+      "quota_before_pct": 99,
+      "quota_after_pct": 99,
+      "quota_used_points": 0,
+      "quota_approx": true,
+      "duration_seconds": 254,
+      "status": "success",
+      "commit_sha": "8dff817dbb48c2c716fb0af5d4827cd803b3dd73",
+      "quality": {
+        "summary": "Correction de contrat de test uniquement ; test ciblé exécuté directement, compileall, manifeste et git diff --check PASS ; import normal N/A dans Work faute d’aiohttp ; aucun code de production modifié."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Ancienne assertion path-only devenue obsolète après E-C",
+        "Le contrat vérifie désormais path + instance_id/display_name uniquement",
+        "Aucun code production modifié",
+        "Réponse Work fournie par l'utilisateur se termine sur une commande Ubuntu tronquée"
+      ]
     }
   ]
 }
