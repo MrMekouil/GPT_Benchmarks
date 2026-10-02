@@ -405,21 +405,35 @@ Le commit distant a été vérifié : parent attendu, message exact, diff limit�
 
 Correctif réel de code : `write_inventory()` distingue les DB historiques sans `settings` des DB modernes, tout en gardant le contrôle d’alias strict et fail-closed. Work : 17 tests PASS, 20 root/runtime SKIP ; suites 021/022/023 N/A sous Windows.
 
+---
+
+## GP-024 — GPT-6 Sol Medium — Clôture documentaire 0.3.1-E-B1
+
+- Date : 2026-10-02
+- Quota : 99 % → 93 % = **6 pts**
+- Durée : **3 min 21 s**
+- Statut : **succès**
+- Commit : `ca16063343009337cbc08118c1e8f11c46acb8eb`
+- Prompt + réponse complets : [runs/GP-024-gpt6-sol-medium-b1-validation-close.md](runs/GP-024-gpt6-sol-medium-b1-validation-close.md)
+
+Clôture documentaire de B1 après validations Ubuntu déjà acquises : 37/37 identity sous chacun des umasks `0002` et `022`, 99/99 régressions ciblées et 105/105 installateur. Aucun code fonctionnel ni test modifié.
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
 
-Cinq succès observés :
+Six succès observés :
 
-- quota cumulé : **~46 pts**
-- durée cumulée : **28 min 42 s**
-- succès : **5/5**
-- moyenne brute : **~9,2 pts/run**
+- quota cumulé : **~52 pts**
+- durée cumulée : **32 min 03 s**
+- succès : **6/6**
+- moyenne brute : **~8,67 pts/run**
 - audits autonomes ciblés : **4 pts / 1:35** et **4 pts / 1:45**
 - reprise de réconciliation déjà entamée : **~5 pts / 2:27**
 - gros checkpoints de production depuis zéro : **11 pts / 8:42** pour la pré-clôture, puis **22 pts / 14:13** pour l’audit transversal identité/persistance 0.3.1-E-A
+- clôture documentaire B1 après validation Ubuntu acquise : **6 pts / 3:21**
 
-La moyenne brute mélange des tâches de tailles très différentes. GP-018 et GP-020 montrent surtout que les gros checkpoints eux-mêmes ne coûtent pas tous pareil : **11 pts** sur une pré-clôture globale contre **22 pts** sur un audit d’architecture/persistance beaucoup plus profond.
+La moyenne brute mélange des tâches de tailles très différentes. GP-018 et GP-020 montrent surtout que les gros checkpoints eux-mêmes ne coûtent pas tous pareil : **11 pts** sur une pré-clôture globale contre **22 pts** sur un audit d’architecture/persistance beaucoup plus profond. GP-024 est un checkpoint documentaire plus léger à **6 pts**.
 
 ## GPT-6 Luna
 
