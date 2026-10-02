@@ -431,6 +431,19 @@ Clôture documentaire de B1 après validations Ubuntu déjà acquises : 37/37 id
 
 Checkpoint fonctionnel B2 : API Admin d’identité et création d’instance avec id/nom personnalisés. Work : 29 tests portables PASS ; 34 tests natifs N/A dans l’environnement Windows ; validation Ubuntu encore requise.
 
+---
+
+## GP-026 — GPT-6 Luna Medium — Clôture documentaire 0.3.1-E-B2
+
+- Date : 2026-10-02
+- Quota : 77 % → 77 % = **~0 pt visible**
+- Durée : **4 min 52 s**
+- Statut : **succès**
+- Commit : `e02109326cc8bca60cd945a19cf89740c727a1e0`
+- Prompt + réponse complets : [runs/GP-026-gpt6-luna-medium-b2-validation-close.md](runs/GP-026-gpt6-luna-medium-b2-validation-close.md)
+
+Clôture documentaire de B2 après validations Ubuntu déjà acquises : 63/63 identité, 99/99 régressions ciblées et 105/105 installateur PASS. Aucun code fonctionnel ni test modifié.
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -450,15 +463,15 @@ La moyenne brute mélange des tâches de tailles très différentes. GP-018 et G
 
 ## GPT-6 Luna
 
-Neuf observations au total, dont deux incidents dont l'effort exact n'avait pas été relevé :
+Dix observations au total, dont deux incidents dont l'effort exact n'avait pas été relevé :
 
-- succès : **6**
+- succès : **7**
 - échec avant audit : **1**
 - blocages : **2**
 - quota connu : **au moins ~7 pts** au total, avec un incident sans relevé
-- durée cumulée : **1 h 58 min 00 s**
-- six réussites Medium ciblées : **~0 pt / 40 s** sur l'analyse locale 6/6, **1 pt / 3:42** sur le correctif palette Utilisateurs, **~0 pt visible / 7:47** sur l’harmonisation Journal d’audit, **~0 pt visible / 3:19** sur la validation documentaire finale, **1 pt / 3:29** sur le correctif fixture B1c, puis **~0 pt visible / 3:32** sur la compatibilité installateur B1d.
-- production Luna ciblée : **5/5 succès**, **2 points visibles cumulés**, **21 min 49 s**.
+- durée cumulée : **2 h 02 min 52 s**
+- sept réussites Medium ciblées : **~0 pt / 40 s** sur l'analyse locale 6/6, **1 pt / 3:42** sur le correctif palette Utilisateurs, **~0 pt visible / 7:47** sur l’harmonisation Journal d’audit, **~0 pt visible / 3:19** sur la validation documentaire finale, **1 pt / 3:29** sur le correctif fixture B1c, **~0 pt visible / 3:32** sur la compatibilité installateur B1d, puis **~0 pt visible / 4:52** sur la clôture documentaire B2.
+- production Luna ciblée : **6/6 succès**, **2 points visibles cumulés**, **26 min 41 s**.
 
 Les blocages GP-010/011 restent à interpréter comme incidents de fiabilité d'exécution possibles, pas comme une mesure pure des capacités de raisonnement de Luna.
 
