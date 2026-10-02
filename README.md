@@ -32,11 +32,14 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 | Génération | Modèle | Effort | Runs observés | Résultats | Quota visible observé | Durée cumulée |
 |---|---|---|---:|---|---|---:|
 | 5.6 | **GPT-5.6 Sol** | Medium | 1 | **1 succès** | **6 pts** au total · 6 pts/succès | **1:50** |
-| 6.0 | **GPT-6 Luna** | Medium* | 10 | **7 succès · 1 échec · 2 blocages** | **≥7 pts connus*** | **2:02:52** |
+| 6.0 | **GPT-6 Luna** | Medium | 8 | **7 succès · 1 échec** | **2 pts visibles** au total | **27:52** |
+| 6.0 | **GPT-6 Luna** | non relevé* | 2 | **2 blocages** | **≥5 pts connus*** | **1:35:00** |
 | 6.0 | **GPT-6 Sol** | Medium | 6 | **6 succès** | **~52 pts** au total · ~8,67 pts/run | **32:03** |
 | 6.0 | **GPT-6 Sol** | High | 1 | **1 partiel** | **~20 pts** | **12:07** |
 | 6.0 | **GPT-6 Astra** | Low | 2 | **2 succès** | **30 pts** au total · 15 pts/run | **2:52** |
 | 6.1 | **GPT-6.1 Sol** | Medium | 7 | **6 succès · 1 bloqué** | **73 pts** au total · 68 succès + 5 bloqué | **1:40:32** |
+
+\* GP-010 et GP-011 n’avaient pas d’effort relevé ; GP-010 n’a pas non plus de mesure de quota. Ils restent séparés des runs Luna Medium.
 
 ### Repères rapides
 
@@ -44,7 +47,7 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 - **A/B fonctionnel :** GPT-6 Sol Medium = 4 pts contre GPT-6 Astra Low = 13 pts, avec la même lacune principale trouvée.
 - **GPT-6 Sol Medium en production :** deux gros checkpoints complets observés à **11 pts / 8:42** (pré-clôture) puis **22 pts / 14:13** (audit transversal d’architecture 0.3.1-E-A). Le coût varie donc fortement avec la profondeur et le périmètre.
 - **GPT-6.1 Sol Medium :** 6 tâches de production terminées sur 7 tentatives observées. Après B2 à **16 pts / 21:37**, E-C UI coûte **17 pts / 26:31**. GP-021 reste le seul blocage, à **5 pts / 4:31**, lié à l’absence d’environnement Linux/POSIX pour les tests crash/locks exigés.
-- **GPT-6 Luna Medium :** sept succès ciblés observés, dont six vrais checkpoints de production récents. Ces six checkpoints totalisent **2 points visibles** pour **26:41**. GP-026 est une clôture documentaire B2 à **~0 pt visible / 4:52** après validations Ubuntu déjà acquises. Deux longues sessions bloquées ont aussi été observées. *L'effort des deux incidents n'avait pas été relevé ; un incident n'a pas de mesure de quota.*
+- **GPT-6 Luna Medium :** **8 runs Medium** observés : **7 succès / 1 échec**, **2 points visibles** au total, **27:52**. Les **6 checkpoints de production récents** sont à **6/6 succès**, **2 points visibles** et **26:41**. À part, GP-010/011 représentent **2 blocages à effort non relevé**, **1:35:00** cumulé et **≥5 points connus**.
 
 ## Résultats actuellement observés
 
@@ -59,7 +62,7 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 | lacune fonctionnelle 0.3.0 | GPT-6 Sol | Medium | 4 pts | 1:45 | lacune exacte trouvée |
 | idem | GPT-6 Astra | Low | 13 pts | 1:10 | même lacune + preuve plus détaillée |
 
-### Run réel GPT-6 Sol Medium
+### Runs réels GPT-6 Sol Medium
 
 | Run | Tâche | Quota visible | Durée | Résultat |
 |---|---|---:|---:|---|
@@ -86,10 +89,10 @@ Ces six runs sont de vrais checkpoints de production Luna terminés après les i
 
 | Run | Tâche | Quota visible | Durée | Résultat |
 |---|---|---:|---:|---|
-| 1 | UI Instances : densification candidats + conflit/logout + tests/manifeste | 11 pts | 18:37 | terminé, commit `7ba38960...` |
-| 2 | UI Supervision : compaction + responsive + diagnostic/logout + tests/manifeste | 10 pts | 10:42 | terminé, commit `622205de...` |
-| 3 | UI Utilisateurs : tableau/modales + Accès + tests/manifeste | 11 pts | 12:42 | terminé, commit `c9186373...` |
-| 4 | Correctif Sessions : READY/OFFLINE + test/manifeste | 3 pts | 5:52 | terminé, commit `de76ac3` |
+| GP-012 | UI Instances : densification candidats + conflit/logout + tests/manifeste | 11 pts | 18:37 | terminé, commit `7ba38960...` |
+| GP-013 | UI Supervision : compaction + responsive + diagnostic/logout + tests/manifeste | 10 pts | 10:42 | terminé, commit `622205de...` |
+| GP-014 | UI Utilisateurs : tableau/modales + Accès + tests/manifeste | 11 pts | 12:42 | terminé, commit `c9186373...` |
+| GP-015 | Correctif Sessions : READY/OFFLINE + test/manifeste | 3 pts | 5:52 | terminé, commit `de76ac3...` |
 | GP-021 | 0.3.1-E-B1 : primitive transactionnelle rename + recovery/tests POSIX | **5 pts** | **4:31** | **bloqué avant implémentation**, aucun commit |
 | GP-025 | 0.3.1-E-B2 : API Admin identité + register id/nom personnalisés | **16 pts** | **21:37** | terminé, commit `68d9a0d...` |
 | GP-027 | 0.3.1-E-C : UI Admin identité + création auto/manuelle id/nom | **17 pts** | **26:31** | terminé, commit `11f1984...` |
@@ -98,12 +101,18 @@ Cumul GPT-6.1 Sol Medium à ce stade : **73 points**, **1 h 40 min 32 s**, **6 s
 
 ## Lecture provisoire
 
-- **GPT-6 Luna Medium** : peut être extrêmement économique sur une analyse locale très bornée, mais plusieurs problèmes de fiabilité/exécution ont aussi été observés. Ne pas confondre qualité de raisonnement et fiabilité de la session Work.
+- **GPT-6 Luna Medium** : très économique sur les tâches ciblées observées : **7/8 succès Medium** et seulement **2 points visibles** cumulés. Les deux longs blocages connus sont conservés séparément car leur effort n’avait pas été relevé ; ils restent un signal de fiabilité d’exécution à surveiller.
 - **GPT-6 Sol Medium** : six succès observés. Les audits ciblés sont à 4 pts, les gros checkpoints à 11–22 pts, et la clôture documentaire B1 à 6 pts. Le coût suit fortement la nature réelle du travail, pas seulement sa durée.
 - **GPT-6 Sol High** : un gros run multi-étapes a consommé ~20 points en 12:07 et s'est arrêté faute de quota avant la fin. Cela ne mesure pas son intelligence, mais montre le risque d'un effort High sur un long marathon.
 - **GPT-6 Astra Low** : excellente qualité, mais 13–17 points sur les deux audits comparables où Sol Medium en consommait 4.
 - **GPT-5.6 Sol Medium** : baseline fiable, mais plus coûteuse que GPT-6 Sol Medium sur le benchmark directement comparable.
 - **GPT-6.1 Sol Medium** : six runs GamePanel terminés et un blocage. Les anciens gros checkpoints UI étaient à 10–11 points ; les deux nouveaux lots 0.3.1-E montent à **16 pts** (B2 backend/root) puis **17 pts** (E-C UI), avec des durées de 21:37 et 26:31. GP-021 reste un coût de **5 points** sans livraison, dû au blocage environnemental POSIX.
+
+## Intégrité des données
+
+- `data/runs.json` est la source structurée canonique.
+- `data/runs.csv` est régénéré depuis le JSON pour éviter les décalages de colonnes.
+- État vérifié au 2026-10-02 : **27 runs JSON = 27 lignes CSV**, IDs uniques et champs communs cohérents.
 
 ## Méthode
 
