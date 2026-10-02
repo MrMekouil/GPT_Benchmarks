@@ -522,6 +522,19 @@ Checkpoint documentaire de clôture E-D : 282/282 tests Ubuntu consignés PASS, 
 
 Checkpoint documentaire de pré-clôture : état stable/candidate, README, validation/changelog et description de la Draft PR #19 alignés. `test_release_docs` PASS ; `test_version_031` N/A faute d’`aiohttp` ; `git diff --check` PASS ; manifeste 181 entrées valide sans `undefined`. Aucun code de production modifié.
 
+---
+
+## GP-033 — GPT-6.1 Sol Medium — 0.3.2-A bloqué au pré-vol
+
+- Date : 2026-10-02
+- Quota : 95 % → 94 % = **1 pt**
+- Durée : **17 s**
+- Statut : **bloqué au pré-vol conformément au contrat**
+- Commit GamePanel : **aucun**
+- Prompt + réponse complets : [runs/GP-033-gpt61-sol-medium-032a-preflight-block.md](runs/GP-033-gpt61-sol-medium-032a-preflight-block.md)
+
+Le miroir Work était encore sur `work/0.3.1-ui-ux`, au HEAD `7ba38960...`, avec 27 fichiers modifiés et 13 non suivis. Le prompt imposait explicitement STOP dans cet état. Le dépôt distant `main` a ensuite été vérifié séparément au HEAD attendu `b7700370...`; aucune branche 0.3.2 n’a été créée.
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -571,14 +584,14 @@ Les blocages GP-010/011 restent à interpréter comme incidents de fiabilité d'
 
 ## GPT-6.1 Sol Medium
 
-Sept observations de production :
+Huit observations de production :
 
-- quota cumulé : **73 pts**
-- durée cumulée : **1 h 40 min 32 s**
-- résultats : **6 succès / 1 blocage**
-- moyenne brute : **~10,43 pts/observation**
+- quota cumulé : **74 pts**
+- durée cumulée : **1 h 40 min 49 s**
+- résultats : **6 succès / 2 blocages**
+- moyenne brute : **9,25 pts/observation**
 
-Les six tâches terminées représentent **68 pts** ; GP-021 a consommé **5 pts** sans livrer B1. Les deux lots 0.3.1-E les plus récents sont **16 pts / 21:37** pour B2 backend/root puis **17 pts / 26:31** pour E-C UI. Le blocage GP-021 reste environnemental : tests POSIX/crash non exécutables dans le sandbox Windows.
+Les six tâches terminées représentent **68 pts**. Les deux blocages représentent **6 pts** : GP-021 à **5 pts / 4:31** sans livraison B1 faute d’environnement POSIX, puis GP-033 à **1 pt / 0:17** avec STOP correct sur miroir Work incohérent/dirty. Les deux gros lots livrés les plus récents restent **16 pts / 21:37** pour B2 backend/root puis **17 pts / 26:31** pour E-C UI.
 
 ## Comparaison directe historique
 
