@@ -457,22 +457,35 @@ Clôture documentaire de B2 après validations Ubuntu déjà acquises : 63/63 id
 
 Checkpoint UI/UX fonctionnel E-C : gestion d’identité dans Admin > Instances, création auto/manuelle avec id/nom personnalisés, retrait du contrôle d’identité du dashboard normal. 7 contrats Web et 21 vérifications syntaxiques PASS ; 11 contrats navigateur N/A faute de Playwright ; validation visuelle Ubuntu encore requise.
 
+---
+
+## GP-028 — GPT-6 Sol Medium — blocker installer/startup identity recovery
+
+- Date : 2026-10-02
+- Quota : 60 % → 39 % = **21 pts**
+- Durée : **20 min 35 s**
+- Statut : **succès**
+- Commit : `f4bd104f5f9a401ae9c429176ee839b03ba704ae`
+- Prompt + réponse complets : [runs/GP-028-gpt6-sol-medium-installer-startup-recovery.md](runs/GP-028-gpt6-sol-medium-installer-startup-recovery.md)
+
+Correctif de sûreté/concurrence : le startup contrôlé par l’installateur dispose d’un fast-path `identity-recover` strictement borné, sans affaiblir le recovery B1 normal ni le rename. Work : 35 tests Python et deux contrats Web PASS ; 43 scénarios natifs N/A ; update Ubuntu réelle encore requise.
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
 
-Six succès observés :
+Sept succès observés :
 
-- quota cumulé : **~52 pts**
-- durée cumulée : **32 min 03 s**
-- succès : **6/6**
-- moyenne brute : **~8,67 pts/run**
+- quota cumulé : **~73 pts**
+- durée cumulée : **52 min 38 s**
+- succès : **7/7**
+- moyenne brute : **~10,43 pts/run**
 - audits autonomes ciblés : **4 pts / 1:35** et **4 pts / 1:45**
 - reprise de réconciliation déjà entamée : **~5 pts / 2:27**
-- gros checkpoints de production depuis zéro : **11 pts / 8:42** pour la pré-clôture, puis **22 pts / 14:13** pour l’audit transversal identité/persistance 0.3.1-E-A
+- gros checkpoints de production depuis zéro : **11 pts / 8:42** pour la pré-clôture, **22 pts / 14:13** pour l’audit transversal identité/persistance 0.3.1-E-A, puis **21 pts / 20:35** pour le correctif concurrence installer/recovery GP-028
 - clôture documentaire B1 après validation Ubuntu acquise : **6 pts / 3:21**
 
-La moyenne brute mélange des tâches de tailles très différentes. GP-018 et GP-020 montrent surtout que les gros checkpoints eux-mêmes ne coûtent pas tous pareil : **11 pts** sur une pré-clôture globale contre **22 pts** sur un audit d’architecture/persistance beaucoup plus profond. GP-024 est un checkpoint documentaire plus léger à **6 pts**.
+La moyenne brute mélange des tâches de tailles très différentes. GP-018, GP-020 et GP-028 montrent que les gros checkpoints Sol Medium s’étendent actuellement de **11 à 22 pts** selon la profondeur : pré-clôture globale, audit architecture/persistance, puis correctif de sûreté/concurrence installateur/recovery. GP-024 reste un checkpoint documentaire plus léger à **6 pts**.
 
 ## GPT-6 Luna
 
