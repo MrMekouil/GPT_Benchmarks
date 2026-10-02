@@ -942,6 +942,35 @@
         "PR #22 reste Draft ; 0.3.2-C non commencé",
         "Quota visible inchangé 66% -> 66%, enregistré comme ~0 pt visible"
       ]
+    },
+    {
+      "run_id": "GP-037",
+      "date": "2026-10-02",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032c",
+      "task_summary": "0.3.2-C : providers de métadonnées, classification, provenance, overrides Admin et cache interne borné",
+      "quota_before_pct": 66,
+      "quota_after_pct": 49,
+      "quota_used_points": 17,
+      "quota_approx": false,
+      "duration_seconds": 2035,
+      "status": "success",
+      "commit_sha": "fc6fcaef584ad1d7eaf0fd99f917acdea5761c98",
+      "quality": {
+        "summary": "Checkpoint 0.3.2-C livré : providers JAR local/Modrinth/CurseForge/Packwiz/mrpack, classification déterministe, provenance/conflits/overrides/cache ; C 58 + B 25 + SQL/docs 18 PASS, compilation/diff-check/manifeste 189/189 PASS ; 16 tests POSIX et certaines suites pydantic/aiohttp N/A ; aucun provider réel ni serveur réel testé."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "CurseForge associe le fichier sans inventer sa classification",
+        "Aucun appel réseau fournisseur réel requis dans la suite normale",
+        "C reste candidate sans validation Linux/provider réelle",
+        "Application 0.3.1 et SQLite schema 4 inchangés",
+        "PR #22 reste Draft ; 0.3.2-D non commencé"
+      ]
     }
   ]
 }
