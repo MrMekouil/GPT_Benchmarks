@@ -563,6 +563,20 @@ Reprise réussie après GP-033 via un worktree propre séparé. Checkpoint 0.3.2
 
 Premier checkpoint fonctionnel 0.3.2 : scanner Minecraft local read-only et borné, support prioritaire Forge/NeoForge, SHA-256/métadonnées locales et protections archive/path. 25 tests scanner portables + 18 régressions PASS ; 15 tests POSIX et certaines suites dépendantes de pydantic/aiohttp N/A. B reste candidate sans validation Linux réelle.
 
+---
+
+## GP-036 — GPT-6 Luna Medium — clôture Ubuntu 0.3.2-B
+
+- Date : 2026-10-02
+- Quota : 66 % → 66 % = **~0 pt visible**
+- Durée : **3 min 19 s**
+- Statut : **succès**
+- Commit : `940103457a394ed7636b3739a41482c029a73ce5`
+- Draft PR : **#22**
+- Prompt + réponse complets : [runs/GP-036-gpt6-luna-medium-032b-ubuntu-closure.md](runs/GP-036-gpt6-luna-medium-032b-ubuntu-closure.md)
+
+Clôture documentaire de B après validation Ubuntu réelle : scanner **40/40 PASS sans skip**, régressions ciblées PASS, manifeste 184 empreintes PASS, release docs et diff-check PASS. Aucun code fonctionnel modifié ; B est désormais acquis.
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -582,17 +596,17 @@ La moyenne brute mélange des tâches de tailles très différentes. GP-018, GP-
 
 ## GPT-6 Luna
 
-Quatorze observations au total, mais **deux incidents ont un effort non relevé** et sont séparés des runs Medium.
+Quinze observations au total, mais **deux incidents ont un effort non relevé** et sont séparés des runs Medium.
 
 ### Medium
 
-- observations : **12**
-- succès : **11**
+- observations : **13**
+- succès : **12**
 - échec avant audit : **1**
 - quota visible cumulé : **6 pts**
-- durée cumulée : **1 h 02 min 09 s**
-- production ciblée récente : **10/10 succès**, **6 pts visibles cumulés**, **1 h 00 min 58 s**
-- détail des succès ciblés : **~0 pt / 40 s** sur l'analyse locale 6/6, **1 pt / 3:42** sur le correctif palette Utilisateurs, **~0 pt / 7:47** sur le Journal d’audit, **~0 pt / 3:19** sur la validation documentaire finale, **1 pt / 3:29** sur le fixture B1c, **~0 pt / 3:32** sur la compatibilité installateur B1d, **~0 pt / 4:52** sur la clôture documentaire B2, **1 pt / 3:11** sur le cleanup du fixture installer marker, **~0 pt / 4:14** sur le contrat manuel E-C, **2 pts / 12:53** sur la clôture documentaire E-D, **1 pt / 13:59** sur la pré-clôture documentaire 0.3.1.
+- durée cumulée : **1 h 05 min 28 s**
+- production ciblée récente : **11/11 succès**, **6 pts visibles cumulés**, **1 h 04 min 17 s**
+- détail des succès ciblés : **~0 pt / 40 s** sur l'analyse locale 6/6, **1 pt / 3:42** sur le correctif palette Utilisateurs, **~0 pt / 7:47** sur le Journal d’audit, **~0 pt / 3:19** sur la validation documentaire finale, **1 pt / 3:29** sur le fixture B1c, **~0 pt / 3:32** sur la compatibilité installateur B1d, **~0 pt / 4:52** sur la clôture documentaire B2, **1 pt / 3:11** sur le cleanup du fixture installer marker, **~0 pt / 4:14** sur le contrat manuel E-C, **2 pts / 12:53** sur la clôture documentaire E-D, **1 pt / 13:59** sur la pré-clôture documentaire 0.3.1, **~0 pt / 3:19** sur la clôture Ubuntu de 0.3.2-B.
 
 ### Incidents à effort non relevé
 
@@ -603,10 +617,10 @@ Quatorze observations au total, mais **deux incidents ont un effort non relevé*
 
 ### Total Luna, tous efforts confondus
 
-- observations : **14**
-- résultats : **11 succès · 1 échec · 2 blocages**
+- observations : **15**
+- résultats : **12 succès · 1 échec · 2 blocages**
 - quota connu : **≥11 pts**
-- durée cumulée : **2 h 37 min 09 s**
+- durée cumulée : **2 h 40 min 28 s**
 
 Les blocages GP-010/011 restent à interpréter comme incidents de fiabilité d'exécution possibles, pas comme une mesure pure des capacités de raisonnement de Luna.
 
