@@ -800,6 +800,34 @@
         "0.3.1 non publiée ; PR #19 reste Draft, sans merge ni tag",
         "Checkpoint documentaire uniquement"
       ]
+    },
+    {
+      "run_id": "GP-032",
+      "date": "2026-10-02",
+      "project": "GamePanel",
+      "model": "GPT-6 Luna",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "luna_targeted_production",
+      "task_summary": "0.3.1 pré-clôture documentaire : aligner état stable/candidate, README/validation/changelog et description PR #19",
+      "quota_before_pct": 97,
+      "quota_after_pct": 96,
+      "quota_used_points": 1,
+      "quota_approx": false,
+      "duration_seconds": 839,
+      "status": "success",
+      "commit_sha": "b67ac81851024fc4c30f85785f4f790633a90f0c",
+      "quality": {
+        "summary": "Checkpoint documentaire de pré-clôture livré et vérifié sur le dépôt distant ; six fichiers documentaires/manifeste modifiés, PR #19 toujours Draft avec description mise à jour ; aucun code de production modifié."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "not_supplied_duplicate_prompt",
+      "notes": [
+        "Le bloc Réponse fourni par l'utilisateur duplique le prompt ; aucun handoff Work distinct n'a été capturé",
+        "Succès vérifié par le HEAD de la Draft PR #19 et le commit distant",
+        "Commit parent exact 554b1d783e96a708b46b81252bfaf12e7f8dd10c",
+        "PR #19 reste Draft/open et sa description reflète l'état de pré-clôture 0.3.1"
+      ]
     }
   ]
 }
