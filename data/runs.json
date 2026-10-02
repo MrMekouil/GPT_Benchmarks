@@ -635,6 +635,33 @@
         "E-C non commencé",
         "Les parties natives Linux/POSIX restent à revalider sur Ubuntu"
       ]
+    },
+    {
+      "run_id": "GP-026",
+      "date": "2026-10-02",
+      "project": "GamePanel",
+      "model": "GPT-6 Luna",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "luna_targeted_production",
+      "task_summary": "0.3.1-E-B2 : clôture documentaire après validation Ubuntu réelle B2",
+      "quota_before_pct": 77,
+      "quota_after_pct": 77,
+      "quota_used_points": 0,
+      "quota_approx": true,
+      "duration_seconds": 292,
+      "status": "success",
+      "commit_sha": "e02109326cc8bca60cd945a19cf89740c727a1e0",
+      "quality": {
+        "summary": "Clôture documentaire B2 terminée ; 63/63 identité PASS, 99/99 régressions ciblées PASS, 105/105 installateur PASS ; aucun code fonctionnel ni test modifié."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Aucun mouvement visible du quota ; consommation réelle possiblement inférieure au pas d'affichage",
+        "Validations Ubuntu déjà acquises avant le run",
+        "E-C non commencé"
+      ]
     }
   ]
 }
