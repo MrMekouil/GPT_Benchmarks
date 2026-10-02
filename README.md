@@ -34,7 +34,7 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 | 5.6 | **GPT-5.6 Sol** | Medium | 1 | **1 succès** | **6 pts** | **6,00 pts** | **1:50** |
 | 6.0 | **GPT-6 Luna** | Medium | 8 | **7 succès · 1 échec** | **2 pts visibles** | **0,25 pt** | **27:52** |
 | 6.0 | **GPT-6 Luna** | non relevé* | 2 | **2 blocages** | **≥5 pts connus*** | **≥2,50 pts*** | **1:35:00** |
-| 6.0 | **GPT-6 Sol** | Medium | 6 | **6 succès** | **~52 pts** | **~8,67 pts** | **32:03** |
+| 6.0 | **GPT-6 Sol** | Medium | 7 | **7 succès** | **~73 pts** | **~10,43 pts** | **52:38** |
 | 6.0 | **GPT-6 Sol** | High | 1 | **1 partiel** | **~20 pts** | **~20,00 pts** | **12:07** |
 | 6.0 | **GPT-6 Astra** | Low | 2 | **2 succès** | **30 pts** | **15,00 pts** | **2:52** |
 | 6.1 | **GPT-6.1 Sol** | Medium | 7 | **6 succès · 1 bloqué** | **73 pts** | **10,43 pts** | **1:40:32** |
@@ -45,7 +45,7 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 
 - **A/B historique le plus propre :** GPT-6 Sol Medium = 4 pts, GPT-5.6 Sol Medium = 6 pts, GPT-6 Astra Low = 17 pts pour le même diagnostic principal.
 - **A/B fonctionnel :** GPT-6 Sol Medium = 4 pts contre GPT-6 Astra Low = 13 pts, avec la même lacune principale trouvée.
-- **GPT-6 Sol Medium en production :** deux gros checkpoints complets observés à **11 pts / 8:42** (pré-clôture) puis **22 pts / 14:13** (audit transversal d’architecture 0.3.1-E-A). Le coût varie donc fortement avec la profondeur et le périmètre.
+- **GPT-6 Sol Medium en production :** trois gros checkpoints complets observés à **11 pts / 8:42** (pré-clôture), **22 pts / 14:13** (audit transversal 0.3.1-E-A) et **21 pts / 20:35** (correctif concurrence installer/recovery GP-028). Le coût varie fortement avec la profondeur et le périmètre.
 - **GPT-6.1 Sol Medium :** 6 tâches de production terminées sur 7 tentatives observées. Après B2 à **16 pts / 21:37**, E-C UI coûte **17 pts / 26:31**. GP-021 reste le seul blocage, à **5 pts / 4:31**, lié à l’absence d’environnement Linux/POSIX pour les tests crash/locks exigés.
 - **GPT-6 Luna Medium :** **8 runs Medium** observés : **7 succès / 1 échec**, **2 points visibles** au total, **27:52**. Les **6 checkpoints de production récents** sont à **6/6 succès**, **2 points visibles** et **26:41**. À part, GP-010/011 représentent **2 blocages à effort non relevé**, **1:35:00** cumulé et **≥5 points connus**.
 
@@ -69,8 +69,9 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 | GP-018 | Pré-clôture 0.3.1 : audit global, versions, critères de sortie, tests/docs/manifeste | **11 pts** | **8:42** | terminé, commit `3de9d3a...` |
 | GP-020 | 0.3.1-E-A : audit identité d’instance, persistances, contrat rename/recovery | **22 pts** | **14:13** | terminé, commit `1a83550...` |
 | GP-024 | Clôture documentaire B1 après validation Ubuntu complète | **6 pts** | **3:21** | terminé, commit `ca16063...` |
+| GP-028 | Correctif startup installateur ↔ `identity-recover`, fail-closed conservé | **21 pts** | **20:35** | terminé, commit `f4bd104...` |
 
-GP-024 est à lire séparément des deux gros checkpoints : il enregistre des validations Ubuntu déjà acquises et ne contient aucune implémentation fonctionnelle.
+GP-024 est à lire séparément des gros checkpoints : il enregistre des validations Ubuntu déjà acquises et ne contient aucune implémentation fonctionnelle. GP-028 est au contraire un correctif de sûreté/concurrence transversal.
 
 ### Runs réels GPT-6 Luna Medium
 
@@ -102,7 +103,7 @@ Cumul GPT-6.1 Sol Medium à ce stade : **73 points**, **1 h 40 min 32 s**, **6 s
 ## Lecture provisoire
 
 - **GPT-6 Luna Medium** : très économique sur les tâches ciblées observées : **7/8 succès Medium** et seulement **2 points visibles** cumulés. Les deux longs blocages connus sont conservés séparément car leur effort n’avait pas été relevé ; ils restent un signal de fiabilité d’exécution à surveiller.
-- **GPT-6 Sol Medium** : six succès observés. Les audits ciblés sont à 4 pts, les gros checkpoints à 11–22 pts, et la clôture documentaire B1 à 6 pts. Le coût suit fortement la nature réelle du travail, pas seulement sa durée.
+- **GPT-6 Sol Medium** : sept succès observés. Les audits ciblés sont à 4 pts, les gros checkpoints se situent désormais à **11–22 pts**, et GP-028 confirme qu’un correctif de sûreté/concurrence transversal peut monter à **21 pts / 20:35**. La moyenne brute passe à **~10,43 pts/run**.
 - **GPT-6 Sol High** : un gros run multi-étapes a consommé ~20 points en 12:07 et s'est arrêté faute de quota avant la fin. Cela ne mesure pas son intelligence, mais montre le risque d'un effort High sur un long marathon.
 - **GPT-6 Astra Low** : excellente qualité, mais 13–17 points sur les deux audits comparables où Sol Medium en consommait 4.
 - **GPT-5.6 Sol Medium** : baseline fiable, mais plus coûteuse que GPT-6 Sol Medium sur le benchmark directement comparable.
@@ -112,7 +113,7 @@ Cumul GPT-6.1 Sol Medium à ce stade : **73 points**, **1 h 40 min 32 s**, **6 s
 
 - `data/runs.json` est la source structurée canonique.
 - `data/runs.csv` est régénéré depuis le JSON pour éviter les décalages de colonnes.
-- État vérifié au 2026-10-02 : **27 runs JSON = 27 lignes CSV**, IDs uniques et champs communs cohérents.
+- État vérifié au 2026-10-02 : **28 runs JSON = 28 lignes CSV**, IDs uniques et champs communs cohérents.
 
 ## Méthode
 
