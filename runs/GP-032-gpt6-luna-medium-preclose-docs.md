@@ -239,15 +239,14 @@ Ne pas fournir de procédure Ubuntu utilisateur.
 Assistant pilotera la validation finale.
 ~~~
 
-## Réponse
+## Réponse exacte
 
-Le bloc « Réponse » fourni avec ce benchmark est une **copie du prompt** et ne contient pas le handoff Work distinct.
-
-La réponse réelle est donc considérée **non capturée**. Le succès du run a toutefois été vérifié directement sur GitHub :
-
-- la Draft PR #19 pointe sur `b67ac81851024fc4c30f85785f4f790633a90f0c` ;
-- commit : `docs: align 0.3.1 pre-release state` ;
-- parent exact : `554b1d783e96a708b46b81252bfaf12e7f8dd10c` ;
-- fichiers modifiés : `ASSISTANT_STATE.md`, `MANIFEST.sha256`, `README.md`, `WORK_STATE.md`, `docs/CHANGELOG.md`, `docs/VALIDATION.md` ;
-- la PR reste ouverte et Draft ;
-- sa description a été mise à jour avec la base stable `v0.3.06`, la candidate 0.3.1, les validations Ubuntu et les N/A conservés.
+~~~text
+1. **HEAD :** `b67ac81851024fc4c30f85785f4f790633a90f0c`
+2. **Fichiers modifiés :** `WORK_STATE.md`, `README.md`, `ASSISTANT_STATE.md`, `docs/CHANGELOG.md`, `docs/VALIDATION.md`, `MANIFEST.sha256` ; description de la PR #19 actualisée.
+3. **Code de production :** aucun changement.
+4. **Tests :** `test_release_docs` PASS ; `test_version_031` N/A, import bloqué par l’absence de `aiohttp`. `git diff --check` PASS.
+5. **Manifeste :** 181 entrées, format valide, aucun `undefined` ; contenu vérifié sur la branche distante.
+6. **PR #19 :** toujours Draft, non mergée et non taguée.
+7. Le miroir local reste dirty avec ses modifications préexistantes ; elles ont été préservées.
+~~~
