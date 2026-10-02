@@ -86,7 +86,7 @@ GP-024 est à lire séparément des gros checkpoints : il enregistre des validat
 | GP-029 | Fixture POSIX `installing()` : nettoyage du marker sans code production | **1 pt** | **3:11** | terminé, commit `b78d765...` |
 | GP-030 | Contrat manuel 0.3.06 : `path` + identité E-C bornée, sans code production | **~0 pt visible** | **4:14** | terminé, commit `8dff817...` |
 | GP-031 | E-D : clôture documentaire après 282/282 Ubuntu + update réelle + validation desktop/mobile | **2 pts** | **12:53** | terminé, commit `554b1d7...` |
-| GP-032 | Pré-clôture 0.3.1 : alignement docs + état stable/candidate + description PR #19 | **1 pt** | **13:59** | succès vérifié, commit `b67ac81...`; handoff non capturé |
+| GP-032 | Pré-clôture 0.3.1 : alignement docs + état stable/candidate + description PR #19 | **1 pt** | **13:59** | terminé, commit `b67ac81...` |
 
 Ces dix runs sont de vrais checkpoints de production Luna terminés après les incidents de fiabilité observés : **10/10 réussis**, **6 points visibles cumulés**, **1:00:58** au total.
 
