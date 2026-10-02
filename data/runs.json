@@ -772,6 +772,34 @@
         "Aucun code production modifié",
         "Réponse Work fournie par l'utilisateur se termine sur une commande Ubuntu tronquée"
       ]
+    },
+    {
+      "run_id": "GP-031",
+      "date": "2026-10-02",
+      "project": "GamePanel",
+      "model": "GPT-6 Luna",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "luna_targeted_production",
+      "task_summary": "0.3.1-E-D : clôture documentaire de la gestion Admin des instances après validation Ubuntu réelle complète",
+      "quota_before_pct": 99,
+      "quota_after_pct": 97,
+      "quota_used_points": 2,
+      "quota_approx": false,
+      "duration_seconds": 773,
+      "status": "success",
+      "commit_sha": "554b1d783e96a708b46b81252bfaf12e7f8dd10c",
+      "quality": {
+        "summary": "Checkpoint documentaire E-D clôturé ; 282/282 Ubuntu PASS, update réelle PASS, validation desktop/mobile E-C et cas réels consignés ; deux N/A volontaires et Playwright/Windows conservés N/A ; aucun code de production modifié."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "E-A/E-B1/E-B2/E-C/E-D marqués acquis sur la candidate",
+        "Rename d'id réussi et création auto/manuelle réelle volontairement non exécutés",
+        "0.3.1 non publiée ; PR #19 reste Draft, sans merge ni tag",
+        "Checkpoint documentaire uniquement"
+      ]
     }
   ]
 }
