@@ -535,6 +535,20 @@ Checkpoint documentaire de pré-clôture : état stable/candidate, README, valid
 
 Le miroir Work était encore sur `work/0.3.1-ui-ux`, au HEAD `7ba38960...`, avec 27 fichiers modifiés et 13 non suivis. Le prompt imposait explicitement STOP dans cet état. Le dépôt distant `main` a ensuite été vérifié séparément au HEAD attendu `b7700370...`; aucune branche 0.3.2 n’a été créée.
 
+---
+
+## GP-034 — GPT-6.1 Sol Medium — 0.3.2-A contrat manifestes/contenu
+
+- Date : 2026-10-02
+- Quota : 94 % → 78 % = **16 pts**
+- Durée : **24 min 29 s**
+- Statut : **succès**
+- Commit : `2c61b30a07859ced630d2dd8a01c5b9c3e786d28`
+- Draft PR : **#22**
+- Prompt + réponse complets : [runs/GP-034-gpt61-sol-medium-032a-content-manifest-contract.md](runs/GP-034-gpt61-sol-medium-032a-content-manifest-contract.md)
+
+Reprise réussie après GP-033 via un worktree propre séparé. Checkpoint 0.3.2-A documentaire/architectural livré : contrat manifestes, stockage, publication, classification, sécurité/RBAC, rename/recovery et découpage B→F. Aucun code de production, migration, scanner, provider, API, UI ou content store fonctionnel ajouté.
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -584,14 +598,14 @@ Les blocages GP-010/011 restent à interpréter comme incidents de fiabilité d'
 
 ## GPT-6.1 Sol Medium
 
-Huit observations de production :
+Neuf observations de production :
 
-- quota cumulé : **74 pts**
-- durée cumulée : **1 h 40 min 49 s**
-- résultats : **6 succès / 2 blocages**
-- moyenne brute : **9,25 pts/observation**
+- quota cumulé : **90 pts**
+- durée cumulée : **2 h 05 min 18 s**
+- résultats : **7 succès / 2 blocages**
+- moyenne brute : **10,00 pts/observation**
 
-Les six tâches terminées représentent **68 pts**. Les deux blocages représentent **6 pts** : GP-021 à **5 pts / 4:31** sans livraison B1 faute d’environnement POSIX, puis GP-033 à **1 pt / 0:17** avec STOP correct sur miroir Work incohérent/dirty. Les deux gros lots livrés les plus récents restent **16 pts / 21:37** pour B2 backend/root puis **17 pts / 26:31** pour E-C UI.
+Les sept tâches terminées représentent **84 pts**. Les deux blocages représentent **6 pts** : GP-021 à **5 pts / 4:31** sans livraison B1 faute d’environnement POSIX, puis GP-033 à **1 pt / 0:17** avec STOP correct sur miroir Work incohérent/dirty. Les trois gros lots récents se situent à **16 pts / 21:37** pour B2 backend/root, **17 pts / 26:31** pour E-C UI et **16 pts / 24:29** pour le contrat 0.3.2-A.
 
 ## Comparaison directe historique
 
