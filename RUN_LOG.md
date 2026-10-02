@@ -418,6 +418,19 @@ Correctif réel de code : `write_inventory()` distingue les DB historiques sans 
 
 Clôture documentaire de B1 après validations Ubuntu déjà acquises : 37/37 identity sous chacun des umasks `0002` et `022`, 99/99 régressions ciblées et 105/105 installateur. Aucun code fonctionnel ni test modifié.
 
+---
+
+## GP-025 — GPT-6.1 Sol Medium — 0.3.1-E-B2 API Admin identité
+
+- Date : 2026-10-02
+- Quota : 93 % → 77 % = **16 pts**
+- Durée : **21 min 37 s**
+- Statut : **succès**
+- Commit : `68d9a0dc99cf775bcde4f50a751f37553f2efe41`
+- Prompt + réponse complets : [runs/GP-025-gpt61-sol-medium-identity-admin-b2.md](runs/GP-025-gpt61-sol-medium-identity-admin-b2.md)
+
+Checkpoint fonctionnel B2 : API Admin d’identité et création d’instance avec id/nom personnalisés. Work : 29 tests portables PASS ; 34 tests natifs N/A dans l’environnement Windows ; validation Ubuntu encore requise.
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -451,14 +464,14 @@ Les blocages GP-010/011 restent à interpréter comme incidents de fiabilité d'
 
 ## GPT-6.1 Sol Medium
 
-Cinq observations de production :
+Six observations de production :
 
-- quota cumulé : **40 pts**
-- durée cumulée : **52 min 24 s**
-- résultats : **4 succès / 1 blocage**
-- moyenne brute : **8 pts/observation**
+- quota cumulé : **56 pts**
+- durée cumulée : **1 h 14 min 01 s**
+- résultats : **5 succès / 1 blocage**
+- moyenne brute : **~9,33 pts/observation**
 
-Les quatre tâches terminées représentent **35 pts** ; GP-021 a consommé **5 pts** sans livrer B1. Le blocage est environnemental : tests POSIX/crash non exécutables dans le sandbox Windows. Cela ne constitue pas à lui seul un échec de raisonnement du modèle.
+Les cinq tâches terminées représentent **51 pts** ; GP-021 a consommé **5 pts** sans livrer B1. GP-025 est le premier gros checkpoint backend/root B2 livré : **16 pts / 21:37**. Le blocage GP-021 reste environnemental : tests POSIX/crash non exécutables dans le sandbox Windows.
 
 ## Comparaison directe historique
 
