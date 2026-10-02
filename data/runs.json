@@ -689,6 +689,34 @@
         "Backend B1/B2 et SQLite schema 4 inchangés",
         "E-C reste candidate jusqu'à validation visuelle Ubuntu"
       ]
+    },
+    {
+      "run_id": "GP-028",
+      "date": "2026-10-02",
+      "project": "GamePanel",
+      "model": "GPT-6 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "identity_installer_startup_fix",
+      "task_summary": "0.3.1-E-C blocker : fast-path borné identity-recover pendant startup contrôlé par l’installateur",
+      "quota_before_pct": 60,
+      "quota_after_pct": 39,
+      "quota_used_points": 21,
+      "quota_approx": false,
+      "duration_seconds": 1235,
+      "status": "success",
+      "commit_sha": "f4bd104f5f9a401ae9c429176ee839b03ba704ae",
+      "quality": {
+        "summary": "Correctif candidat livré et poussé ; fast-path recovery borné pendant startup installateur, fail-closed conservé ; 35 tests Python et 2 contrats Web PASS ; 43 scénarios natifs N/A ; update Ubuntu réelle encore requise."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Correctif de sûreté/concurrence entre installer_lock et identity-recover au startup",
+        "Recovery B1 normal et rename inchangés",
+        "E-C reste candidate ; E-D non commencé",
+        "Validation Ubuntu post-correctif encore requise"
+      ]
     }
   ]
 }
