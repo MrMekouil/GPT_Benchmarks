@@ -29,17 +29,17 @@ La métrique la plus utile est donc :
 
 Vue regroupée par modèle/effort, classée dans l'ordre logique des générations. Les moyennes ne sont indicatives que lorsque les tâches sont suffisamment comparables.
 
-| Génération | Modèle | Effort | Runs observés | Résultats | Quota visible observé | Durée cumulée |
-|---|---|---|---:|---|---|---:|
-| 5.6 | **GPT-5.6 Sol** | Medium | 1 | **1 succès** | **6 pts** au total · 6 pts/succès | **1:50** |
-| 6.0 | **GPT-6 Luna** | Medium | 8 | **7 succès · 1 échec** | **2 pts visibles** au total | **27:52** |
-| 6.0 | **GPT-6 Luna** | non relevé* | 2 | **2 blocages** | **≥5 pts connus*** | **1:35:00** |
-| 6.0 | **GPT-6 Sol** | Medium | 6 | **6 succès** | **~52 pts** au total · ~8,67 pts/run | **32:03** |
-| 6.0 | **GPT-6 Sol** | High | 1 | **1 partiel** | **~20 pts** | **12:07** |
-| 6.0 | **GPT-6 Astra** | Low | 2 | **2 succès** | **30 pts** au total · 15 pts/run | **2:52** |
-| 6.1 | **GPT-6.1 Sol** | Medium | 7 | **6 succès · 1 bloqué** | **73 pts** au total · 68 succès + 5 bloqué | **1:40:32** |
+| Génération | Modèle | Effort | Runs observés | Résultats | Quota visible cumulé | Moyenne quota / run | Durée cumulée |
+|---|---|---|---:|---|---:|---:|---:|
+| 5.6 | **GPT-5.6 Sol** | Medium | 1 | **1 succès** | **6 pts** | **6,00 pts** | **1:50** |
+| 6.0 | **GPT-6 Luna** | Medium | 8 | **7 succès · 1 échec** | **2 pts visibles** | **0,25 pt** | **27:52** |
+| 6.0 | **GPT-6 Luna** | non relevé* | 2 | **2 blocages** | **≥5 pts connus*** | **≥2,50 pts*** | **1:35:00** |
+| 6.0 | **GPT-6 Sol** | Medium | 6 | **6 succès** | **~52 pts** | **~8,67 pts** | **32:03** |
+| 6.0 | **GPT-6 Sol** | High | 1 | **1 partiel** | **~20 pts** | **~20,00 pts** | **12:07** |
+| 6.0 | **GPT-6 Astra** | Low | 2 | **2 succès** | **30 pts** | **15,00 pts** | **2:52** |
+| 6.1 | **GPT-6.1 Sol** | Medium | 7 | **6 succès · 1 bloqué** | **73 pts** | **10,43 pts** | **1:40:32** |
 
-\* GP-010 et GP-011 n’avaient pas d’effort relevé ; GP-010 n’a pas non plus de mesure de quota. Ils restent séparés des runs Luna Medium.
+\* GP-010 et GP-011 n’avaient pas d’effort relevé ; GP-010 n’a pas non plus de mesure de quota. Ils restent séparés des runs Luna Medium. La moyenne affichée est la **moyenne brute par observation de la ligne**, y compris échecs/blocages ; pour ces deux incidents Luna, **≥2,50 pts/run** est seulement une borne basse puisque GP-010 n’a pas de mesure.
 
 ### Repères rapides
 
