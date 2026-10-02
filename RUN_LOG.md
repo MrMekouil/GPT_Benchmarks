@@ -577,6 +577,20 @@ Premier checkpoint fonctionnel 0.3.2 : scanner Minecraft local read-only et born
 
 Clôture documentaire de B après validation Ubuntu réelle : scanner **40/40 PASS sans skip**, régressions ciblées PASS, manifeste 184 empreintes PASS, release docs et diff-check PASS. Aucun code fonctionnel modifié ; B est désormais acquis.
 
+---
+
+## GP-037 — GPT-6.1 Sol Medium — 0.3.2-C providers/classification
+
+- Date : 2026-10-02
+- Quota : 66 % → 49 % = **17 pts**
+- Durée : **33 min 55 s**
+- Statut : **succès**
+- Commit : `fc6fcaef584ad1d7eaf0fd99f917acdea5761c98`
+- Draft PR : **#22**
+- Prompt + réponse complets : [runs/GP-037-gpt61-sol-medium-032c-providers-classification.md](runs/GP-037-gpt61-sol-medium-032c-providers-classification.md)
+
+Checkpoint fonctionnel C livré : providers JAR local, Modrinth, CurseForge, Packwiz/mrpack ; classification déterministe, provenance, conflits, overrides Admin et cache interne. C 58 + B 25 + SQL/docs 18 PASS ; compilation, diff-check et manifeste 189/189 PASS. Les 16 tests POSIX et certaines suites dépendantes de pydantic/aiohttp restent N/A. C reste candidate.
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -626,14 +640,14 @@ Les blocages GP-010/011 restent à interpréter comme incidents de fiabilité d'
 
 ## GPT-6.1 Sol Medium
 
-Dix observations de production :
+Onze observations de production :
 
-- quota cumulé : **102 pts**
-- durée cumulée : **2 h 26 min 07 s**
-- résultats : **8 succès / 2 blocages**
-- moyenne brute : **10,20 pts/observation**
+- quota cumulé : **119 pts**
+- durée cumulée : **3 h 00 min 02 s**
+- résultats : **9 succès / 2 blocages**
+- moyenne brute : **10,82 pts/observation**
 
-Les huit tâches terminées représentent **96 pts**. Les deux blocages représentent **6 pts** : GP-021 à **5 pts / 4:31** sans livraison B1 faute d’environnement POSIX, puis GP-033 à **1 pt / 0:17** avec STOP correct sur miroir Work incohérent/dirty. Les quatre gros lots récents se situent à **16 pts / 21:37** pour B2 backend/root, **17 pts / 26:31** pour E-C UI, **16 pts / 24:29** pour le contrat 0.3.2-A et **12 pts / 20:49** pour le scanner Minecraft 0.3.2-B.
+Les neuf tâches terminées représentent **113 pts**. Les deux blocages représentent **6 pts** : GP-021 à **5 pts / 4:31** sans livraison B1 faute d’environnement POSIX, puis GP-033 à **1 pt / 0:17** avec STOP correct sur miroir Work incohérent/dirty. Les cinq gros lots récents se situent à **16 pts / 21:37** pour B2 backend/root, **17 pts / 26:31** pour E-C UI, **16 pts / 24:29** pour le contrat 0.3.2-A, **12 pts / 20:49** pour le scanner Minecraft 0.3.2-B et **17 pts / 33:55** pour les providers/classification 0.3.2-C.
 
 ## Comparaison directe historique
 
