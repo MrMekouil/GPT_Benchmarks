@@ -662,6 +662,33 @@
         "Validations Ubuntu déjà acquises avant le run",
         "E-C non commencé"
       ]
+    },
+    {
+      "run_id": "GP-027",
+      "date": "2026-10-02",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "identity_ui_ec",
+      "task_summary": "0.3.1-E-C : UI Admin Instances pour gestion identité, création auto/manuelle id+nom, retrait édition du dashboard",
+      "quota_before_pct": 77,
+      "quota_after_pct": 60,
+      "quota_used_points": 17,
+      "quota_approx": false,
+      "duration_seconds": 1591,
+      "status": "success",
+      "commit_sha": "11f19845baf275c2765e93454b3a3e8aed8b9bb8",
+      "quality": {
+        "summary": "Checkpoint UI E-C livré ; 7 contrats Web PASS, 21 vérifications syntaxiques PASS, git diff --check et manifeste PASS ; 11 contrats navigateur N/A faute de Playwright ; validation visuelle Ubuntu desktop/mobile encore requise."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Gros checkpoint UI/UX fonctionnel",
+        "Backend B1/B2 et SQLite schema 4 inchangés",
+        "E-C reste candidate jusqu'à validation visuelle Ubuntu"
+      ]
     }
   ]
 }
