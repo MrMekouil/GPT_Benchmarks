@@ -581,6 +581,32 @@
         "Correction réelle de code avec quatre tests ciblés",
         "B1 reste conditionné à la revalidation Ubuntu finale"
       ]
+    },
+    {
+      "run_id": "GP-024",
+      "date": "2026-10-02",
+      "project": "GamePanel",
+      "model": "GPT-6 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "b1_validation_close",
+      "task_summary": "0.3.1-E-B1 : clôture documentaire après validation Ubuntu réelle identity/régressions/installateur",
+      "quota_before_pct": 99,
+      "quota_after_pct": 93,
+      "quota_used_points": 6,
+      "quota_approx": false,
+      "duration_seconds": 201,
+      "status": "success",
+      "commit_sha": "ca16063343009337cbc08118c1e8f11c46acb8eb",
+      "quality": {
+        "summary": "Clôture documentaire terminée ; B1 acquis sur Ubuntu réel ; 37/37 identity PASS sous umask 0002 et 022, 99/99 régressions ciblées PASS, 105/105 installateur PASS ; aucun code fonctionnel ni test modifié."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Checkpoint documentaire de clôture, pas une implémentation",
+        "Les validations Ubuntu avaient déjà été exécutées par l'utilisateur avant le run Work"
+      ]
     }
   ]
 }
