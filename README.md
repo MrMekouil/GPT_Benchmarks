@@ -32,7 +32,7 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 | Génération | Modèle | Effort | Runs observés | Résultats | Quota visible observé | Durée cumulée |
 |---|---|---|---:|---|---|---:|
 | 5.6 | **GPT-5.6 Sol** | Medium | 1 | **1 succès** | **6 pts** au total · 6 pts/succès | **1:50** |
-| 6.0 | **GPT-6 Luna** | Medium* | 8 | **5 succès · 1 échec · 2 blocages** | **≥7 pts connus*** | **1:54:28** |
+| 6.0 | **GPT-6 Luna** | Medium* | 9 | **6 succès · 1 échec · 2 blocages** | **≥7 pts connus*** | **1:58:00** |
 | 6.0 | **GPT-6 Sol** | Medium | 5 | **5 succès** | **~46 pts** au total · ~9,2 pts/run | **28:42** |
 | 6.0 | **GPT-6 Sol** | High | 1 | **1 partiel** | **~20 pts** | **12:07** |
 | 6.0 | **GPT-6 Astra** | Low | 2 | **2 succès** | **30 pts** au total · 15 pts/run | **2:52** |
@@ -44,7 +44,7 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 - **A/B fonctionnel :** GPT-6 Sol Medium = 4 pts contre GPT-6 Astra Low = 13 pts, avec la même lacune principale trouvée.
 - **GPT-6 Sol Medium en production :** deux gros checkpoints complets observés à **11 pts / 8:42** (pré-clôture) puis **22 pts / 14:13** (audit transversal d’architecture 0.3.1-E-A). Le coût varie donc fortement avec la profondeur et le périmètre.
 - **GPT-6.1 Sol Medium :** 4 tâches de production terminées sur 5 tentatives observées. Les quatre succès consomment 3 à 11 pts ; GP-021 a consommé **5 pts / 4:31** puis s’est arrêté avant implémentation, faute d’environnement Linux/POSIX permettant les tests crash/locks exigés.
-- **GPT-6 Luna Medium :** cinq succès ciblés observés, dont quatre vrais checkpoints de production récents. Ces quatre checkpoints totalisent **2 points visibles** pour **18:17**. GP-022 est un correctif de fixture B1c à **1 pt / 3:29**, succès vérifié directement sur le commit distant. Deux longues sessions bloquées ont aussi été observées. *L'effort des deux incidents n'avait pas été relevé ; un incident n'a pas de mesure de quota.*
+- **GPT-6 Luna Medium :** six succès ciblés observés, dont cinq vrais checkpoints de production récents. Ces cinq checkpoints totalisent **2 points visibles** pour **21:49**. GP-023 est un vrai correctif installateur à **~0 pt visible / 3:32**, avec 17 tests PASS dans Work ; les suites Linux restent à revalider sur Ubuntu. Deux longues sessions bloquées ont aussi été observées. *L'effort des deux incidents n'avait pas été relevé ; un incident n'a pas de mesure de quota.*
 
 ## Résultats actuellement observés
 
@@ -76,8 +76,9 @@ Ces deux gros checkpoints montrent un écart important selon la complexité : **
 | GP-017 | Journal d’audit : palette graphite + responsive cartes mobile + contrat/manifeste | **~0 pt visible** | **7:47** | terminé, commit `4966b61...` |
 | GP-019 | Validation documentaire finale 0.3.1 + BeamMP réel + manifeste | **~0 pt visible** | **3:19** | terminé, commit `92df2a3...` |
 | GP-022 | B1c : correction du fixture no-op root, sans code de production | **1 pt** | **3:29** | terminé, commit `3c6c7e1...` |
+| GP-023 | B1d : compatibilité installateur historique `write_inventory/aliases` + tests | **~0 pt visible** | **3:32** | terminé, commit `45d4a38...` |
 
-Ces quatre runs sont de vrais checkpoints de production Luna terminés après les incidents de fiabilité observés : **4/4 réussis**, **2 points visibles cumulés**, **18:17** au total.
+Ces cinq runs sont de vrais checkpoints de production Luna terminés après les incidents de fiabilité observés : **5/5 réussis**, **2 points visibles cumulés**, **21:49** au total.
 
 ### Runs réels GPT-6.1 Sol Medium
 
