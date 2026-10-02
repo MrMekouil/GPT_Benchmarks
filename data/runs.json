@@ -358,7 +358,7 @@
       "quota_approx": false,
       "duration_seconds": 352,
       "status": "success",
-      "commit_sha": "de76ac3",
+      "commit_sha": "de76ac399e4f805e82de0006d8f07d8cffc32b7b",
       "quality": {
         "summary": "Correctif ciblé terminé ; contrat Utilisateurs PASS ; syntaxes JS/CJS PASS ; git diff PASS ; 5 tests Python ciblés PASS ; backend bloqué par aiohttp absent ; navigateur N/A"
       },
