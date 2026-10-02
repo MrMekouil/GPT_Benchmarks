@@ -607,6 +607,34 @@
         "Checkpoint documentaire de clôture, pas une implémentation",
         "Les validations Ubuntu avaient déjà été exécutées par l'utilisateur avant le run Work"
       ]
+    },
+    {
+      "run_id": "GP-025",
+      "date": "2026-10-02",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "identity_admin_b2",
+      "task_summary": "0.3.1-E-B2 : API Admin d'identité + création d'instance avec id/nom personnalisés",
+      "quota_before_pct": 93,
+      "quota_after_pct": 77,
+      "quota_used_points": 16,
+      "quota_approx": false,
+      "duration_seconds": 1297,
+      "status": "success",
+      "commit_sha": "68d9a0dc99cf775bcde4f50a751f37553f2efe41",
+      "quality": {
+        "summary": "Checkpoint fonctionnel B2 livré ; PATCH Admin identité et register custom id/nom ajoutés ; 29 tests portables PASS ; 34 tests natifs N/A dans Work Windows ; validation Ubuntu encore requise."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Vrai checkpoint fonctionnel large avec code backend/root, docs et 415 lignes de tests ciblés ajoutées",
+        "SQLite schema 4 conservé",
+        "E-C non commencé",
+        "Les parties natives Linux/POSIX restent à revalider sur Ubuntu"
+      ]
     }
   ]
 }
