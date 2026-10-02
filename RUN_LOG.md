@@ -483,6 +483,19 @@ Correctif de sûreté/concurrence : le startup contrôlé par l’installateur d
 
 Correctif de fixture uniquement : `installing()` nettoie désormais le marker qu’il a créé avant de relâcher le lock ; aucun code de production modifié. Work : 23 tests PASS, 22 tests POSIX N/A, compileall et diff-check PASS ; Ubuntu à rejouer.
 
+---
+
+## GP-030 — GPT-6 Luna Medium — contrat manuel E-C
+
+- Date : 2026-10-02
+- Quota : 99 % → 99 % = **~0 pt visible**
+- Durée : **4 min 14 s**
+- Statut : **succès**
+- Commit : `8dff817dbb48c2c716fb0af5d4827cd803b3dd73`
+- Prompt + réponse complets : [runs/GP-030-gpt6-luna-medium-manual-contract.md](runs/GP-030-gpt6-luna-medium-manual-contract.md)
+
+Correction de contrat de test uniquement : le payload manuel attendu est désormais `path + instance_id/display_name`, sans propriété technique injectable. Aucun code de production modifié. La commande Ubuntu du handoff fourni est archivée telle quelle, tronquée en fin de réponse.
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -502,17 +515,17 @@ La moyenne brute mélange des tâches de tailles très différentes. GP-018, GP-
 
 ## GPT-6 Luna
 
-Onze observations au total, mais **deux incidents ont un effort non relevé** et sont séparés des runs Medium.
+Douze observations au total, mais **deux incidents ont un effort non relevé** et sont séparés des runs Medium.
 
 ### Medium
 
-- observations : **9**
-- succès : **8**
+- observations : **10**
+- succès : **9**
 - échec avant audit : **1**
 - quota visible cumulé : **3 pts**
-- durée cumulée : **31 min 03 s**
-- production ciblée récente : **7/7 succès**, **3 pts visibles cumulés**, **29 min 52 s**
-- détail des succès ciblés : **~0 pt / 40 s** sur l'analyse locale 6/6, **1 pt / 3:42** sur le correctif palette Utilisateurs, **~0 pt / 7:47** sur le Journal d’audit, **~0 pt / 3:19** sur la validation documentaire finale, **1 pt / 3:29** sur le fixture B1c, **~0 pt / 3:32** sur la compatibilité installateur B1d, **~0 pt / 4:52** sur la clôture documentaire B2, **1 pt / 3:11** sur le cleanup du fixture installer marker.
+- durée cumulée : **35 min 17 s**
+- production ciblée récente : **8/8 succès**, **3 pts visibles cumulés**, **34 min 06 s**
+- détail des succès ciblés : **~0 pt / 40 s** sur l'analyse locale 6/6, **1 pt / 3:42** sur le correctif palette Utilisateurs, **~0 pt / 7:47** sur le Journal d’audit, **~0 pt / 3:19** sur la validation documentaire finale, **1 pt / 3:29** sur le fixture B1c, **~0 pt / 3:32** sur la compatibilité installateur B1d, **~0 pt / 4:52** sur la clôture documentaire B2, **1 pt / 3:11** sur le cleanup du fixture installer marker, **~0 pt / 4:14** sur le contrat manuel E-C.
 
 ### Incidents à effort non relevé
 
@@ -523,10 +536,10 @@ Onze observations au total, mais **deux incidents ont un effort non relevé** et
 
 ### Total Luna, tous efforts confondus
 
-- observations : **11**
-- résultats : **8 succès · 1 échec · 2 blocages**
+- observations : **12**
+- résultats : **9 succès · 1 échec · 2 blocages**
 - quota connu : **≥8 pts**
-- durée cumulée : **2 h 06 min 03 s**
+- durée cumulée : **2 h 10 min 17 s**
 
 Les blocages GP-010/011 restent à interpréter comme incidents de fiabilité d'exécution possibles, pas comme une mesure pure des capacités de raisonnement de Luna.
 
