@@ -554,6 +554,33 @@
         "Le résultat a été vérifié directement sur le dépôt distant",
         "Commit message exact : test: fix identity root fixture no-op isolation"
       ]
+    },
+    {
+      "run_id": "GP-023",
+      "date": "2026-10-02",
+      "project": "GamePanel",
+      "model": "GPT-6 Luna",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "luna_targeted_production",
+      "task_summary": "0.3.1-E-B1d : compatibilité write_inventory/aliases pour anciennes DB sans settings, avec fail-closed moderne",
+      "quota_before_pct": 99,
+      "quota_after_pct": 99,
+      "quota_used_points": 0,
+      "quota_approx": true,
+      "duration_seconds": 212,
+      "status": "success",
+      "commit_sha": "45d4a3872d727677378443fe700e19c42a2ef90b",
+      "quality": {
+        "summary": "Correctif installateur terminé ; 17 tests PASS, 20 root/runtime SKIP, compileall et git diff --check PASS ; suites 021/022/023 N/A sous Windows ; commit/push vérifiés."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Aucun mouvement visible du quota ; consommation réelle possiblement inférieure au pas d'affichage",
+        "Correction réelle de code avec quatre tests ciblés",
+        "B1 reste conditionné à la revalidation Ubuntu finale"
+      ]
     }
   ]
 }
