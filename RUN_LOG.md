@@ -518,10 +518,9 @@ Checkpoint documentaire de clôture E-D : 282/282 tests Ubuntu consignés PASS, 
 - Durée : **13 min 59 s**
 - Statut : **succès vérifié sur le dépôt distant**
 - Commit : `b67ac81851024fc4c30f85785f4f790633a90f0c`
-- Prompt complet : [runs/GP-032-gpt6-luna-medium-preclose-docs.md](runs/GP-032-gpt6-luna-medium-preclose-docs.md)
-- Réponse Work : **non capturée** ; le bloc « Réponse » fourni était un doublon du prompt.
+- Prompt + réponse complets : [runs/GP-032-gpt6-luna-medium-preclose-docs.md](runs/GP-032-gpt6-luna-medium-preclose-docs.md)
 
-Checkpoint documentaire de pré-clôture : état stable/candidate, README, validation/changelog et description de la Draft PR #19 alignés. Succès vérifié via le HEAD de la PR et le commit distant ; aucun code de production modifié.
+Checkpoint documentaire de pré-clôture : état stable/candidate, README, validation/changelog et description de la Draft PR #19 alignés. `test_release_docs` PASS ; `test_version_031` N/A faute d’`aiohttp` ; `git diff --check` PASS ; manifeste 181 entrées valide sans `undefined`. Aucun code de production modifié.
 
 # Agrégats provisoires
 
