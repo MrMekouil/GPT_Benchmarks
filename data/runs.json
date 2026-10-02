@@ -829,6 +829,34 @@
         "Réponse Work exacte fournie a posteriori par l'utilisateur et archivée",
         "Le miroir local est resté dirty avec ses modifications préexistantes, préservées"
       ]
+    },
+    {
+      "run_id": "GP-033",
+      "date": "2026-10-02",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "preflight_environment_block",
+      "task_summary": "0.3.2-A : ouverture documentaire/architecturale bloquée au pré-vol par miroir Work sur mauvaise branche/HEAD et working tree dirty",
+      "quota_before_pct": 95,
+      "quota_after_pct": 94,
+      "quota_used_points": 1,
+      "quota_approx": false,
+      "duration_seconds": 17,
+      "status": "blocked",
+      "commit_sha": null,
+      "quality": {
+        "summary": "STOP correct au pré-vol : aucun fichier modifié, aucune branche/PR créée, aucun commit/push ; le miroir Work local était sur work/0.3.1-ui-ux au HEAD 7ba38960… avec tree dirty. Le dépôt distant main était bien au HEAD attendu b7700370…."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Blocage environnemental/local mirror, pas un échec démontré de raisonnement",
+        "La consigne imposait STOP si main/HEAD/working tree n’étaient pas exactement conformes",
+        "Le remote main a été vérifié séparément au HEAD attendu b7700370be92cc072f139d0dd4c551d4e9783979",
+        "La branche work/0.3.2-content-manifests n’existe pas sur le dépôt distant après le run"
+      ]
     }
   ]
 }
