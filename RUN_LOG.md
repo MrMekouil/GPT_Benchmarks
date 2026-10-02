@@ -444,6 +444,19 @@ Checkpoint fonctionnel B2 : API Admin d’identité et création d’instance av
 
 Clôture documentaire de B2 après validations Ubuntu déjà acquises : 63/63 identité, 99/99 régressions ciblées et 105/105 installateur PASS. Aucun code fonctionnel ni test modifié.
 
+---
+
+## GP-027 — GPT-6.1 Sol Medium — 0.3.1-E-C UI Admin identité
+
+- Date : 2026-10-02
+- Quota : 77 % → 60 % = **17 pts**
+- Durée : **26 min 31 s**
+- Statut : **succès**
+- Commit : `11f19845baf275c2765e93454b3a3e8aed8b9bb8`
+- Prompt + réponse complets : [runs/GP-027-gpt61-sol-medium-identity-ui-ec.md](runs/GP-027-gpt61-sol-medium-identity-ui-ec.md)
+
+Checkpoint UI/UX fonctionnel E-C : gestion d’identité dans Admin > Instances, création auto/manuelle avec id/nom personnalisés, retrait du contrôle d’identité du dashboard normal. 7 contrats Web et 21 vérifications syntaxiques PASS ; 11 contrats navigateur N/A faute de Playwright ; validation visuelle Ubuntu encore requise.
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -477,14 +490,14 @@ Les blocages GP-010/011 restent à interpréter comme incidents de fiabilité d'
 
 ## GPT-6.1 Sol Medium
 
-Six observations de production :
+Sept observations de production :
 
-- quota cumulé : **56 pts**
-- durée cumulée : **1 h 14 min 01 s**
-- résultats : **5 succès / 1 blocage**
-- moyenne brute : **~9,33 pts/observation**
+- quota cumulé : **73 pts**
+- durée cumulée : **1 h 40 min 32 s**
+- résultats : **6 succès / 1 blocage**
+- moyenne brute : **~10,43 pts/observation**
 
-Les cinq tâches terminées représentent **51 pts** ; GP-021 a consommé **5 pts** sans livrer B1. GP-025 est le premier gros checkpoint backend/root B2 livré : **16 pts / 21:37**. Le blocage GP-021 reste environnemental : tests POSIX/crash non exécutables dans le sandbox Windows.
+Les six tâches terminées représentent **68 pts** ; GP-021 a consommé **5 pts** sans livrer B1. Les deux lots 0.3.1-E les plus récents sont **16 pts / 21:37** pour B2 backend/root puis **17 pts / 26:31** pour E-C UI. Le blocage GP-021 reste environnemental : tests POSIX/crash non exécutables dans le sandbox Windows.
 
 ## Comparaison directe historique
 
