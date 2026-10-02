@@ -914,6 +914,34 @@
         "Version application 0.3.1 et SQLite schema 4 inchangés",
         "PR #22 reste Draft ; 0.3.2-C non commencé"
       ]
+    },
+    {
+      "run_id": "GP-036",
+      "date": "2026-10-02",
+      "project": "GamePanel",
+      "model": "GPT-6 Luna",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "luna_targeted_production",
+      "task_summary": "0.3.2-B : clôture documentaire après validation Ubuntu réelle du scanner Minecraft local",
+      "quota_before_pct": 66,
+      "quota_after_pct": 66,
+      "quota_used_points": 0,
+      "quota_approx": true,
+      "duration_seconds": 199,
+      "status": "success",
+      "commit_sha": "940103457a394ed7636b3739a41482c029a73ce5",
+      "quality": {
+        "summary": "Clôture documentaire B après validation Ubuntu réelle : scanner 40/40 PASS sans skip, régressions ciblées PASS, manifeste 184 empreintes PASS, release docs et diff-check PASS ; test_version_031 N/A dans Work faute d’aiohttp ; aucun code fonctionnel modifié."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "0.3.2-B marqué acquis sur Ubuntu",
+        "Aucun code fonctionnel modifié ; version et SQLite schema inchangés",
+        "PR #22 reste Draft ; 0.3.2-C non commencé",
+        "Quota visible inchangé 66% -> 66%, enregistré comme ~0 pt visible"
+      ]
     }
   ]
 }
