@@ -818,15 +818,16 @@
       "status": "success",
       "commit_sha": "b67ac81851024fc4c30f85785f4f790633a90f0c",
       "quality": {
-        "summary": "Checkpoint documentaire de pré-clôture livré et vérifié sur le dépôt distant ; six fichiers documentaires/manifeste modifiés, PR #19 toujours Draft avec description mise à jour ; aucun code de production modifié."
+        "summary": "Checkpoint documentaire de pré-clôture livré et vérifié : test_release_docs PASS ; test_version_031 N/A faute d’aiohttp ; git diff --check PASS ; manifeste 181 entrées valide sans undefined ; aucun code de production modifié ; PR #19 toujours Draft."
       },
       "prompt_capture": "exact",
-      "response_capture": "not_supplied_duplicate_prompt",
+      "response_capture": "exact",
       "notes": [
-        "Le bloc Réponse fourni par l'utilisateur duplique le prompt ; aucun handoff Work distinct n'a été capturé",
         "Succès vérifié par le HEAD de la Draft PR #19 et le commit distant",
         "Commit parent exact 554b1d783e96a708b46b81252bfaf12e7f8dd10c",
-        "PR #19 reste Draft/open et sa description reflète l'état de pré-clôture 0.3.1"
+        "PR #19 reste Draft/open et sa description reflète l'état de pré-clôture 0.3.1",
+        "Réponse Work exacte fournie a posteriori par l'utilisateur et archivée",
+        "Le miroir local est resté dirty avec ses modifications préexistantes, préservées"
       ]
     }
   ]
