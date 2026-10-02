@@ -33,7 +33,7 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 |---|---|---|---:|---|---|---:|
 | 5.6 | **GPT-5.6 Sol** | Medium | 1 | **1 succès** | **6 pts** au total · 6 pts/succès | **1:50** |
 | 6.0 | **GPT-6 Luna** | Medium* | 9 | **6 succès · 1 échec · 2 blocages** | **≥7 pts connus*** | **1:58:00** |
-| 6.0 | **GPT-6 Sol** | Medium | 5 | **5 succès** | **~46 pts** au total · ~9,2 pts/run | **28:42** |
+| 6.0 | **GPT-6 Sol** | Medium | 6 | **6 succès** | **~52 pts** au total · ~8,67 pts/run | **32:03** |
 | 6.0 | **GPT-6 Sol** | High | 1 | **1 partiel** | **~20 pts** | **12:07** |
 | 6.0 | **GPT-6 Astra** | Low | 2 | **2 succès** | **30 pts** au total · 15 pts/run | **2:52** |
 | 6.1 | **GPT-6.1 Sol** | Medium | 5 | **4 succès · 1 bloqué** | **40 pts** au total · 35 succès + 5 bloqué | **52:24** |
@@ -65,8 +65,9 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 |---|---|---:|---:|---|
 | GP-018 | Pré-clôture 0.3.1 : audit global, versions, critères de sortie, tests/docs/manifeste | **11 pts** | **8:42** | terminé, commit `3de9d3a...` |
 | GP-020 | 0.3.1-E-A : audit identité d’instance, persistances, contrat rename/recovery | **22 pts** | **14:13** | terminé, commit `1a83550...` |
+| GP-024 | Clôture documentaire B1 après validation Ubuntu complète | **6 pts** | **3:21** | terminé, commit `ca16063...` |
 
-Ces deux gros checkpoints montrent un écart important selon la complexité : **11 pts** pour la pré-clôture globale contre **22 pts** pour l’audit d’architecture/persistance 0.3.1-E-A.
+GP-024 est à lire séparément des deux gros checkpoints : il enregistre des validations Ubuntu déjà acquises et ne contient aucune implémentation fonctionnelle.
 
 ### Runs réels GPT-6 Luna Medium
 
@@ -95,7 +96,7 @@ Cumul GPT-6.1 Sol Medium à ce stade : **40 points**, **52 min 24 s**, **4 succ�
 ## Lecture provisoire
 
 - **GPT-6 Luna Medium** : peut être extrêmement économique sur une analyse locale très bornée, mais plusieurs problèmes de fiabilité/exécution ont aussi été observés. Ne pas confondre qualité de raisonnement et fiabilité de la session Work.
-- **GPT-6 Sol Medium** : très solide sur les audits ciblés (4 pts), mais les gros checkpoints vont désormais de **11 à 22 pts** selon la profondeur. L’audit 0.3.1-E-A montre qu’un travail transversal architecture/persistance peut coûter environ deux fois le checkpoint de pré-clôture.
+- **GPT-6 Sol Medium** : six succès observés. Les audits ciblés sont à 4 pts, les gros checkpoints à 11–22 pts, et la clôture documentaire B1 à 6 pts. Le coût suit fortement la nature réelle du travail, pas seulement sa durée.
 - **GPT-6 Sol High** : un gros run multi-étapes a consommé ~20 points en 12:07 et s'est arrêté faute de quota avant la fin. Cela ne mesure pas son intelligence, mais montre le risque d'un effort High sur un long marathon.
 - **GPT-6 Astra Low** : excellente qualité, mais 13–17 points sur les deux audits comparables où Sol Medium en consommait 4.
 - **GPT-5.6 Sol Medium** : baseline fiable, mais plus coûteuse que GPT-6 Sol Medium sur le benchmark directement comparable.
