@@ -509,6 +509,20 @@ Correction de contrat de test uniquement : le payload manuel attendu est désorm
 
 Checkpoint documentaire de clôture E-D : 282/282 tests Ubuntu consignés PASS, update réelle post-correctif PASS, validation E-C desktop/mobile PASS, avec deux N/A volontaires conservés sans les transformer en PASS. Aucun code de production modifié.
 
+---
+
+## GP-032 — GPT-6 Luna Medium — pré-clôture documentaire 0.3.1
+
+- Date : 2026-10-02
+- Quota : 97 % → 96 % = **1 pt**
+- Durée : **13 min 59 s**
+- Statut : **succès vérifié sur le dépôt distant**
+- Commit : `b67ac81851024fc4c30f85785f4f790633a90f0c`
+- Prompt complet : [runs/GP-032-gpt6-luna-medium-preclose-docs.md](runs/GP-032-gpt6-luna-medium-preclose-docs.md)
+- Réponse Work : **non capturée** ; le bloc « Réponse » fourni était un doublon du prompt.
+
+Checkpoint documentaire de pré-clôture : état stable/candidate, README, validation/changelog et description de la Draft PR #19 alignés. Succès vérifié via le HEAD de la PR et le commit distant ; aucun code de production modifié.
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -528,17 +542,17 @@ La moyenne brute mélange des tâches de tailles très différentes. GP-018, GP-
 
 ## GPT-6 Luna
 
-Treize observations au total, mais **deux incidents ont un effort non relevé** et sont séparés des runs Medium.
+Quatorze observations au total, mais **deux incidents ont un effort non relevé** et sont séparés des runs Medium.
 
 ### Medium
 
-- observations : **11**
-- succès : **10**
+- observations : **12**
+- succès : **11**
 - échec avant audit : **1**
-- quota visible cumulé : **5 pts**
-- durée cumulée : **48 min 10 s**
-- production ciblée récente : **9/9 succès**, **5 pts visibles cumulés**, **46 min 59 s**
-- détail des succès ciblés : **~0 pt / 40 s** sur l'analyse locale 6/6, **1 pt / 3:42** sur le correctif palette Utilisateurs, **~0 pt / 7:47** sur le Journal d’audit, **~0 pt / 3:19** sur la validation documentaire finale, **1 pt / 3:29** sur le fixture B1c, **~0 pt / 3:32** sur la compatibilité installateur B1d, **~0 pt / 4:52** sur la clôture documentaire B2, **1 pt / 3:11** sur le cleanup du fixture installer marker, **~0 pt / 4:14** sur le contrat manuel E-C, **2 pts / 12:53** sur la clôture documentaire E-D.
+- quota visible cumulé : **6 pts**
+- durée cumulée : **1 h 02 min 09 s**
+- production ciblée récente : **10/10 succès**, **6 pts visibles cumulés**, **1 h 00 min 58 s**
+- détail des succès ciblés : **~0 pt / 40 s** sur l'analyse locale 6/6, **1 pt / 3:42** sur le correctif palette Utilisateurs, **~0 pt / 7:47** sur le Journal d’audit, **~0 pt / 3:19** sur la validation documentaire finale, **1 pt / 3:29** sur le fixture B1c, **~0 pt / 3:32** sur la compatibilité installateur B1d, **~0 pt / 4:52** sur la clôture documentaire B2, **1 pt / 3:11** sur le cleanup du fixture installer marker, **~0 pt / 4:14** sur le contrat manuel E-C, **2 pts / 12:53** sur la clôture documentaire E-D, **1 pt / 13:59** sur la pré-clôture documentaire 0.3.1.
 
 ### Incidents à effort non relevé
 
@@ -549,10 +563,10 @@ Treize observations au total, mais **deux incidents ont un effort non relevé** 
 
 ### Total Luna, tous efforts confondus
 
-- observations : **13**
-- résultats : **10 succès · 1 échec · 2 blocages**
-- quota connu : **≥10 pts**
-- durée cumulée : **2 h 23 min 10 s**
+- observations : **14**
+- résultats : **11 succès · 1 échec · 2 blocages**
+- quota connu : **≥11 pts**
+- durée cumulée : **2 h 37 min 09 s**
 
 Les blocages GP-010/011 restent à interpréter comme incidents de fiabilité d'exécution possibles, pas comme une mesure pure des capacités de raisonnement de Luna.
 
