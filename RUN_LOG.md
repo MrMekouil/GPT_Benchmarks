@@ -392,6 +392,19 @@ Pré-audit utile mais objectif non atteint : B1 n’a pas été implémenté ni 
 
 Le commit distant a été vérifié : parent attendu, message exact, diff limité au fixture/test + état/docs/manifeste, sans modification du protocole de production.
 
+---
+
+## GP-023 — GPT-6 Luna Medium — B1d compatibilité installateur historique
+
+- Date : 2026-10-02
+- Quota : 99 % → 99 % = **~0 pt visible**
+- Durée : **3 min 32 s**
+- Statut : **succès**
+- Commit : `45d4a3872d727677378443fe700e19c42a2ef90b`
+- Prompt + réponse complets : [runs/GP-023-gpt6-luna-medium-installer-compat.md](runs/GP-023-gpt6-luna-medium-installer-compat.md)
+
+Correctif réel de code : `write_inventory()` distingue les DB historiques sans `settings` des DB modernes, tout en gardant le contrôle d’alias strict et fail-closed. Work : 17 tests PASS, 20 root/runtime SKIP ; suites 021/022/023 N/A sous Windows.
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -410,15 +423,15 @@ La moyenne brute mélange des tâches de tailles très différentes. GP-018 et G
 
 ## GPT-6 Luna
 
-Huit observations au total, dont deux incidents dont l'effort exact n'avait pas été relevé :
+Neuf observations au total, dont deux incidents dont l'effort exact n'avait pas été relevé :
 
-- succès : **5**
+- succès : **6**
 - échec avant audit : **1**
 - blocages : **2**
 - quota connu : **au moins ~7 pts** au total, avec un incident sans relevé
-- durée cumulée : **1 h 54 min 28 s**
-- cinq réussites Medium ciblées : **~0 pt / 40 s** sur l'analyse locale 6/6, **1 pt / 3:42** sur le correctif palette Utilisateurs, **~0 pt visible / 7:47** sur l’harmonisation Journal d’audit, **~0 pt visible / 3:19** sur la validation documentaire finale, puis **1 pt / 3:29** sur le correctif fixture B1c.
-- production Luna ciblée : **4/4 succès**, **2 points visibles cumulés**, **18 min 17 s**.
+- durée cumulée : **1 h 58 min 00 s**
+- six réussites Medium ciblées : **~0 pt / 40 s** sur l'analyse locale 6/6, **1 pt / 3:42** sur le correctif palette Utilisateurs, **~0 pt visible / 7:47** sur l’harmonisation Journal d’audit, **~0 pt visible / 3:19** sur la validation documentaire finale, **1 pt / 3:29** sur le correctif fixture B1c, puis **~0 pt visible / 3:32** sur la compatibilité installateur B1d.
+- production Luna ciblée : **5/5 succès**, **2 points visibles cumulés**, **21 min 49 s**.
 
 Les blocages GP-010/011 restent à interpréter comme incidents de fiabilité d'exécution possibles, pas comme une mesure pure des capacités de raisonnement de Luna.
 
