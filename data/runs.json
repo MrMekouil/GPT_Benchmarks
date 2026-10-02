@@ -857,6 +857,34 @@
         "Le remote main a été vérifié séparément au HEAD attendu b7700370be92cc072f139d0dd4c551d4e9783979",
         "La branche work/0.3.2-content-manifests n’existe pas sur le dépôt distant après le run"
       ]
+    },
+    {
+      "run_id": "GP-034",
+      "date": "2026-10-02",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032a",
+      "task_summary": "0.3.2-A : contrat documentaire/architectural manifestes, content store, publication et sécurité dans un worktree séparé",
+      "quota_before_pct": 94,
+      "quota_after_pct": 78,
+      "quota_used_points": 16,
+      "quota_approx": false,
+      "duration_seconds": 1469,
+      "status": "success",
+      "commit_sha": "2c61b30a07859ced630d2dd8a01c5b9c3e786d28",
+      "quality": {
+        "summary": "Checkpoint 0.3.2-A livré dans un nouveau worktree propre : contrat CONTENT_MANIFESTS_032, docs/state/roadmap/manifeste, Draft PR #22 ; release docs et contrôles statiques PASS, 182 empreintes SHA-256 vérifiées ; test_version_031 N/A faute d’aiohttp ; aucun code de production modifié."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Run de reprise après GP-033 : le STOP précédent était correct et le worktree historique dirty a été préservé",
+        "Draft PR #22 ouverte vers main, base exacte b7700370be92cc072f139d0dd4c551d4e9783979",
+        "0.3.2-B non commencé ; aucun merge, tag ou release",
+        "Aucun scanner, provider, API, UI, migration SQLite ou content store fonctionnel implémenté"
+      ]
     }
   ]
 }
