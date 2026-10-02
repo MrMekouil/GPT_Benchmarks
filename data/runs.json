@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-01",
+  "updated_at": "2026-10-02",
   "measurement_notes": [
     "quota_used_points correspond aux points de pourcentage visibles dans l'interface Work/ChatGPT, pas à un comptage exact de tokens",
     "quota_approx=true indique une valeur arrondie, déduite ou seulement observée comme delta approximatif",
@@ -526,6 +526,33 @@
         "aiohttp, pydantic et fcntl absents ; installation pip bloquée par le sandbox ; WSL inaccessible",
         "Aucun commit ni push GamePanel",
         "Le modèle a refusé d'implémenter une primitive de sûreté sans pouvoir exécuter les tests crash/locks exigés"
+      ]
+    },
+    {
+      "run_id": "GP-022",
+      "date": "2026-10-02",
+      "project": "GamePanel",
+      "model": "GPT-6 Luna",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "luna_targeted_production",
+      "task_summary": "0.3.1-E-B1c : corriger le fixture root no-op pour ne pas précréer transactions/history",
+      "quota_before_pct": 100,
+      "quota_after_pct": 99,
+      "quota_used_points": 1,
+      "quota_approx": false,
+      "duration_seconds": 209,
+      "status": "success",
+      "commit_sha": "3c6c7e1c050310e779c2b838799cd7dbc87e0286",
+      "quality": {
+        "summary": "Succès vérifié via GitHub : commit demandé présent, parent attendu f9156ec, diff ciblé retirant la précréation transactions/history du fixture et ajoutant l'assertion HISTORY ; aucun protocole de production modifié."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "not_supplied",
+      "notes": [
+        "La réponse Work n'a pas été fournie dans le message utilisateur",
+        "Le résultat a été vérifié directement sur le dépôt distant",
+        "Commit message exact : test: fix identity root fixture no-op isolation"
       ]
     }
   ]
