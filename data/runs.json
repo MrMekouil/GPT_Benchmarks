@@ -1145,6 +1145,34 @@
         "Application 0.3.1 et SQLite schema 5 inchangés",
         "E3/F non commencés ; aucun endpoint content, téléchargement ou branchement UI"
       ]
+    },
+    {
+      "run_id": "GP-044",
+      "date": "2026-10-03",
+      "project": "GamePanel",
+      "model": "GPT-6 Luna",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "luna_targeted_production",
+      "task_summary": "0.3.2-E2 : correction ultra-ciblée du fixture staging path et régénération du manifeste",
+      "quota_before_pct": 90,
+      "quota_after_pct": 89,
+      "quota_used_points": 1,
+      "quota_approx": false,
+      "duration_seconds": 208,
+      "status": "success",
+      "commit_sha": "463e0cccdb70f12eb2ec139df5992d72c24d1608",
+      "quality": {
+        "summary": "Correctif limité au test E2 et au manifeste : 69 tests exécutés localement, 38 PASS / 31 ignorés POSIX dans l’environnement Windows, aucun échec ; manifeste et git diff --check PASS. Le 69/69 Ubuntu reste à confirmer."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Commit vérifié : uniquement tests/test_content_publication_032.py et MANIFEST.sha256",
+        "Aucun code fonctionnel ni documentation modifiés",
+        "Le résultat Ubuntu attendu 69/69 PASS n’est pas revendiqué comme exécuté",
+        "PR #22 reste Draft ; E3 non commencé"
+      ]
     }
   ]
 }
