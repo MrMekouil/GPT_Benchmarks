@@ -1203,6 +1203,36 @@
         "E3/F non commencés",
         "Quota visible inchangé 89% -> 89%, enregistré comme ~0 pt visible"
       ]
+    },
+    {
+      "run_id": "GP-046",
+      "date": "2026-10-03",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032e3a",
+      "task_summary": "0.3.2-E3-A : API Admin content et orchestration réelle scan/draft/publication/révocation",
+      "quota_before_pct": 89,
+      "quota_after_pct": 66,
+      "quota_used_points": 23,
+      "quota_approx": false,
+      "duration_seconds": 2325,
+      "status": "success",
+      "commit_sha": "0c8f2c42dd72b4d9701fb55994f6e060e13cff07",
+      "quality": {
+        "summary": "Checkpoint E3-A livré : routes Admin content pour état, scan, draft, publication/retry et révocation ; 20 PASS/26 N/A ciblés, régressions 79/35, 83/16 et 12/47 PASS/N/A, compile/diff-check/manifeste 200/200 PASS. E3-A reste candidat sans validation Ubuntu complète."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "PR #22 reste Draft",
+        "E3-A candidat seulement ; E global non acquis",
+        "Application 0.3.1 et SQLite schema 5 inchangés",
+        "Aucun endpoint public/player de manifest/blob, téléchargement, HEAD/Range/ETag, upload binaire ou branchement UI D",
+        "HTTP/POSIX et suites dépendant de aiohttp/pydantic restent N/A dans Work",
+        "Validation Ubuntu réelle encore requise"
+      ]
     }
   ]
 }
