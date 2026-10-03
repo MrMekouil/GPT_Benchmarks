@@ -132,7 +132,7 @@ GP-041 a produit une implémentation locale avancée mais s’est interrompu ava
 
 ## Lecture provisoire
 
-- **GPT-6 Luna Medium** : très économique sur les tâches ciblées observées : **16/17 succès Medium** et **8 points visibles** cumulés. Les quinze checkpoints de production récents sont à **15/15 succès** pour **8 points visibles**. Les deux longs blocages connus sont conservés séparément car leur effort n’avait pas été relevé ; ils restent un signal de fiabilité d’exécution à surveiller.
+- **GPT-6 Luna Medium** : très économique sur les tâches ciblées observées : **17/18 succès Medium** et **9 points visibles** cumulés. Les seize checkpoints de production récents sont à **16/16 succès** pour **9 points visibles**. Les deux longs blocages connus sont conservés séparément car leur effort n’avait pas été relevé ; ils restent un signal de fiabilité d’exécution à surveiller.
 - **GPT-6 Sol Medium** : sept succès observés. Les audits ciblés sont à 4 pts, les gros checkpoints se situent désormais à **11–22 pts**, et GP-028 confirme qu’un correctif de sûreté/concurrence transversal peut monter à **21 pts / 20:35**. La moyenne brute passe à **~10,43 pts/run**.
 - **GPT-6 Sol High** : un gros run multi-étapes a consommé ~20 points en 12:07 et s'est arrêté faute de quota avant la fin. Cela ne mesure pas son intelligence, mais montre le risque d'un effort High sur un long marathon.
 - **GPT-6 Astra Low** : excellente qualité, mais 13–17 points sur les deux audits comparables où Sol Medium en consommait 4.
