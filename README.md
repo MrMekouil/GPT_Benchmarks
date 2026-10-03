@@ -144,7 +144,7 @@ GP-041 a produit une implémentation locale avancée mais s’est interrompu ava
 
 - `data/runs.json` est la source structurée canonique.
 - `data/runs.csv` est régénéré depuis le JSON pour éviter les décalages de colonnes.
-- État vérifié au 2026-10-03 : **46 runs JSON = 46 lignes CSV**, IDs uniques et champs communs cohérents.
+- État vérifié au 2026-10-03 : **47 runs JSON = 47 lignes CSV**, IDs uniques et champs communs cohérents.
 
 ## Méthode
 
