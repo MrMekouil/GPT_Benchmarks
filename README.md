@@ -37,7 +37,7 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 | 6.0 | **GPT-6 Sol** | Medium | 7 | **7 succès** | **~73 pts** | **~10,43 pts** | **52:38** |
 | 6.0 | **GPT-6 Sol** | High | 1 | **1 partiel** | **~20 pts** | **~20,00 pts** | **12:07** |
 | 6.0 | **GPT-6 Astra** | Low | 2 | **2 succès** | **30 pts** | **15,00 pts** | **2:52** |
-| 6.1 | **GPT-6.1 Sol** | Medium | 13 | **11 succès · 2 bloqués** | **131 pts** | **10,08 pts** | **3:20:53** |
+| 6.1 | **GPT-6.1 Sol** | Medium | 14 | **12 succès · 2 bloqués** | **154 pts** | **11,00 pts** | **3:59:38** |
 | 6.1 | **GPT-6.1 Sol** | High | 2 | **1 succès · 1 partiel** | **27 pts** | **13,50 pts** | **1:22:17*** |
 
 \* Durée GPT-6.1 Sol High : GP-043 inclut une attente d’autorisation et n’est pas directement comparable aux durées normales.
@@ -49,7 +49,7 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 - **A/B historique le plus propre :** GPT-6 Sol Medium = 4 pts, GPT-5.6 Sol Medium = 6 pts, GPT-6 Astra Low = 17 pts pour le même diagnostic principal.
 - **A/B fonctionnel :** GPT-6 Sol Medium = 4 pts contre GPT-6 Astra Low = 13 pts, avec la même lacune principale trouvée.
 - **GPT-6 Sol Medium en production :** trois gros checkpoints complets observés à **11 pts / 8:42** (pré-clôture), **22 pts / 14:13** (audit transversal 0.3.1-E-A) et **21 pts / 20:35** (correctif concurrence installer/recovery GP-028). Le coût varie fortement avec la profondeur et le périmètre.
-- **GPT-6.1 Sol Medium :** 11 tâches terminées sur 13 tentatives observées. Les gros checkpoints d’implémentation restent B2 **16 pts / 21:37**, E-C UI **17 pts / 26:31**, 0.3.2-A **16 pts / 24:29**, 0.3.2-B **12 pts / 20:49**, 0.3.2-C **17 pts / 33:55** et 0.3.2-D **11 pts / 16:49**. GP-042 ajoute un audit de récupération E2 très ciblé à **1 pt / 4:02**, sans modification par design. Deux blocages environnementaux restent observés : GP-021 à **5 pts / 4:31** et GP-033 à **1 pt / 0:17**.
+- **GPT-6.1 Sol Medium :** 12 tâches terminées sur 14 tentatives observées. Les gros checkpoints d’implémentation incluent B2 **16 pts / 21:37**, E-C UI **17 pts / 26:31**, 0.3.2-A **16 pts / 24:29**, 0.3.2-B **12 pts / 20:49**, 0.3.2-C **17 pts / 33:55**, 0.3.2-D **11 pts / 16:49** et désormais 0.3.2-E3-A **23 pts / 38:45**. GP-042 reste un audit de récupération ciblé à **1 pt / 4:02**. Deux blocages environnementaux restent observés : GP-021 à **5 pts / 4:31** et GP-033 à **1 pt / 0:17**.
 - **GPT-6.1 Sol High :** deux observations E2. GP-041 est **partiel à 20 pts / 53:27**, interrompu avant commit/push. GP-043 reprend le travail récupéré et livre E2 candidat à **7 pts / 28:50 observés**. Cette durée GP-043 est explicitement **biaisée par une attente d’autorisation**, donc non directement comparable.
 - **GPT-6 Luna Medium :** **17 runs Medium** observés : **16 succès / 1 échec**, **8 points visibles** au total, **1:23:07**. Les **15 checkpoints de production récents** sont à **15/15 succès**, **8 points visibles** et **1:21:56**. À part, GP-010/011 représentent **2 blocages à effort non relevé**, **1:35:00** cumulé et **≥5 points connus**.
 
@@ -116,8 +116,9 @@ Ces quinze runs sont de vrais checkpoints de production Luna terminés après le
 | GP-037 | 0.3.2-C : providers métadonnées + classification/provenance/overrides/cache | **17 pts** | **33:55** | terminé, commit `fc6fcae...`; C reste candidate |
 | GP-039 | 0.3.2-D : UI Admin manifestes/contenus client, sans backend E | **11 pts** | **16:49** | terminé, commit `39f7532...`; navigateur réel N/A |
 | GP-042 | 0.3.2-E2 : audit de récupération après interruption, STOP sans modification | **1 pt** | **4:02** | terminé sans commit/push, conformément au prompt |
+| GP-046 | 0.3.2-E3-A : API Admin content + orchestration scan/draft/publication/révocation | **23 pts** | **38:45** | terminé, commit `0c8f2c4...`; validation Ubuntu encore requise |
 
-Cumul GPT-6.1 Sol Medium à ce stade : **131 points**, **3 h 20 min 53 s**, **11 succès / 2 blocages**. Les onze tâches réussies représentent **125 points** ; les deux blocages représentent **6 points** au total.
+Cumul GPT-6.1 Sol Medium à ce stade : **154 points**, **3 h 59 min 38 s**, **12 succès / 2 blocages**. Les douze tâches réussies représentent **148 points** ; les deux blocages représentent **6 points** au total.
 
 ### Runs réels GPT-6.1 Sol High
 
@@ -135,14 +136,14 @@ GP-041 a produit une implémentation locale avancée mais s’est interrompu ava
 - **GPT-6 Sol High** : un gros run multi-étapes a consommé ~20 points en 12:07 et s'est arrêté faute de quota avant la fin. Cela ne mesure pas son intelligence, mais montre le risque d'un effort High sur un long marathon.
 - **GPT-6 Astra Low** : excellente qualité, mais 13–17 points sur les deux audits comparables où Sol Medium en consommait 4.
 - **GPT-5.6 Sol Medium** : baseline fiable, mais plus coûteuse que GPT-6 Sol Medium sur le benchmark directement comparable.
-- **GPT-6.1 Sol Medium** : onze runs GamePanel réussis et deux blocages. Les gros lots d’implémentation récents vont de **11 à 17 pts** ; GP-042 montre qu’un audit de récupération strictement borné peut rester à **1 pt / 4:02**. GP-021 a coûté **5 pts** sans livraison à cause du manque d’environnement POSIX ; GP-033 **1 pt / 17 s** en STOP de pré-vol correct.
+- **GPT-6.1 Sol Medium** : douze runs GamePanel réussis et deux blocages. Les gros lots d’implémentation récents vont désormais de **11 à 23 pts** ; E3-A devient le plus coûteux de cette série à **23 pts / 38:45**. GP-042 montre qu’un audit de récupération strictement borné peut rester à **1 pt / 4:02**. GP-021 a coûté **5 pts** sans livraison à cause du manque d’environnement POSIX ; GP-033 **1 pt / 17 s** en STOP de pré-vol correct.
 - **GPT-6.1 Sol High** : deux observations E2, **27 pts** au total : un run partiel à **20 pts**, puis une reprise réussie à **7 pts**. La durée de la reprise est contaminée par une demande d’autorisation, donc le signal de coût quota est plus exploitable ici que le signal temporel.
 
 ## Intégrité des données
 
 - `data/runs.json` est la source structurée canonique.
 - `data/runs.csv` est régénéré depuis le JSON pour éviter les décalages de colonnes.
-- État vérifié au 2026-10-03 : **45 runs JSON = 45 lignes CSV**, IDs uniques et champs communs cohérents.
+- État vérifié au 2026-10-03 : **46 runs JSON = 46 lignes CSV**, IDs uniques et champs communs cohérents.
 
 ## Méthode
 
