@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-02",
+  "updated_at": "2026-10-03",
   "measurement_notes": [
     "quota_used_points correspond aux points de pourcentage visibles dans l'interface Work/ChatGPT, pas à un comptage exact de tokens",
     "quota_approx=true indique une valeur arrondie, déduite ou seulement observée comme delta approximatif",
@@ -970,6 +970,35 @@
         "C reste candidate sans validation Linux/provider réelle",
         "Application 0.3.1 et SQLite schema 4 inchangés",
         "PR #22 reste Draft ; 0.3.2-D non commencé"
+      ]
+    },
+    {
+      "run_id": "GP-038",
+      "date": "2026-10-03",
+      "project": "GamePanel",
+      "model": "GPT-6 Luna",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "luna_targeted_production",
+      "task_summary": "0.3.2-C : clôture documentaire après validation Ubuntu réelle des providers et de la classification",
+      "quota_before_pct": 100,
+      "quota_after_pct": 99,
+      "quota_used_points": 1,
+      "quota_approx": false,
+      "duration_seconds": 257,
+      "status": "success",
+      "commit_sha": "bb0dddcd15386aaff81c8d3c9cc1a93bb750e148",
+      "quality": {
+        "summary": "Clôture documentaire C après validation Ubuntu réelle : tests C+B PASS avec POSIX sans skip, régressions ciblées PASS, manifeste 189/189 et diff-check PASS ; test_release_docs PASS dans Work, test_version_031 N/A faute d’aiohttp ; aucun code fonctionnel modifié."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "0.3.2-C marqué acquis sur Ubuntu",
+        "Description Draft PR #22 mise à jour pour A/B/C acquis",
+        "Application 0.3.1 et SQLite schema 4 inchangés",
+        "Aucun vrai appel fournisseur ni vrai serveur Minecraft revendiqué",
+        "0.3.2-D non commencé"
       ]
     }
   ]
