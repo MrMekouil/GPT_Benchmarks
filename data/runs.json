@@ -1116,6 +1116,35 @@
         "Le manifeste local E2 est encore incohérent et doit être régénéré lors de la reprise",
         "Ce run mesure la récupération/diagnostic, pas l’achèvement E2"
       ]
+    },
+    {
+      "run_id": "GP-043",
+      "date": "2026-10-03",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "High",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032e2",
+      "task_summary": "0.3.2-E2 : finalisation du travail interrompu — canonicalisation, content store immuable, publication atomique/recovery",
+      "quota_before_pct": 97,
+      "quota_after_pct": 90,
+      "quota_used_points": 7,
+      "quota_approx": false,
+      "duration_seconds": 1730,
+      "status": "success",
+      "commit_sha": "c3f335a52426f8c8a8ba18f816801aec0ef20ec9",
+      "quality": {
+        "summary": "E2 candidat finalisé et poussé : modules manifest/store/publication + startup hook, tests E2, docs et manifeste. Work : E2 38 PASS/31 N/A POSIX ; E1/identity/startup/docs 53 PASS/51 N/A ; B/C 83 PASS/16 N/A ; compile/diff/scope et manifeste 197/197 PASS. Aucun PASS Ubuntu/POSIX revendiqué."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Durée observée 28:50 biaisée par une demande d’autorisation ; ne pas la comparer directement aux durées normales",
+        "Run de reprise du travail local récupéré après GP-041/GP-042, sans repartir de zéro",
+        "PR #22 reste Draft, E2 candidat seulement, E global non acquis",
+        "Application 0.3.1 et SQLite schema 5 inchangés",
+        "E3/F non commencés ; aucun endpoint content, téléchargement ou branchement UI"
+      ]
     }
   ]
 }
