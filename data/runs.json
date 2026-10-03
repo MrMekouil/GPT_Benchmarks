@@ -1028,6 +1028,36 @@
         "Version application 0.3.1 et SQLite schema 4 inchangés",
         "PR #22 reste Draft ; 0.3.2-E non commencé"
       ]
+    },
+    {
+      "run_id": "GP-040",
+      "date": "2026-10-03",
+      "project": "GamePanel",
+      "model": "GPT-6 Luna",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "luna_targeted_production",
+      "task_summary": "0.3.2-D : clôture documentaire après validation réelle Ubuntu/Chromium de l’UI Admin contenus client",
+      "quota_before_pct": 88,
+      "quota_after_pct": 88,
+      "quota_used_points": 0,
+      "quota_approx": true,
+      "duration_seconds": 275,
+      "status": "success",
+      "commit_sha": "7787223bd9f912e0e1d987e8670161dd0f0f059f",
+      "quality": {
+        "summary": "Clôture documentaire D après validation réelle Ubuntu/Chromium : contrats UI et navigateur PASS, responsive 1440/1150/760/390 sans overflow, interactions override/client-extra et régressions UI ciblées PASS ; release docs, manifeste 191/191 et diff-check PASS ; aucun code fonctionnel modifié."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "0.3.2-D marqué acquis après validation Ubuntu/Chromium réelle",
+        "Dans Work, Chromium N/A faute de Playwright et test_version_031 N/A faute d’aiohttp ; ces N/A sont distincts du PASS réel Ubuntu/Chromium",
+        "PR #22 reste Draft avec A/B/C/D acquis",
+        "Version 0.3.1 et SQLite schema 4 inchangés",
+        "0.3.2-E/F non commencés",
+        "Quota visible inchangé 88% -> 88%, enregistré comme ~0 pt visible"
+      ]
     }
   ]
 }
