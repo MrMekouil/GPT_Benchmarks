@@ -77,3 +77,24 @@ Ne merge pas, ne tague pas.
 Réponse finale courte :
 commit/push, fichiers principaux, tests PASS/N/A, points POSIX restant à valider sur Ubuntu, et limites E2.
 ~~~
+
+
+## Réponse exacte
+
+~~~text
+- **Commit `c3f335a52426f8c8a8ba18f816801aec0ef20ec9` poussé** sur `work/0.3.2-content-manifests`. PR #22 mise à jour, toujours Draft. Worktree propre.
+- **Fichiers principaux :** modules `content_manifest.py`, `content_store.py`, `content_publication.py`, hook startup dans `api.py`, tests E2, quatre documents et manifeste.
+- **PASS :** E2 **38** ; E1/identity/startup/docs **53** ; B/C **83**. Compilation, diff-check, scope et manifeste **197/197** vérifiés.
+- **N/A :** respectivement **31 / 51 / 16** tests POSIX ou dépendances natives. Migrations/version non importables faute de `pydantic`/`aiohttp`.
+- **Ubuntu restant :** fsync/finalisation, sources mouvantes, liens/FIFO, crashes par sous-processus avec réouverture SQLite, recovery et startup natif. Aucun PASS POSIX revendiqué.
+- **E2 candidat seulement** ; E global non acquis. Application **0.3.1**, SQLite **5** inchangés. Aucun endpoint, téléchargement ou branchement UI ; E3/F non commencés. Aucun merge/tag.
+~~~
+
+## Vérification externe
+
+- Parent exact : `e964cb8cf70641625de2764041155cd990f48fc2`.
+- Commit : `feat: add immutable content publication and recovery`.
+- PR #22 : ouverte et Draft, head `c3f335a52426f8c8a8ba18f816801aec0ef20ec9`.
+- Fichiers modifiés : `ASSISTANT_STATE.md`, `MANIFEST.sha256`, `WORK_STATE.md`, `docs/CHANGELOG.md`, `docs/CONTENT_MANIFESTS_032.md`, `gamepanel/api.py`, `gamepanel/content_manifest.py`, `gamepanel/content_publication.py`, `gamepanel/content_store.py`, `tests/test_content_publication_032.py`.
+- La description de PR distingue explicitement les PASS Work des N/A POSIX/Ubuntu.
+- Aucun merge/tag/release ; E2 reste candidat, E global non acquis.
