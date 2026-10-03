@@ -1262,6 +1262,36 @@
         "E3-B/E3-C/F non commencés",
         "Aucun code fonctionnel modifié"
       ]
+    },
+    {
+      "run_id": "GP-048",
+      "date": "2026-10-03",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "High",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032e3b",
+      "task_summary": "0.3.2-E3-B : distribution HTTP autorisée + client-extra",
+      "quota_before_pct": 65,
+      "quota_after_pct": 41,
+      "quota_used_points": 24,
+      "quota_approx": false,
+      "duration_seconds": 2520,
+      "status": "success",
+      "commit_sha": "5d4b0301f54ea8ba93d63dc305c8896f7f958283",
+      "quality": {
+        "summary": "E3-B candidat livré malgré un stall apparent de l’UI Work après exécution : distribution HTTP autorisée GET/HEAD/ETag/304/Range/If-Range, streaming avec revalidation session/grant/révocation, client-extra Admin borné, tests portables 21 PASS/21 N/A natifs, régressions 120/82 et 95/63 PASS/N/A, compile/release-docs/diff/manifeste PASS. Validation Ubuntu native encore requise."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "partial_exact",
+      "notes": [
+        "L’UI Work est restée bloquée sur « Étape 2 sur 4 » après les contrôles, sans handoff final",
+        "Le dépôt distant prouve néanmoins que le travail a été finalisé et poussé",
+        "PR #22 vérifiée à 5d4b0301f54ea8ba93d63dc305c8896f7f958283",
+        "E3-B candidat seulement ; validation Ubuntu HTTP/POSIX native encore requise",
+        "Application 0.3.1 et SQLite schema 5 inchangés",
+        "E3-C/F non commencés"
+      ]
     }
   ]
 }
