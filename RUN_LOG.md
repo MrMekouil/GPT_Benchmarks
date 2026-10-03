@@ -633,6 +633,19 @@ Checkpoint UI D livré : interface Admin distinguant inventaire/brouillon/versio
 
 Clôture documentaire de D après validation réelle Ubuntu/Chromium : contrats UI/navigateur PASS, responsive 1440/1150/760/390 sans overflow, interactions override/client-extra et régressions UI ciblées PASS. Aucun code fonctionnel modifié ; A/B/C/D sont acquis, E/F non commencés.
 
+---
+
+## GP-041 — GPT-6.1 Sol High — 0.3.2-E2 partiel/interrompu
+
+- Date : 2026-10-03
+- Quota : 72 % → 52 % = **20 pts**
+- Durée : **53 min 27 s**
+- Statut : **partiel**
+- Commit GamePanel : **aucun**
+- Prompt + réponse partielle complets : [runs/GP-041-gpt61-sol-high-032e2-partial.md](runs/GP-041-gpt61-sol-high-032e2-partial.md)
+
+Le run rapporte une implémentation locale avancée d’E2 : canonicalisation stricte, store privé, publication atomique/recovery et tests aux frontières de crash. Work annonçait **34 tests E2 PASS** et **29 POSIX N/A**, puis la réponse s’est arrêtée pendant « Réflexion en cours » avant handoff final. Vérification externe : la PR #22 est restée exactement sur le HEAD initial `e964cb8...`, donc aucun commit/push E2 n’a été livré.
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -690,6 +703,18 @@ Douze observations de production :
 - moyenne brute : **10,83 pts/observation**
 
 Les dix tâches terminées représentent **124 pts**. Les deux blocages représentent **6 pts** : GP-021 à **5 pts / 4:31** sans livraison B1 faute d’environnement POSIX, puis GP-033 à **1 pt / 0:17** avec STOP correct sur miroir Work incohérent/dirty. Les six gros lots récents se situent à **16 pts / 21:37** pour B2 backend/root, **17 pts / 26:31** pour E-C UI, **16 pts / 24:29** pour le contrat 0.3.2-A, **12 pts / 20:49** pour le scanner Minecraft 0.3.2-B, **17 pts / 33:55** pour les providers/classification 0.3.2-C et **11 pts / 16:49** pour l’UI Admin 0.3.2-D.
+
+## GPT-6.1 Sol High
+
+Une observation :
+
+- quota cumulé : **20 pts**
+- durée cumulée : **53 min 27 s**
+- résultats : **1 partiel**
+- moyenne brute : **20,00 pts/observation**
+- livrable distant : **aucun commit/push E2**
+
+Le run a consommé 20 points avec un travail local avancé et des tests portables rapportés PASS, mais l’objectif n’a pas été clôturé. L’arrêt apparent de Work pendant sa phase finale empêche de distinguer proprement coût du raisonnement, coût de l’exécution et incident d’outillage.
 
 ## Comparaison directe historique
 
