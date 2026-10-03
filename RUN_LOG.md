@@ -674,6 +674,20 @@ Checkpoint de récupération après l’interruption GP-041 : état Git et fichi
 
 Reprise du travail E2 local interrompu : audit du diff existant, corrections ciblées, validation Work puis commit/push. E2 **38 PASS / 31 N/A POSIX**, E1/identity/startup/docs **53 PASS / 51 N/A**, B/C **83 PASS / 16 N/A**, manifeste **197/197**. E2 reste candidat et aucun PASS Ubuntu/POSIX non exécuté n’est revendiqué.
 
+---
+
+## GP-044 — GPT-6 Luna Medium — correctif fixture staging E2
+
+- Date : 2026-10-03
+- Quota : 90 % → 89 % = **1 pt**
+- Durée : **3 min 28 s**
+- Statut : **succès**
+- Commit : `463e0cccdb70f12eb2ec139df5992d72c24d1608`
+- Draft PR : **#22**
+- Prompt + réponse complets : [runs/GP-044-gpt6-luna-medium-e2-staging-fixture.md](runs/GP-044-gpt6-luna-medium-e2-staging-fixture.md)
+
+Correctif ultra-ciblé du fixture E2 : priorité d’opérateurs corrigée dans le chemin de staging, puis manifeste régénéré. Exécution locale : **38 PASS / 31 ignorés POSIX**, aucun échec ; manifeste et diff-check PASS. Le **69/69 Ubuntu reste à confirmer** et n’est pas revendiqué comme exécuté.
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -693,17 +707,17 @@ La moyenne brute mélange des tâches de tailles très différentes. GP-018, GP-
 
 ## GPT-6 Luna
 
-Dix-sept observations au total, mais **deux incidents ont un effort non relevé** et sont séparés des runs Medium.
+Dix-huit observations au total, mais **deux incidents ont un effort non relevé** et sont séparés des runs Medium.
 
 ### Medium
 
-- observations : **15**
-- succès : **14**
+- observations : **16**
+- succès : **15**
 - échec avant audit : **1**
-- quota visible cumulé : **7 pts**
-- durée cumulée : **1 h 14 min 20 s**
-- production ciblée récente : **13/13 succès**, **7 pts visibles cumulés**, **1 h 13 min 09 s**
-- détail des succès ciblés : **~0 pt / 40 s** sur l'analyse locale 6/6, **1 pt / 3:42** sur le correctif palette Utilisateurs, **~0 pt / 7:47** sur le Journal d’audit, **~0 pt / 3:19** sur la validation documentaire finale, **1 pt / 3:29** sur le fixture B1c, **~0 pt / 3:32** sur la compatibilité installateur B1d, **~0 pt / 4:52** sur la clôture documentaire B2, **1 pt / 3:11** sur le cleanup du fixture installer marker, **~0 pt / 4:14** sur le contrat manuel E-C, **2 pts / 12:53** sur la clôture documentaire E-D, **1 pt / 13:59** sur la pré-clôture documentaire 0.3.1, **~0 pt / 3:19** sur la clôture Ubuntu de 0.3.2-B, **1 pt / 4:17** sur la clôture Ubuntu de 0.3.2-C, **~0 pt / 4:35** sur la clôture Ubuntu/Chromium de 0.3.2-D.
+- quota visible cumulé : **8 pts**
+- durée cumulée : **1 h 17 min 48 s**
+- production ciblée récente : **14/14 succès**, **8 pts visibles cumulés**, **1 h 16 min 37 s**
+- détail des succès ciblés : **~0 pt / 40 s** sur l'analyse locale 6/6, **1 pt / 3:42** sur le correctif palette Utilisateurs, **~0 pt / 7:47** sur le Journal d’audit, **~0 pt / 3:19** sur la validation documentaire finale, **1 pt / 3:29** sur le fixture B1c, **~0 pt / 3:32** sur la compatibilité installateur B1d, **~0 pt / 4:52** sur la clôture documentaire B2, **1 pt / 3:11** sur le cleanup du fixture installer marker, **~0 pt / 4:14** sur le contrat manuel E-C, **2 pts / 12:53** sur la clôture documentaire E-D, **1 pt / 13:59** sur la pré-clôture documentaire 0.3.1, **~0 pt / 3:19** sur la clôture Ubuntu de 0.3.2-B, **1 pt / 4:17** sur la clôture Ubuntu de 0.3.2-C, **~0 pt / 4:35** sur la clôture Ubuntu/Chromium de 0.3.2-D, **1 pt / 3:28** sur le correctif fixture staging E2.
 
 ### Incidents à effort non relevé
 
@@ -714,10 +728,10 @@ Dix-sept observations au total, mais **deux incidents ont un effort non relevé*
 
 ### Total Luna, tous efforts confondus
 
-- observations : **17**
-- résultats : **14 succès · 1 échec · 2 blocages**
-- quota connu : **≥12 pts**
-- durée cumulée : **2 h 49 min 20 s**
+- observations : **18**
+- résultats : **15 succès · 1 échec · 2 blocages**
+- quota connu : **≥13 pts**
+- durée cumulée : **2 h 52 min 48 s**
 
 Les blocages GP-010/011 restent à interpréter comme incidents de fiabilité d'exécution possibles, pas comme une mesure pure des capacités de raisonnement de Luna.
 
