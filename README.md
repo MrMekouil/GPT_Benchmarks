@@ -38,7 +38,7 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 | 6.0 | **GPT-6 Sol** | High | 1 | **1 partiel** | **~20 pts** | **~20,00 pts** | **12:07** |
 | 6.0 | **GPT-6 Astra** | Low | 2 | **2 succès** | **30 pts** | **15,00 pts** | **2:52** |
 | 6.1 | **GPT-6.1 Sol** | Medium | 14 | **12 succès · 2 bloqués** | **154 pts** | **11,00 pts** | **3:59:38** |
-| 6.1 | **GPT-6.1 Sol** | High | 2 | **1 succès · 1 partiel** | **27 pts** | **13,50 pts** | **1:22:17*** |
+| 6.1 | **GPT-6.1 Sol** | High | 3 | **2 succès · 1 partiel** | **51 pts** | **17,00 pts** | **2:04:17*** |
 
 \* Durée GPT-6.1 Sol High : GP-043 inclut une attente d’autorisation et n’est pas directement comparable aux durées normales.
 
@@ -50,7 +50,7 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 - **A/B fonctionnel :** GPT-6 Sol Medium = 4 pts contre GPT-6 Astra Low = 13 pts, avec la même lacune principale trouvée.
 - **GPT-6 Sol Medium en production :** trois gros checkpoints complets observés à **11 pts / 8:42** (pré-clôture), **22 pts / 14:13** (audit transversal 0.3.1-E-A) et **21 pts / 20:35** (correctif concurrence installer/recovery GP-028). Le coût varie fortement avec la profondeur et le périmètre.
 - **GPT-6.1 Sol Medium :** 12 tâches terminées sur 14 tentatives observées. Les gros checkpoints d’implémentation incluent B2 **16 pts / 21:37**, E-C UI **17 pts / 26:31**, 0.3.2-A **16 pts / 24:29**, 0.3.2-B **12 pts / 20:49**, 0.3.2-C **17 pts / 33:55**, 0.3.2-D **11 pts / 16:49** et désormais 0.3.2-E3-A **23 pts / 38:45**. GP-042 reste un audit de récupération ciblé à **1 pt / 4:02**. Deux blocages environnementaux restent observés : GP-021 à **5 pts / 4:31** et GP-033 à **1 pt / 0:17**.
-- **GPT-6.1 Sol High :** deux observations E2. GP-041 est **partiel à 20 pts / 53:27**, interrompu avant commit/push. GP-043 reprend le travail récupéré et livre E2 candidat à **7 pts / 28:50 observés**. Cette durée GP-043 est explicitement **biaisée par une attente d’autorisation**, donc non directement comparable.
+- **GPT-6.1 Sol High :** trois observations. GP-041 est **partiel à 20 pts / 53:27** sur E2 ; GP-043 reprend le travail récupéré et livre E2 candidat à **7 pts / 28:50 observés** ; GP-048 livre E3-B à **24 pts / 42:00** malgré un stall apparent de l’UI après exécution. La durée GP-043 reste biaisée par une attente d’autorisation.
 - **GPT-6 Luna Medium :** **18 runs Medium** observés : **17 succès / 1 échec**, **9 points visibles** au total, **1:27:47**. Les **16 checkpoints de production récents** sont à **16/16 succès**, **9 points visibles** et **1:26:36**. À part, GP-010/011 représentent **2 blocages à effort non relevé**, **1:35:00** cumulé et **≥5 points connus**.
 
 ## Résultats actuellement observés
@@ -127,8 +127,9 @@ Cumul GPT-6.1 Sol Medium à ce stade : **154 points**, **3 h 59 min 38 s**, **12
 |---|---|---:|---:|---|
 | GP-041 | 0.3.2-E2 : canonicalisation + content store + publication/recovery | **20 pts** | **53:27** | **partiel**, aucun commit/push ; PR #22 restée sur `e964cb8...` |
 | GP-043 | 0.3.2-E2 : finalisation du travail récupéré, commit/push candidat | **7 pts** | **28:50*** | terminé, commit `c3f335a...`; durée biaisée par demande d’autorisation |
+| GP-048 | 0.3.2-E3-B : distribution HTTP autorisée + client-extra | **24 pts** | **42:00** | terminé, commit `5d4b030...`; UI Work restée bloquée après exécution |
 
-GP-041 a produit une implémentation locale avancée mais s’est interrompu avant livraison. Après l’audit de récupération GP-042, GP-043 a repris ce travail existant et livré E2 candidat. Le coût visible High cumulé des deux runs E2 est **27 pts** ; la durée cumulée observée **1:22:17** est à lire avec prudence car GP-043 inclut une attente d’autorisation.
+GP-041 a produit une implémentation locale avancée mais s’est interrompu avant livraison. Après l’audit de récupération GP-042, GP-043 a repris ce travail existant et livré E2 candidat. GP-048 livre E3-B malgré une capture Work sans handoff final ; le dépôt distant confirme le succès. Le coût visible High cumulé est désormais **51 pts** pour **3 observations** ; la durée cumulée observée **2:04:17** reste à lire avec prudence car GP-043 inclut une attente d’autorisation.
 
 ## Lecture provisoire
 
@@ -138,13 +139,13 @@ GP-041 a produit une implémentation locale avancée mais s’est interrompu ava
 - **GPT-6 Astra Low** : excellente qualité, mais 13–17 points sur les deux audits comparables où Sol Medium en consommait 4.
 - **GPT-5.6 Sol Medium** : baseline fiable, mais plus coûteuse que GPT-6 Sol Medium sur le benchmark directement comparable.
 - **GPT-6.1 Sol Medium** : douze runs GamePanel réussis et deux blocages. Les gros lots d’implémentation récents vont désormais de **11 à 23 pts** ; E3-A devient le plus coûteux de cette série à **23 pts / 38:45**. GP-042 montre qu’un audit de récupération strictement borné peut rester à **1 pt / 4:02**. GP-021 a coûté **5 pts** sans livraison à cause du manque d’environnement POSIX ; GP-033 **1 pt / 17 s** en STOP de pré-vol correct.
-- **GPT-6.1 Sol High** : deux observations E2, **27 pts** au total : un run partiel à **20 pts**, puis une reprise réussie à **7 pts**. La durée de la reprise est contaminée par une demande d’autorisation, donc le signal de coût quota est plus exploitable ici que le signal temporel.
+- **GPT-6.1 Sol High** : trois observations, **51 pts** au total : un run E2 partiel à **20 pts**, une reprise E2 réussie à **7 pts**, puis E3-B réussi à **24 pts**. Le coût quota sur les tâches profondes reste élevé ; le signal temporel est moins propre à cause de l’attente d’autorisation sur GP-043 et du stall d’UI après exécution sur GP-048.
 
 ## Intégrité des données
 
 - `data/runs.json` est la source structurée canonique.
 - `data/runs.csv` est régénéré depuis le JSON pour éviter les décalages de colonnes.
-- État vérifié au 2026-10-03 : **47 runs JSON = 47 lignes CSV**, IDs uniques et champs communs cohérents.
+- État vérifié au 2026-10-03 : **48 runs JSON = 48 lignes CSV**, IDs uniques et champs communs cohérents.
 
 ## Méthode
 
