@@ -148,3 +148,30 @@ Restitution finale courte :
 commit/push, fichiers principaux, tests PASS/FAIL/N/A, garanties de crash/recovery réellement couvertes et limites restantes.
 Aucune procédure Ubuntu ni prochain checkpoint.
 ~~~
+
+
+## Réponse exacte (partielle)
+
+~~~text
+Je vérifie le HEAD et le worktree, puis le contrat de publication et les contraintes du schéma 5 avant d’implémenter E2. Les tests couvriront les frontières de crash et la cohérence SQL/fichiers ; E2 restera candidat.
+a exécuté une commande
+Le schéma 5 couvre les relations nécessaires à E2. La publication gardera SQLite comme seul point de visibilité : objets vérifiés et durables d’abord, commit ensuite. Au recovery, un job pré-commit sera interrompu ; une publication déjà commitée sera conservée.
+a exécuté une commande
+La première implémentation est en place : validation canonique stricte, copie dans un inode privé neuf et phases réserve/préparation/commit. Aucun objet existant ne sera écrasé. Le recovery conservera le head SQL et bloquera le pack si une publication référencée est corrompue.
+A modifié un fichier
+Les tests SQL portables passent aux frontières avant objets, après blobs, après manifest, avant commit et après commit. Les preuves et décisions Admin approuvées sont conservées dans le job SQLite ; le journal filesystem contient seulement des IDs, révisions et digests, sans chemins source ni données privées.
+A modifié des fichiers
+Je poursuis la revue du journal de publication et des contrôles avant commit, puis je documenterai les résultats Work et les tests POSIX restant à valider sous Ubuntu.
+a exécuté une commande
+La revue a conduit à renforcer deux contrôles : un journal incohérent est conservé et refusé, et le commit exige un journal `OBJECTS_READY` correspondant au job. Les tests portables vérifient aussi qu’un échec de nettoyage après commit conserve la publication, et qu’un pack corrompu reste indisponible sans retour silencieux à l’ancienne version.
+A modifié des fichiers
+Dans Work, E2 compte 34 tests PASS et 29 tests POSIX N/A. Les régressions B/C passent aussi sur leur partie portable. Les migrations et le test de version ne s’importent pas faute de `pydantic`/`aiohttp`. J’ai écrit les tests POSIX de crash par arrêt brutal d’un sous-processus et réouverture de la DB ; ils n’ont pas été exécutés ici.
+Réflexion en cours
+Étape 1 sur 3Étape 2 sur 3
+~~~
+
+La réponse s’interrompt ici : aucun handoff final, aucun commit/push annoncé.
+
+## Vérification externe
+
+Après le run, la Draft PR #22 pointe toujours exactement sur `e964cb8cf70641625de2764041155cd990f48fc2`, qui était le HEAD de départ demandé. Aucun commit E2 n’est donc visible sur le dépôt distant. Le run est classé **partiel**, pas succès.
