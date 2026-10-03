@@ -96,8 +96,9 @@ GP-024 est à lire séparément des gros checkpoints : il enregistre des validat
 | GP-040 | 0.3.2-D : clôture documentaire après validation Ubuntu/Chromium réelle | **~0 pt visible** | **4:35** | terminé, commit `7787223...` |
 | GP-044 | 0.3.2-E2 : correctif fixture staging path + manifeste | **1 pt** | **3:28** | terminé, commit `463e0cc...`; 38 PASS / 31 POSIX ignorés localement |
 | GP-045 | 0.3.2-E2 : clôture documentaire après validation Ubuntu 69/69 | **~0 pt visible** | **5:19** | terminé, commit `6fd46e5...`; E2 acquis |
+| GP-047 | 0.3.2-E3-A : clôture documentaire après validation Ubuntu 46/46 | **1 pt** | **4:40** | terminé, commit `44d49fe...`; E3-A acquis |
 
-Ces quinze runs sont de vrais checkpoints de production Luna terminés après les incidents de fiabilité observés : **15/15 réussis**, **8 points visibles cumulés**, **1:21:56** au total.
+Ces seize runs sont de vrais checkpoints de production Luna terminés après les incidents de fiabilité observés : **16/16 réussis**, **9 points visibles cumulés**, **1:26:36** au total.
 
 ### Runs réels GPT-6.1 Sol Medium
 
