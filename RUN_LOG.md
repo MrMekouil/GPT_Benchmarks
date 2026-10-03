@@ -716,6 +716,20 @@ Clôture documentaire de E2 après validation Ubuntu réelle : `tests.test_conte
 
 Checkpoint fonctionnel E3-A livré : routes Admin content pour état, scan, draft, publication/retry et révocation, avec orchestration réelle B/C/E2. Tests ciblés **20 PASS / 26 N/A** ; régressions **79/35**, **83/16**, **12/47** PASS/N/A ; compile, diff-check et manifeste **200/200 PASS**. E3-A reste candidat, validation Ubuntu encore requise.
 
+---
+
+## GP-047 — GPT-6 Luna Medium — clôture Ubuntu 0.3.2-E3-A
+
+- Date : 2026-10-03
+- Quota : 66 % → 65 % = **1 pt**
+- Durée : **4 min 40 s**
+- Statut : **succès**
+- Commit : `44d49fead0123099784e32f2bcf3be4304611fef`
+- Draft PR : **#22**
+- Prompt + réponse complets : [runs/GP-047-gpt6-luna-medium-032e3a-ubuntu-closure.md](runs/GP-047-gpt6-luna-medium-032e3a-ubuntu-closure.md)
+
+Clôture documentaire de E3-A après validation Ubuntu réelle : `tests.test_content_admin_032` **46/46 PASS sans skip inattendu**, régressions E2/E1/identity/startup/release-docs, acceptance/security/migrations/version et B/C ciblées PASS. Aucun code fonctionnel modifié ; E3-A est acquis, E global reste non acquis.
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -735,17 +749,17 @@ La moyenne brute mélange des tâches de tailles très différentes. GP-018, GP-
 
 ## GPT-6 Luna
 
-Dix-neuf observations au total, mais **deux incidents ont un effort non relevé** et sont séparés des runs Medium.
+Vingt observations au total, mais **deux incidents ont un effort non relevé** et sont séparés des runs Medium.
 
 ### Medium
 
-- observations : **17**
-- succès : **16**
+- observations : **18**
+- succès : **17**
 - échec avant audit : **1**
-- quota visible cumulé : **8 pts**
-- durée cumulée : **1 h 23 min 07 s**
-- production ciblée récente : **15/15 succès**, **8 pts visibles cumulés**, **1 h 21 min 56 s**
-- détail des succès ciblés : **~0 pt / 40 s** sur l'analyse locale 6/6, **1 pt / 3:42** sur le correctif palette Utilisateurs, **~0 pt / 7:47** sur le Journal d’audit, **~0 pt / 3:19** sur la validation documentaire finale, **1 pt / 3:29** sur le fixture B1c, **~0 pt / 3:32** sur la compatibilité installateur B1d, **~0 pt / 4:52** sur la clôture documentaire B2, **1 pt / 3:11** sur le cleanup du fixture installer marker, **~0 pt / 4:14** sur le contrat manuel E-C, **2 pts / 12:53** sur la clôture documentaire E-D, **1 pt / 13:59** sur la pré-clôture documentaire 0.3.1, **~0 pt / 3:19** sur la clôture Ubuntu de 0.3.2-B, **1 pt / 4:17** sur la clôture Ubuntu de 0.3.2-C, **~0 pt / 4:35** sur la clôture Ubuntu/Chromium de 0.3.2-D, **1 pt / 3:28** sur le correctif fixture staging E2, **~0 pt / 5:19** sur la clôture Ubuntu de 0.3.2-E2.
+- quota visible cumulé : **9 pts**
+- durée cumulée : **1 h 27 min 47 s**
+- production ciblée récente : **16/16 succès**, **9 pts visibles cumulés**, **1 h 26 min 36 s**
+- détail des succès ciblés : **~0 pt / 40 s** sur l'analyse locale 6/6, **1 pt / 3:42** sur le correctif palette Utilisateurs, **~0 pt / 7:47** sur le Journal d’audit, **~0 pt / 3:19** sur la validation documentaire finale, **1 pt / 3:29** sur le fixture B1c, **~0 pt / 3:32** sur la compatibilité installateur B1d, **~0 pt / 4:52** sur la clôture documentaire B2, **1 pt / 3:11** sur le cleanup du fixture installer marker, **~0 pt / 4:14** sur le contrat manuel E-C, **2 pts / 12:53** sur la clôture documentaire E-D, **1 pt / 13:59** sur la pré-clôture documentaire 0.3.1, **~0 pt / 3:19** sur la clôture Ubuntu de 0.3.2-B, **1 pt / 4:17** sur la clôture Ubuntu de 0.3.2-C, **~0 pt / 4:35** sur la clôture Ubuntu/Chromium de 0.3.2-D, **1 pt / 3:28** sur le correctif fixture staging E2, **~0 pt / 5:19** sur la clôture Ubuntu de 0.3.2-E2, **1 pt / 4:40** sur la clôture Ubuntu de 0.3.2-E3-A.
 
 ### Incidents à effort non relevé
 
@@ -756,10 +770,10 @@ Dix-neuf observations au total, mais **deux incidents ont un effort non relevé*
 
 ### Total Luna, tous efforts confondus
 
-- observations : **19**
-- résultats : **16 succès · 1 échec · 2 blocages**
-- quota connu : **≥13 pts**
-- durée cumulée : **2 h 58 min 07 s**
+- observations : **20**
+- résultats : **17 succès · 1 échec · 2 blocages**
+- quota connu : **≥14 pts**
+- durée cumulée : **3 h 02 min 47 s**
 
 Les blocages GP-010/011 restent à interpréter comme incidents de fiabilité d'exécution possibles, pas comme une mesure pure des capacités de raisonnement de Luna.
 
