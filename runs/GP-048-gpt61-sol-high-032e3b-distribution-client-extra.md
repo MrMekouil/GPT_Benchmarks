@@ -150,3 +150,39 @@ Réponse finale courte :
 commit/push, routes, tests PASS/N/A, limites Ubuntu restantes.
 Aucune procédure Ubuntu ni checkpoint suivant.
 ~~~
+
+
+## Réponse exacte (partielle)
+
+~~~text
+Je vérifie le HEAD et le worktree, puis j’audite les lectures autorisées, le store et les gardes identity avant d’ajouter la distribution HTTP et le transport client-extra.
+
+a exécuté une commande
+Le schéma 5 permet de conserver les sources client-extra dans les observations privées, sans nouvelle table : leurs octets restent dans la zone source du pack et sont copiés en blob immuable lors de la publication. Pour les téléchargements, l’autorisation sera vérifiée avant toute réponse conditionnelle puis à chaque chunk, avec le fd validé conservé jusqu’à la fin du flux.
+
+A modifié un fichier, a exécuté une commande et a recherché sur le Web
+Le premier contrôle a détecté une collision de nom de module : content_http.py sert déjà au transport des providers. Je rétablis son contenu exact et place les nouvelles routes de distribution dans un module dédié, puis je relance les régressions pour vérifier l’isolation.
+
+a exécuté une commande
+Les contrats portables passent pour les conditions HTTP, le RBAC par publication et la persistance client-extra. J’ajoute les tests natifs qui vérifieront les fd/no-follow et les coupures de flux lors d’une révocation, d’une suppression de grant ou d’une déconnexion ; ils seront explicitement N/A ici si POSIX/aiohttp manquent.
+
+a exécuté une commande
+Réponse : Les contrôles portables E3-B passent : 21 PASS. Les 21 tests POSIX/HTTP natifs restent N/A dans Work, faute de Linux et des dépendances requises. Je termine la revue et la documentation en conservant ce statut candidat, distinct des validations Ubuntu acquises.
+Les contrôles portables E3-B passent : 21 PASS. Les 21 tests POSIX/HTTP natifs restent N/A dans Work, faute de Linux et des dépendances requises. Je termine la revue et la documentation en conservant ce statut candidat, distinct des validations Ubuntu acquises.
+
+Exécution d’une commande
+Exécution d’une commande
+Étape 2 sur 4
+~~~
+
+La capture Work s’arrête ici sans handoff final, mais le dépôt distant montre que le travail a ensuite été commité et poussé.
+
+## Vérification externe
+
+- Parent exact : `44d49fead0123099784e32f2bcf3be4304611fef`.
+- Commit : `feat: add authorized content distribution and client-extra`.
+- HEAD PR #22 : `5d4b0301f54ea8ba93d63dc305c8896f7f958283`.
+- PR #22 : ouverte et Draft.
+- E3-B documenté comme candidat ; E global non acquis ; E3-C/F non commencés.
+- Fichiers principaux : `gamepanel/content_delivery.py`, `gamepanel/content_distribution_api.py`, `gamepanel/content_api.py`, `gamepanel/content_admin.py`, `gamepanel/content_store.py`, `gamepanel/api.py`, `tests/test_content_distribution_032.py`, plus docs/état/manifeste.
+- La description de PR indique E3-B **21 PASS / 21 N/A** dans Work, régressions **120 PASS / 82 N/A** et **95 PASS / 63 N/A**, compile/release-docs/diff/manifeste PASS ; validation Ubuntu HTTP/POSIX native encore requise.
