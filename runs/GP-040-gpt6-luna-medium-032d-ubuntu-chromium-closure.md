@@ -61,3 +61,25 @@ Réponse finale courte :
 commit/push, fichiers touchés, tests PASS/FAIL/N/A.
 Aucune procédure Ubuntu ni prochain checkpoint.
 ~~~
+
+
+## Réponse exacte
+
+~~~text
+1. **Commit poussé :** `7787223bd9f912e0e1d987e8670161dd0f0f059f`.
+2. **Fichiers modifiés :** `WORK_STATE.md`, `ASSISTANT_STATE.md`, `docs/CHANGELOG.md`, `docs/CONTENT_MANIFESTS_032.md`, `MANIFEST.sha256`. Aucun code fonctionnel modifié.
+3. **D acquis** et description de la PR #22 actualisée ; la PR reste Draft, non mergée et non taguée.
+4. **PASS réel Ubuntu/Chromium confirmé :** contrat UI, responsive 1440/1150/760/390 sans débordement et interactions override/client-extra. Régressions UI ciblées, `tests.test_release_docs`, manifeste et `git diff --check` PASS.
+5. **PASS dans Work :** `tests.test_release_docs` (1/1). Manifeste vérifié (191/191).
+6. **N/A dans Work :** test Chromium faute de Playwright ; `tests.test_version_031` faute d’`aiohttp`. Ces limites ne remplacent pas le PASS Chromium Ubuntu confirmé.
+7. **État final :** worktree propre ; version 0.3.1 et SQLite schema 4 inchangés ; E/F non commencés.
+~~~
+
+## Vérification externe
+
+- Parent exact : `39f753261918a2bf1870a6eec4c44ae5d7e22fab`.
+- Commit : `docs: record 0.3.2-D Ubuntu validation`.
+- PR #22 : ouverte et Draft, head `7787223bd9f912e0e1d987e8670161dd0f0f059f`.
+- Description PR mise à jour pour A/B/C/D acquis.
+- Fichiers modifiés : `ASSISTANT_STATE.md`, `MANIFEST.sha256`, `WORK_STATE.md`, `docs/CHANGELOG.md`, `docs/CONTENT_MANIFESTS_032.md`.
+- Aucun code fonctionnel modifié.
