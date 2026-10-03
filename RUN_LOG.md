@@ -659,6 +659,21 @@ Le run rapporte une implémentation locale avancée d’E2 : canonicalisation st
 
 Checkpoint de récupération après l’interruption GP-041 : état Git et fichiers E2 locaux établis, travail jugé récupérable, risques/manifeste incohérent recensés et recommandation de reprendre l’existant. STOP respecté sans modification, commit, push, reset ou cleanup. La PR #22 est restée sur `e964cb8...` comme attendu.
 
+---
+
+## GP-043 — GPT-6.1 Sol High — finalisation 0.3.2-E2
+
+- Date : 2026-10-03
+- Quota : 97 % → 90 % = **7 pts**
+- Durée observée : **28 min 50 s**
+- Note durée : **biaisée par une demande d’autorisation**
+- Statut : **succès**
+- Commit : `c3f335a52426f8c8a8ba18f816801aec0ef20ec9`
+- Draft PR : **#22**
+- Prompt + réponse complets : [runs/GP-043-gpt61-sol-high-032e2-completion.md](runs/GP-043-gpt61-sol-high-032e2-completion.md)
+
+Reprise du travail E2 local interrompu : audit du diff existant, corrections ciblées, validation Work puis commit/push. E2 **38 PASS / 31 N/A POSIX**, E1/identity/startup/docs **53 PASS / 51 N/A**, B/C **83 PASS / 16 N/A**, manifeste **197/197**. E2 reste candidat et aucun PASS Ubuntu/POSIX non exécuté n’est revendiqué.
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -719,15 +734,15 @@ Les onze tâches réussies représentent **125 pts**. Les deux blocages représe
 
 ## GPT-6.1 Sol High
 
-Une observation :
+Deux observations :
 
-- quota cumulé : **20 pts**
-- durée cumulée : **53 min 27 s**
-- résultats : **1 partiel**
-- moyenne brute : **20,00 pts/observation**
-- livrable distant : **aucun commit/push E2**
+- quota cumulé : **27 pts**
+- durée cumulée observée : **1 h 22 min 17 s***
+- résultats : **1 succès / 1 partiel**
+- moyenne brute : **13,50 pts/observation**
+- livrable distant : **E2 candidat livré sur `c3f335a...` par GP-043**
 
-Le run a consommé 20 points avec un travail local avancé et des tests portables rapportés PASS, mais l’objectif n’a pas été clôturé. L’arrêt apparent de Work pendant sa phase finale empêche de distinguer proprement coût du raisonnement, coût de l’exécution et incident d’outillage.
+GP-041 a consommé **20 pts / 53:27** et s’est interrompu avant commit/push malgré un travail local avancé. Après l’audit de récupération GP-042, GP-043 a repris l’existant et finalisé E2 pour **7 pts / 28:50 observés**. *La durée GP-043 inclut une attente d’autorisation ; le total temporel n’est donc pas directement comparable aux autres runs.*
 
 ## Comparaison directe historique
 
