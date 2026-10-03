@@ -1173,6 +1173,36 @@
         "Le résultat Ubuntu attendu 69/69 PASS n’est pas revendiqué comme exécuté",
         "PR #22 reste Draft ; E3 non commencé"
       ]
+    },
+    {
+      "run_id": "GP-045",
+      "date": "2026-10-03",
+      "project": "GamePanel",
+      "model": "GPT-6 Luna",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "luna_targeted_production",
+      "task_summary": "0.3.2-E2 : clôture documentaire après validation Ubuntu réelle complète",
+      "quota_before_pct": 89,
+      "quota_after_pct": 89,
+      "quota_used_points": 0,
+      "quota_approx": true,
+      "duration_seconds": 319,
+      "status": "success",
+      "commit_sha": "6fd46e5cbafb22bde1fba96f335b275e3be2cde9",
+      "quality": {
+        "summary": "Clôture documentaire E2 après validation Ubuntu réelle : tests content publication 69/69 PASS sans skip inattendu ; E1/identity/startup/acceptance/migrations/version/release-docs et B/C ciblés PASS ; manifeste 197/197, release-docs et diff-check PASS dans Work ; aucun code fonctionnel modifié."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "E2 marqué acquis après validation Ubuntu réelle",
+        "Dans Work, test_version_031 N/A n’est pas revendiqué ; la validation Ubuntu complète est enregistrée séparément",
+        "PR #22 reste Draft avec A/B/C/D/E1/E2 acquis ; E global non acquis",
+        "Version application 0.3.1 et SQLite schema 5 inchangés",
+        "E3/F non commencés",
+        "Quota visible inchangé 89% -> 89%, enregistré comme ~0 pt visible"
+      ]
     }
   ]
 }
