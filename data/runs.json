@@ -1087,6 +1087,35 @@
         "Le run semble avoir rencontré un stall/bug d’exécution Work après une implémentation locale avancée",
         "Ne pas compter ce run comme succès E2"
       ]
+    },
+    {
+      "run_id": "GP-042",
+      "date": "2026-10-03",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032e2_recovery",
+      "task_summary": "0.3.2-E2 : audit de récupération après interruption, sans modification ni reprise fonctionnelle",
+      "quota_before_pct": 99,
+      "quota_after_pct": 98,
+      "quota_used_points": 1,
+      "quota_approx": false,
+      "duration_seconds": 242,
+      "status": "success",
+      "commit_sha": null,
+      "quality": {
+        "summary": "Checkpoint de récupération réussi : état Git/local détaillé, travail E2 existant identifié, tests précédents et risques recensés, recommandation de reprendre les modifications locales ; STOP respecté sans modification, commit, push, reset ou cleanup."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "PR #22 vérifiée après le run : toujours sur e964cb8cf70641625de2764041155cd990f48fc2",
+        "Aucun commit attendu : le prompt imposait STOP après le rapport",
+        "Le travail E2 local est jugé récupérable et substantiel",
+        "Le manifeste local E2 est encore incohérent et doit être régénéré lors de la reprise",
+        "Ce run mesure la récupération/diagnostic, pas l’achèvement E2"
+      ]
     }
   ]
 }
