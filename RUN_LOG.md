@@ -646,6 +646,19 @@ Clôture documentaire de D après validation réelle Ubuntu/Chromium : contrats 
 
 Le run rapporte une implémentation locale avancée d’E2 : canonicalisation stricte, store privé, publication atomique/recovery et tests aux frontières de crash. Work annonçait **34 tests E2 PASS** et **29 POSIX N/A**, puis la réponse s’est arrêtée pendant « Réflexion en cours » avant handoff final. Vérification externe : la PR #22 est restée exactement sur le HEAD initial `e964cb8...`, donc aucun commit/push E2 n’a été livré.
 
+---
+
+## GP-042 — GPT-6.1 Sol Medium — audit de récupération E2
+
+- Date : 2026-10-03
+- Quota : 99 % → 98 % = **1 pt**
+- Durée : **4 min 02 s**
+- Statut : **succès**
+- Commit GamePanel : **aucun, conformément au prompt**
+- Prompt + réponse complets : [runs/GP-042-gpt61-sol-medium-032e2-recovery-audit.md](runs/GP-042-gpt61-sol-medium-032e2-recovery-audit.md)
+
+Checkpoint de récupération après l’interruption GP-041 : état Git et fichiers E2 locaux établis, travail jugé récupérable, risques/manifeste incohérent recensés et recommandation de reprendre l’existant. STOP respecté sans modification, commit, push, reset ou cleanup. La PR #22 est restée sur `e964cb8...` comme attendu.
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -695,14 +708,14 @@ Les blocages GP-010/011 restent à interpréter comme incidents de fiabilité d'
 
 ## GPT-6.1 Sol Medium
 
-Douze observations de production :
+Treize observations de production :
 
-- quota cumulé : **130 pts**
-- durée cumulée : **3 h 16 min 51 s**
-- résultats : **10 succès / 2 blocages**
-- moyenne brute : **10,83 pts/observation**
+- quota cumulé : **131 pts**
+- durée cumulée : **3 h 20 min 53 s**
+- résultats : **11 succès / 2 blocages**
+- moyenne brute : **10,08 pts/observation**
 
-Les dix tâches terminées représentent **124 pts**. Les deux blocages représentent **6 pts** : GP-021 à **5 pts / 4:31** sans livraison B1 faute d’environnement POSIX, puis GP-033 à **1 pt / 0:17** avec STOP correct sur miroir Work incohérent/dirty. Les six gros lots récents se situent à **16 pts / 21:37** pour B2 backend/root, **17 pts / 26:31** pour E-C UI, **16 pts / 24:29** pour le contrat 0.3.2-A, **12 pts / 20:49** pour le scanner Minecraft 0.3.2-B, **17 pts / 33:55** pour les providers/classification 0.3.2-C et **11 pts / 16:49** pour l’UI Admin 0.3.2-D.
+Les onze tâches réussies représentent **125 pts**. Les deux blocages représentent **6 pts** : GP-021 à **5 pts / 4:31** sans livraison B1 faute d’environnement POSIX, puis GP-033 à **1 pt / 0:17** avec STOP correct sur miroir Work incohérent/dirty. Les six gros lots d’implémentation récents se situent à **16 pts / 21:37** pour B2 backend/root, **17 pts / 26:31** pour E-C UI, **16 pts / 24:29** pour le contrat 0.3.2-A, **12 pts / 20:49** pour le scanner Minecraft 0.3.2-B, **17 pts / 33:55** pour les providers/classification 0.3.2-C et **11 pts / 16:49** pour l’UI Admin 0.3.2-D ; GP-042 ajoute un audit de récupération strictement borné à **1 pt / 4:02**.
 
 ## GPT-6.1 Sol High
 
