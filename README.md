@@ -37,7 +37,7 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 | 6.0 | **GPT-6 Sol** | Medium | 7 | **7 succès** | **~73 pts** | **~10,43 pts** | **52:38** |
 | 6.0 | **GPT-6 Sol** | High | 1 | **1 partiel** | **~20 pts** | **~20,00 pts** | **12:07** |
 | 6.0 | **GPT-6 Astra** | Low | 2 | **2 succès** | **30 pts** | **15,00 pts** | **2:52** |
-| 6.1 | **GPT-6.1 Sol** | Medium | 11 | **9 succès · 2 bloqués** | **119 pts** | **10,82 pts** | **3:00:02** |
+| 6.1 | **GPT-6.1 Sol** | Medium | 12 | **10 succès · 2 bloqués** | **130 pts** | **10,83 pts** | **3:16:51** |
 
 \* GP-010 et GP-011 n’avaient pas d’effort relevé ; GP-010 n’a pas non plus de mesure de quota. Ils restent séparés des runs Luna Medium. La moyenne affichée est la **moyenne brute par observation de la ligne**, y compris échecs/blocages ; pour ces deux incidents Luna, **≥2,50 pts/run** est seulement une borne basse puisque GP-010 n’a pas de mesure.
 
@@ -46,7 +46,7 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 - **A/B historique le plus propre :** GPT-6 Sol Medium = 4 pts, GPT-5.6 Sol Medium = 6 pts, GPT-6 Astra Low = 17 pts pour le même diagnostic principal.
 - **A/B fonctionnel :** GPT-6 Sol Medium = 4 pts contre GPT-6 Astra Low = 13 pts, avec la même lacune principale trouvée.
 - **GPT-6 Sol Medium en production :** trois gros checkpoints complets observés à **11 pts / 8:42** (pré-clôture), **22 pts / 14:13** (audit transversal 0.3.1-E-A) et **21 pts / 20:35** (correctif concurrence installer/recovery GP-028). Le coût varie fortement avec la profondeur et le périmètre.
-- **GPT-6.1 Sol Medium :** 9 tâches de production terminées sur 11 tentatives observées. B2 coûte **16 pts / 21:37**, E-C UI **17 pts / 26:31**, le contrat 0.3.2-A **16 pts / 24:29**, le scanner Minecraft 0.3.2-B **12 pts / 20:49** et les providers/classification 0.3.2-C **17 pts / 33:55**. Deux blocages environnementaux restent observés : GP-021 à **5 pts / 4:31** et GP-033 à **1 pt / 0:17**.
+- **GPT-6.1 Sol Medium :** 10 tâches de production terminées sur 12 tentatives observées. B2 coûte **16 pts / 21:37**, E-C UI **17 pts / 26:31**, le contrat 0.3.2-A **16 pts / 24:29**, le scanner Minecraft 0.3.2-B **12 pts / 20:49**, les providers/classification 0.3.2-C **17 pts / 33:55** et l’UI Admin 0.3.2-D **11 pts / 16:49**. Deux blocages environnementaux restent observés : GP-021 à **5 pts / 4:31** et GP-033 à **1 pt / 0:17**.
 - **GPT-6 Luna Medium :** **14 runs Medium** observés : **13 succès / 1 échec**, **7 points visibles** au total, **1:09:45**. Les **12 checkpoints de production récents** sont à **12/12 succès**, **7 points visibles** et **1:08:34**. À part, GP-010/011 représentent **2 blocages à effort non relevé**, **1:35:00** cumulé et **≥5 points connus**.
 
 ## Résultats actuellement observés
@@ -107,8 +107,9 @@ Ces douze runs sont de vrais checkpoints de production Luna terminés après les
 | GP-034 | 0.3.2-A : contrat manifestes/content store/publication + Draft PR #22 | **16 pts** | **24:29** | terminé, commit `2c61b30...` |
 | GP-035 | 0.3.2-B : scanner Minecraft local borné Forge/NeoForge | **12 pts** | **20:49** | terminé, commit `24d675b...`; validation Linux réelle encore requise |
 | GP-037 | 0.3.2-C : providers métadonnées + classification/provenance/overrides/cache | **17 pts** | **33:55** | terminé, commit `fc6fcae...`; C reste candidate |
+| GP-039 | 0.3.2-D : UI Admin manifestes/contenus client, sans backend E | **11 pts** | **16:49** | terminé, commit `39f7532...`; navigateur réel N/A |
 
-Cumul GPT-6.1 Sol Medium à ce stade : **119 points**, **3 h 00 min 02 s**, **9 succès / 2 blocages**. Les neuf tâches terminées représentent **113 points** ; les deux blocages représentent **6 points** au total.
+Cumul GPT-6.1 Sol Medium à ce stade : **130 points**, **3 h 16 min 51 s**, **10 succès / 2 blocages**. Les dix tâches terminées représentent **124 points** ; les deux blocages représentent **6 points** au total.
 
 ## Lecture provisoire
 
@@ -117,13 +118,13 @@ Cumul GPT-6.1 Sol Medium à ce stade : **119 points**, **3 h 00 min 02 s**, **9 
 - **GPT-6 Sol High** : un gros run multi-étapes a consommé ~20 points en 12:07 et s'est arrêté faute de quota avant la fin. Cela ne mesure pas son intelligence, mais montre le risque d'un effort High sur un long marathon.
 - **GPT-6 Astra Low** : excellente qualité, mais 13–17 points sur les deux audits comparables où Sol Medium en consommait 4.
 - **GPT-5.6 Sol Medium** : baseline fiable, mais plus coûteuse que GPT-6 Sol Medium sur le benchmark directement comparable.
-- **GPT-6.1 Sol Medium** : neuf runs GamePanel terminés et deux blocages. Les gros lots récents se situent entre **12 et 17 pts** : **16 pts** pour B2 backend/root, **17 pts** pour E-C UI, **16 pts** pour 0.3.2-A, **12 pts** pour 0.3.2-B et **17 pts** pour 0.3.2-C. GP-021 a coûté **5 pts** sans livraison à cause du manque d’environnement POSIX ; GP-033 **1 pt / 17 s** en STOP de pré-vol correct.
+- **GPT-6.1 Sol Medium** : dix runs GamePanel terminés et deux blocages. Les gros lots récents vont de **11 à 17 pts** : **16 pts** pour B2 backend/root, **17 pts** pour E-C UI, **16 pts** pour 0.3.2-A, **12 pts** pour 0.3.2-B, **17 pts** pour 0.3.2-C et **11 pts** pour l’UI Admin 0.3.2-D. GP-021 a coûté **5 pts** sans livraison à cause du manque d’environnement POSIX ; GP-033 **1 pt / 17 s** en STOP de pré-vol correct.
 
 ## Intégrité des données
 
 - `data/runs.json` est la source structurée canonique.
 - `data/runs.csv` est régénéré depuis le JSON pour éviter les décalages de colonnes.
-- État vérifié au 2026-10-03 : **38 runs JSON = 38 lignes CSV**, IDs uniques et champs communs cohérents.
+- État vérifié au 2026-10-03 : **39 runs JSON = 39 lignes CSV**, IDs uniques et champs communs cohérents.
 
 ## Méthode
 
