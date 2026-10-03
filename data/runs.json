@@ -1058,6 +1058,35 @@
         "0.3.2-E/F non commencés",
         "Quota visible inchangé 88% -> 88%, enregistré comme ~0 pt visible"
       ]
+    },
+    {
+      "run_id": "GP-041",
+      "date": "2026-10-03",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "High",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032e2",
+      "task_summary": "0.3.2-E2 : canonicalisation, content store immuable, publication atomique et recovery — run interrompu avant commit/push",
+      "quota_before_pct": 72,
+      "quota_after_pct": 52,
+      "quota_used_points": 20,
+      "quota_approx": false,
+      "duration_seconds": 3207,
+      "status": "partial",
+      "commit_sha": null,
+      "quality": {
+        "summary": "Implémentation locale substantielle rapportée avec 34 tests E2 PASS et 29 POSIX N/A, plus régressions B/C portables ; le run s’est interrompu pendant la phase finale de réflexion/revue avant commit/push. PR #22 restée sur le HEAD initial e964cb8…, donc aucun livrable distant E2."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "partial_exact",
+      "notes": [
+        "Réponse Work incomplète : elle se termine sur « Réflexion en cours — Étape 1 sur 3 / Étape 2 sur 3 »",
+        "Le distant a été vérifié après le run : PR #22 toujours sur e964cb8cf70641625de2764041155cd990f48fc2",
+        "Aucun commit/push E2 vérifiable",
+        "Le run semble avoir rencontré un stall/bug d’exécution Work après une implémentation locale avancée",
+        "Ne pas compter ce run comme succès E2"
+      ]
     }
   ]
 }
