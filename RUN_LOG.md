@@ -730,6 +730,20 @@ Checkpoint fonctionnel E3-A livré : routes Admin content pour état, scan, draf
 
 Clôture documentaire de E3-A après validation Ubuntu réelle : `tests.test_content_admin_032` **46/46 PASS sans skip inattendu**, régressions E2/E1/identity/startup/release-docs, acceptance/security/migrations/version et B/C ciblées PASS. Aucun code fonctionnel modifié ; E3-A est acquis, E global reste non acquis.
 
+---
+
+## GP-048 — GPT-6.1 Sol High — 0.3.2-E3-B distribution HTTP + client-extra
+
+- Date : 2026-10-03
+- Quota : 65 % → 41 % = **24 pts**
+- Durée : **42 min 00 s**
+- Statut : **succès vérifié sur le dépôt distant**
+- Commit : `5d4b0301f54ea8ba93d63dc305c8896f7f958283`
+- Draft PR : **#22**
+- Prompt + réponse partielle : [runs/GP-048-gpt61-sol-high-032e3b-distribution-client-extra.md](runs/GP-048-gpt61-sol-high-032e3b-distribution-client-extra.md)
+
+E3-B livré malgré un stall apparent de l’UI Work après les dernières exécutions : distribution HTTP autorisée GET/HEAD/ETag/304/Range/If-Range, streaming avec revalidation session/grant/révocation et transport Admin client-extra borné. PR #22 mise à jour avec E3-B candidat. Work : **21 PASS / 21 N/A** E3-B, régressions **120/82** et **95/63** PASS/N/A ; compile/release-docs/diff/manifeste PASS. Validation Ubuntu HTTP/POSIX native encore requise.
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -790,15 +804,15 @@ Les douze tâches réussies représentent **148 pts**. Les deux blocages représ
 
 ## GPT-6.1 Sol High
 
-Deux observations :
+Trois observations :
 
-- quota cumulé : **27 pts**
-- durée cumulée observée : **1 h 22 min 17 s***
-- résultats : **1 succès / 1 partiel**
-- moyenne brute : **13,50 pts/observation**
-- livrable distant : **E2 candidat livré sur `c3f335a...` par GP-043**
+- quota cumulé : **51 pts**
+- durée cumulée observée : **2 h 04 min 17 s***
+- résultats : **2 succès / 1 partiel**
+- moyenne brute : **17,00 pts/observation**
+- livrables distants : **E2 candidat `c3f335a...`**, puis **E3-B candidat `5d4b030...`**
 
-GP-041 a consommé **20 pts / 53:27** et s’est interrompu avant commit/push malgré un travail local avancé. Après l’audit de récupération GP-042, GP-043 a repris l’existant et finalisé E2 pour **7 pts / 28:50 observés**. *La durée GP-043 inclut une attente d’autorisation ; le total temporel n’est donc pas directement comparable aux autres runs.*
+GP-041 a consommé **20 pts / 53:27** et s’est interrompu avant commit/push malgré un travail local avancé. GP-043 a repris l’existant et finalisé E2 pour **7 pts / 28:50 observés**. GP-048 a livré E3-B pour **24 pts / 42:00** malgré un stall apparent de l’UI après exécution ; le succès est confirmé par le commit et la PR distante. *La durée GP-043 inclut une attente d’autorisation ; le total temporel n’est donc pas directement comparable aux autres runs.*
 
 ## Comparaison directe historique
 
