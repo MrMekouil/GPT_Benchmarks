@@ -619,6 +619,20 @@ Clôture documentaire de C après validation Ubuntu réelle : tests C+B PASS, te
 
 Checkpoint UI D livré : interface Admin distinguant inventaire/brouillon/versions publiées, preuves/conflits, overrides et client-extra locaux non persistés. 8 contrats Web, syntaxe de 23 JS/CJS, release-docs, diff-check et manifeste 191/191 PASS ; Chromium/Playwright N/A, responsive validé statiquement seulement. Aucun backend/API content ni persistance E.
 
+---
+
+## GP-040 — GPT-6 Luna Medium — clôture Ubuntu/Chromium 0.3.2-D
+
+- Date : 2026-10-03
+- Quota : 88 % → 88 % = **~0 pt visible**
+- Durée : **4 min 35 s**
+- Statut : **succès**
+- Commit : `7787223bd9f912e0e1d987e8670161dd0f0f059f`
+- Draft PR : **#22**
+- Prompt + réponse complets : [runs/GP-040-gpt6-luna-medium-032d-ubuntu-chromium-closure.md](runs/GP-040-gpt6-luna-medium-032d-ubuntu-chromium-closure.md)
+
+Clôture documentaire de D après validation réelle Ubuntu/Chromium : contrats UI/navigateur PASS, responsive 1440/1150/760/390 sans overflow, interactions override/client-extra et régressions UI ciblées PASS. Aucun code fonctionnel modifié ; A/B/C/D sont acquis, E/F non commencés.
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -638,17 +652,17 @@ La moyenne brute mélange des tâches de tailles très différentes. GP-018, GP-
 
 ## GPT-6 Luna
 
-Seize observations au total, mais **deux incidents ont un effort non relevé** et sont séparés des runs Medium.
+Dix-sept observations au total, mais **deux incidents ont un effort non relevé** et sont séparés des runs Medium.
 
 ### Medium
 
-- observations : **14**
-- succès : **13**
+- observations : **15**
+- succès : **14**
 - échec avant audit : **1**
 - quota visible cumulé : **7 pts**
-- durée cumulée : **1 h 09 min 45 s**
-- production ciblée récente : **12/12 succès**, **7 pts visibles cumulés**, **1 h 08 min 34 s**
-- détail des succès ciblés : **~0 pt / 40 s** sur l'analyse locale 6/6, **1 pt / 3:42** sur le correctif palette Utilisateurs, **~0 pt / 7:47** sur le Journal d’audit, **~0 pt / 3:19** sur la validation documentaire finale, **1 pt / 3:29** sur le fixture B1c, **~0 pt / 3:32** sur la compatibilité installateur B1d, **~0 pt / 4:52** sur la clôture documentaire B2, **1 pt / 3:11** sur le cleanup du fixture installer marker, **~0 pt / 4:14** sur le contrat manuel E-C, **2 pts / 12:53** sur la clôture documentaire E-D, **1 pt / 13:59** sur la pré-clôture documentaire 0.3.1, **~0 pt / 3:19** sur la clôture Ubuntu de 0.3.2-B, **1 pt / 4:17** sur la clôture Ubuntu de 0.3.2-C.
+- durée cumulée : **1 h 14 min 20 s**
+- production ciblée récente : **13/13 succès**, **7 pts visibles cumulés**, **1 h 13 min 09 s**
+- détail des succès ciblés : **~0 pt / 40 s** sur l'analyse locale 6/6, **1 pt / 3:42** sur le correctif palette Utilisateurs, **~0 pt / 7:47** sur le Journal d’audit, **~0 pt / 3:19** sur la validation documentaire finale, **1 pt / 3:29** sur le fixture B1c, **~0 pt / 3:32** sur la compatibilité installateur B1d, **~0 pt / 4:52** sur la clôture documentaire B2, **1 pt / 3:11** sur le cleanup du fixture installer marker, **~0 pt / 4:14** sur le contrat manuel E-C, **2 pts / 12:53** sur la clôture documentaire E-D, **1 pt / 13:59** sur la pré-clôture documentaire 0.3.1, **~0 pt / 3:19** sur la clôture Ubuntu de 0.3.2-B, **1 pt / 4:17** sur la clôture Ubuntu de 0.3.2-C, **~0 pt / 4:35** sur la clôture Ubuntu/Chromium de 0.3.2-D.
 
 ### Incidents à effort non relevé
 
@@ -659,10 +673,10 @@ Seize observations au total, mais **deux incidents ont un effort non relevé** e
 
 ### Total Luna, tous efforts confondus
 
-- observations : **16**
-- résultats : **13 succès · 1 échec · 2 blocages**
+- observations : **17**
+- résultats : **14 succès · 1 échec · 2 blocages**
 - quota connu : **≥12 pts**
-- durée cumulée : **2 h 44 min 45 s**
+- durée cumulée : **2 h 49 min 20 s**
 
 Les blocages GP-010/011 restent à interpréter comme incidents de fiabilité d'exécution possibles, pas comme une mesure pure des capacités de raisonnement de Luna.
 
