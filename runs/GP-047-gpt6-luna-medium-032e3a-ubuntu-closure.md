@@ -73,3 +73,25 @@ Réponse finale courte :
 commit/push, fichiers documentaires touchés, validations PASS/FAIL/N/A.
 Aucune procédure Ubuntu ni prochain checkpoint.
 ~~~
+
+
+## Réponse exacte
+
+~~~text
+E3-A est clos documentairement après validation Ubuntu réelle.
+
+- Commit **`44d49fead0123099784e32f2bcf3be4304611fef`** poussé sur `work/0.3.2-content-manifests`.
+- Documents modifiés : `WORK_STATE.md`, `ASSISTANT_STATE.md`, `docs/CHANGELOG.md`, `docs/CONTENT_MANIFESTS_032.md` et `MANIFEST.sha256`.
+- `tests.test_release_docs` : **PASS** ; manifeste **200/200 PASS** ; `git diff --check` : **PASS**.
+- PR #22 mise à jour, toujours Draft et non mergée.
+- E3-A acquis ; E global reste non acquis. **E3-B/E3-C/F non commencés**
+~~~
+
+## Vérification externe
+
+- Parent exact : `0c8f2c42dd72b4d9701fb55994f6e060e13cff07`.
+- Commit : `docs: record 0.3.2-E3-A Ubuntu validation`.
+- Fichiers modifiés : `ASSISTANT_STATE.md`, `MANIFEST.sha256`, `WORK_STATE.md`, `docs/CHANGELOG.md`, `docs/CONTENT_MANIFESTS_032.md`.
+- PR #22 : ouverte et Draft, head `44d49fead0123099784e32f2bcf3be4304611fef`.
+- Description PR : A/B/C/D/E1/E2/E3-A acquis, E global non acquis, E3-B/E3-C/F non commencés.
+- Aucun code fonctionnel modifié.
