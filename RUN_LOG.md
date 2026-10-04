@@ -757,6 +757,20 @@ E3-B livré malgré un stall apparent de l’UI Work après les dernières exéc
 
 Le fixture de timeout client-extra a été corrigé localement selon la réponse, avec **21 PASS / 21 N/A** sous Windows, manifeste **203/203** et diff-check PASS. Le venv Ubuntu demandé était absent et WSL inaccessible ; le **42/42 Ubuntu** exigé avant commit n’a pas pu être exécuté. La PR #22 est donc restée sur `5d4b0301...`.
 
+---
+
+## GP-050 — GPT-6 Luna Medium — push du correctif fixture timeout E3-B
+
+- Date : 2026-10-04
+- Quota : 100 % → 99 % = **1 pt**
+- Durée : **4 min 03 s**
+- Statut : **succès**
+- Commit : `bb5da9dfe35fbb46ddea3b505d61bc122de40022`
+- Draft PR : **#22**
+- Prompt + réponse complets : [runs/GP-050-gpt6-luna-medium-e3b-timeout-fixture-push.md](runs/GP-050-gpt6-luna-medium-e3b-timeout-fixture-push.md)
+
+Reprise du correctif local laissé par GP-049 et push effectif. Le commit ne touche que le test de timeout E3-B et le manifeste. Work : **42 exécutés, 21 PASS / 21 N/A** natifs, manifeste et diff-check PASS ; le **42/42 Ubuntu** attendu n’est pas revendiqué comme exécuté.
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -776,18 +790,18 @@ La moyenne brute mélange des tâches de tailles très différentes. GP-018, GP-
 
 ## GPT-6 Luna
 
-Vingt-et-une observations au total, dont **deux incidents ont un effort non relevé** et sont séparés des runs Medium.
+Vingt-deux observations au total, dont **deux incidents ont un effort non relevé** et sont séparés des runs Medium.
 
 ### Medium
 
-- observations : **19**
-- succès : **17**
+- observations : **20**
+- succès : **18**
 - blocage environnemental : **1**
 - échec avant audit : **1**
-- quota visible cumulé : **9 pts**
-- durée cumulée : **1 h 30 min 02 s**
-- production ciblée récente : **16 succès / 1 blocage**, **9 pts visibles cumulés**, **1 h 28 min 51 s**
-- détail des succès ciblés : **~0 pt / 40 s** sur l'analyse locale 6/6, **1 pt / 3:42** sur le correctif palette Utilisateurs, **~0 pt / 7:47** sur le Journal d’audit, **~0 pt / 3:19** sur la validation documentaire finale, **1 pt / 3:29** sur le fixture B1c, **~0 pt / 3:32** sur la compatibilité installateur B1d, **~0 pt / 4:52** sur la clôture documentaire B2, **1 pt / 3:11** sur le cleanup du fixture installer marker, **~0 pt / 4:14** sur le contrat manuel E-C, **2 pts / 12:53** sur la clôture documentaire E-D, **1 pt / 13:59** sur la pré-clôture documentaire 0.3.1, **~0 pt / 3:19** sur la clôture Ubuntu de 0.3.2-B, **1 pt / 4:17** sur la clôture Ubuntu de 0.3.2-C, **~0 pt / 4:35** sur la clôture Ubuntu/Chromium de 0.3.2-D, **1 pt / 3:28** sur le correctif fixture staging E2, **~0 pt / 5:19** sur la clôture Ubuntu de 0.3.2-E2, **1 pt / 4:40** sur la clôture Ubuntu de 0.3.2-E3-A, **~0 pt / 2:15** sur le fixture timeout E3-B bloqué faute d’Ubuntu/WSL.
+- quota visible cumulé : **10 pts**
+- durée cumulée : **1 h 34 min 05 s**
+- production ciblée récente : **17 succès / 1 blocage**, **10 pts visibles cumulés**, **1 h 32 min 54 s**
+- détail des succès ciblés : **~0 pt / 40 s** sur l'analyse locale 6/6, **1 pt / 3:42** sur le correctif palette Utilisateurs, **~0 pt / 7:47** sur le Journal d’audit, **~0 pt / 3:19** sur la validation documentaire finale, **1 pt / 3:29** sur le fixture B1c, **~0 pt / 3:32** sur la compatibilité installateur B1d, **~0 pt / 4:52** sur la clôture documentaire B2, **1 pt / 3:11** sur le cleanup du fixture installer marker, **~0 pt / 4:14** sur le contrat manuel E-C, **2 pts / 12:53** sur la clôture documentaire E-D, **1 pt / 13:59** sur la pré-clôture documentaire 0.3.1, **~0 pt / 3:19** sur la clôture Ubuntu de 0.3.2-B, **1 pt / 4:17** sur la clôture Ubuntu de 0.3.2-C, **~0 pt / 4:35** sur la clôture Ubuntu/Chromium de 0.3.2-D, **1 pt / 3:28** sur le correctif fixture staging E2, **~0 pt / 5:19** sur la clôture Ubuntu de 0.3.2-E2, **1 pt / 4:40** sur la clôture Ubuntu de 0.3.2-E3-A, **~0 pt / 2:15** sur le fixture timeout E3-B bloqué faute d’Ubuntu/WSL, puis **1 pt / 4:03** sur la reprise/push de ce correctif.
 
 ### Incidents à effort non relevé
 
@@ -798,10 +812,10 @@ Vingt-et-une observations au total, dont **deux incidents ont un effort non rele
 
 ### Total Luna, tous efforts confondus
 
-- observations : **21**
-- résultats : **17 succès · 1 échec · 3 blocages**
-- quota connu : **≥14 pts**
-- durée cumulée : **3 h 05 min 02 s**
+- observations : **22**
+- résultats : **18 succès · 1 échec · 3 blocages**
+- quota connu : **≥15 pts**
+- durée cumulée : **3 h 09 min 05 s**
 
 Les blocages GP-010/011 restent à interpréter comme incidents de fiabilité d'exécution possibles, pas comme une mesure pure des capacités de raisonnement de Luna.
 
