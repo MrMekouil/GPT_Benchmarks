@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-03",
+  "updated_at": "2026-10-04",
   "measurement_notes": [
     "quota_used_points correspond aux points de pourcentage visibles dans l'interface Work/ChatGPT, pas à un comptage exact de tokens",
     "quota_approx=true indique une valeur arrondie, déduite ou seulement observée comme delta approximatif",
@@ -1291,6 +1291,36 @@
         "E3-B candidat seulement ; validation Ubuntu HTTP/POSIX native encore requise",
         "Application 0.3.1 et SQLite schema 5 inchangés",
         "E3-C/F non commencés"
+      ]
+    },
+    {
+      "run_id": "GP-049",
+      "date": "2026-10-04",
+      "project": "GamePanel",
+      "model": "GPT-6 Luna",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "luna_targeted_production",
+      "task_summary": "0.3.2-E3-B : correction ciblée du test de timeout client-extra, validation Ubuntu impossible dans Work",
+      "quota_before_pct": 100,
+      "quota_after_pct": 100,
+      "quota_used_points": 0,
+      "quota_approx": true,
+      "duration_seconds": 135,
+      "status": "blocked",
+      "commit_sha": null,
+      "quality": {
+        "summary": "Correctif local du fixture de timeout rapporté, avec 42 tests exécutés sous Windows : 21 PASS / 21 N/A natifs, manifeste 203/203 et diff-check PASS. Le venv Ubuntu demandé était absent et WSL inaccessible ; le 42/42 Ubuntu requis n’a pas pu être confirmé, donc aucun commit/push."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "PR #22 vérifiée après le run : toujours sur 5d4b0301f54ea8ba93d63dc305c8896f7f958283",
+        "Le prompt conditionnait explicitement commit/push à la validation Ubuntu 42/42 PASS",
+        "Le correctif local est rapporté comme limité à tests/test_content_distribution_032.py et MANIFEST.sha256",
+        "Aucun code fonctionnel ni documentation modifiés selon la réponse",
+        "Quota visible inchangé 100% -> 100%, enregistré comme ~0 pt visible",
+        "Blocage environnemental : venv Ubuntu absent et WSL inaccessible"
       ]
     }
   ]
