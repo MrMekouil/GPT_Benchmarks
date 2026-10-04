@@ -1409,6 +1409,36 @@
         "F non commencé",
         "Le commit contient web/app.js, web/style.css, tests/web-content-032.cjs, tests/web-content-browser-032.cjs, tests/web-content-fixture-032.cjs et docs/état/manifeste"
       ]
+    },
+    {
+      "run_id": "GP-053",
+      "date": "2026-10-04",
+      "project": "GamePanel",
+      "model": "GPT-6 Luna",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "luna_targeted_production",
+      "task_summary": "0.3.2-E3-C : clôture documentaire après validation Ubuntu/Chromium réelle ; E global acquis",
+      "quota_before_pct": 82,
+      "quota_after_pct": 81,
+      "quota_used_points": 1,
+      "quota_approx": false,
+      "duration_seconds": 366,
+      "status": "success",
+      "commit_sha": "9c37a5623e71eda0dde077ad15b8eb1314abb09f",
+      "quality": {
+        "summary": "Clôture documentaire E3-C après validation Ubuntu/Chromium réelle : contrats Web, flux scan→draft→stale→client-extra→publication→révocation, changement d’instance/réponse tardive et responsive 1440/1150/760/390 PASS ; sept régressions UI 0.3.1, release-docs, manifeste 204/204 et diff-check PASS. E3-C et E global marqués acquis, F non commencé."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "PR #22 reste Draft et non mergée",
+        "A/B/C/D/E1/E2/E3-A/E3-B/E3-C acquis ; E global acquis",
+        "F non commencé",
+        "Application 0.3.1 et SQLite schema 5 inchangés",
+        "web-instances-030.cjs conservé hors gate E3-C comme contrat historique obsolète",
+        "Aucun code fonctionnel modifié"
+      ]
     }
   ]
 }
