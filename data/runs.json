@@ -1469,6 +1469,36 @@
         "Rename/recovery réel interdit sur Interstice/Aero/Zombies ; environnement isolé jetable requis",
         "Validation réelle F non exécutée par Work"
       ]
+    },
+    {
+      "run_id": "GP-055",
+      "date": "2026-10-04",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032f_fixture",
+      "task_summary": "0.3.2-F : corriger la fixture ContentStore après FAIL Ubuntu CONTENT_JOURNAL_ORPHAN",
+      "quota_before_pct": 100,
+      "quota_after_pct": 94,
+      "quota_used_points": 6,
+      "quota_approx": false,
+      "duration_seconds": 304,
+      "status": "success",
+      "commit_sha": "0f3f408c598c2f6575a211b7595309cf7492ea56",
+      "quality": {
+        "summary": "Diagnostic confirmé : le test créait un staging orphelin avant ContentPublication.startup et déclenchait correctement CONTENT_JOURNAL_ORPHAN. Fixture corrigée en conservant création/fsync puis cleanup avant startup ; production inchangée. Work Windows : store 3 PASS/7 N/A, régressions 97 PASS/100 N/A, startup_026 N/A faute de pydantic ; compileall, release-docs, manifeste et diff-check PASS. Validation Ubuntu requise ; F reste non acquis."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Le parent c987ee3 avait donné Ubuntu 9/10 PASS, 1 FAIL sur la fixture search-only parent",
+        "L’invariant CONTENT_JOURNAL_ORPHAN est confirmé et n’a pas été affaibli",
+        "Commit limité à tests/test_content_store_032.py, docs/état et MANIFEST.sha256",
+        "Aucun code de production modifié",
+        "F reste non acquis ; aucun nouveau Gate 3 exécuté",
+        "PR #22 reste Draft"
+      ]
     }
   ]
 }
