@@ -99,8 +99,9 @@ GP-024 est à lire séparément des gros checkpoints : il enregistre des validat
 | GP-047 | 0.3.2-E3-A : clôture documentaire après validation Ubuntu 46/46 | **1 pt** | **4:40** | terminé, commit `44d49fe...`; E3-A acquis |
 | GP-049 | 0.3.2-E3-B : fixture timeout client-extra corrigée localement, Ubuntu indisponible | **~0 pt visible** | **2:15** | bloqué avant commit ; PR restée sur `5d4b030...` |
 | GP-050 | 0.3.2-E3-B : reprise + push du fixture timeout client-extra | **1 pt** | **4:03** | terminé, commit `bb5da9d...`; 21 PASS / 21 N/A dans Work |
+| GP-051 | 0.3.2-E3-B : clôture documentaire après validation Ubuntu 42/42 | **1 pt** | **7:46** | terminé, commit `94fbabc...`; E3-B acquis |
 
-Ces dix-huit checkpoints de production Luna récents comptent **17 succès / 1 blocage**, **10 points visibles cumulés** et **1:32:54** au total.
+Ces dix-neuf checkpoints de production Luna récents comptent **18 succès / 1 blocage**, **11 points visibles cumulés** et **1:40:40** au total.
 
 ### Runs réels GPT-6.1 Sol Medium
 
