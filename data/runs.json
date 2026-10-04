@@ -1499,6 +1499,37 @@
         "F reste non acquis ; aucun nouveau Gate 3 exécuté",
         "PR #22 reste Draft"
       ]
+    },
+    {
+      "run_id": "GP-056",
+      "date": "2026-10-04",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032f_scanner",
+      "task_summary": "0.3.2-F : corriger le scanner Minecraft pour les ancêtres absolus search-only via O_PATH",
+      "quota_before_pct": 94,
+      "quota_after_pct": 89,
+      "quota_used_points": 5,
+      "quota_approx": false,
+      "duration_seconds": 410,
+      "status": "success",
+      "commit_sha": "fad9b8b39a12199749c3e4b91710d4c7380944a4",
+      "quality": {
+        "summary": "Cause confirmée : MinecraftScanner exigeait O_RDONLY sur les ancêtres absolus search-only. Correctif candidat : ancêtres O_PATH, root final et parcours relatifs O_RDONLY, même politique dans run() et validate(), ancrage/no-follow conservés et permissions système inchangées. Work Windows : scanner 27 PASS/24 N/A, régressions 149 PASS/108 N/A ; compileall, release-docs, manifeste et diff-check PASS. Tests natifs Ubuntu à rejouer ; F reste non acquis."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Le scan réel minecraft-aero avait échoué avec CONTENT_SCAN_UNSAFE_OR_UNREADABLE_ROOT sous le compte gamepanel",
+        "O_RDONLY /home/serveur échouait réellement tandis que O_PATH /home/serveur passait",
+        "Le correctif rapporté conserve O_RDONLY sur le root final et les répertoires réellement scannés",
+        "Aucune permission système modifiée",
+        "Tests natifs Ubuntu encore requis",
+        "F reste non acquis ; aucun gate suivant exécuté",
+        "PR #22 reste Draft"
+      ]
     }
   ]
 }

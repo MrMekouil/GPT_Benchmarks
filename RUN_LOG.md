@@ -841,6 +841,20 @@ Runbook F réel préparé en **11 gates avec STOP**, couvrant sauvegarde/rollbac
 
 Diagnostic confirmé : la fixture créait un staging orphelin avant recovery et déclenchait correctement `CONTENT_JOURNAL_ORPHAN`. Le test conserve création/fsync puis nettoie le staging via `cleanup()` avant startup ; aucun code de production n’est modifié. Work Windows : store **3 PASS / 7 N/A**, régressions **97 PASS / 100 N/A**, compileall/release-docs/manifeste/diff-check PASS ; validation Ubuntu encore requise. F reste non acquis.
 
+## GP-056 — GPT-6.1 Sol Medium — correctif scanner Minecraft O_PATH
+
+- Date : 2026-10-04
+- Quota : 94 % → 89 % = **5 pts**
+- Durée : **6 min 50 s**
+- Statut : **succès**
+- Commit : `fad9b8b39a12199749c3e4b91710d4c7380944a4`
+- Draft PR : **#22**
+- Prompt + réponse complets : [runs/GP-056-gpt61-sol-medium-minecraft-scanner-opath.md](runs/GP-056-gpt61-sol-medium-minecraft-scanner-opath.md)
+
+Le blocker réel du scan Aero est rapporté comme corrigé : les ancêtres absolus search-only utilisent désormais `O_PATH`, tandis que le root final et les parcours réellement scannés restent en `O_RDONLY`. Ancrage/no-follow conservés et aucune permission système modifiée. Work Windows : scanner **27 PASS / 24 N/A**, régressions **149 PASS / 108 N/A**, compileall/release-docs/manifeste/diff-check PASS. Tests Ubuntu natifs à rejouer ; **F reste non acquis**.
+
+---
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -891,14 +905,14 @@ Les blocages GP-010/011 restent à interpréter comme incidents de fiabilité d'
 
 ## GPT-6.1 Sol Medium
 
-Dix-sept observations de production :
+Dix-huit observations de production :
 
-- quota cumulé : **193 pts**
-- durée cumulée : **4 h 45 min 47 s**
-- résultats : **15 succès / 2 blocages**
-- moyenne brute : **11,35 pts/observation**
+- quota cumulé : **198 pts**
+- durée cumulée : **4 h 52 min 37 s**
+- résultats : **16 succès / 2 blocages**
+- moyenne brute : **11,00 pts/observation**
 
-Les quinze tâches réussies représentent **187 pts**. Les deux blocages représentent **6 pts** : GP-021 à **5 pts / 4:31** sans livraison B1 faute d’environnement POSIX, puis GP-033 à **1 pt / 0:17** avec STOP correct sur miroir Work incohérent/dirty. Les neuf gros checkpoints récents se situent à **16 pts / 21:37** pour B2 backend/root, **17 pts / 26:31** pour E-C UI, **16 pts / 24:29** pour le contrat 0.3.2-A, **12 pts / 20:49** pour le scanner Minecraft 0.3.2-B, **17 pts / 33:55** pour les providers/classification 0.3.2-C, **11 pts / 16:49** pour l’UI Admin 0.3.2-D, **23 pts / 38:45** pour l’API Admin/orchestration 0.3.2-E3-A, **16 pts / 18:52** pour l’UI réelle 0.3.2-E3-C et **17 pts / 22:13** pour le runbook réel 0.3.2-F ; GP-055 ajoute un correctif de fixture ciblé à **6 pts / 5:04**. GP-042 reste un audit de récupération à **1 pt / 4:02**.
+Les seize tâches réussies représentent **192 pts**. Les deux blocages représentent **6 pts** : GP-021 à **5 pts / 4:31** sans livraison B1 faute d’environnement POSIX, puis GP-033 à **1 pt / 0:17** avec STOP correct sur miroir Work incohérent/dirty. Les neuf gros checkpoints récents se situent à **16 pts / 21:37** pour B2 backend/root, **17 pts / 26:31** pour E-C UI, **16 pts / 24:29** pour le contrat 0.3.2-A, **12 pts / 20:49** pour le scanner Minecraft 0.3.2-B, **17 pts / 33:55** pour les providers/classification 0.3.2-C, **11 pts / 16:49** pour l’UI Admin 0.3.2-D, **23 pts / 38:45** pour l’API Admin/orchestration 0.3.2-E3-A, **16 pts / 18:52** pour l’UI réelle 0.3.2-E3-C et **17 pts / 22:13** pour le runbook réel 0.3.2-F ; GP-055 ajoute un correctif de fixture ciblé à **6 pts / 5:04** et GP-056 un correctif scanner de production ciblé à **5 pts / 6:50**. GP-042 reste un audit de récupération à **1 pt / 4:02**.
 
 ## GPT-6.1 Sol High
 
