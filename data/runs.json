@@ -1380,6 +1380,35 @@
         "E3-C/F non commencés",
         "Aucun code fonctionnel modifié"
       ]
+    },
+    {
+      "run_id": "GP-052",
+      "date": "2026-10-04",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032e3c",
+      "task_summary": "0.3.2-E3-C : branchement de l’UI Admin Contenus client sur les API réelles E3-A/E3-B",
+      "quota_before_pct": 98,
+      "quota_after_pct": 82,
+      "quota_used_points": 16,
+      "quota_approx": false,
+      "duration_seconds": 1132,
+      "status": "success",
+      "commit_sha": "3de856089a389e7afa35a8f1606f8c0d395505c5",
+      "quality": {
+        "summary": "E3-C candidat livré sans modification backend : UI Admin branchée sur l’état réel, scan, draft persistant, upload client-extra brut, publication/retry et révocation. Contrat content et sept régressions UI 0.3.1 PASS, syntaxes JS/CJS, release-docs, manifeste 204/204 et diff-check PASS ; Chromium N/A car Playwright absent."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "PR #22 reste Draft ; E3-C candidat seulement",
+        "Validation Ubuntu/Chromium réelle encore requise avant acquisition E3-C",
+        "Aucun backend, schema SQLite 5, version applicative 0.3.1, RBAC ou provider modifié",
+        "F non commencé",
+        "Le commit contient web/app.js, web/style.css, tests/web-content-032.cjs, tests/web-content-browser-032.cjs, tests/web-content-fixture-032.cjs et docs/état/manifeste"
+      ]
     }
   ]
 }
