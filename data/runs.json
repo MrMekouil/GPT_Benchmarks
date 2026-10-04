@@ -1439,6 +1439,36 @@
         "web-instances-030.cjs conservé hors gate E3-C comme contrat historique obsolète",
         "Aucun code fonctionnel modifié"
       ]
+    },
+    {
+      "run_id": "GP-054",
+      "date": "2026-10-04",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032f_runbook",
+      "task_summary": "0.3.2-F : préparation du runbook de validation réelle Interstice + Aero, sans exécuter F",
+      "quota_before_pct": 81,
+      "quota_after_pct": 64,
+      "quota_used_points": 17,
+      "quota_approx": false,
+      "duration_seconds": 1333,
+      "status": "success",
+      "commit_sha": "9b4cdb4ae07e6bc0679e0d55e2a642c1436addbb",
+      "quality": {
+        "summary": "Runbook F réel préparé en 11 gates avec STOP : pré-vol, sauvegarde/rollback, update candidate, observations Interstice/Aero, draft contrôlé, client-extra, publication/digest/immutabilité, autorisations, rename/recovery isolé, nettoyage/preuves. Release-docs 1/1, syntaxe exemples, manifeste 205/205 et diff-check PASS. F non exécuté et reste non acquis ; gate rename/recovery bloqué sans VM Ubuntu + ressource explicitement jetable."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Aucun code fonctionnel modifié",
+        "E global reste acquis ; F non acquis",
+        "PR #22 reste Draft, aucun merge/tag/release",
+        "Application 0.3.1 et SQLite schema 5 inchangés",
+        "Rename/recovery réel interdit sur Interstice/Aero/Zombies ; environnement isolé jetable requis",
+        "Validation réelle F non exécutée par Work"
+      ]
     }
   ]
 }
