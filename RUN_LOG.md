@@ -827,6 +827,20 @@ Clôture documentaire de E3-C après validation Ubuntu/Chromium réelle : contra
 
 Runbook F réel préparé en **11 gates avec STOP**, couvrant sauvegarde/rollback, observations Interstice/Aero, drafts contrôlés, client-extra, publication/digests/immutabilité, autorisations, rename/recovery isolé et nettoyage/preuves. Work : release-docs **1/1 PASS**, syntaxe des exemples, manifeste **205/205** et diff-check PASS. Validation réelle F non exécutée ; rename/recovery reste bloqué sans VM Ubuntu + ressource explicitement jetable.
 
+---
+
+## GP-055 — GPT-6.1 Sol Medium — correctif fixture ContentStore Ubuntu
+
+- Date : 2026-10-04
+- Quota : 100 % → 94 % = **6 pts**
+- Durée : **5 min 04 s**
+- Statut : **succès**
+- Commit : `0f3f408c598c2f6575a211b7595309cf7492ea56`
+- Draft PR : **#22**
+- Prompt + réponse complets : [runs/GP-055-gpt61-sol-medium-content-store-fixture-fix.md](runs/GP-055-gpt61-sol-medium-content-store-fixture-fix.md)
+
+Diagnostic confirmé : la fixture créait un staging orphelin avant recovery et déclenchait correctement `CONTENT_JOURNAL_ORPHAN`. Le test conserve création/fsync puis nettoie le staging via `cleanup()` avant startup ; aucun code de production n’est modifié. Work Windows : store **3 PASS / 7 N/A**, régressions **97 PASS / 100 N/A**, compileall/release-docs/manifeste/diff-check PASS ; validation Ubuntu encore requise. F reste non acquis.
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -877,14 +891,14 @@ Les blocages GP-010/011 restent à interpréter comme incidents de fiabilité d'
 
 ## GPT-6.1 Sol Medium
 
-Seize observations de production :
+Dix-sept observations de production :
 
-- quota cumulé : **187 pts**
-- durée cumulée : **4 h 40 min 43 s**
-- résultats : **14 succès / 2 blocages**
-- moyenne brute : **11,69 pts/observation**
+- quota cumulé : **193 pts**
+- durée cumulée : **4 h 45 min 47 s**
+- résultats : **15 succès / 2 blocages**
+- moyenne brute : **11,35 pts/observation**
 
-Les quatorze tâches réussies représentent **181 pts**. Les deux blocages représentent **6 pts** : GP-021 à **5 pts / 4:31** sans livraison B1 faute d’environnement POSIX, puis GP-033 à **1 pt / 0:17** avec STOP correct sur miroir Work incohérent/dirty. Les neuf gros checkpoints récents se situent à **16 pts / 21:37** pour B2 backend/root, **17 pts / 26:31** pour E-C UI, **16 pts / 24:29** pour le contrat 0.3.2-A, **12 pts / 20:49** pour le scanner Minecraft 0.3.2-B, **17 pts / 33:55** pour les providers/classification 0.3.2-C, **11 pts / 16:49** pour l’UI Admin 0.3.2-D, **23 pts / 38:45** pour l’API Admin/orchestration 0.3.2-E3-A, **16 pts / 18:52** pour l’UI réelle 0.3.2-E3-C et **17 pts / 22:13** pour le runbook réel 0.3.2-F ; GP-042 reste un audit de récupération à **1 pt / 4:02**.
+Les quinze tâches réussies représentent **187 pts**. Les deux blocages représentent **6 pts** : GP-021 à **5 pts / 4:31** sans livraison B1 faute d’environnement POSIX, puis GP-033 à **1 pt / 0:17** avec STOP correct sur miroir Work incohérent/dirty. Les neuf gros checkpoints récents se situent à **16 pts / 21:37** pour B2 backend/root, **17 pts / 26:31** pour E-C UI, **16 pts / 24:29** pour le contrat 0.3.2-A, **12 pts / 20:49** pour le scanner Minecraft 0.3.2-B, **17 pts / 33:55** pour les providers/classification 0.3.2-C, **11 pts / 16:49** pour l’UI Admin 0.3.2-D, **23 pts / 38:45** pour l’API Admin/orchestration 0.3.2-E3-A, **16 pts / 18:52** pour l’UI réelle 0.3.2-E3-C et **17 pts / 22:13** pour le runbook réel 0.3.2-F ; GP-055 ajoute un correctif de fixture ciblé à **6 pts / 5:04**. GP-042 reste un audit de récupération à **1 pt / 4:02**.
 
 ## GPT-6.1 Sol High
 
