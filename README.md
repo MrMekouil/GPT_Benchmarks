@@ -121,8 +121,9 @@ Ces dix-neuf checkpoints de production Luna récents comptent **18 succès / 1 b
 | GP-039 | 0.3.2-D : UI Admin manifestes/contenus client, sans backend E | **11 pts** | **16:49** | terminé, commit `39f7532...`; navigateur réel N/A |
 | GP-042 | 0.3.2-E2 : audit de récupération après interruption, STOP sans modification | **1 pt** | **4:02** | terminé sans commit/push, conformément au prompt |
 | GP-046 | 0.3.2-E3-A : API Admin content + orchestration scan/draft/publication/révocation | **23 pts** | **38:45** | terminé, commit `0c8f2c4...`; validation Ubuntu encore requise |
+| GP-052 | 0.3.2-E3-C : UI Admin branchée aux API réelles E3-A/E3-B | **16 pts** | **18:52** | terminé, commit `3de8560...`; Chromium réel encore requis |
 
-Cumul GPT-6.1 Sol Medium à ce stade : **154 points**, **3 h 59 min 38 s**, **12 succès / 2 blocages**. Les douze tâches réussies représentent **148 points** ; les deux blocages représentent **6 points** au total.
+Cumul GPT-6.1 Sol Medium à ce stade : **170 points**, **4 h 18 min 30 s**, **13 succès / 2 blocages**. Les treize tâches réussies représentent **164 points** ; les deux blocages représentent **6 points** au total.
 
 ### Runs réels GPT-6.1 Sol High
 
@@ -141,14 +142,14 @@ GP-041 a produit une implémentation locale avancée mais s’est interrompu ava
 - **GPT-6 Sol High** : un gros run multi-étapes a consommé ~20 points en 12:07 et s'est arrêté faute de quota avant la fin. Cela ne mesure pas son intelligence, mais montre le risque d'un effort High sur un long marathon.
 - **GPT-6 Astra Low** : excellente qualité, mais 13–17 points sur les deux audits comparables où Sol Medium en consommait 4.
 - **GPT-5.6 Sol Medium** : baseline fiable, mais plus coûteuse que GPT-6 Sol Medium sur le benchmark directement comparable.
-- **GPT-6.1 Sol Medium** : douze runs GamePanel réussis et deux blocages. Les gros lots d’implémentation récents vont désormais de **11 à 23 pts** ; E3-A devient le plus coûteux de cette série à **23 pts / 38:45**. GP-042 montre qu’un audit de récupération strictement borné peut rester à **1 pt / 4:02**. GP-021 a coûté **5 pts** sans livraison à cause du manque d’environnement POSIX ; GP-033 **1 pt / 17 s** en STOP de pré-vol correct.
+- **GPT-6.1 Sol Medium** : treize runs GamePanel réussis et deux blocages. Les gros lots d’implémentation récents restent dans une plage **11–23 pts** ; E3-A reste le plus coûteux à **23 pts / 38:45**, tandis que le branchement UI réel E3-C coûte **16 pts / 18:52**. GP-042 montre qu’un audit de récupération strictement borné peut rester à **1 pt / 4:02**. GP-021 a coûté **5 pts** sans livraison à cause du manque d’environnement POSIX ; GP-033 **1 pt / 17 s** en STOP de pré-vol correct.
 - **GPT-6.1 Sol High** : trois observations, **51 pts** au total : un run E2 partiel à **20 pts**, une reprise E2 réussie à **7 pts**, puis E3-B réussi à **24 pts**. Le coût quota sur les tâches profondes reste élevé ; le signal temporel est moins propre à cause de l’attente d’autorisation sur GP-043 et du stall d’UI après exécution sur GP-048.
 
 ## Intégrité des données
 
 - `data/runs.json` est la source structurée canonique.
 - `data/runs.csv` est régénéré depuis le JSON pour éviter les décalages de colonnes.
-- État vérifié au 2026-10-04 : **51 runs JSON = 51 lignes CSV**, IDs uniques et champs communs cohérents.
+- État vérifié au 2026-10-04 : **52 runs JSON = 52 lignes CSV**, IDs uniques et champs communs cohérents.
 
 ## Méthode
 
