@@ -744,6 +744,19 @@ Clôture documentaire de E3-A après validation Ubuntu réelle : `tests.test_con
 
 E3-B livré malgré un stall apparent de l’UI Work après les dernières exécutions : distribution HTTP autorisée GET/HEAD/ETag/304/Range/If-Range, streaming avec revalidation session/grant/révocation et transport Admin client-extra borné. PR #22 mise à jour avec E3-B candidat. Work : **21 PASS / 21 N/A** E3-B, régressions **120/82** et **95/63** PASS/N/A ; compile/release-docs/diff/manifeste PASS. Validation Ubuntu HTTP/POSIX native encore requise.
 
+---
+
+## GP-049 — GPT-6 Luna Medium — fixture timeout E3-B bloqué par environnement
+
+- Date : 2026-10-04
+- Quota : 100 % → 100 % = **~0 pt visible**
+- Durée : **2 min 15 s**
+- Statut : **bloqué par l’environnement après correctif local**
+- Commit GamePanel : **aucun**
+- Prompt + réponse complets : [runs/GP-049-gpt6-luna-medium-e3b-timeout-fixture-block.md](runs/GP-049-gpt6-luna-medium-e3b-timeout-fixture-block.md)
+
+Le fixture de timeout client-extra a été corrigé localement selon la réponse, avec **21 PASS / 21 N/A** sous Windows, manifeste **203/203** et diff-check PASS. Le venv Ubuntu demandé était absent et WSL inaccessible ; le **42/42 Ubuntu** exigé avant commit n’a pas pu être exécuté. La PR #22 est donc restée sur `5d4b0301...`.
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
