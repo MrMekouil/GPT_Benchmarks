@@ -1530,6 +1530,38 @@
         "F reste non acquis ; aucun gate suivant exécuté",
         "PR #22 reste Draft"
       ]
+    },
+    {
+      "run_id": "GP-057",
+      "date": "2026-10-04",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032f_archive_policy",
+      "task_summary": "0.3.2-F : adapter la policy archive/JAR Minecraft aux mods Aero réels sans relâcher les protections",
+      "quota_before_pct": 89,
+      "quota_after_pct": 84,
+      "quota_used_points": 5,
+      "quota_approx": false,
+      "duration_seconds": 422,
+      "status": "success",
+      "commit_sha": "46a52600adea741358a772655465ff5005a0f991",
+      "quality": {
+        "summary": "Correctif rapporté : ':' admis uniquement dans les noms ZIP internes tandis que les chemins filesystem restent stricts ; gros MANIFEST lu sous borne avec CRC complet et seule la section principale utilisée. Limites finales : 32768 entrées, central 4 MiB, métadonnée 2 MiB, total 4 MiB. Work Windows : scanner 33 PASS/24 N/A, régressions 129 PASS/87 N/A ; compileall, release-docs, manifeste et diff-check PASS. F et Gate 4 restent non acquis."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Le correctif O_PATH précédent était validé Ubuntu à 51/51 scanner et 258/258 régressions selon le prompt transmis",
+        "Le scan réel Aero atteignait ensuite les JAR et bloquait sur les limites archive/path",
+        "Les limites rapportées passent à 32768 entrées, 4 MiB central, 2 MiB par métadonnée et 4 MiB metadata total",
+        "':' est autorisé uniquement pour les noms internes ZIP/JAR ; les chemins filesystem restent stricts",
+        "Le MANIFEST volumineux reste lu sous borne avec validation CRC complète, seule la section principale étant utilisée",
+        "Aucune protection traversal/ZIP bomb n’est rapportée comme supprimée",
+        "F et Gate 4 restent non acquis ; aucun scan réel ni gate suivant exécuté",
+        "PR #22 reste Draft"
+      ]
     }
   ]
 }

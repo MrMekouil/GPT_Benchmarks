@@ -855,6 +855,20 @@ Le blocker réel du scan Aero est rapporté comme corrigé : les ancêtres absol
 
 ---
 
+## GP-057 — GPT-6.1 Sol Medium — policy JAR réelle Minecraft
+
+- Date : 2026-10-04
+- Quota : 89 % → 84 % = **5 pts**
+- Durée : **7 min 02 s**
+- Statut : **succès**
+- Commit : `46a52600adea741358a772655465ff5005a0f991`
+- Draft PR : **#22**
+- Prompt + réponse complets : [runs/GP-057-gpt61-sol-medium-minecraft-jar-policy.md](runs/GP-057-gpt61-sol-medium-minecraft-jar-policy.md)
+
+Adaptation rapportée de la policy archive/JAR aux mods Aero réels : `:` admis seulement dans les noms ZIP internes, chemins filesystem toujours stricts, gros MANIFEST traité sous borne avec CRC complet. Limites finales : **32 768 entrées**, central **4 MiB**, métadonnée **2 MiB**, total **4 MiB**. Work Windows : scanner **33 PASS / 24 N/A**, régressions **129 PASS / 87 N/A**, compileall/release-docs/manifeste/diff-check PASS. **F et Gate 4 restent non acquis**.
+
+---
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -905,14 +919,14 @@ Les blocages GP-010/011 restent à interpréter comme incidents de fiabilité d'
 
 ## GPT-6.1 Sol Medium
 
-Dix-huit observations de production :
+Dix-neuf observations de production :
 
-- quota cumulé : **198 pts**
-- durée cumulée : **4 h 52 min 37 s**
-- résultats : **16 succès / 2 blocages**
-- moyenne brute : **11,00 pts/observation**
+- quota cumulé : **203 pts**
+- durée cumulée : **4 h 59 min 39 s**
+- résultats : **17 succès / 2 blocages**
+- moyenne brute : **10,68 pts/observation**
 
-Les seize tâches réussies représentent **192 pts**. Les deux blocages représentent **6 pts** : GP-021 à **5 pts / 4:31** sans livraison B1 faute d’environnement POSIX, puis GP-033 à **1 pt / 0:17** avec STOP correct sur miroir Work incohérent/dirty. Les neuf gros checkpoints récents se situent à **16 pts / 21:37** pour B2 backend/root, **17 pts / 26:31** pour E-C UI, **16 pts / 24:29** pour le contrat 0.3.2-A, **12 pts / 20:49** pour le scanner Minecraft 0.3.2-B, **17 pts / 33:55** pour les providers/classification 0.3.2-C, **11 pts / 16:49** pour l’UI Admin 0.3.2-D, **23 pts / 38:45** pour l’API Admin/orchestration 0.3.2-E3-A, **16 pts / 18:52** pour l’UI réelle 0.3.2-E3-C et **17 pts / 22:13** pour le runbook réel 0.3.2-F ; GP-055 ajoute un correctif de fixture ciblé à **6 pts / 5:04** et GP-056 un correctif scanner de production ciblé à **5 pts / 6:50**. GP-042 reste un audit de récupération à **1 pt / 4:02**.
+Les dix-sept tâches réussies représentent **197 pts**. Les deux blocages représentent **6 pts** : GP-021 à **5 pts / 4:31** sans livraison B1 faute d’environnement POSIX, puis GP-033 à **1 pt / 0:17** avec STOP correct sur miroir Work incohérent/dirty. Les neuf gros checkpoints récents se situent à **16 pts / 21:37** pour B2 backend/root, **17 pts / 26:31** pour E-C UI, **16 pts / 24:29** pour le contrat 0.3.2-A, **12 pts / 20:49** pour le scanner Minecraft 0.3.2-B, **17 pts / 33:55** pour les providers/classification 0.3.2-C, **11 pts / 16:49** pour l’UI Admin 0.3.2-D, **23 pts / 38:45** pour l’API Admin/orchestration 0.3.2-E3-A, **16 pts / 18:52** pour l’UI réelle 0.3.2-E3-C et **17 pts / 22:13** pour le runbook réel 0.3.2-F ; GP-055 ajoute un correctif de fixture ciblé à **6 pts / 5:04**, GP-056 un correctif scanner de production ciblé à **5 pts / 6:50** et GP-057 une adaptation de policy JAR à **5 pts / 7:02**. GP-042 reste un audit de récupération à **1 pt / 4:02**.
 
 ## GPT-6.1 Sol High
 
