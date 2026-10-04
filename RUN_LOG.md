@@ -785,6 +785,20 @@ Reprise du correctif local laissé par GP-049 et push effectif. Le commit ne tou
 
 Clôture documentaire de E3-B après validation Ubuntu réelle : `tests.test_content_distribution_032` **42/42 PASS sans skip inattendu**, suites E3-A/E2/E1/identity/startup/release-docs, acceptance/security/migrations/version et B/C ciblées PASS. Aucun code fonctionnel modifié ; E3-B est acquis, E global reste non acquis.
 
+---
+
+## GP-052 — GPT-6.1 Sol Medium — 0.3.2-E3-C UI Admin content réelle
+
+- Date : 2026-10-04
+- Quota : 98 % → 82 % = **16 pts**
+- Durée : **18 min 52 s**
+- Statut : **succès**
+- Commit : `3de856089a389e7afa35a8f1606f8c0d395505c5`
+- Draft PR : **#22**
+- Prompt + réponse complets : [runs/GP-052-gpt61-sol-medium-032e3c-admin-ui-api.md](runs/GP-052-gpt61-sol-medium-032e3c-admin-ui-api.md)
+
+E3-C candidat livré sans modification backend : l’UI Admin Contenus client utilise les API réelles pour état, scan, draft, upload client-extra brut, publication/retry et révocation. Contrat content, sept régressions UI 0.3.1, syntaxes JS/CJS, release-docs, manifeste **204/204** et diff-check PASS. Chromium réel N/A dans Work car Playwright absent ; validation Ubuntu/Chromium encore requise avant acquisition E3-C.
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -835,14 +849,14 @@ Les blocages GP-010/011 restent à interpréter comme incidents de fiabilité d'
 
 ## GPT-6.1 Sol Medium
 
-Quatorze observations de production :
+Quinze observations de production :
 
-- quota cumulé : **154 pts**
-- durée cumulée : **3 h 59 min 38 s**
-- résultats : **12 succès / 2 blocages**
-- moyenne brute : **11,00 pts/observation**
+- quota cumulé : **170 pts**
+- durée cumulée : **4 h 18 min 30 s**
+- résultats : **13 succès / 2 blocages**
+- moyenne brute : **11,33 pts/observation**
 
-Les douze tâches réussies représentent **148 pts**. Les deux blocages représentent **6 pts** : GP-021 à **5 pts / 4:31** sans livraison B1 faute d’environnement POSIX, puis GP-033 à **1 pt / 0:17** avec STOP correct sur miroir Work incohérent/dirty. Les sept gros lots d’implémentation récents se situent à **16 pts / 21:37** pour B2 backend/root, **17 pts / 26:31** pour E-C UI, **16 pts / 24:29** pour le contrat 0.3.2-A, **12 pts / 20:49** pour le scanner Minecraft 0.3.2-B, **17 pts / 33:55** pour les providers/classification 0.3.2-C, **11 pts / 16:49** pour l’UI Admin 0.3.2-D et **23 pts / 38:45** pour l’API Admin/orchestration 0.3.2-E3-A ; GP-042 reste un audit de récupération à **1 pt / 4:02**.
+Les treize tâches réussies représentent **164 pts**. Les deux blocages représentent **6 pts** : GP-021 à **5 pts / 4:31** sans livraison B1 faute d’environnement POSIX, puis GP-033 à **1 pt / 0:17** avec STOP correct sur miroir Work incohérent/dirty. Les huit gros lots d’implémentation récents se situent à **16 pts / 21:37** pour B2 backend/root, **17 pts / 26:31** pour E-C UI, **16 pts / 24:29** pour le contrat 0.3.2-A, **12 pts / 20:49** pour le scanner Minecraft 0.3.2-B, **17 pts / 33:55** pour les providers/classification 0.3.2-C, **11 pts / 16:49** pour l’UI Admin 0.3.2-D, **23 pts / 38:45** pour l’API Admin/orchestration 0.3.2-E3-A et **16 pts / 18:52** pour l’UI réelle 0.3.2-E3-C ; GP-042 reste un audit de récupération à **1 pt / 4:02**.
 
 ## GPT-6.1 Sol High
 
