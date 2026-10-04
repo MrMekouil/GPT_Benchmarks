@@ -1625,6 +1625,38 @@
         "F et Gate 5 restent non acquis ; Gate 4 Interstice non exécuté",
         "PR #22 reste Draft"
       ]
+    },
+    {
+      "run_id": "GP-060",
+      "date": "2026-10-04",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032f_ui_compaction",
+      "task_summary": "0.3.2-F : refondre l’ergonomie Admin Contenus client pour un vrai modpack via groupes et lignes compactes",
+      "quota_before_pct": 70,
+      "quota_after_pct": 61,
+      "quota_used_points": 9,
+      "quota_approx": false,
+      "duration_seconds": 853,
+      "status": "success",
+      "commit_sha": "735d4dc2081bc760ae82649c55bc5feef45cafdb",
+      "quality": {
+        "summary": "Refonte UI rapportée : quatre accordéons à compteurs dans Inventaire et Brouillon, lignes compactes, CONFLICT rouges prioritaires dans Inconnu, preuves/réglages individuels repliés et saisies conservées. Aucun changement backend/classification/payload ni sélection automatique. Tests : syntaxe, contrat VM, sept régressions UI, release-docs/manifeste/diff-check PASS ; Chrome réel responsive 1440/1150/760/390 PASS sans overflow ; Playwright complet N/A car dépendance absente. F reste non acquis."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Le prompt rapporte une observation Aero réelle révision 2 avec qualification Modrinth visible",
+        "La refonte est annoncée UI uniquement, sans modification backend, API, SQLite, provider, scanner, classification, publication ou sécurité",
+        "Inventaire observé et Brouillon utilisent quatre groupes environnement : server-only, client-only, both, unknown",
+        "CONFLICT reste dans Inconnu avec priorité visuelle rouge",
+        "Les champs avancés du brouillon sont repliés par mod et les saisies non enregistrées sont rapportées comme conservées",
+        "Chrome réel responsive 1440/1150/760/390 PASS sans overflow ; Playwright complet N/A faute de dépendance",
+        "F reste non acquis",
+        "PR #22 reste Draft"
+      ]
     }
   ]
 }

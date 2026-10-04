@@ -37,7 +37,7 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 | 6.0 | **GPT-6 Sol** | Medium | 7 | **7 succès** | **~73 pts** | **~10,43 pts** | **52:38** |
 | 6.0 | **GPT-6 Sol** | High | 1 | **1 partiel** | **~20 pts** | **~20,00 pts** | **12:07** |
 | 6.0 | **GPT-6 Astra** | Low | 2 | **2 succès** | **30 pts** | **15,00 pts** | **2:52** |
-| 6.1 | **GPT-6.1 Sol** | Medium | 21 | **19 succès · 2 bloqués** | **217 pts** | **10,33 pts** | **5:19:49** |
+| 6.1 | **GPT-6.1 Sol** | Medium | 22 | **20 succès · 2 bloqués** | **226 pts** | **10,27 pts** | **5:34:02** |
 | 6.1 | **GPT-6.1 Sol** | High | 3 | **2 succès · 1 partiel** | **51 pts** | **17,00 pts** | **2:04:17*** |
 
 \* Durée GPT-6.1 Sol High : GP-043 inclut une attente d’autorisation et n’est pas directement comparable aux durées normales.
@@ -49,7 +49,7 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 - **A/B historique le plus propre :** GPT-6 Sol Medium = 4 pts, GPT-5.6 Sol Medium = 6 pts, GPT-6 Astra Low = 17 pts pour le même diagnostic principal.
 - **A/B fonctionnel :** GPT-6 Sol Medium = 4 pts contre GPT-6 Astra Low = 13 pts, avec la même lacune principale trouvée.
 - **GPT-6 Sol Medium en production :** trois gros checkpoints complets observés à **11 pts / 8:42** (pré-clôture), **22 pts / 14:13** (audit transversal 0.3.1-E-A) et **21 pts / 20:35** (correctif concurrence installer/recovery GP-028). Le coût varie fortement avec la profondeur et le périmètre.
-- **GPT-6.1 Sol Medium :** 19 tâches terminées sur 21 tentatives observées. Les gros checkpoints incluent B2 **16 pts / 21:37**, E-C UI **17 pts / 26:31**, 0.3.2-A **16 pts / 24:29**, 0.3.2-B **12 pts / 20:49**, 0.3.2-C **17 pts / 33:55**, 0.3.2-D **11 pts / 16:49**, E3-A **23 pts / 38:45**, E3-C **16 pts / 18:52** et le runbook réel F **17 pts / 22:13**. GP-055 ajoute un correctif de fixture ContentStore ciblé à **6 pts / 5:04** sans code de production ; GP-056 ajoute le correctif scanner O_PATH à **5 pts / 6:50** ; GP-057 ajoute l’adaptation de la policy JAR réelle à **5 pts / 7:02** ; GP-058 corrige les collisions ZIP case-sensitive après NFC à **4 pts / 4:57** ; GP-059 branche la qualification Modrinth optionnelle à **10 pts / 15:13**. GP-042 reste un audit de récupération ciblé à **1 pt / 4:02**. Deux blocages environnementaux restent observés : GP-021 à **5 pts / 4:31** et GP-033 à **1 pt / 0:17**.
+- **GPT-6.1 Sol Medium :** 20 tâches terminées sur 22 tentatives observées. Les gros checkpoints incluent B2 **16 pts / 21:37**, E-C UI **17 pts / 26:31**, 0.3.2-A **16 pts / 24:29**, 0.3.2-B **12 pts / 20:49**, 0.3.2-C **17 pts / 33:55**, 0.3.2-D **11 pts / 16:49**, E3-A **23 pts / 38:45**, E3-C **16 pts / 18:52** et le runbook réel F **17 pts / 22:13**. GP-055 ajoute un correctif de fixture ContentStore ciblé à **6 pts / 5:04** sans code de production ; GP-056 ajoute le correctif scanner O_PATH à **5 pts / 6:50** ; GP-057 ajoute l’adaptation de la policy JAR réelle à **5 pts / 7:02** ; GP-058 corrige les collisions ZIP case-sensitive après NFC à **4 pts / 4:57** ; GP-059 branche la qualification Modrinth optionnelle à **10 pts / 15:13** ; GP-060 refond l’UI Contenus client pour un vrai modpack à **9 pts / 14:13**. GP-042 reste un audit de récupération ciblé à **1 pt / 4:02**. Deux blocages environnementaux restent observés : GP-021 à **5 pts / 4:31** et GP-033 à **1 pt / 0:17**.
 - **GPT-6.1 Sol High :** trois observations. GP-041 est **partiel à 20 pts / 53:27** sur E2 ; GP-043 reprend le travail récupéré et livre E2 candidat à **7 pts / 28:50 observés** ; GP-048 livre E3-B à **24 pts / 42:00** malgré un stall apparent de l’UI après exécution. La durée GP-043 reste biaisée par une attente d’autorisation.
 - **GPT-6 Luna Medium :** **22 runs Medium** observés : **20 succès / 1 échec / 1 blocage**, **12 points visibles** au total, **1:47:57**. Les **20 checkpoints de production récents** sont à **19 succès / 1 blocage**, **12 points visibles** et **1:46:46**. À part, GP-010/011 représentent **2 blocages à effort non relevé**, **1:35:00** cumulé et **≥5 points connus**.
 
@@ -129,8 +129,9 @@ Ces vingt checkpoints de production Luna récents comptent **19 succès / 1 bloc
 | GP-057 | 0.3.2-F : policy JAR réelle, limites archive + `:` interne + gros MANIFEST | **5 pts** | **7:02** | terminé, commit `46a5260...`; F et Gate 4 non acquis |
 | GP-058 | 0.3.2-F : collisions internes ZIP/JAR case-sensitive après NFC | **4 pts** | **4:57** | terminé, commit `d0b1d10...`; F et Gate 4 non acquis |
 | GP-059 | 0.3.2-F : qualification Modrinth exacte et optionnelle au runtime | **10 pts** | **15:13** | terminé, commit `3fd61f5...`; F/Gate 5 non acquis, Gate 4 non exécuté |
+| GP-060 | 0.3.2-F : refonte ergonomique Admin Contenus client, groupes + lignes compactes | **9 pts** | **14:13** | terminé, commit `735d4dc...`; F non acquis |
 
-Cumul GPT-6.1 Sol Medium à ce stade : **217 points**, **5 h 19 min 49 s**, **19 succès / 2 blocages**. Les dix-neuf tâches réussies représentent **211 points** ; les deux blocages représentent **6 points** au total.
+Cumul GPT-6.1 Sol Medium à ce stade : **226 points**, **5 h 34 min 02 s**, **20 succès / 2 blocages**. Les vingt tâches réussies représentent **220 points** ; les deux blocages représentent **6 points** au total.
 
 ### Runs réels GPT-6.1 Sol High
 
@@ -149,14 +150,14 @@ GP-041 a produit une implémentation locale avancée mais s’est interrompu ava
 - **GPT-6 Sol High** : un gros run multi-étapes a consommé ~20 points en 12:07 et s'est arrêté faute de quota avant la fin. Cela ne mesure pas son intelligence, mais montre le risque d'un effort High sur un long marathon.
 - **GPT-6 Astra Low** : excellente qualité, mais 13–17 points sur les deux audits comparables où Sol Medium en consommait 4.
 - **GPT-5.6 Sol Medium** : baseline fiable, mais plus coûteuse que GPT-6 Sol Medium sur le benchmark directement comparable.
-- **GPT-6.1 Sol Medium** : dix-neuf runs GamePanel réussis et deux blocages. Les gros checkpoints récents restent dans une plage **11–23 pts** ; E3-A reste le plus coûteux à **23 pts / 38:45**, E3-C est à **16 pts / 18:52** et le runbook F à **17 pts / 22:13**. GP-055 montre qu’un correctif de fixture borné peut rester à **6 pts / 5:04** sans toucher la production ; GP-056 ajoute un correctif scanner de production ciblé à **5 pts / 6:50** ; GP-057 ajoute une adaptation ciblée de la policy JAR à **5 pts / 7:02** ; GP-058 ajoute le correctif de collision ZIP case-sensitive à **4 pts / 4:57** ; GP-059 ajoute le branchement Modrinth optionnel et borné à **10 pts / 15:13**. GP-042 montre qu’un audit de récupération strictement borné peut rester à **1 pt / 4:02**. GP-021 a coûté **5 pts** sans livraison à cause du manque d’environnement POSIX ; GP-033 **1 pt / 17 s** en STOP de pré-vol correct.
+- **GPT-6.1 Sol Medium** : vingt runs GamePanel réussis et deux blocages. Les gros checkpoints récents restent dans une plage **11–23 pts** ; E3-A reste le plus coûteux à **23 pts / 38:45**, E3-C est à **16 pts / 18:52** et le runbook F à **17 pts / 22:13**. GP-055 montre qu’un correctif de fixture borné peut rester à **6 pts / 5:04** sans toucher la production ; GP-056 ajoute un correctif scanner de production ciblé à **5 pts / 6:50** ; GP-057 ajoute une adaptation ciblée de la policy JAR à **5 pts / 7:02** ; GP-058 ajoute le correctif de collision ZIP case-sensitive à **4 pts / 4:57** ; GP-059 ajoute le branchement Modrinth optionnel et borné à **10 pts / 15:13** ; GP-060 ajoute la refonte ergonomique UI Contenus client à **9 pts / 14:13**. GP-042 montre qu’un audit de récupération strictement borné peut rester à **1 pt / 4:02**. GP-021 a coûté **5 pts** sans livraison à cause du manque d’environnement POSIX ; GP-033 **1 pt / 17 s** en STOP de pré-vol correct.
 - **GPT-6.1 Sol High** : trois observations, **51 pts** au total : un run E2 partiel à **20 pts**, une reprise E2 réussie à **7 pts**, puis E3-B réussi à **24 pts**. Le coût quota sur les tâches profondes reste élevé ; le signal temporel est moins propre à cause de l’attente d’autorisation sur GP-043 et du stall d’UI après exécution sur GP-048.
 
 ## Intégrité des données
 
 - `data/runs.json` est la source structurée canonique.
 - `data/runs.csv` est régénéré depuis le JSON pour éviter les décalages de colonnes.
-- État vérifié au 2026-10-04 : **59 runs JSON = 59 lignes CSV**, IDs uniques et champs communs cohérents.
+- État vérifié au 2026-10-04 : **60 runs JSON = 60 lignes CSV**, IDs uniques et champs communs cohérents.
 
 ## Méthode
 

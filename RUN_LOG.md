@@ -897,6 +897,20 @@ Qualification réelle rapportée comme améliorée sans rendre le réseau obliga
 
 ---
 
+## GP-060 — GPT-6.1 Sol Medium — refonte UI Contenus client
+
+- Date : 2026-10-04
+- Quota : 70 % → 61 % = **9 pts**
+- Durée : **14 min 13 s**
+- Statut : **succès**
+- Commit : `735d4dc2081bc760ae82649c55bc5feef45cafdb`
+- Draft PR : **#22**
+- Prompt + réponse complets : [runs/GP-060-gpt61-sol-medium-content-ui-compaction.md](runs/GP-060-gpt61-sol-medium-content-ui-compaction.md)
+
+Refonte UI rapportée sans changement backend/classification/payload : quatre accordéons à compteurs dans Inventaire et Brouillon, lignes compactes, CONFLICT rouges prioritaires dans Inconnu, preuves/réglages repliés et saisies conservées. Tests syntaxe/contrat VM/sept régressions UI/release-docs/manifeste/diff-check PASS ; Chrome réel responsive **1440/1150/760/390 PASS** sans overflow, Playwright complet N/A faute de dépendance. **F reste non acquis**.
+
+---
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -947,14 +961,14 @@ Les blocages GP-010/011 restent à interpréter comme incidents de fiabilité d'
 
 ## GPT-6.1 Sol Medium
 
-Vingt et une observations de production :
+Vingt-deux observations de production :
 
-- quota cumulé : **217 pts**
-- durée cumulée : **5 h 19 min 49 s**
-- résultats : **19 succès / 2 blocages**
-- moyenne brute : **10,33 pts/observation**
+- quota cumulé : **226 pts**
+- durée cumulée : **5 h 34 min 02 s**
+- résultats : **20 succès / 2 blocages**
+- moyenne brute : **10,27 pts/observation**
 
-Les dix-neuf tâches réussies représentent **211 pts**. Les deux blocages représentent **6 pts** : GP-021 à **5 pts / 4:31** sans livraison B1 faute d’environnement POSIX, puis GP-033 à **1 pt / 0:17** avec STOP correct sur miroir Work incohérent/dirty. Les neuf gros checkpoints récents se situent à **16 pts / 21:37** pour B2 backend/root, **17 pts / 26:31** pour E-C UI, **16 pts / 24:29** pour le contrat 0.3.2-A, **12 pts / 20:49** pour le scanner Minecraft 0.3.2-B, **17 pts / 33:55** pour les providers/classification 0.3.2-C, **11 pts / 16:49** pour l’UI Admin 0.3.2-D, **23 pts / 38:45** pour l’API Admin/orchestration 0.3.2-E3-A, **16 pts / 18:52** pour l’UI réelle 0.3.2-E3-C et **17 pts / 22:13** pour le runbook réel 0.3.2-F ; GP-055 ajoute un correctif de fixture ciblé à **6 pts / 5:04**, GP-056 un correctif scanner de production ciblé à **5 pts / 6:50**, GP-057 une adaptation de policy JAR à **5 pts / 7:02**, GP-058 un correctif de collision ZIP case-sensitive à **4 pts / 4:57** et GP-059 le branchement Modrinth optionnel à **10 pts / 15:13**. GP-042 reste un audit de récupération à **1 pt / 4:02**.
+Les vingt tâches réussies représentent **220 pts**. Les deux blocages représentent **6 pts** : GP-021 à **5 pts / 4:31** sans livraison B1 faute d’environnement POSIX, puis GP-033 à **1 pt / 0:17** avec STOP correct sur miroir Work incohérent/dirty. Les neuf gros checkpoints récents se situent à **16 pts / 21:37** pour B2 backend/root, **17 pts / 26:31** pour E-C UI, **16 pts / 24:29** pour le contrat 0.3.2-A, **12 pts / 20:49** pour le scanner Minecraft 0.3.2-B, **17 pts / 33:55** pour les providers/classification 0.3.2-C, **11 pts / 16:49** pour l’UI Admin 0.3.2-D, **23 pts / 38:45** pour l’API Admin/orchestration 0.3.2-E3-A, **16 pts / 18:52** pour l’UI réelle 0.3.2-E3-C et **17 pts / 22:13** pour le runbook réel 0.3.2-F ; GP-055 ajoute un correctif de fixture ciblé à **6 pts / 5:04**, GP-056 un correctif scanner de production ciblé à **5 pts / 6:50**, GP-057 une adaptation de policy JAR à **5 pts / 7:02**, GP-058 un correctif de collision ZIP case-sensitive à **4 pts / 4:57**, GP-059 le branchement Modrinth optionnel à **10 pts / 15:13** et GP-060 la refonte ergonomique UI Contenus client à **9 pts / 14:13**. GP-042 reste un audit de récupération à **1 pt / 4:02**.
 
 ## GPT-6.1 Sol High
 
