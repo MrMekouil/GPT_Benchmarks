@@ -1322,6 +1322,35 @@
         "Quota visible inchangé 100% -> 100%, enregistré comme ~0 pt visible",
         "Blocage environnemental : venv Ubuntu absent et WSL inaccessible"
       ]
+    },
+    {
+      "run_id": "GP-050",
+      "date": "2026-10-04",
+      "project": "GamePanel",
+      "model": "GPT-6 Luna",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "luna_targeted_production",
+      "task_summary": "0.3.2-E3-B : reprise et push du correctif fixture timeout client-extra",
+      "quota_before_pct": 100,
+      "quota_after_pct": 99,
+      "quota_used_points": 1,
+      "quota_approx": false,
+      "duration_seconds": 243,
+      "status": "success",
+      "commit_sha": "bb5da9dfe35fbb46ddea3b505d61bc122de40022",
+      "quality": {
+        "summary": "Correctif fixture timeout client-extra poussé, limité au test et au manifeste. Work : 42 tests exécutés, 21 PASS / 21 N/A natifs, manifeste et diff-check PASS. Le 42/42 Ubuntu sans skip n’a pas pu être confirmé dans l’environnement Work."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Commit vérifié : uniquement tests/test_content_distribution_032.py et MANIFEST.sha256",
+        "PR #22 pointe désormais sur bb5da9dfe35fbb46ddea3b505d61bc122de40022",
+        "Aucun code fonctionnel ni documentation modifiés",
+        "Le résultat 42/42 Ubuntu attendu n’est pas revendiqué comme exécuté",
+        "Ce run reprend le correctif local laissé par GP-049 et le pousse"
+      ]
     }
   ]
 }
