@@ -87,3 +87,17 @@ Ne commence pas E3-C/F.
 Réponse finale courte :
 commit/push + résultat exact des 42 tests + manifeste/diff-check.
 ~~~
+
+
+## Réponse exacte
+
+~~~text
+La fixture a été corrigée : elle envoie un octet avant de bloquer, ce qui permet au timeout serveur de s’activer pendant la lecture.
+
+- **Work Windows** : 42 tests exécutés, 21 PASS et 21 N/A (tests HTTP/POSIX natifs).
+- **Manifeste** : PASS, 203 hashes vérifiés.
+- **`git diff --check`** : PASS.
+- **Commit/push non effectués** : le venv Ubuntu demandé est absent et WSL refuse l’accès. Les 42 PASS sans skip nécessaires n’ont donc pas pu être confirmés.
+
+Seuls `tests/test_content_distribution_032.py` et `MANIFEST.sha256` sont modifiés localement ; HEAD reste `5d4b0301…`.
+~~~
