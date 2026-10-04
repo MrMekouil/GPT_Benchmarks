@@ -101,3 +101,11 @@ La fixture a été corrigée : elle envoie un octet avant de bloquer, ce qui per
 
 Seuls `tests/test_content_distribution_032.py` et `MANIFEST.sha256` sont modifiés localement ; HEAD reste `5d4b0301…`.
 ~~~
+
+
+## Vérification externe
+
+- PR #22 toujours ouverte et Draft.
+- HEAD distant après le run : `5d4b0301f54ea8ba93d63dc305c8896f7f958283`, identique au HEAD de départ.
+- Aucun commit/push du correctif n’est visible à distance.
+- Le statut **bloqué** reflète l’impossibilité d’exécuter la validation Ubuntu 42/42 exigée avant commit.
