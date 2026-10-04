@@ -57,3 +57,20 @@ Ne merge pas, ne tague pas.
 
 Réponse finale : nouveau SHA poussé + résultat exact des 42 tests.
 ~~~
+
+
+## Réponse exacte
+
+~~~text
+- Commit **`bb5da9dfe35fbb46ddea3b505d61bc122de40022`** poussé sur `work/0.3.2-content-manifests`.
+- Test lancé dans Work : **42 exécutés, 21 PASS, 21 N/A** (tests HTTP/POSIX natifs sautés). Le venv Ubuntu demandé est absent de WSL et ses dépendances ne sont pas installées ; je ne peux donc pas confirmer **42/42 PASS sans skip**.
+- `MANIFEST.sha256` : **PASS** (`sha256sum -c`). `git diff --check` : **PASS**. Seuls le test et le manifeste ont changé.
+~~~
+
+## Vérification externe
+
+- Parent exact : `5d4b0301f54ea8ba93d63dc305c8896f7f958283`.
+- Commit : `test: exercise client-extra network timeout in flight`.
+- Fichiers modifiés : `tests/test_content_distribution_032.py`, `MANIFEST.sha256`.
+- PR #22 : ouverte et Draft, head `bb5da9dfe35fbb46ddea3b505d61bc122de40022`.
+- Aucun code fonctionnel ou documentation modifié.
