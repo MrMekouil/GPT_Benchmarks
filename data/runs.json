@@ -1351,6 +1351,35 @@
         "Le résultat 42/42 Ubuntu attendu n’est pas revendiqué comme exécuté",
         "Ce run reprend le correctif local laissé par GP-049 et le pousse"
       ]
+    },
+    {
+      "run_id": "GP-051",
+      "date": "2026-10-04",
+      "project": "GamePanel",
+      "model": "GPT-6 Luna",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "luna_targeted_production",
+      "task_summary": "0.3.2-E3-B : clôture documentaire après validation Ubuntu réelle complète",
+      "quota_before_pct": 99,
+      "quota_after_pct": 98,
+      "quota_used_points": 1,
+      "quota_approx": false,
+      "duration_seconds": 466,
+      "status": "success",
+      "commit_sha": "94fbabc86ae658cb24a81df40f374885e849b997",
+      "quality": {
+        "summary": "Clôture documentaire E3-B après validation Ubuntu réelle : tests content distribution 42/42 PASS sans skip inattendu ; E3-A/E2/E1/identity/startup/release-docs, acceptance/security/migrations/version et B/C ciblés PASS ; release-docs 1/1, manifeste 203/203 et diff-check PASS. Aucun code fonctionnel modifié."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "E3-B marqué acquis après validation Ubuntu réelle",
+        "PR #22 reste Draft avec A/B/C/D/E1/E2/E3-A/E3-B acquis ; E global non acquis",
+        "Version application 0.3.1 et SQLite schema 5 inchangés",
+        "E3-C/F non commencés",
+        "Aucun code fonctionnel modifié"
+      ]
     }
   ]
 }
