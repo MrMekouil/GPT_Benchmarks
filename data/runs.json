@@ -1562,6 +1562,37 @@
         "F et Gate 4 restent non acquis ; aucun scan réel ni gate suivant exécuté",
         "PR #22 reste Draft"
       ]
+    },
+    {
+      "run_id": "GP-058",
+      "date": "2026-10-04",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032f_archive_case",
+      "task_summary": "0.3.2-F : rendre les collisions internes ZIP/JAR case-sensitive après NFC pour le cas Railways réel",
+      "quota_before_pct": 84,
+      "quota_after_pct": 80,
+      "quota_used_points": 4,
+      "quota_approx": false,
+      "duration_seconds": 297,
+      "status": "success",
+      "commit_sha": "d0b1d101fc904b15bbb267adb7b4fc1a7d8c4bc8",
+      "quality": {
+        "summary": "Cause rapportée : casefold() assimilait deux ressources Railways distinctes. Correctif : collisions ZIP complètes et par composants sensibles à la casse après NFC ; doublons exacts/NFC et conflits fichier/ancêtre restent refusés, metadata au nom exact et filesystem inchangé. Work Windows : scanner 36 PASS/24 N/A, régressions 129 PASS/87 N/A ; compileall, release-docs, manifeste et diff-check PASS. F et Gate 4 restent non acquis."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Le blocker réel était CONTENT_SCAN_AMBIGUOUS_ARCHIVE sur Broad_Gauge_L_0-2-0.bbmodel vs broad_gauge_l_0-2-0.bbmodel",
+        "Les noms internes ZIP/JAR sont désormais rapportés comme case-sensitive après NFC pour les collisions full-path et composants",
+        "Doublons exacts, collisions NFC et conflits fichier/ancêtre restent refusés",
+        "META-INF exact reste traité sur son nom exact selon la réponse Work",
+        "Les règles filesystem ne sont pas rapportées comme modifiées",
+        "F et Gate 4 restent non acquis ; aucun scan réel ni gate suivant exécuté",
+        "PR #22 reste Draft"
+      ]
     }
   ]
 }
