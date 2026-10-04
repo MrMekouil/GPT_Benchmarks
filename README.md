@@ -136,7 +136,7 @@ GP-041 a produit une implémentation locale avancée mais s’est interrompu ava
 
 ## Lecture provisoire
 
-- **GPT-6 Luna Medium** : très économique sur les tâches ciblées observées : **18 succès / 1 échec / 1 blocage** sur 20 runs Medium, pour **10 points visibles** cumulés. Les 18 checkpoints de production récents sont à **17 succès / 1 blocage** ; GP-049 est le blocage environnemental, puis GP-050 pousse effectivement le correctif ciblé. Les deux longs blocages GP-010/011 restent séparés car leur effort n’avait pas été relevé.
+- **GPT-6 Luna Medium** : très économique sur les tâches ciblées observées : **19 succès / 1 échec / 1 blocage** sur 21 runs Medium, pour **11 points visibles** cumulés. Les 19 checkpoints de production récents sont à **18 succès / 1 blocage** ; GP-049 est le blocage environnemental, GP-050 pousse le correctif ciblé et GP-051 clôt E3-B après validation Ubuntu 42/42. Les deux longs blocages GP-010/011 restent séparés car leur effort n’avait pas été relevé.
 - **GPT-6 Sol Medium** : sept succès observés. Les audits ciblés sont à 4 pts, les gros checkpoints se situent désormais à **11–22 pts**, et GP-028 confirme qu’un correctif de sûreté/concurrence transversal peut monter à **21 pts / 20:35**. La moyenne brute passe à **~10,43 pts/run**.
 - **GPT-6 Sol High** : un gros run multi-étapes a consommé ~20 points en 12:07 et s'est arrêté faute de quota avant la fin. Cela ne mesure pas son intelligence, mais montre le risque d'un effort High sur un long marathon.
 - **GPT-6 Astra Low** : excellente qualité, mais 13–17 points sur les deux audits comparables où Sol Medium en consommait 4.
@@ -148,7 +148,7 @@ GP-041 a produit une implémentation locale avancée mais s’est interrompu ava
 
 - `data/runs.json` est la source structurée canonique.
 - `data/runs.csv` est régénéré depuis le JSON pour éviter les décalages de colonnes.
-- État vérifié au 2026-10-04 : **50 runs JSON = 50 lignes CSV**, IDs uniques et champs communs cohérents.
+- État vérifié au 2026-10-04 : **51 runs JSON = 51 lignes CSV**, IDs uniques et champs communs cohérents.
 
 ## Méthode
 
