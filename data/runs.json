@@ -1593,6 +1593,38 @@
         "F et Gate 4 restent non acquis ; aucun scan réel ni gate suivant exécuté",
         "PR #22 reste Draft"
       ]
+    },
+    {
+      "run_id": "GP-059",
+      "date": "2026-10-04",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032f_provider_runtime",
+      "task_summary": "0.3.2-F : brancher une qualification Modrinth exacte et optionnelle pour les mods Forge/NeoForge réels",
+      "quota_before_pct": 80,
+      "quota_after_pct": 70,
+      "quota_used_points": 10,
+      "quota_approx": false,
+      "duration_seconds": 913,
+      "status": "success",
+      "commit_sha": "3fd61f56b304b725df7e5ff49fabe59b8be3dec3",
+      "quality": {
+        "summary": "Correctif rapporté : LocalJar reste prioritaire et Modrinth est branché sans clé avec correspondance exacte SHA-512/taille ; pannes, quota et not-found restent UNKNOWN sans bloquer l’observation. Bornes rapportées : lots de 64, maximum 512 JAR non cachés et 16 requêtes, 3 s/appel, budget global 20 s, cache exact. Work : 183 PASS/113 N/A POSIX, zéro FAIL ; compileall, release-docs, manifeste 209 fichiers et diff-check PASS. LOADER_CONFLICT conservé faute de preuve ExecStart/config réelle ; F et Gate 5 non acquis, Gate 4 Interstice non exécuté."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Selon le prompt transmis, le scanner ZIP case-sensitive avait déjà 60/60 PASS Ubuntu et 216/216 régressions PASS",
+        "Le scan réel minecraft-aero réussissait filesystem/archive et avait persisté une observation révision 1",
+        "LocalJar reste la première source et Modrinth devient le provider externe réellement branché sans clé",
+        "La correspondance provider reste exacte par SHA-512/taille ; aucune heuristique filename/projet n’est rapportée comme ajoutée",
+        "Bornes rapportées : batch 64, 512 JAR non cachés maximum, 16 requêtes, 3 s/appel, budget global 20 s, cache exact",
+        "LOADER_CONFLICT reste conservé faute de preuve ExecStart/config réelle",
+        "F et Gate 5 restent non acquis ; Gate 4 Interstice non exécuté",
+        "PR #22 reste Draft"
+      ]
     }
   ]
 }
