@@ -925,6 +925,20 @@ Pré-vol arrêté correctement : le HEAD distant attendu `3ae10db...` était con
 
 ---
 
+## GP-062 — GPT-6.1 Sol Medium — reprise import CurseForge interrompue
+
+- Date : 2026-10-05
+- Quota : 97 % → 81 % = **16 pts**
+- Durée : **32 min 00 s**
+- Statut : **partiel / Connexion Interrupted**
+- Commit GamePanel : **aucun commit distant confirmé**
+- Draft PR : **#22**
+- Prompt + état capturé : [runs/GP-062-gpt61-sol-medium-curseforge-import-interrupted.md](runs/GP-062-gpt61-sol-medium-curseforge-import-interrupted.md)
+
+Après le STOP GP-061, ce run devait fast-forward le checkout puis reprendre l’import Admin `minecraftinstance.json` CurseForge. La session s’est terminée sur « Connexion Interrupted » après **32:00 / 16 pts**. Vérification GitHub après coup : la branche/PR reste sur `3ae10db...`, donc aucun commit/push de ce run n’est confirmé. Du travail local peut avoir existé avant l’interruption, mais il n’est pas vérifiable ; aucun handoff/tests/fichiers finaux n’ont été capturés.
+
+---
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -975,14 +989,14 @@ Les blocages GP-010/011 restent à interpréter comme incidents de fiabilité d'
 
 ## GPT-6.1 Sol Medium
 
-Vingt-trois observations de production :
+Vingt-quatre observations de production :
 
-- quota cumulé : **229 pts**
-- durée cumulée : **5 h 34 min 36 s**
-- résultats : **20 succès / 3 blocages**
-- moyenne brute : **9,96 pts/observation**
+- quota cumulé : **245 pts**
+- durée cumulée : **6 h 06 min 36 s**
+- résultats : **20 succès / 3 blocages / 1 partiel**
+- moyenne brute : **10,21 pts/observation**
 
-Les vingt tâches réussies représentent **220 pts**. Les trois blocages représentent **9 pts** : GP-021 à **5 pts / 4:31** sans livraison B1 faute d’environnement POSIX, GP-033 à **1 pt / 0:17** avec STOP correct sur miroir Work incohérent/dirty, puis GP-061 à **3 pts / 0:34** avec STOP correct sur checkout local désynchronisé. Les neuf gros checkpoints récents se situent à **16 pts / 21:37** pour B2 backend/root, **17 pts / 26:31** pour E-C UI, **16 pts / 24:29** pour le contrat 0.3.2-A, **12 pts / 20:49** pour le scanner Minecraft 0.3.2-B, **17 pts / 33:55** pour les providers/classification 0.3.2-C, **11 pts / 16:49** pour l’UI Admin 0.3.2-D, **23 pts / 38:45** pour l’API Admin/orchestration 0.3.2-E3-A, **16 pts / 18:52** pour l’UI réelle 0.3.2-E3-C et **17 pts / 22:13** pour le runbook réel 0.3.2-F ; GP-055 ajoute un correctif de fixture ciblé à **6 pts / 5:04**, GP-056 un correctif scanner de production ciblé à **5 pts / 6:50**, GP-057 une adaptation de policy JAR à **5 pts / 7:02**, GP-058 un correctif de collision ZIP case-sensitive à **4 pts / 4:57**, GP-059 le branchement Modrinth optionnel à **10 pts / 15:13** et GP-060 la refonte ergonomique UI Contenus client à **9 pts / 14:13**. GP-042 reste un audit de récupération à **1 pt / 4:02**.
+Les vingt tâches réussies représentent **220 pts**. Les trois blocages représentent **9 pts** : GP-021 à **5 pts / 4:31** sans livraison B1 faute d’environnement POSIX, GP-033 à **1 pt / 0:17** avec STOP correct sur miroir Work incohérent/dirty, puis GP-061 à **3 pts / 0:34** avec STOP correct sur checkout local désynchronisé. GP-062 ajoute **1 run partiel à 16 pts / 32:00**, interrompu sans commit distant confirmé ; un éventuel travail local reste non vérifiable. Les neuf gros checkpoints récents se situent à **16 pts / 21:37** pour B2 backend/root, **17 pts / 26:31** pour E-C UI, **16 pts / 24:29** pour le contrat 0.3.2-A, **12 pts / 20:49** pour le scanner Minecraft 0.3.2-B, **17 pts / 33:55** pour les providers/classification 0.3.2-C, **11 pts / 16:49** pour l’UI Admin 0.3.2-D, **23 pts / 38:45** pour l’API Admin/orchestration 0.3.2-E3-A, **16 pts / 18:52** pour l’UI réelle 0.3.2-E3-C et **17 pts / 22:13** pour le runbook réel 0.3.2-F ; GP-055 ajoute un correctif de fixture ciblé à **6 pts / 5:04**, GP-056 un correctif scanner de production ciblé à **5 pts / 6:50**, GP-057 une adaptation de policy JAR à **5 pts / 7:02**, GP-058 un correctif de collision ZIP case-sensitive à **4 pts / 4:57**, GP-059 le branchement Modrinth optionnel à **10 pts / 15:13** et GP-060 la refonte ergonomique UI Contenus client à **9 pts / 14:13**. GP-042 reste un audit de récupération à **1 pt / 4:02**.
 
 ## GPT-6.1 Sol High
 

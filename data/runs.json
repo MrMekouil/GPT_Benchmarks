@@ -1687,6 +1687,36 @@
         "L’import CurseForge n’a pas été implémenté dans ce run",
         "F reste non acquis"
       ]
+    },
+    {
+      "run_id": "GP-062",
+      "date": "2026-10-05",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032f_curseforge_import_resume",
+      "task_summary": "0.3.2-F : reprise après fast-forward de l’import Admin minecraftinstance.json CurseForge, session interrompue",
+      "quota_before_pct": 97,
+      "quota_after_pct": 81,
+      "quota_used_points": 16,
+      "quota_approx": false,
+      "duration_seconds": 1920,
+      "status": "partial",
+      "quality": {
+        "summary": "Session interrompue par « Connexion Interrupted » après 32 minutes. Vérification distante après coup : la branche GamePanel work/0.3.2-content-manifests est toujours sur 3ae10db45018232336888e2dfab751ca4e3f7f26, donc aucun commit/push de l’import CurseForge n’est confirmé. Du travail local Work a pu exister avant l’interruption, mais il n’est pas vérifiable depuis GitHub."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "interrupted_user_report",
+      "notes": [
+        "Le prompt demandait d’abord un fast-forward depuis le checkout local 735d4dc... vers le HEAD distant 3ae10db...",
+        "La session a consommé 16 points visibles sur 32 minutes avant « Connexion Interrupted »",
+        "Après le run, la branche distante GamePanel est restée exactement sur 3ae10db45018232336888e2dfab751ca4e3f7f26",
+        "Aucun commit/push de l’import CurseForge n’est donc confirmé",
+        "Un éventuel travail local non poussé dans la session Work reste possible mais non vérifiable",
+        "Aucun handoff Work final, résultat de tests ou liste de fichiers modifiés n’a été capturé",
+        "F reste non acquis"
+      ]
     }
   ]
 }
