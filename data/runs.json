@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-04",
+  "updated_at": "2026-10-05",
   "measurement_notes": [
     "quota_used_points correspond aux points de pourcentage visibles dans l'interface Work/ChatGPT, pas à un comptage exact de tokens",
     "quota_approx=true indique une valeur arrondie, déduite ou seulement observée comme delta approximatif",
@@ -1656,6 +1656,36 @@
         "Chrome réel responsive 1440/1150/760/390 PASS sans overflow ; Playwright complet N/A faute de dépendance",
         "F reste non acquis",
         "PR #22 reste Draft"
+      ]
+    },
+    {
+      "run_id": "GP-061",
+      "date": "2026-10-05",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032f_curseforge_import_preflight",
+      "task_summary": "0.3.2-F : pré-vol import Admin minecraftinstance.json CurseForge, STOP sur checkout local désynchronisé",
+      "quota_before_pct": 100,
+      "quota_after_pct": 97,
+      "quota_used_points": 3,
+      "quota_approx": false,
+      "duration_seconds": 34,
+      "status": "blocked",
+      "quality": {
+        "summary": "STOP conforme au contrat de pré-vol : le HEAD distant attendu 3ae10db... était bien celui de la branche/PR, mais le checkout local Work était resté sur 735d4dc.... Branche correcte et arbres de travail propres ; aucun fichier modifié, aucun test exécuté, aucun commit/push. L’import CurseForge n’a pas été implémenté."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Le HEAD local Work était 735d4dc2081bc760ae82649c55bc5feef45cafdb alors que le HEAD distant attendu était 3ae10db45018232336888e2dfab751ca4e3f7f26",
+        "Le HEAD distant était conforme et la PR #22 restait Draft",
+        "Branche correcte ; status, diff et diff --cached propres",
+        "STOP exigé par le prompt en cas d’état différent",
+        "Aucun fichier modifié, aucun test exécuté, aucun commit/push",
+        "L’import CurseForge n’a pas été implémenté dans ce run",
+        "F reste non acquis"
       ]
     }
   ]
