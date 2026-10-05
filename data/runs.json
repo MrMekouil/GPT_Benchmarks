@@ -1777,6 +1777,41 @@
         "Aucun fichier modifié, aucun test exécuté, aucun commit/push",
         "F reste non acquis"
       ]
+    },
+    {
+      "run_id": "GP-065",
+      "date": "2026-10-05",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032f_curseforge_import",
+      "task_summary": "0.3.2-F : implémenter l’import Admin offline minecraftinstance.json CurseForge avec installedFile + SHA-1 exact",
+      "quota_before_pct": 77,
+      "quota_after_pct": 61,
+      "quota_used_points": 16,
+      "quota_approx": false,
+      "duration_seconds": 1794,
+      "status": "success",
+      "commit_sha": "b8e8ecd8731e3829c1cdc5e83aab7e636597e8be",
+      "quality": {
+        "summary": "Import CurseForge offline rapporté comme livré : parser/provider, orchestration/API Admin, UI guidée, exception Caddy ciblée, fixtures/tests, documentation et manifeste. Preuve exacte fondée sur installedFile + SHA-1 exact, preuves fusionnées et CONFLICT conservés ; aucun JSON brut persisté ni migration SQLite. Tests ciblés : 257 PASS/140 N/A, zéro FAIL ; contrat UI, sept régressions UI, compileall, syntaxe, manifeste et whitespace PASS. HTTP/POSIX natifs, Playwright et suite complète non validés ; validation Aero préparée mais non exécutée. F reste non acquis."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Le HEAD GamePanel distant avant le run était attendu à 3ae10db45018232336888e2dfab751ca4e3f7f26",
+        "Le commit poussé et vérifié après le run est b8e8ecd8731e3829c1cdc5e83aab7e636597e8be",
+        "PR #22 reste Draft",
+        "Architecture rapportée : import offline de minecraftinstance.json, preuve installedFile + SHA-1 exact",
+        "Aucun latestFile utilisé comme preuve exacte selon le contrat transmis",
+        "Aucun JSON brut persisté et aucune migration SQLite rapportée",
+        "CONFLICT existants conservés par fusion des preuves",
+        "Tests ciblés rapportés : 257 PASS / 140 N/A, zéro FAIL ; UI/régressions/compileall/syntaxe/manifeste/whitespace PASS",
+        "HTTP/POSIX natifs, Playwright et suite complète non validés dans ce run",
+        "Validation Aero préparée mais non exécutée",
+        "F reste non acquis ; aucun gate F réel, merge, tag, release ou bump"
+      ]
     }
   ]
 }
