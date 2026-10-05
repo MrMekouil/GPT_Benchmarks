@@ -1748,6 +1748,35 @@
         "Aucune modification effectuée",
         "F reste non acquis"
       ]
+    },
+    {
+      "run_id": "GP-064",
+      "date": "2026-10-05",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032f_curseforge_import_clone_network_block",
+      "task_summary": "0.3.2-F : nouvelle tentative import CurseForge, bloquée au clone par absence d’accès Git réseau",
+      "quota_before_pct": 78,
+      "quota_after_pct": 77,
+      "quota_used_points": 1,
+      "quota_approx": false,
+      "duration_seconds": 32,
+      "status": "blocked",
+      "quality": {
+        "summary": "Run bloqué avant implémentation : le HEAD distant GamePanel 3ae10db... et la PR #22 Draft ont été vérifiés, mais le clone du dépôt a échoué car github.com:443 était inaccessible depuis le workspace. Aucun fichier modifié, import CurseForge non commencé, tests N/A, aucun commit/push ; F reste non acquis."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Le prompt demandait explicitement de cloner GamePanel dans un nouveau workspace vide",
+        "Le HEAD distant 3ae10db45018232336888e2dfab751ca4e3f7f26 a été confirmé et la PR #22 était toujours Draft",
+        "Le clone a échoué car la connexion à github.com:443 était impossible depuis le workspace",
+        "Le dépôt n’a donc pas été cloné et l’import CurseForge n’a pas commencé",
+        "Aucun fichier modifié, aucun test exécuté, aucun commit/push",
+        "F reste non acquis"
+      ]
     }
   ]
 }
