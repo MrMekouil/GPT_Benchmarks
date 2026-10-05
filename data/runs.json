@@ -1701,20 +1701,51 @@
       "quota_after_pct": 81,
       "quota_used_points": 16,
       "quota_approx": false,
-      "duration_seconds": 1920,
+      "duration_seconds": 1680,
       "status": "partial",
       "quality": {
-        "summary": "Session interrompue par « Connexion Interrupted » après 32 minutes. Vérification distante après coup : la branche GamePanel work/0.3.2-content-manifests est toujours sur 3ae10db45018232336888e2dfab751ca4e3f7f26, donc aucun commit/push de l’import CurseForge n’est confirmé. Du travail local Work a pu exister avant l’interruption, mais il n’est pas vérifiable depuis GitHub."
+        "summary": "Session interrompue après 28 minutes par atteinte de la limite maximale de longueur de la discussion Work. Correction fournie après coup : du travail local sur l’import CurseForge avait bien été réalisé avant l’interruption, mais aucun commit/push distant n’était encore visible. La branche GamePanel distante est restée sur 3ae10db45018232336888e2dfab751ca4e3f7f26."
       },
       "prompt_capture": "exact",
       "response_capture": "interrupted_user_report",
       "notes": [
         "Le prompt demandait d’abord un fast-forward depuis le checkout local 735d4dc... vers le HEAD distant 3ae10db...",
-        "La session a consommé 16 points visibles sur 32 minutes avant « Connexion Interrupted »",
+        "Durée corrigée après coup : 28 minutes, pour 16 points visibles consommés",
+        "L’interruption correspondait à l’atteinte de la limite maximale de longueur de la discussion Work",
+        "Du travail local sur le sous-lot CurseForge avait bien été réalisé avant l’interruption",
         "Après le run, la branche distante GamePanel est restée exactement sur 3ae10db45018232336888e2dfab751ca4e3f7f26",
-        "Aucun commit/push de l’import CurseForge n’est donc confirmé",
-        "Un éventuel travail local non poussé dans la session Work reste possible mais non vérifiable",
-        "Aucun handoff Work final, résultat de tests ou liste de fichiers modifiés n’a été capturé",
+        "Aucun commit/push de l’import CurseForge n’était donc confirmé à ce stade",
+        "Le travail local n’était pas récupérable dans la nouvelle discussion Work, dont le workspace ne contenait plus le clone",
+        "F reste non acquis"
+      ]
+    },
+    {
+      "run_id": "GP-063",
+      "date": "2026-10-05",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032f_curseforge_import_new_work_missing_clone",
+      "task_summary": "0.3.2-F : nouvelle discussion Work après interruption, reprise CurseForge bloquée car clone GamePanel absent du workspace",
+      "quota_before_pct": 81,
+      "quota_after_pct": 78,
+      "quota_used_points": 3,
+      "quota_approx": false,
+      "duration_seconds": 21,
+      "status": "blocked",
+      "quality": {
+        "summary": "Reprise bloquée avant implémentation : la nouvelle discussion Work ne contenait plus le clone GamePanel. Le dossier work était vide et Git remontait à C:/Users/Greg sur une branche master sans commit ni remote, empêchant de vérifier le HEAD distant 3ae10db... ou de retrouver le travail local CurseForge de GP-062. Aucune modification effectuée ; F reste non acquis."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Ce run démarre dans une nouvelle discussion Work après que GP-062 a atteint la limite maximale de longueur de discussion",
+        "Le workspace de cette nouvelle discussion ne contenait plus le clone GamePanel",
+        "Le dossier work était vide ; Git remontait à C:/Users/Greg sur master sans commit ni remote",
+        "Le travail local CurseForge réalisé pendant GP-062 n’était donc pas accessible dans cette nouvelle discussion",
+        "Impossible de vérifier le HEAD distant depuis ce workspace ou de reprendre les modifications locales",
+        "Aucune modification effectuée",
         "F reste non acquis"
       ]
     }

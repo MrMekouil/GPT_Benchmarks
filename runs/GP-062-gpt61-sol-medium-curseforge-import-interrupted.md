@@ -2,7 +2,7 @@
 
 - Date : 2026-10-05
 - Quota visible : 97 % → 81 % (**16 points**)
-- Durée : **32 min 00 s**
+- Durée : **28 min 00 s**
 - Résultat : partiel / connexion interrompue
 - Commit GamePanel : aucun commit distant confirmé
 - Draft PR : #22
@@ -41,9 +41,11 @@ Connexion Interrupted -- a voir si il a bossé quand meme, je pense que oui
 - Branche GamePanel `work/0.3.2-content-manifests` : toujours `3ae10db45018232336888e2dfab751ca4e3f7f26`.
 - PR #22 : toujours Draft et head `3ae10db45018232336888e2dfab751ca4e3f7f26`.
 - Aucun commit/push de l’import CurseForge n’est donc visible sur GitHub.
-- Un travail local Work peut avoir été réalisé pendant les 32 minutes, mais il n’est pas vérifiable depuis le dépôt distant.
+- Correction fournie après coup : du travail local Work sur le sous-lot CurseForge avait bien été réalisé pendant les **28 minutes**.
+- L’interruption correspondait à l’atteinte de la limite maximale de longueur de la discussion Work.
+- Ce travail local n’était plus accessible dans la discussion Work suivante, dont le workspace ne contenait plus le clone GamePanel.
 - Aucun handoff final, résultat de tests ni liste de fichiers modifiés n’a été capturé.
 
 ## Classification benchmark
 
-Run enregistré comme **partiel**, et non succès ou échec fonctionnel : l’exécution a été interrompue après une consommation significative, sans livraison distante confirmée.
+Run enregistré comme **partiel**, et non succès ou échec fonctionnel : du travail local avait été réalisé, mais la discussion Work a atteint sa limite avant handoff/commit distant confirmé.
