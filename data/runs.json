@@ -1847,6 +1847,40 @@
         "HTTP/scanner/store POSIX natifs N/A ; aucun retest Aero réel",
         "F reste non acquis ; aucun merge/tag/release/bump"
       ]
+    },
+    {
+      "run_id": "GP-067",
+      "date": "2026-10-06",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032f_curseforge_real_validation_docs",
+      "task_summary": "0.3.2-F : documenter uniquement la validation réelle Aero de l’import CurseForge",
+      "quota_before_pct": 91,
+      "quota_after_pct": 87,
+      "quota_used_points": 4,
+      "quota_approx": false,
+      "duration_seconds": 101,
+      "status": "success",
+      "commit_sha": "0ee8fdc6dd05dc323a2d2436e0ce202c05b9aa20",
+      "quality": {
+        "summary": "Run documentaire uniquement : preuves Aero réelles CurseForge consignées, dont profil 244 addons, 217 JAR associés exactement, 27 absents, 0 sans preuve exacte, résumé 188 both / 3 client-only / 7 server-only / 15 unknown / 4 CONFLICT, 38/39 du sous-ensemble historique associés par SHA-1 exact et absence de brouillon/publication/job implicite. Contrôles docs/manifeste/whitespace PASS. Aucun changement fonctionnel ni gate F relancé ; F reste non acquis."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Validation réelle Aero documentée uniquement ; aucun changement fonctionnel",
+        "Profil réel : 244 addons ; 217 JAR serveur associés exactement ; 27 absents du serveur ; 0 entrée sans preuve exacte",
+        "Résumé global : 188 both, 3 client-only, 7 server-only, 15 unknown, 4 CONFLICT",
+        "Sous-ensemble historique des 39 UNKNOWN : 38/39 associés par SHA-1 exact ; 21 both, 0 client-only, 2 server-only, 15 exacts restant unknown, BlueMap non associé",
+        "Conflits historiques conservés : doubledoors, treeharvester ; nouveaux conflits légitimes : baguettelib et fusion",
+        "Après import : draft=[], publications=[], head=[], jobs=[] ; aucune publication/job/brouillon implicite",
+        "Premier essai réel sur df0b8254 : 0/244 à cause du mauvais champ hash algo ; correctif Desktop type livré dans b66e9948",
+        "Caddy personnalisé corrigé manuellement de 16 KiB vers l’exception 4 MiB prévue ; caddy validate PASS",
+        "Validation Ubuntu ciblée PASS ; Playwright N/A car module absent",
+        "F reste non acquis ; aucun gate F relancé, merge, tag, release ou bump"
+      ]
     }
   ]
 }
