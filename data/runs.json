@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-05",
+  "updated_at": "2026-10-06",
   "measurement_notes": [
     "quota_used_points correspond aux points de pourcentage visibles dans l'interface Work/ChatGPT, pas à un comptage exact de tokens",
     "quota_approx=true indique une valeur arrondie, déduite ou seulement observée comme delta approximatif",
@@ -1811,6 +1811,41 @@
         "HTTP/POSIX natifs, Playwright et suite complète non validés dans ce run",
         "Validation Aero préparée mais non exécutée",
         "F reste non acquis ; aucun gate F réel, merge, tag, release ou bump"
+      ]
+    },
+    {
+      "run_id": "GP-066",
+      "date": "2026-10-06",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032f_curseforge_hash_type_fix",
+      "task_summary": "0.3.2-F : corriger le parser CurseForge Desktop pour hashes[].type et préserver la preuve SHA-1 exacte",
+      "quota_before_pct": 100,
+      "quota_after_pct": 91,
+      "quota_used_points": 9,
+      "quota_approx": false,
+      "duration_seconds": 422,
+      "status": "success",
+      "commit_sha": "b66e9948a16790d731c3c45a4e6fc5ed2b78dfd5",
+      "quality": {
+        "summary": "Correctif rapporté : le parser CurseForge Desktop reconnaît SHA-1 via hashes[].type == 1, ignore MD5 type == 2, conserve une compatibilité algo testée et rejette les contradictions type/algo. Tests ciblés : 262 PASS/140 N/A, zéro FAIL ; compileall, manifeste et diff-check PASS. Neuf fichiers changés. Aucun retest Aero réel ; F reste non acquis."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Le même run a dû être exécuté deux fois ; une seule observation logique est enregistrée",
+        "Durée indiquée : 3 min 31 s par exécution, soit 7 min 02 s cumulées",
+        "Quota visible total communiqué : 100 % -> 91 %, soit 9 points pour les deux exécutions",
+        "Le HEAD attendu dans le prompt était df0b8254ad1238dd962298cfc412badaf7bdfbe4",
+        "Le commit final poussé et vérifié est b66e9948a16790d731c3c45a4e6fc5ed2b78dfd5",
+        "PR #22 reste Draft",
+        "SHA-1 Desktop type:1 reconnu ; MD5 type:2 ignoré pour l’association",
+        "Compatibilité algo conservée et contradictions type/algo rejetées selon le handoff",
+        "Tests ciblés : 262 PASS / 140 N/A, zéro FAIL ; compileall/manifeste/diff-check PASS",
+        "HTTP/scanner/store POSIX natifs N/A ; aucun retest Aero réel",
+        "F reste non acquis ; aucun merge/tag/release/bump"
       ]
     }
   ]

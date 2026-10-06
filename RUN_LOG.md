@@ -981,6 +981,20 @@ Import CurseForge offline rapporté comme livré : `installedFile` + SHA-1 exact
 
 ---
 
+## GP-066 — GPT-6.1 Sol Medium — correctif hashes[].type CurseForge Desktop
+
+- Date : 2026-10-06
+- Quota : 100 % → 91 % = **9 pts cumulés**
+- Durée : **7 min 02 s cumulées** (**2 × 3:31**)
+- Statut : **succès**
+- Commit : `b66e9948a16790d731c3c45a4e6fc5ed2b78dfd5`
+- Draft PR : **#22**
+- Prompt + réponse complets : [runs/GP-066-gpt61-sol-medium-curseforge-hash-type-fix.md](runs/GP-066-gpt61-sol-medium-curseforge-hash-type-fix.md)
+
+Le même run a été exécuté deux fois ; il est conservé comme une observation logique avec coût/durée cumulés. Correctif rapporté : SHA-1 Desktop `type:1` reconnu, MD5 ignoré, compatibilité `algo` testée et contradictions rejetées. Tests ciblés **262 PASS / 140 N/A**, zéro FAIL ; compileall/manifeste/diff-check PASS. Aucun retest Aero réel ; **F reste non acquis**.
+
+---
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -1031,14 +1045,14 @@ Les blocages GP-010/011 restent à interpréter comme incidents de fiabilité d'
 
 ## GPT-6.1 Sol Medium
 
-Vingt-sept observations de production :
+Vingt-huit observations de production :
 
-- quota cumulé : **265 pts**
-- durée cumulée : **6 h 33 min 23 s**
-- résultats : **21 succès / 5 blocages / 1 partiel**
-- moyenne brute : **9,81 pts/observation**
+- quota cumulé : **274 pts**
+- durée cumulée : **6 h 40 min 25 s**
+- résultats : **22 succès / 5 blocages / 1 partiel**
+- moyenne brute : **9,79 pts/observation**
 
-Les vingt et une tâches réussies représentent **236 pts**. Les cinq blocages représentent **13 pts** : GP-021 à **5 pts / 4:31** sans livraison B1 faute d’environnement POSIX, GP-033 à **1 pt / 0:17** avec STOP correct sur miroir Work incohérent/dirty, GP-061 à **3 pts / 0:34** avec STOP correct sur checkout local désynchronisé, GP-063 à **3 pts / 0:21** car la nouvelle discussion Work ne contenait plus le clone GamePanel, puis GP-064 à **1 pt / 0:32** sur échec d’accès réseau à `github.com:443` lors du clone. GP-062 reste **1 run partiel à 16 pts / 28:00** : travail local confirmé, puis limite maximale de longueur de discussion atteinte avant livraison distante. Les neuf gros checkpoints récents se situent à **16 pts / 21:37** pour B2 backend/root, **17 pts / 26:31** pour E-C UI, **16 pts / 24:29** pour le contrat 0.3.2-A, **12 pts / 20:49** pour le scanner Minecraft 0.3.2-B, **17 pts / 33:55** pour les providers/classification 0.3.2-C, **11 pts / 16:49** pour l’UI Admin 0.3.2-D, **23 pts / 38:45** pour l’API Admin/orchestration 0.3.2-E3-A, **16 pts / 18:52** pour l’UI réelle 0.3.2-E3-C et **17 pts / 22:13** pour le runbook réel 0.3.2-F ; GP-055 ajoute un correctif de fixture ciblé à **6 pts / 5:04**, GP-056 un correctif scanner de production ciblé à **5 pts / 6:50**, GP-057 une adaptation de policy JAR à **5 pts / 7:02**, GP-058 un correctif de collision ZIP case-sensitive à **4 pts / 4:57**, GP-059 le branchement Modrinth optionnel à **10 pts / 15:13**, GP-060 la refonte ergonomique UI Contenus client à **9 pts / 14:13** et GP-065 l’import CurseForge offline à **16 pts / 29:54**. GP-042 reste un audit de récupération à **1 pt / 4:02**.
+Les vingt-deux tâches réussies représentent **245 pts**. Les cinq blocages représentent **13 pts** : GP-021 à **5 pts / 4:31** sans livraison B1 faute d’environnement POSIX, GP-033 à **1 pt / 0:17** avec STOP correct sur miroir Work incohérent/dirty, GP-061 à **3 pts / 0:34** avec STOP correct sur checkout local désynchronisé, GP-063 à **3 pts / 0:21** car la nouvelle discussion Work ne contenait plus le clone GamePanel, puis GP-064 à **1 pt / 0:32** sur échec d’accès réseau à `github.com:443` lors du clone. GP-062 reste **1 run partiel à 16 pts / 28:00** : travail local confirmé, puis limite maximale de longueur de discussion atteinte avant livraison distante. Les neuf gros checkpoints récents se situent à **16 pts / 21:37** pour B2 backend/root, **17 pts / 26:31** pour E-C UI, **16 pts / 24:29** pour le contrat 0.3.2-A, **12 pts / 20:49** pour le scanner Minecraft 0.3.2-B, **17 pts / 33:55** pour les providers/classification 0.3.2-C, **11 pts / 16:49** pour l’UI Admin 0.3.2-D, **23 pts / 38:45** pour l’API Admin/orchestration 0.3.2-E3-A, **16 pts / 18:52** pour l’UI réelle 0.3.2-E3-C et **17 pts / 22:13** pour le runbook réel 0.3.2-F ; GP-055 ajoute un correctif de fixture ciblé à **6 pts / 5:04**, GP-056 un correctif scanner de production ciblé à **5 pts / 6:50**, GP-057 une adaptation de policy JAR à **5 pts / 7:02**, GP-058 un correctif de collision ZIP case-sensitive à **4 pts / 4:57**, GP-059 le branchement Modrinth optionnel à **10 pts / 15:13**, GP-060 la refonte ergonomique UI Contenus client à **9 pts / 14:13**, GP-065 l’import CurseForge offline à **16 pts / 29:54** et GP-066 le correctif hash Desktop à **9 pts / 7:02 cumulés sur deux exécutions**. GP-042 reste un audit de récupération à **1 pt / 4:02**.
 
 ## GPT-6.1 Sol High
 
