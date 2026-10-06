@@ -1881,6 +1881,36 @@
         "Validation Ubuntu ciblée PASS ; Playwright N/A car module absent",
         "F reste non acquis ; aucun gate F relancé, merge, tag, release ou bump"
       ]
+    },
+    {
+      "run_id": "GP-068",
+      "date": "2026-10-06",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032f_archive_limits_chipped",
+      "task_summary": "0.3.2-F : relever les bornes ZIP pour Chipped réel à 49152 entrées et 6 MiB de central directory",
+      "quota_before_pct": 87,
+      "quota_after_pct": 84,
+      "quota_used_points": 3,
+      "quota_approx": false,
+      "duration_seconds": 167,
+      "status": "success",
+      "commit_sha": "37d375e15dfe5c61491cfae5965ab8002052203e",
+      "quality": {
+        "summary": "Correctif ciblé rapporté : limites ZIP relevées à 49 152 entrées et 6 MiB de central directory pour le cas réel Chipped, autres protections inchangées. Tests : 264 PASS / 140 N/A POSIX, zéro FAIL ; compileall, docs, manifeste et whitespace PASS. Huit fichiers modifiés. Aucun gate réel exécuté ; Gate 4 et F restent non acquis."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Blocker Gate 4 réel : CONTENT_SCAN_ARCHIVE_LIMIT sur chipped-forge-1.20.1-3.0.7.jar",
+        "Mesures réelles : jar_bytes=15060263, entries=38628, central_bytes=4190907, expanded_bytes=10293495, max_entry_bytes=472315, max_ratio=12.1826",
+        "Limites relevées : archive_entries=49152 et central_bytes=6*1024*1024",
+        "Autres limites et protections rapportées inchangées",
+        "Tests ciblés : 264 PASS / 140 N/A POSIX, zéro FAIL ; compileall/docs/manifeste/whitespace PASS",
+        "Gate 4 et F restent non acquis ; aucun gate réel exécuté, merge, tag, release ou bump"
+      ]
     }
   ]
 }
