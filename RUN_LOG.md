@@ -1051,6 +1051,20 @@ Correctif rapporté **fixture/tests uniquement** après FAIL Ubuntu natif de `te
 
 ---
 
+## GP-071 — GPT-6.1 Sol Medium — reconnaissance JAR Forge support/library
+
+- Date : 2026-10-07
+- Quota : 89 % → 81 % = **8 pts**
+- Durée : **10 min 37 s**
+- Statut : **succès**
+- Commit : `901c7682399f4854cedcb07a7ac950ddfaf72ac5`
+- Draft PR : **#22**
+- Prompt + réponse complets : [runs/GP-071-gpt61-sol-medium-forge-support-recognition.md](runs/GP-071-gpt61-sol-medium-forge-support-recognition.md)
+
+Correctif produit rapporté : `FMLModType=LIBRARY` reconnu, trois SPI Forge/ModLauncher exacts et bornés reconnus sans déduction client/server, et metadata étrangère invalide non bloquante uniquement lorsqu’une sélection Forge vérifiée et une metadata native cohérente existent. Aucun scan récursif `jarjar`; NeoForge reste conservateur. Premier passage : **1 FAIL + 3 erreurs**, corrigés dans le run. Final : **280 PASS / 150 N/A POSIX / 0 FAIL** ; reconnaissance/docs, compileall, manifeste et diff-check PASS. **Gate 4 et F restent non acquis**.
+
+---
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -1101,14 +1115,14 @@ Les blocages GP-010/011 restent à interpréter comme incidents de fiabilité d'
 
 ## GPT-6.1 Sol Medium
 
-Trente-deux observations de production :
+Trente-trois observations de production :
 
-- quota cumulé : **292 pts**
-- durée cumulée : **6 h 54 min 58 s**
-- résultats : **26 succès / 5 blocages / 1 partiel**
-- moyenne brute : **9,13 pts/observation**
+- quota cumulé : **300 pts**
+- durée cumulée : **7 h 05 min 35 s**
+- résultats : **27 succès / 5 blocages / 1 partiel**
+- moyenne brute : **9,09 pts/observation**
 
-Les vingt-six tâches réussies représentent **263 pts**. Les cinq blocages représentent **13 pts** : GP-021 à **5 pts / 4:31** sans livraison B1 faute d’environnement POSIX, GP-033 à **1 pt / 0:17** avec STOP correct sur miroir Work incohérent/dirty, GP-061 à **3 pts / 0:34** avec STOP correct sur checkout local désynchronisé, GP-063 à **3 pts / 0:21** car la nouvelle discussion Work ne contenait plus le clone GamePanel, puis GP-064 à **1 pt / 0:32** sur échec d’accès réseau à `github.com:443` lors du clone. GP-062 reste **1 run partiel à 16 pts / 28:00** : travail local confirmé, puis limite maximale de longueur de discussion atteinte avant livraison distante. Les neuf gros checkpoints récents se situent à **16 pts / 21:37** pour B2 backend/root, **17 pts / 26:31** pour E-C UI, **16 pts / 24:29** pour le contrat 0.3.2-A, **12 pts / 20:49** pour le scanner Minecraft 0.3.2-B, **17 pts / 33:55** pour les providers/classification 0.3.2-C, **11 pts / 16:49** pour l’UI Admin 0.3.2-D, **23 pts / 38:45** pour l’API Admin/orchestration 0.3.2-E3-A, **16 pts / 18:52** pour l’UI réelle 0.3.2-E3-C et **17 pts / 22:13** pour le runbook réel 0.3.2-F ; GP-055 ajoute un correctif de fixture ciblé à **6 pts / 5:04**, GP-056 un correctif scanner de production ciblé à **5 pts / 6:50**, GP-057 une adaptation de policy JAR à **5 pts / 7:02**, GP-058 un correctif de collision ZIP case-sensitive à **4 pts / 4:57**, GP-059 le branchement Modrinth optionnel à **10 pts / 15:13**, GP-060 la refonte ergonomique UI Contenus client à **9 pts / 14:13**, GP-065 l’import CurseForge offline à **16 pts / 29:54** et GP-066 le correctif hash Desktop à **9 pts / 7:02 cumulés sur deux exécutions** et GP-067 la documentation de validation Aero réelle à **4 pts / 1:41** et GP-068 le relèvement des bornes ZIP Chipped à **3 pts / 2:47** et GP-069 la preuve launcher systemd/statique à **8 pts / 7:36** et GP-070 le correctif fixture/test loader à **3 pts / 2:29**. GP-042 reste un audit de récupération à **1 pt / 4:02**.
+Les vingt-sept tâches réussies représentent **271 pts**. Les cinq blocages représentent **13 pts** : GP-021 à **5 pts / 4:31** sans livraison B1 faute d’environnement POSIX, GP-033 à **1 pt / 0:17** avec STOP correct sur miroir Work incohérent/dirty, GP-061 à **3 pts / 0:34** avec STOP correct sur checkout local désynchronisé, GP-063 à **3 pts / 0:21** car la nouvelle discussion Work ne contenait plus le clone GamePanel, puis GP-064 à **1 pt / 0:32** sur échec d’accès réseau à `github.com:443` lors du clone. GP-062 reste **1 run partiel à 16 pts / 28:00** : travail local confirmé, puis limite maximale de longueur de discussion atteinte avant livraison distante. Les neuf gros checkpoints récents se situent à **16 pts / 21:37** pour B2 backend/root, **17 pts / 26:31** pour E-C UI, **16 pts / 24:29** pour le contrat 0.3.2-A, **12 pts / 20:49** pour le scanner Minecraft 0.3.2-B, **17 pts / 33:55** pour les providers/classification 0.3.2-C, **11 pts / 16:49** pour l’UI Admin 0.3.2-D, **23 pts / 38:45** pour l’API Admin/orchestration 0.3.2-E3-A, **16 pts / 18:52** pour l’UI réelle 0.3.2-E3-C et **17 pts / 22:13** pour le runbook réel 0.3.2-F ; GP-055 ajoute un correctif de fixture ciblé à **6 pts / 5:04**, GP-056 un correctif scanner de production ciblé à **5 pts / 6:50**, GP-057 une adaptation de policy JAR à **5 pts / 7:02**, GP-058 un correctif de collision ZIP case-sensitive à **4 pts / 4:57**, GP-059 le branchement Modrinth optionnel à **10 pts / 15:13**, GP-060 la refonte ergonomique UI Contenus client à **9 pts / 14:13**, GP-065 l’import CurseForge offline à **16 pts / 29:54** et GP-066 le correctif hash Desktop à **9 pts / 7:02 cumulés sur deux exécutions** et GP-067 la documentation de validation Aero réelle à **4 pts / 1:41** et GP-068 le relèvement des bornes ZIP Chipped à **3 pts / 2:47** et GP-069 la preuve launcher systemd/statique à **8 pts / 7:36** et GP-070 le correctif fixture/test loader à **3 pts / 2:29** et GP-071 la reconnaissance JAR Forge support/library à **8 pts / 10:37**. GP-042 reste un audit de récupération à **1 pt / 4:02**.
 
 ## GPT-6.1 Sol High
 
