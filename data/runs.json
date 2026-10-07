@@ -2129,6 +2129,42 @@
         "Aucun nouveau décompte réel après correctif",
         "Gate 4 reste acquis ; F reste non acquis"
       ]
+    },
+    {
+      "run_id": "GP-075",
+      "date": "2026-10-07",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032f_curseforge_explicit_import_replacement",
+      "task_summary": "0.3.2-F : remplacer les anciennes preuves curseforge-local lors d’un nouvel import explicite minecraftinstance.json",
+      "quota_before_pct": 100,
+      "quota_after_pct": 90,
+      "quota_used_points": 10,
+      "quota_approx": false,
+      "duration_seconds": 1276,
+      "status": "success",
+      "commit_sha": "89b49e219fa60875dccf1cc04f07a75dc478c2cd",
+      "quality": {
+        "summary": "Correctif livré : un import explicite minecraftinstance.json remplace les anciennes preuves CurseForge locales dans la nouvelle observation et n’ajoute que celles du nouveau profil, tout en conservant les preuves indépendantes pour le même path/SHA-256/taille. Les rescans normaux continuent de conserver les dernières preuves locales, un changement d’artifact n’hérite d’aucune preuve locale, le réimport est idempotent et l’historique SQL reste intact. Tests : 242 PASS / 100 N/A natifs POSIX / 0 FAIL final ; compileall, manifeste et diff-check PASS. Gate 4 reste acquis ; F non acquis."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Bug réel : deux imports explicites minecraftinstance.json successifs mélangeaient les anciennes et nouvelles preuves curseforge-local pour les mêmes artifacts",
+        "Nouvel import explicite : aucune ancienne assertion/match/diagnostic curseforge-local reprise ; seules les preuves du nouveau fichier sont ajoutées",
+        "Preuves indépendantes déjà persistées conservées pour le même path/SHA-256/taille si elles ne sont pas curseforge-local",
+        "Conflits indépendants historiques conservés",
+        "Scan Minecraft normal sans nouvel import : dernières preuves curseforge-local conservées comme auparavant",
+        "Changement path/hash/taille : aucune preuve locale héritée",
+        "Addon absent du nouveau profil : ancienne preuve curseforge-local absente de la nouvelle observation",
+        "Réimport du même fichier idempotent, sans duplication",
+        "Aucune suppression/modification des anciennes observations SQL ; historique intact",
+        "Aucune migration/version ; classification SUGGESTED/VERIFIED/CONFLICT inchangée",
+        "Tests : 242 PASS / 100 N/A natifs POSIX / 0 FAIL final ; compileall/manifeste/diff-check PASS",
+        "Aucun gate réel relancé ; Gate 4 ACQUIS ; F NON ACQUIS"
+      ]
     }
   ]
 }
