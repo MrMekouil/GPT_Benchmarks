@@ -1945,6 +1945,41 @@
         "Dix fichiers modifiés selon le handoff",
         "Gate 4 et F restent non acquis ; aucun démarrage, migration, bump, merge, tag ou release"
       ]
+    },
+    {
+      "run_id": "GP-070",
+      "date": "2026-10-07",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032f_loader_selection_fixture_fix",
+      "task_summary": "0.3.2-F : corriger uniquement la fixture/test de sélection loader après FAIL Ubuntu natif",
+      "quota_before_pct": 92,
+      "quota_after_pct": 89,
+      "quota_used_points": 3,
+      "quota_approx": false,
+      "duration_seconds": 149,
+      "status": "success",
+      "commit_sha": "0a234e3b203576ba05055468245b856c8e840055",
+      "quality": {
+        "summary": "Correctif fixture/tests uniquement rapporté après FAIL Ubuntu natif de test_native_selection_two_forge_versions : assertion brute sur le mot java remplacée par une vérification ciblée de non-persistance de la commande, et répertoire fixture 47.3.0 supprimé avant les cas à deux installations. Aucun code produit modifié. Tests : 271 PASS / 147 N/A, zéro FAIL exécuté ; compileall, docs, manifeste et whitespace PASS. Tests natifs Ubuntu corrigés restent N/A ici ; Gate 4 et F non acquis."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "HEAD attendu dans le prompt : 8db5517629e4dee2202ed569e546e5b8bb126dd3",
+        "FAIL Ubuntu réel précédent : tests.test_loader_selection_032.NativeSelection032.test_native_selection_two_forge_versions",
+        "Cause auditée : fixture/test uniquement",
+        "Assertion assertNotIn(\"java\", json.dumps(result)) invalide à cause de modLoader=javafml",
+        "Fixture 47.3.0 laissait son répertoire après suppression de unix_args.txt, créant RESOURCE_MISSING artificiel",
+        "Correctif rapporté : vérification ciblée de non-persistance de run.sh/ExecStart brut et nettoyage complet du répertoire 47.3.0 pour les tests deux installations ; cas NeoForge analogue vérifié",
+        "Aucun code produit modifié",
+        "Tests : 271 PASS / 147 N/A, zéro FAIL exécuté ; compileall/docs/manifeste/whitespace PASS",
+        "Tests natifs Ubuntu corrigés N/A dans Work",
+        "FAIL précédent documenté",
+        "Gate 4 et F restent non acquis ; PR #22 Draft"
+      ]
     }
   ]
 }
