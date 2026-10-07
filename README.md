@@ -32,7 +32,7 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 | Génération | Modèle | Effort | Runs observés | Résultats | Quota visible cumulé | Moyenne quota / run | Durée cumulée |
 |---|---|---|---:|---|---:|---:|---:|
 | 5.6 | **GPT-5.6 Sol** | Medium | 1 | **1 succès** | **6 pts** | **6,00 pts** | **1:50** |
-| 6.0 | **GPT-6 Luna** | Medium | 22 | **20 succès · 1 échec · 1 bloqué** | **12 pts visibles** | **0,55 pt** | **1:47:57** |
+| 6.0 | **GPT-6 Luna** | Medium | 23 | **21 succès · 1 échec · 1 bloqué** | **13 pts visibles** | **0,57 pt** | **1:52:56** |
 | 6.0 | **GPT-6 Luna** | non relevé* | 2 | **2 blocages** | **≥5 pts connus*** | **≥2,50 pts*** | **1:35:00** |
 | 6.0 | **GPT-6 Sol** | Medium | 7 | **7 succès** | **~73 pts** | **~10,43 pts** | **52:38** |
 | 6.0 | **GPT-6 Sol** | High | 1 | **1 partiel** | **~20 pts** | **~20,00 pts** | **12:07** |
@@ -51,7 +51,7 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 - **GPT-6 Sol Medium en production :** trois gros checkpoints complets observés à **11 pts / 8:42** (pré-clôture), **22 pts / 14:13** (audit transversal 0.3.1-E-A) et **21 pts / 20:35** (correctif concurrence installer/recovery GP-028). Le coût varie fortement avec la profondeur et le périmètre.
 - **GPT-6.1 Sol Medium :** 29 tâches terminées sur 35 tentatives observées. Les gros checkpoints incluent B2 **16 pts / 21:37**, E-C UI **17 pts / 26:31**, 0.3.2-A **16 pts / 24:29**, 0.3.2-B **12 pts / 20:49**, 0.3.2-C **17 pts / 33:55**, 0.3.2-D **11 pts / 16:49**, E3-A **23 pts / 38:45**, E3-C **16 pts / 18:52** et le runbook réel F **17 pts / 22:13**. GP-055 ajoute un correctif de fixture ContentStore ciblé à **6 pts / 5:04** sans code de production ; GP-056 ajoute le correctif scanner O_PATH à **5 pts / 6:50** ; GP-057 ajoute l’adaptation de la policy JAR réelle à **5 pts / 7:02** ; GP-058 corrige les collisions ZIP case-sensitive après NFC à **4 pts / 4:57** ; GP-059 branche la qualification Modrinth optionnelle à **10 pts / 15:13** ; GP-060 refond l’UI Contenus client pour un vrai modpack à **9 pts / 14:13** ; GP-065 livre l’import CurseForge offline à **16 pts / 29:54** ; GP-066 corrige le format de hash CurseForge Desktop à **9 pts / 7:02 cumulés sur 2 exécutions** ; GP-067 documente la validation Aero réelle à **4 pts / 1:41** sans changement fonctionnel ; GP-068 relève les bornes ZIP Chipped à **3 pts / 2:47** ; GP-069 ajoute la preuve launcher systemd/statique à **8 pts / 7:36** ; GP-070 corrige uniquement la fixture/test loader à **3 pts / 2:29** après FAIL Ubuntu natif ; GP-071 ajoute la reconnaissance des JAR Forge support/library à **8 pts / 10:37** ; GP-072 ajoute la preuve CurseForge exacte → both/SUGGESTED et la watchlist Admin à **7 pts / 9:35**, avec Gate 4 désormais acquis sur preuve utilisateur ; GP-073 rend cette présence strictement advisory face aux autres preuves et compacte l’UI en six groupes exclusifs fermés à **5 pts / 8:22**. GP-061 ajoute un STOP de pré-vol correct à **3 pts / 0:34** ; GP-062 est **partiel à 16 pts / 28:00** après travail local, interrompu par la limite de longueur de discussion ; GP-063 est bloqué à **3 pts / 0:21** car la nouvelle discussion Work ne disposait plus du clone GamePanel ; GP-064 est bloqué à **1 pt / 0:32** car le clone GitHub a échoué sur l’accès réseau `github.com:443`. GP-042 reste un audit de récupération ciblé à **1 pt / 4:02**. Cinq blocages restent observés : GP-021 à **5 pts / 4:31**, GP-033 à **1 pt / 0:17**, GP-061 à **3 pts / 0:34**, GP-063 à **3 pts / 0:21** et GP-064 à **1 pt / 0:32**.
 - **GPT-6.1 Sol High :** trois observations. GP-041 est **partiel à 20 pts / 53:27** sur E2 ; GP-043 reprend le travail récupéré et livre E2 candidat à **7 pts / 28:50 observés** ; GP-048 livre E3-B à **24 pts / 42:00** malgré un stall apparent de l’UI après exécution. La durée GP-043 reste biaisée par une attente d’autorisation.
-- **GPT-6 Luna Medium :** **22 runs Medium** observés : **20 succès / 1 échec / 1 blocage**, **12 points visibles** au total, **1:47:57**. Les **20 checkpoints de production récents** sont à **19 succès / 1 blocage**, **12 points visibles** et **1:46:46**. À part, GP-010/011 représentent **2 blocages à effort non relevé**, **1:35:00** cumulé et **≥5 points connus**.
+- **GPT-6 Luna Medium :** **23 runs Medium** observés : **21 succès / 1 échec / 1 blocage**, **13 points visibles** au total, **1:52:56**. Les **21 checkpoints de production récents** sont à **20 succès / 1 blocage**, **13 points visibles** et **1:51:45**. GP-074 ajoute le correctif UI de regroupement effectif à **1 pt / 4:59**. À part, GP-010/011 représentent **2 blocages à effort non relevé**, **1:35:00** cumulé et **≥5 points connus**.
 
 ## Résultats actuellement observés
 
@@ -101,8 +101,9 @@ GP-024 est à lire séparément des gros checkpoints : il enregistre des validat
 | GP-050 | 0.3.2-E3-B : reprise + push du fixture timeout client-extra | **1 pt** | **4:03** | terminé, commit `bb5da9d...`; 21 PASS / 21 N/A dans Work |
 | GP-051 | 0.3.2-E3-B : clôture documentaire après validation Ubuntu 42/42 | **1 pt** | **7:46** | terminé, commit `94fbabc...`; E3-B acquis |
 | GP-053 | 0.3.2-E3-C : clôture documentaire après validation Ubuntu/Chromium réelle | **1 pt** | **6:06** | terminé, commit `9c37a56...`; E3-C et E global acquis |
+| GP-074 | 0.3.2-F : correctif UI regroupement effectif Suggérés/VERIFIED | **1 pt** | **4:59** | terminé, commit `f22be6f...`; Gate 4 acquis, F non acquis |
 
-Ces vingt checkpoints de production Luna récents comptent **19 succès / 1 blocage**, **12 points visibles cumulés** et **1:46:46** au total.
+Ces vingt et un checkpoints de production Luna récents comptent **20 succès / 1 blocage**, **13 points visibles cumulés** et **1:51:45** au total.
 
 ### Runs réels GPT-6.1 Sol Medium
 
@@ -158,7 +159,7 @@ GP-041 a produit une implémentation locale avancée mais s’est interrompu ava
 
 ## Lecture provisoire
 
-- **GPT-6 Luna Medium** : très économique sur les tâches ciblées observées : **20 succès / 1 échec / 1 blocage** sur 22 runs Medium, pour **12 points visibles** cumulés. Les 20 checkpoints de production récents sont à **19 succès / 1 blocage** ; GP-053 clôt désormais E3-C et marque E global acquis après validation Ubuntu/Chromium réelle. Les deux longs blocages GP-010/011 restent séparés car leur effort n’avait pas été relevé.
+- **GPT-6 Luna Medium** : très économique sur les tâches ciblées observées : **21 succès / 1 échec / 1 blocage** sur 23 runs Medium, pour **13 points visibles** cumulés. Les 21 checkpoints de production récents sont à **20 succès / 1 blocage** ; GP-074 ajoute le correctif UI strictement de présentation à **1 pt / 4:59**, avec Gate 4 acquis et F non acquis. Les deux longs blocages GP-010/011 restent séparés car leur effort n’avait pas été relevé.
 - **GPT-6 Sol Medium** : sept succès observés. Les audits ciblés sont à 4 pts, les gros checkpoints se situent désormais à **11–22 pts**, et GP-028 confirme qu’un correctif de sûreté/concurrence transversal peut monter à **21 pts / 20:35**. La moyenne brute passe à **~10,43 pts/run**.
 - **GPT-6 Sol High** : un gros run multi-étapes a consommé ~20 points en 12:07 et s'est arrêté faute de quota avant la fin. Cela ne mesure pas son intelligence, mais montre le risque d'un effort High sur un long marathon.
 - **GPT-6 Astra Low** : excellente qualité, mais 13–17 points sur les deux audits comparables où Sol Medium en consommait 4.
@@ -170,7 +171,7 @@ GP-041 a produit une implémentation locale avancée mais s’est interrompu ava
 
 - `data/runs.json` est la source structurée canonique.
 - `data/runs.csv` est régénéré depuis le JSON pour éviter les décalages de colonnes.
-- État vérifié au 2026-10-07 : **73 runs JSON = 73 lignes CSV**, IDs uniques et champs communs cohérents.
+- État vérifié au 2026-10-07 : **74 runs JSON = 74 lignes CSV**, IDs uniques et champs communs cohérents.
 
 ## Méthode
 
