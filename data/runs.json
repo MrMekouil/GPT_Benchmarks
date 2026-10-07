@@ -2093,6 +2093,42 @@
         "Playwright N/A, module absent",
         "Aucun nouveau décompte réel revendiqué ; Gate 4 ACQUIS ; F NON ACQUIS"
       ]
+    },
+    {
+      "run_id": "GP-074",
+      "date": "2026-10-07",
+      "project": "GamePanel",
+      "model": "GPT-6 Luna",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032f_ui_effective_grouping_fix",
+      "task_summary": "0.3.2-F : corriger uniquement le regroupement UI Suggérés pour suivre l’état effectif",
+      "quota_before_pct": 69,
+      "quota_after_pct": 68,
+      "quota_used_points": 1,
+      "quota_approx": false,
+      "duration_seconds": 299,
+      "status": "success",
+      "commit_sha": "f22be6f2f8dc90a3e70fbe374bc3ba895cbdcab1",
+      "quality": {
+        "summary": "Correctif strictement UI livré : le groupe Suggérés suit désormais uniquement l’evidence_state effectif SUGGESTED ; une ancienne assertion advisory CurseForge reste visible dans les preuves mais ne reclasse plus une entrée VERIFIED. Les groupes restent mutuellement exclusifs, fermés par défaut, sans duplication et avec conservation des index du brouillon. Tests UI/API simulé et syntaxe JavaScript PASS ; release-docs, manifeste et diff-check PASS ; Playwright N/A. Aucun gate réel relancé. Gate 4 reste acquis ; F non acquis."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Validation réelle revision 6 avant correctif : 354 JAR ; both/VERIFIED=257, both/SUGGESTED=59, client-only/VERIFIED=13, server-only/VERIFIED=10, unknown/CONFLICT=13, unknown/UNKNOWN=2",
+        "UI incorrecte avant correctif : Conflits 13, Suggérés 190, Serveur uniquement 6, Client uniquement 6, Les deux 137, Inconnus 2",
+        "Cause : contentGroup() regroupait toute entrée portant l’assertion advisory installedFile-sha1-server-client-presence-v1 dans Suggérés, même avec décision effective VERIFIED",
+        "Correctif strictement UI : Suggérés uniquement si evidence_state effectif=SUGGESTED ; VERIFIED avec advisory rejoint son groupe effectif",
+        "CONFLICT reste dans Conflits ; UNKNOWN uniquement dans Inconnus",
+        "Groupes mutuellement exclusifs, aucun doublon, tous fermés par défaut, index du brouillon conservés",
+        "Aucun changement de content_classification.py, content_curseforge.py, persistance/SQLite, règles SUGGESTED/VERIFIED/CONFLICT, scanner ou conflits historiques",
+        "Résultat attendu selon l’observation réelle actuelle : Conflits 13 / Suggérés 59 / Serveur uniquement 10 / Client uniquement 13 / Les deux 257 / Inconnus 2",
+        "Tests UI/API simulé et syntaxe JavaScript PASS ; release-docs, manifeste et diff-check PASS",
+        "Playwright N/A, module absent",
+        "Aucun nouveau décompte réel après correctif",
+        "Gate 4 reste acquis ; F reste non acquis"
+      ]
     }
   ]
 }
