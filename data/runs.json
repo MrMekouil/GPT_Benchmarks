@@ -2016,6 +2016,44 @@
         "Huit fichiers modifiés selon le handoff",
         "Gate 4 et F restent non acquis ; retest utilisateur requis"
       ]
+    },
+    {
+      "run_id": "GP-072",
+      "date": "2026-10-07",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032f_curseforge_suggested_watchlist",
+      "task_summary": "0.3.2-F : dériver both/SUGGESTED d’une présence CurseForge client exacte par SHA-1 et ajouter une watchlist Admin",
+      "quota_before_pct": 81,
+      "quota_after_pct": 74,
+      "quota_used_points": 7,
+      "quota_approx": false,
+      "duration_seconds": 575,
+      "status": "success",
+      "commit_sha": "868a5d2bb966aa18f441fbe9d96bf056b3c9d505",
+      "quality": {
+        "summary": "Sous-lot livré : preuve CurseForge locale exacte sans side explicite produit environment=both avec état SUGGESTED et provenance versionnée, sans déduire de policy ni promouvoir en VERIFIED. La suggestion est conservée pour le même path/hash/taille, ne migre pas vers un nouvel artifact, le réimport est idempotent et les CONFLICT restent inchangés. UI Admin : watchlist compacte « À vérifier en priorité » dérivée des décisions persistées. Tests finaux : 289 PASS / 150 N/A POSIX / 0 FAIL ; UI VM/API, syntaxe JS, compileall, manifeste et diff-check PASS. Trois échecs initiaux corrigés dans le run. Playwright N/A. Gate 4 acquis sur preuve utilisateur ; F reste non acquis."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Gate 4 Interstice déclaré acquis sur validation réelle utilisateur : Forge 47.4.0 / MC 1.20.1 / VERIFIED, complete=true, 354 JAR / 1 220 941 100 octets, SHA-256 indépendant PASS, aucun draft/publication/head/job implicite",
+        "État réel après import CurseForge : 354 entrées ; 74 environment=unknown affichées, dont 61 UNKNOWN réels et 13 CONFLICT ; 72/74 avec match curseforge-local exact, 14 aussi Modrinth, 2 sans match exact",
+        "Nouvelle preuve : artifact serveur exact + installedFile client exact par SHA-1 sans side explicite => environment=both, state=SUGGESTED",
+        "Cette preuve n’implique ni compatibilité vérifiée, ni déclaration officielle CurseForge, ni policy, ni redistribution, ni VERIFIED",
+        "Policy reste UNKNOWN sauf preuve indépendante",
+        "CONFLICT historiques et autres contradictions restent CONFLICT ; doubledoors/treeharvester non résolus automatiquement",
+        "Suggestion persistée via assertions/provenance existantes pour le même path/hash/taille ; aucun transfert si les octets changent",
+        "Réimport idempotent, pas de doublon d’assertion",
+        "UI Admin : groupe « À vérifier en priorité » dérivé des décisions persistées, séparé des CONFLICT et UNKNOWN",
+        "Tests finaux : 289 PASS / 150 N/A POSIX / 0 FAIL",
+        "UI VM/API, syntaxe JS, compileall, manifeste et diff-check PASS",
+        "Échecs initiaux corrigés : 2 Python, 1 UI",
+        "Playwright N/A, module absent",
+        "Gate 4 ACQUIS ; F NON ACQUIS"
+      ]
     }
   ]
 }
