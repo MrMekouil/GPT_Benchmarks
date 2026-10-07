@@ -2054,6 +2054,45 @@
         "Playwright N/A, module absent",
         "Gate 4 ACQUIS ; F NON ACQUIS"
       ]
+    },
+    {
+      "run_id": "GP-073",
+      "date": "2026-10-07",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032f_advisory_conflict_ui_groups",
+      "task_summary": "0.3.2-F : rendre la preuve CurseForge de présence advisory hors calcul de conflit et regrouper l’UI en six groupes exclusifs fermés",
+      "quota_before_pct": 74,
+      "quota_after_pct": 69,
+      "quota_used_points": 5,
+      "quota_approx": false,
+      "duration_seconds": 502,
+      "status": "success",
+      "commit_sha": "4ed0fbeb95303acbc25fa99edd84596ba14012fc",
+      "quality": {
+        "summary": "Correctif livré : la preuve curseforge-local installedFile-sha1-server-client-presence-v1 reste advisory. Seule, elle donne both/SUGGESTED ; en présence d’autres assertions d’environnement, elle reste persistée/visible mais est exclue du calcul de valeur/conflit. Les conflits indépendants restent inchangés. UI Admin restructurée en six groupes mutuellement exclusifs et fermés par défaut : Conflits, Suggérés, Serveur uniquement, Client uniquement, Les deux, Inconnus ; les CONFLICT ne gonflent plus Inconnus et aucune entrée n’est dupliquée. Tests : 294 PASS / 150 N/A POSIX / 0 FAIL ; UI VM/API, syntaxe JS, compileall, manifeste et diff-check PASS. Playwright N/A. Aucun nouveau décompte réel revendiqué. Gate 4 acquis ; F non acquis."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Gate 4 Interstice reste acquis ; F reste non acquis",
+        "Validation réelle préalable : les inconnus visibles sont passés de 74 à 26, dont seulement 2 vrais UNKNOWN et le reste CONFLICT ; aucun nouveau décompte final n’est revendiqué dans ce run",
+        "La méthode advisory concernée est curseforge-local / installedFile-sha1-server-client-presence-v1",
+        "Seule preuve exploitable : both/SUGGESTED",
+        "Avec d’autres assertions d’environnement, la preuve advisory reste persistée/visible mais ne participe pas au calcul de valeur/conflit",
+        "Les autres sources SUGGESTED gardent leur sémantique historique",
+        "Les conflits historiques indépendants restent CONFLICT ; aucun conflit individuel résolu automatiquement",
+        "UI : six groupes exclusifs Conflits, Suggérés, Serveur uniquement, Client uniquement, Les deux, Inconnus",
+        "Tous les groupes fermés par défaut ; aucun open automatique après scan/import",
+        "Suggérés restent la watchlist prioritaire même si une preuve plus forte fournit la décision effective",
+        "CONFLICT absent du groupe Inconnus ; Inconnus contient uniquement les vrais UNKNOWN",
+        "Aucune duplication ; index du formulaire brouillon conservés",
+        "Tests : 294 PASS / 150 N/A POSIX / 0 FAIL ; UI VM/API, syntaxe JS, compileall, manifeste et diff-check PASS",
+        "Playwright N/A, module absent",
+        "Aucun nouveau décompte réel revendiqué ; Gate 4 ACQUIS ; F NON ACQUIS"
+      ]
     }
   ]
 }
