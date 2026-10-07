@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-06",
+  "updated_at": "2026-10-07",
   "measurement_notes": [
     "quota_used_points correspond aux points de pourcentage visibles dans l'interface Work/ChatGPT, pas à un comptage exact de tokens",
     "quota_approx=true indique une valeur arrondie, déduite ou seulement observée comme delta approximatif",
@@ -1910,6 +1910,40 @@
         "Autres limites et protections rapportées inchangées",
         "Tests ciblés : 264 PASS / 140 N/A POSIX, zéro FAIL ; compileall/docs/manifeste/whitespace PASS",
         "Gate 4 et F restent non acquis ; aucun gate réel exécuté, merge, tag, release ou bump"
+      ]
+    },
+    {
+      "run_id": "GP-069",
+      "date": "2026-10-07",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032f_loader_systemd_launcher_proof",
+      "task_summary": "0.3.2-F : sélectionner le loader actif via preuve systemd + analyse statique bornée du launcher",
+      "quota_before_pct": 100,
+      "quota_after_pct": 92,
+      "quota_used_points": 8,
+      "quota_approx": false,
+      "duration_seconds": 456,
+      "status": "success",
+      "commit_sha": "835c96bc659f7ab9a529508469caa02ab48fdcfa",
+      "quality": {
+        "summary": "Correctif rapporté : sélection du loader actif fondée sur une preuve systemd via action fixe launcher-proof, puis lecture statique bornée/no-follow du launcher ; sélection unique VERIFIED, autres installations conservées, aucun script exécuté. Tests : 271 PASS / 147 N/A, zéro FAIL exécuté ; trois suites historiques N/A à l’import faute de pydantic/aiohttp. Syntaxe, docs, manifeste et whitespace PASS. Gate 4 et F restent non acquis."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Preuve réelle Interstice : WorkingDirectory=/home/serveur/minecraft/forge-1.20.1 et ExecStart=/home/serveur/minecraft/forge-1.20.1/run.sh",
+        "run.sh réel référence littéralement @libraries/net/minecraftforge/forge/1.20.1-47.4.0/unix_args.txt",
+        "Deux Forge installés : 47.2.0 et 47.4.0 ; 47.4.0 sélectionné, 47.2.0 seulement installé",
+        "Architecture rapportée : preuve systemd via action fixe launcher-proof + lecture statique bornée/no-follow du launcher",
+        "Aucun script shell exécuté ; aucune sélection par version la plus haute/récente",
+        "Tests : 271 PASS / 147 N/A, zéro FAIL exécuté",
+        "Trois suites historiques N/A à l’import faute de pydantic/aiohttp",
+        "Syntaxe, docs, manifeste et whitespace PASS",
+        "Dix fichiers modifiés selon le handoff",
+        "Gate 4 et F restent non acquis ; aucun démarrage, migration, bump, merge, tag ou release"
       ]
     }
   ]
