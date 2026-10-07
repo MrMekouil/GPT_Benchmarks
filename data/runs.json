@@ -1980,6 +1980,42 @@
         "FAIL précédent documenté",
         "Gate 4 et F restent non acquis ; PR #22 Draft"
       ]
+    },
+    {
+      "run_id": "GP-071",
+      "date": "2026-10-07",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032f_jar_recognition_forge_support",
+      "task_summary": "0.3.2-F : reconnaître proprement les JAR Forge support/library et ignorer la metadata étrangère invalide si une preuve Forge native valide existe",
+      "quota_before_pct": 89,
+      "quota_after_pct": 81,
+      "quota_used_points": 8,
+      "quota_approx": false,
+      "duration_seconds": 637,
+      "status": "success",
+      "commit_sha": "901c7682399f4854cedcb07a7ac950ddfaf72ac5",
+      "quality": {
+        "summary": "Correctif produit rapporté : FMLModType=LIBRARY reconnu comme composant Forge, trois SPI Forge/ModLauncher exacts et bornés reconnus sans déduction d’environment, et metadata étrangère invalide rendue non bloquante uniquement lorsqu’une sélection Forge vérifiée et une metadata native cohérente existent. Aucun scan récursif jarjar ; NeoForge reste conservateur. Tests finaux : 280 PASS / 150 N/A POSIX / 0 FAIL ; premier passage 1 FAIL + 3 erreurs corrigés dans le run. Reconnaissance/docs, compileall, manifeste et diff-check PASS. Gate 4 et F restent non acquis."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Preuve réelle Interstice : 354 JAR, 1 220 941 100 octets, scanner_diagnostics global vide, complete=false uniquement à cause de trois JAR",
+        "KotlinForForge : MANIFEST FMLModType=LIBRARY ; attendu reconnu sans MOD_METADATA_UNKNOWN",
+        "Connector : trois SPI exacts observés (ITransformationService, IDependencyLocator, IModLocator) ; nested META-INF/jarjar non inspecté récursivement",
+        "WaterVision : mods.toml Forge valide, fabric.mod.json secondaire invalide ; sous Forge sélectionné, l’erreur étrangère devient non bloquante",
+        "Aucune déduction client/server depuis filename, services ou manifest",
+        "Aucun JAR/service/script exécuté ; limites ZIP/JAR inchangées ; aucune migration/version",
+        "NeoForge reste conservateur selon le handoff",
+        "Premier run de tests : 1 FAIL et 3 erreurs, corrigés dans la même exécution",
+        "Tests finaux : 280 PASS / 150 N/A POSIX / 0 FAIL",
+        "Retest reconnaissance/docs, compileall, manifeste et diff-check PASS",
+        "Huit fichiers modifiés selon le handoff",
+        "Gate 4 et F restent non acquis ; retest utilisateur requis"
+      ]
     }
   ]
 }
