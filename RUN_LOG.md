@@ -1093,6 +1093,20 @@ Correctif livré : la preuve `curseforge-local / installedFile-sha1-server-clien
 
 ---
 
+## GP-074 — GPT-6 Luna Medium — correctif UI regroupement effectif
+
+- Date : 2026-10-07
+- Quota : 69 % → 68 % = **1 pt**
+- Durée : **4 min 59 s**
+- Statut : **succès**
+- Commit : `f22be6f2f8dc90a3e70fbe374bc3ba895cbdcab1`
+- Draft PR : **#22**
+- Prompt + réponse complets : [runs/GP-074-gpt6-luna-medium-ui-effective-grouping.md](runs/GP-074-gpt6-luna-medium-ui-effective-grouping.md)
+
+Correctif strictement UI : le groupe « Suggérés » suit désormais uniquement l’état effectif `SUGGESTED`. Une assertion advisory CurseForge reste visible dans les preuves d’une entrée `VERIFIED`, mais ne la reclasse plus comme suggérée. Les groupes restent exclusifs, fermés par défaut, sans duplication et avec conservation des index du brouillon. Tests UI/API simulé et syntaxe JavaScript PASS ; release-docs, manifeste et diff-check PASS ; Playwright N/A. Aucun gate réel relancé. **Gate 4 reste ACQUIS ; F reste NON ACQUIS**.
+
+---
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -1112,18 +1126,18 @@ La moyenne brute mélange des tâches de tailles très différentes. GP-018, GP-
 
 ## GPT-6 Luna
 
-Vingt-quatre observations au total, dont **deux incidents ont un effort non relevé** et sont séparés des runs Medium.
+Vingt-cinq observations au total, dont **deux incidents ont un effort non relevé** et sont séparés des runs Medium.
 
 ### Medium
 
-- observations : **22**
-- succès : **20**
+- observations : **23**
+- succès : **21**
 - blocage environnemental : **1**
 - échec avant audit : **1**
-- quota visible cumulé : **12 pts**
-- durée cumulée : **1 h 47 min 57 s**
-- production ciblée récente : **19 succès / 1 blocage**, **12 pts visibles cumulés**, **1 h 46 min 46 s**
-- détail des succès ciblés : **~0 pt / 40 s** sur l'analyse locale 6/6, **1 pt / 3:42** sur le correctif palette Utilisateurs, **~0 pt / 7:47** sur le Journal d’audit, **~0 pt / 3:19** sur la validation documentaire finale, **1 pt / 3:29** sur le fixture B1c, **~0 pt / 3:32** sur la compatibilité installateur B1d, **~0 pt / 4:52** sur la clôture documentaire B2, **1 pt / 3:11** sur le cleanup du fixture installer marker, **~0 pt / 4:14** sur le contrat manuel E-C, **2 pts / 12:53** sur la clôture documentaire E-D, **1 pt / 13:59** sur la pré-clôture documentaire 0.3.1, **~0 pt / 3:19** sur la clôture Ubuntu de 0.3.2-B, **1 pt / 4:17** sur la clôture Ubuntu de 0.3.2-C, **~0 pt / 4:35** sur la clôture Ubuntu/Chromium de 0.3.2-D, **1 pt / 3:28** sur le correctif fixture staging E2, **~0 pt / 5:19** sur la clôture Ubuntu de 0.3.2-E2, **1 pt / 4:40** sur la clôture Ubuntu de 0.3.2-E3-A, **~0 pt / 2:15** sur le fixture timeout E3-B bloqué faute d’Ubuntu/WSL, puis **1 pt / 4:03** sur la reprise/push de ce correctif, puis **1 pt / 7:46** sur la clôture Ubuntu de 0.3.2-E3-B, puis **1 pt / 6:06** sur la clôture Ubuntu/Chromium de 0.3.2-E3-C avec E global acquis.
+- quota visible cumulé : **13 pts**
+- durée cumulée : **1 h 52 min 56 s**
+- production ciblée récente : **20 succès / 1 blocage**, **13 pts visibles cumulés**, **1 h 51 min 45 s**
+- détail des succès ciblés : **~0 pt / 40 s** sur l'analyse locale 6/6, **1 pt / 3:42** sur le correctif palette Utilisateurs, **~0 pt / 7:47** sur le Journal d’audit, **~0 pt / 3:19** sur la validation documentaire finale, **1 pt / 3:29** sur le fixture B1c, **~0 pt / 3:32** sur la compatibilité installateur B1d, **~0 pt / 4:52** sur la clôture documentaire B2, **1 pt / 3:11** sur le cleanup du fixture installer marker, **~0 pt / 4:14** sur le contrat manuel E-C, **2 pts / 12:53** sur la clôture documentaire E-D, **1 pt / 13:59** sur la pré-clôture documentaire 0.3.1, **~0 pt / 3:19** sur la clôture Ubuntu de 0.3.2-B, **1 pt / 4:17** sur la clôture Ubuntu de 0.3.2-C, **~0 pt / 4:35** sur la clôture Ubuntu/Chromium de 0.3.2-D, **1 pt / 3:28** sur le correctif fixture staging E2, **~0 pt / 5:19** sur la clôture Ubuntu de 0.3.2-E2, **1 pt / 4:40** sur la clôture Ubuntu de 0.3.2-E3-A, **~0 pt / 2:15** sur le fixture timeout E3-B bloqué faute d’Ubuntu/WSL, puis **1 pt / 4:03** sur la reprise/push de ce correctif, puis **1 pt / 7:46** sur la clôture Ubuntu de 0.3.2-E3-B, puis **1 pt / 6:06** sur la clôture Ubuntu/Chromium de 0.3.2-E3-C avec E global acquis, puis **1 pt / 4:59** sur le correctif UI de regroupement effectif GP-074.
 
 ### Incidents à effort non relevé
 
@@ -1134,10 +1148,10 @@ Vingt-quatre observations au total, dont **deux incidents ont un effort non rele
 
 ### Total Luna, tous efforts confondus
 
-- observations : **24**
-- résultats : **20 succès · 1 échec · 3 blocages**
-- quota connu : **≥17 pts**
-- durée cumulée : **3 h 22 min 57 s**
+- observations : **25**
+- résultats : **21 succès · 1 échec · 3 blocages**
+- quota connu : **≥18 pts**
+- durée cumulée : **3 h 27 min 56 s**
 
 Les blocages GP-010/011 restent à interpréter comme incidents de fiabilité d'exécution possibles, pas comme une mesure pure des capacités de raisonnement de Luna.
 
