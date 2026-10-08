@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-07",
+  "updated_at": "2026-10-08",
   "measurement_notes": [
     "quota_used_points correspond aux points de pourcentage visibles dans l'interface Work/ChatGPT, pas à un comptage exact de tokens",
     "quota_approx=true indique une valeur arrondie, déduite ou seulement observée comme delta approximatif",
@@ -2164,6 +2164,42 @@
         "Aucune migration/version ; classification SUGGESTED/VERIFIED/CONFLICT inchangée",
         "Tests : 242 PASS / 100 N/A natifs POSIX / 0 FAIL final ; compileall/manifeste/diff-check PASS",
         "Aucun gate réel relancé ; Gate 4 ACQUIS ; F NON ACQUIS"
+      ]
+    },
+    {
+      "run_id": "GP-076",
+      "date": "2026-10-08",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032f_local_jar_loader_scope",
+      "task_summary": "0.3.2-F : borner les preuves local-jar au loader sélectionné et purger les anciennes assertions locales obsolètes",
+      "quota_before_pct": 100,
+      "quota_after_pct": 91,
+      "quota_used_points": 9,
+      "quota_approx": false,
+      "duration_seconds": 950,
+      "status": "success",
+      "commit_sha": "6f41240010b6157f5d6e95f4be312e1b2ada1b5d",
+      "quality": {
+        "summary": "Correctif livré : la preuve Fabric issue de local-jar est désormais bornée au loader sélectionné ; fabric.mod.json n’est plus traité comme une déclaration Forge autoritaire lorsqu’un JAR possède ses propres métadonnées Forge. Les anciennes assertions locales devenues obsolètes sont recalculées pour les observations courantes, tandis que l’historique SQL et les conflits indépendants sont préservés. Aucun caractère obligatoire côté client ni policy n’est déduit. Sept cas synthétiques Forge/Fabric mixtes sont corrigés. Le nombre réel d’assertions VERIFIED dépendant de Fabric parmi les 354 JAR reste N/A faute d’export complet et aucun retest serveur n’est revendiqué. Tests : 305 PASS / 150 N/A POSIX / 0 FAIL final ; syntaxe, manifeste et diff-check PASS. Gate 4 acquis ; F non acquis."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Problème réel Interstice : sept conflits local-jar fabric.mod.json environment=* => both/VERIFIED face à Modrinth server-only/VERIFIED",
+        "JAR concernés : Incendium, Terralith, create_ltab, doubledoors, lithosphere, treeharvester et worldedit ; chacun possède aussi META-INF/mods.toml",
+        "Correction : preuve Fabric bornée au loader sélectionné ; fabric.mod.json non autoritaire sous Forge lorsqu’une metadata Forge native est présente",
+        "Comportement des véritables mods Fabric préservé selon le handoff",
+        "Ne pas confondre chargeable côté client et obligatoire côté client ; aucune policy client déduite",
+        "Anciennes assertions local-jar devenues obsolètes recalculées pour les observations courantes ; anciennes observations SQL intactes",
+        "Conflits indépendants historiques préservés",
+        "Sept cas synthétiques corrigés",
+        "Total réel des assertions VERIFIED dépendant de Fabric parmi les 354 JAR : N/A faute d’export complet",
+        "Aucun retest serveur revendiqué",
+        "Tests : 305 PASS / 150 N/A POSIX / 0 FAIL final ; syntaxe, manifeste et diff-check PASS",
+        "Gate 4 ACQUIS ; F NON ACQUIS ; aucun gate réel, merge, tag, release ou bump"
       ]
     }
   ]
