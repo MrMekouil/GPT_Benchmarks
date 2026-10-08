@@ -2234,6 +2234,34 @@
         "Playwright et caddy validate N/A, dépendances absentes ; Caddy personnalisé à vérifier",
         "Gate 4 ACQUIS ; F NON ACQUIS ; PR #22 Draft ; aucun merge/tag/release/bump"
       ]
+    },
+    {
+      "run_id": "GP-078",
+      "date": "2026-10-08",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032f_client_pack_triage",
+      "task_summary": "0.3.2-F : assistance au tri du pack client, recommandations et revue locale",
+      "quota_before_pct": 100,
+      "quota_after_pct": 88,
+      "quota_used_points": 12,
+      "quota_approx": false,
+      "duration_seconds": 1305,
+      "status": "success",
+      "commit_sha": "4e00bfce3b514c4b4c91c1d6099e59780a18f67e",
+      "quality": {
+        "summary": "Assistance au tri client livrée. Inclusion uniquement avec environnement client et politique required/recommended VERIFIED, exclusion fondée sur preuve, candidats et cas à revoir. 204 tests Python et 8 UI PASS ; 88 N/A natifs, Chromium/Playwright N/A, aucun FAIL final. Gate 4 acquis ; F non acquis."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "AutoModpack est uniquement une provenance de distribution prévue.",
+        "Application locale explicite après revue, sans écraser les choix manuels ni les brouillons existants/stale.",
+        "Aucune sauvegarde/publication implicite.",
+        "Ergonomie réelle restant à valider."
+      ]
     }
   ]
 }
