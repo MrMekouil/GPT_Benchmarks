@@ -2201,6 +2201,39 @@
         "Tests : 305 PASS / 150 N/A POSIX / 0 FAIL final ; syntaxe, manifeste et diff-check PASS",
         "Gate 4 ACQUIS ; F NON ACQUIS ; aucun gate réel, merge, tag, release ou bump"
       ]
+    },
+    {
+      "run_id": "GP-077",
+      "date": "2026-10-08",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032f_automodpack_offline_import",
+      "task_summary": "0.3.2-F : import Admin facultatif AutoModpack v4 hors-ligne avec provenance distincte sans effet sur la classification",
+      "quota_before_pct": 91,
+      "quota_after_pct": 74,
+      "quota_used_points": 17,
+      "quota_approx": false,
+      "duration_seconds": 2044,
+      "status": "success",
+      "commit_sha": "084732e7482a55096be0207a515b9a5180461ad6",
+      "quality": {
+        "summary": "Import AutoModpack v4 hors-ligne livré : parser strict borné, API Admin, provenance persistée distincte sans modifier environment/policy ni droits, UI compacte et exception Caddy 4 MiB. Tests 316 PASS / 151 N/A natifs / 0 FAIL ; simulation 350/354 PASS. Playwright et caddy validate N/A ; import réel Interstice encore non validé. Gate 4 acquis, F non acquis."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "354 JAR réels Interstice ; 350 correspondances SHA-1+taille signalées dans le profil AutoModpack 4.0.5 ; quatre hors manifeste : FarmersStructures, AutoModpack, BlueMap, cbcmoreshells",
+        "Provenance automodpack-local signifie uniquement distribution client prévue : aucune classification, policy, redistribution ou VERIFIED",
+        "Import explicite remplace les anciennes preuves AutoModpack ; rescans/CurseForge conservent celles de l'artifact identique, pas les artifacts modifiés ; historique SQL intact",
+        "Aucun effet sur brouillon/publication, aucun téléchargement/suppression/copie, AutoModpack conservé",
+        "UI résumé et indication Prévu par AutoModpack, six groupes conservés",
+        "350 entrées du fichier fourni acceptées, simulation 350/354 PASS ; import réel Interstice à valider séparément",
+        "316 PASS / 151 N/A natifs / 0 FAIL ; UI/API simulée, syntaxe, manifeste, diff-check PASS",
+        "Playwright et caddy validate N/A, dépendances absentes ; Caddy personnalisé à vérifier",
+        "Gate 4 ACQUIS ; F NON ACQUIS ; PR #22 Draft ; aucun merge/tag/release/bump"
+      ]
     }
   ]
 }
