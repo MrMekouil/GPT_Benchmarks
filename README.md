@@ -153,7 +153,7 @@ Ces vingt-deux checkpoints de production Luna récents comptent **20 succès / 1
 | GP-078 | 0.3.2-F : assistance au tri client avec revue du brouillon | **12 pts** | **21:45** | terminé, commit `4e00bfc...`; 204 Python + 8 UI PASS, ergonomie réelle N/A ; Gate 4 acquis, F non acquis |
 | GP-082 | 0.3.2-F : STOP pré-vol nouvel espace Work, exécuteur indisponible | **0 pt** | **0:26** | **bloqué**, aucun checkout/test/correctif ni push ; F non acquis |
 
-Cumul GPT-6.1 Sol Medium à ce stade : **360 points**, **8 h 56 min 27 s**, **33 succès / 5 blocages / 1 partiel**. Les trente-trois tâches réussies représentent **331 points**, les cinq blocages **13 points** et le run partiel **16 points**.
+Cumul GPT-6.1 Sol Medium à ce stade : **360 points**, **8 h 56 min 53 s**, **33 succès / 6 blocages / 1 partiel**. Les trente-trois tâches réussies représentent **331 points**, les cinq blocages **13 points** et le run partiel **16 points**.
 
 ### Runs réels GPT-6.1 Sol High
 
