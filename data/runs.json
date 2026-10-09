@@ -2294,6 +2294,29 @@
         "WORK_STATE.md et MANIFEST.sha256 restants ; aucun commit/push",
         "Aucun gate réel lancé ; Gate 4 ACQUIS ; F NON ACQUIS"
       ]
+    },
+    {
+      "run_id": "GP-080",
+      "date": "2026-10-09",
+      "project": "GamePanel",
+      "model": "GPT-6 Luna",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032f_triage_edit_protection_stop",
+      "task_summary": "0.3.2-F : STOP protection d’édition test de triage",
+      "quota_before_pct": 97,
+      "quota_after_pct": 97,
+      "quota_used_points": 0,
+      "quota_approx": false,
+      "duration_seconds": 34,
+      "status": "blocked",
+      "commit_sha": null,
+      "quality": {
+        "summary": "STOP éditeur sur test triage. Aucune modification, commit ni push. Tests non relancés. Gate 4 acquis, F non acquis."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": []
     }
   ]
 }
