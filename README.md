@@ -106,7 +106,7 @@ GP-024 est à lire séparément des gros checkpoints : il enregistre des validat
 | GP-080 | 0.3.2-F : STOP protection d’édition tests triage | **0 pt** | **0:34** | **bloqué**, aucune nouvelle modification ni test |
 | GP-081 | 0.3.2-F : audit du point de réanalyse | **0 pt** | **0:22** | **bloqué**, aucune procédure native ni livraison |
 
-Ces vingt-deux checkpoints de production Luna récents comptent **20 succès / 1 blocage / 1 partiel**, **16 points visibles cumulés** et **2:01:41** au total.
+Ces vingt-quatre checkpoints de production Luna récents comptent **20 succès / 3 blocages / 1 partiel**, **16 points visibles cumulés** et **2:02:37** au total.
 
 ### Runs réels GPT-6.1 Sol Medium
 
