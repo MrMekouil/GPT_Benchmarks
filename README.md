@@ -149,6 +149,7 @@ Ces vingt-deux checkpoints de production Luna récents comptent **20 succès / 1
 | GP-076 | 0.3.2-F : scope local-jar selon loader + purge des assertions obsolètes | **9 pts** | **15:50** | terminé, commit `6f41240...`; impact réel 354 JAR non mesuré, Gate 4 acquis, F non acquis |
 | GP-077 | 0.3.2-F : import facultatif AutoModpack v4 hors-ligne | **17 pts** | **34:04** | terminé, commit `084732e...`; simulation 350/354 PASS, validation réelle N/A ; Gate 4 acquis, F non acquis |
 | GP-078 | 0.3.2-F : assistance au tri client avec revue du brouillon | **12 pts** | **21:45** | terminé, commit `4e00bfc...`; 204 Python + 8 UI PASS, ergonomie réelle N/A ; Gate 4 acquis, F non acquis |
+| GP-082 | 0.3.2-F : STOP pré-vol nouvel espace Work, exécuteur indisponible | **0 pt** | **0:26** | **bloqué**, aucun checkout/test/correctif ni push ; F non acquis |
 
 Cumul GPT-6.1 Sol Medium à ce stade : **360 points**, **8 h 56 min 27 s**, **33 succès / 5 blocages / 1 partiel**. Les trente-trois tâches réussies représentent **331 points**, les cinq blocages **13 points** et le run partiel **16 points**.
 
