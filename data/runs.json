@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-08",
+  "updated_at": "2026-10-09",
   "measurement_notes": [
     "quota_used_points correspond aux points de pourcentage visibles dans l'interface Work/ChatGPT, pas à un comptage exact de tokens",
     "quota_approx=true indique une valeur arrondie, déduite ou seulement observée comme delta approximatif",
@@ -2261,6 +2261,38 @@
         "Application locale explicite après revue, sans écraser les choix manuels ni les brouillons existants/stale.",
         "Aucune sauvegarde/publication implicite.",
         "Ergonomie réelle restant à valider."
+      ]
+    },
+    {
+      "run_id": "GP-079",
+      "date": "2026-10-09",
+      "project": "GamePanel",
+      "model": "GPT-6 Luna",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032f_triage_admission_nonblocking_diagnostics",
+      "task_summary": "0.3.2-F : correction UI de l’admission au tri lorsque snapshot complet avec diagnostics provider non bloquants",
+      "quota_before_pct": 100,
+      "quota_after_pct": 97,
+      "quota_used_points": 3,
+      "quota_approx": false,
+      "duration_seconds": 596,
+      "status": "partial",
+      "commit_sha": null,
+      "quality": {
+        "summary": "Correctif UI rapporté présent localement mais non livré. Syntaxe JavaScript et web-content-032.cjs PASS ; web-content-triage-032.cjs FAIL car deux anciens tests exigent encore le blocage par les diagnostics seuls. Scénario Interstice 354 entrées complete=true ajouté. Aucun commit ni push, HEAD distant inchangé. WORK_STATE.md et MANIFEST.sha256 non mis à jour. Gate 4 acquis, F non acquis."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "HEAD GamePanel distant vérifié inchangé : 4e00bfce3b514c4b4c91c1d6099e59780a18f67e ; PR #22 Draft",
+        "Travail local déclaré dans web/app.js et tests/web-content-triage-032.cjs ; non vérifiable via GitHub distant",
+        "UI : contentTriageBlocked exigeait status=ready bien qu’applyContentState positionne partial en présence de diagnostics non bloquants",
+        "Tests PASS : syntaxe JS et web-content-032.cjs",
+        "Tests FAIL : web-content-triage-032.cjs, deux assertions historiques contradictoires ; nouveau scénario positif 354 JAR ajouté",
+        "Tests bloquants à corriger, refus scan incomplet/backend indisponible à préserver",
+        "WORK_STATE.md et MANIFEST.sha256 restants ; aucun commit/push",
+        "Aucun gate réel lancé ; Gate 4 ACQUIS ; F NON ACQUIS"
       ]
     }
   ]
