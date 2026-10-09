@@ -2317,6 +2317,33 @@
       "prompt_capture": "exact",
       "response_capture": "exact",
       "notes": []
+    },
+    {
+      "run_id": "GP-081",
+      "date": "2026-10-09",
+      "project": "GamePanel",
+      "model": "GPT-6 Luna",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "content_manifests_032f_triage_reparse_point_stop",
+      "task_summary": "0.3.2-F : audit lecture seule du point de réanalyse, STOP sans procédure native",
+      "quota_before_pct": 100,
+      "quota_after_pct": 100,
+      "quota_used_points": 0,
+      "quota_approx": false,
+      "duration_seconds": 22,
+      "status": "blocked",
+      "commit_sha": null,
+      "quality": {
+        "summary": "Blocage confirmé : apply_patch refuse le fichier de test (path contains a reparse point), aucune procédure native disponible. Vérifications git en lecture seule hors dépôt connecté, aucun commit/push, aucun nouveau test. F non acquis."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "HEAD distant 4e00bfce3b514c4b4c91c1d6099e59780a18f67e, PR #22 Draft",
+        "Aucune modification, test ou livraison ; maintien du travail local déclaré",
+        "Gate 4 ACQUIS ; F NON ACQUIS"
+      ]
     }
   ]
 }
