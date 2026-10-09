@@ -32,7 +32,7 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 | Génération | Modèle | Effort | Runs observés | Résultats | Quota visible cumulé | Moyenne quota / run | Durée cumulée |
 |---|---|---|---:|---|---:|---:|---:|
 | 5.6 | **GPT-5.6 Sol** | Medium | 1 | **1 succès** | **6 pts** | **6,00 pts** | **1:50** |
-| 6.0 | **GPT-6 Luna** | Medium | 24 | **21 succès · 1 échec · 1 bloqué · 1 partiel** | **16 pts visibles** | **0,67 pt** | **2:02:52** |
+| 6.0 | **GPT-6 Luna** | Medium | 26 | **21 succès · 1 échec · 3 bloqués · 1 partiel** | **16 pts visibles** | **0,62 pt** | **2:03:48** |
 | 6.0 | **GPT-6 Luna** | non relevé* | 2 | **2 blocages** | **≥5 pts connus*** | **≥2,50 pts*** | **1:35:00** |
 | 6.0 | **GPT-6 Sol** | Medium | 7 | **7 succès** | **~73 pts** | **~10,43 pts** | **52:38** |
 | 6.0 | **GPT-6 Sol** | High | 1 | **1 partiel** | **~20 pts** | **~20,00 pts** | **12:07** |
@@ -176,7 +176,7 @@ GP-041 a produit une implémentation locale avancée mais s’est interrompu ava
 
 - `data/runs.json` est la source structurée canonique.
 - `data/runs.csv` est régénéré depuis le JSON pour éviter les décalages de colonnes.
-- État vérifié au 2026-10-09 : **79 runs JSON = 79 lignes CSV**, IDs uniques et champs communs cohérents.
+- État vérifié au 2026-10-09 : **81 runs JSON = 81 lignes CSV**, IDs uniques et champs communs cohérents.
 
 ## Méthode
 
