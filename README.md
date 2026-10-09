@@ -37,7 +37,7 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 | 6.0 | **GPT-6 Sol** | Medium | 7 | **7 succès** | **~73 pts** | **~10,43 pts** | **52:38** |
 | 6.0 | **GPT-6 Sol** | High | 1 | **1 partiel** | **~20 pts** | **~20,00 pts** | **12:07** |
 | 6.0 | **GPT-6 Astra** | Low | 2 | **2 succès** | **30 pts** | **15,00 pts** | **2:52** |
-| 6.1 | **GPT-6.1 Sol** | Medium | 39 | **33 succès · 5 bloqués · 1 partiel** | **360 pts** | **9,23 pts** | **8:56:27** |
+| 6.1 | **GPT-6.1 Sol** | Medium | 40 | **33 succès · 6 bloqués · 1 partiel** | **360 pts** | **9,00 pts** | **8:56:53** |
 | 6.1 | **GPT-6.1 Sol** | High | 3 | **2 succès · 1 partiel** | **51 pts** | **17,00 pts** | **2:04:17*** |
 
 \* Durée GPT-6.1 Sol High : GP-043 inclut une attente d’autorisation et n’est pas directement comparable aux durées normales.
@@ -176,7 +176,7 @@ GP-041 a produit une implémentation locale avancée mais s’est interrompu ava
 
 - `data/runs.json` est la source structurée canonique.
 - `data/runs.csv` est régénéré depuis le JSON pour éviter les décalages de colonnes.
-- État vérifié au 2026-10-09 : **81 runs JSON = 81 lignes CSV**, IDs uniques et champs communs cohérents.
+- État vérifié au 2026-10-09 : **82 runs JSON = 82 lignes CSV**, IDs uniques et champs communs cohérents.
 
 ## Méthode
 
