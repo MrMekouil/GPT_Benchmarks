@@ -1214,18 +1214,18 @@ La moyenne brute mélange des tâches de tailles très différentes. GP-018, GP-
 
 ## GPT-6 Luna
 
-Vingt-six observations au total, dont **deux incidents ont un effort non relevé** et sont séparés des runs Medium.
+Vingt-huit observations au total, dont **deux incidents ont un effort non relevé** et sont séparés des runs Medium.
 
 ### Medium
 
-- observations : **24**
+- observations : **26**
 - succès : **21**
 - partiel : **1**
-- blocage environnemental : **1**
+- blocages : **3**
 - échec avant audit : **1**
 - quota visible cumulé : **16 pts**
-- durée cumulée : **2 h 02 min 52 s**
-- production ciblée récente : **20 succès / 1 blocage / 1 partiel**, **16 pts visibles cumulés**, **2 h 01 min 41 s**
+- durée cumulée : **2 h 03 min 48 s**
+- production ciblée récente : **20 succès / 3 blocages / 1 partiel**, **16 pts visibles cumulés**, **2 h 02 min 37 s**
 - détail des succès ciblés : **~0 pt / 40 s** sur l'analyse locale 6/6, **1 pt / 3:42** sur le correctif palette Utilisateurs, **~0 pt / 7:47** sur le Journal d’audit, **~0 pt / 3:19** sur la validation documentaire finale, **1 pt / 3:29** sur le fixture B1c, **~0 pt / 3:32** sur la compatibilité installateur B1d, **~0 pt / 4:52** sur la clôture documentaire B2, **1 pt / 3:11** sur le cleanup du fixture installer marker, **~0 pt / 4:14** sur le contrat manuel E-C, **2 pts / 12:53** sur la clôture documentaire E-D, **1 pt / 13:59** sur la pré-clôture documentaire 0.3.1, **~0 pt / 3:19** sur la clôture Ubuntu de 0.3.2-B, **1 pt / 4:17** sur la clôture Ubuntu de 0.3.2-C, **~0 pt / 4:35** sur la clôture Ubuntu/Chromium de 0.3.2-D, **1 pt / 3:28** sur le correctif fixture staging E2, **~0 pt / 5:19** sur la clôture Ubuntu de 0.3.2-E2, **1 pt / 4:40** sur la clôture Ubuntu de 0.3.2-E3-A, **~0 pt / 2:15** sur le fixture timeout E3-B bloqué faute d’Ubuntu/WSL, puis **1 pt / 4:03** sur la reprise/push de ce correctif, puis **1 pt / 7:46** sur la clôture Ubuntu de 0.3.2-E3-B, puis **1 pt / 6:06** sur la clôture Ubuntu/Chromium de 0.3.2-E3-C avec E global acquis, puis **1 pt / 4:59** sur le correctif UI de regroupement effectif GP-074. GP-079 est **partiel à 3 pts / 9:56**, avec travail local non poussé et test triage FAIL.
 
 ### Incidents à effort non relevé
@@ -1237,10 +1237,10 @@ Vingt-six observations au total, dont **deux incidents ont un effort non relevé
 
 ### Total Luna, tous efforts confondus
 
-- observations : **26**
-- résultats : **21 succès · 1 échec · 3 blocages · 1 partiel**
+- observations : **28**
+- résultats : **21 succès · 1 échec · 5 blocages · 1 partiel**
 - quota connu : **≥21 pts**
-- durée cumulée : **3 h 37 min 52 s**
+- durée cumulée : **3 h 38 min 48 s**
 
 Les blocages GP-010/011 restent à interpréter comme incidents de fiabilité d'exécution possibles, pas comme une mesure pure des capacités de raisonnement de Luna.
 
