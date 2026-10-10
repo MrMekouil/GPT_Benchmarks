@@ -154,7 +154,7 @@ Ces vingt-quatre checkpoints de production Luna récents comptent **20 succès /
 | GP-082 | 0.3.2-F : STOP pré-vol nouvel espace Work, exécuteur indisponible | **0 pt** | **0:26** | **bloqué**, aucun checkout/test/correctif ni push ; F non acquis |
 | GP-083 | 0.3.2-F : audit CurseForge cumulatif + 86 UNKNOWN, STOP protection d’édition | **8 pts** | **5:25** | **bloqué**, diagnostic sans correctif ; aucun test ni push, Gate 4 acquis, F non acquis |
 
-Cumul GPT-6.1 Sol Medium à ce stade : **360 points**, **8 h 56 min 53 s**, **33 succès / 6 blocages / 1 partiel**. Les trente-trois tâches réussies représentent **331 points**, les cinq blocages **13 points** et le run partiel **16 points**.
+Cumul GPT-6.1 Sol Medium à ce stade : **368 points**, **9 h 02 min 18 s**, **33 succès / 7 blocages / 1 partiel**. Les trente-trois tâches réussies représentent **331 points**, les sept blocages **21 points** et le run partiel **16 points**.
 
 ### Runs réels GPT-6.1 Sol High
 
