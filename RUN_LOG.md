@@ -1177,6 +1177,24 @@ Correctif UI rapporté uniquement **localement**, dans `web/app.js` et `tests/we
 
 ---
 
+## GP-080 — GPT-6 Luna Medium — STOP éditeur (0 pt / 0:34)
+
+2026-10-09. Bloqué par le point de réanalyse du test triage, aucune nouvelle modification, aucun test relancé, aucun push. [Prompt/réponse](runs/GP-080-gpt6-luna-medium-triage-edit-protection-stop.md). Gate 4 acquis ; F non acquis.
+
+## GP-081 — GPT-6 Luna Medium — audit reparse point (0 pt / 0:22)
+
+2026-10-09. Git en lecture seule lancé dans un dépôt parent ; aucune procédure native d'édition/réparation trouvée. STOP sans livraison. [Prompt/réponse](runs/GP-081-gpt6-luna-medium-reparse-point-audit-stop.md). Gate 4 acquis ; F non acquis.
+
+## GP-082 — GPT-6.1 Sol Medium — STOP pré-vol Work (0 pt / 0:26)
+
+2026-10-09. L'exécuteur Work refuse de lancer le pré-vol (`setup refresh had errors`) ; checkout, tests et correctif N/A. HEAD GamePanel inchangé, aucun push. [Prompt/réponse](runs/GP-082-gpt61-sol-medium-work-preflight-executor-stop.md). Gate 4 acquis ; F non acquis.
+
+## GP-083 — GPT-6.1 Sol Medium — audit CurseForge et UNKNOWN bloqué (8 pts / 5:25)
+
+2026-10-10. Éditeur refuse le checkout (`writing outside of the project; rejected by user approval settings`). Diagnostic livré mais aucun correctif ni commit : import explicite CurseForge remplace les preuves courantes ; mode cumulatif proposé, non implémenté. Sur 86 UNKNOWN, 84 lookup provider infructueux, 1 Fabric hors scope, 1 version Modrinth sans environnement ; gain réel N/A. Tests nouveaux N/A. [Prompt/réponse](runs/GP-083-gpt61-sol-medium-curseforge-unknown-audit-editor-stop.md). Gate 4 acquis ; F non acquis.
+
+---
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
