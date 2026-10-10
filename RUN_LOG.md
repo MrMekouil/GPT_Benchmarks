@@ -1228,7 +1228,7 @@ Les blocages GP-010/011 restent à interpréter comme incidents de fiabilité d'
 
 ## GPT-6.1 Sol Medium
 
-Trente-neuf observations de production :
+Quarante et une observations de production :
 
 - quota cumulé : **360 pts**
 - durée cumulée : **8 h 56 min 27 s**
