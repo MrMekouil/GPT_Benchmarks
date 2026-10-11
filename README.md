@@ -153,6 +153,7 @@ Ces vingt-quatre checkpoints de production Luna récents comptent **20 succès /
 | GP-078 | 0.3.2-F : assistance au tri client avec revue du brouillon | **12 pts** | **21:45** | terminé, commit `4e00bfc...`; 204 Python + 8 UI PASS, ergonomie réelle N/A ; Gate 4 acquis, F non acquis |
 | GP-082 | 0.3.2-F : STOP pré-vol nouvel espace Work, exécuteur indisponible | **0 pt** | **0:26** | **bloqué**, aucun checkout/test/correctif ni push ; F non acquis |
 | GP-083 | 0.3.2-F : audit CurseForge cumulatif + 86 UNKNOWN, STOP protection d’édition | **8 pts** | **5:25** | **bloqué**, diagnostic sans correctif ; aucun test ni push, Gate 4 acquis, F non acquis |
+| GP-084 | 0.3.2-F : audit des 3 commits A/B/C CurseForge Remplacer/Enrichir et UNKNOWN | **8 pts** | **5:16** | audit terminé, aucun nouveau commit ; tests Linux historiques rapportés, réexécution N/A ; Gate 4 acquis, F non acquis |
 
 Cumul GPT-6.1 Sol Medium à ce stade : **368 points**, **9 h 02 min 18 s**, **33 succès / 7 blocages / 1 partiel**. Les trente-trois tâches réussies représentent **331 points**, les sept blocages **21 points** et le run partiel **16 points**.
 
