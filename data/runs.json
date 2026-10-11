@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-10",
+  "updated_at": "2026-10-11",
   "measurement_notes": [
     "quota_used_points correspond aux points de pourcentage visibles dans l'interface Work/ChatGPT, pas à un comptage exact de tokens",
     "quota_approx=true indique une valeur arrondie, déduite ou seulement observée comme delta approximatif",
@@ -2409,6 +2409,40 @@
         "Export Ubuntu nécessaire : 86 paths, tailles, SHA-256/SHA-1, décisions, assertions, matches, diagnostics, loader et metadata native",
         "Gain potentiel chiffré N/A, aucun résultat inventé ; tests nouveaux N/A, MANIFEST inchangé",
         "Gate 4 ACQUIS ; F NON ACQUIS"
+      ]
+    },
+    {
+      "run_id": "GP-084",
+      "date": "2026-10-11",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "audit",
+      "comparison_group": "content_manifests_032f_curseforge_abc_commits_review",
+      "task_summary": "0.3.2-F : audit des trois commits livrés CurseForge Remplacer/Enrichir, UI et cadrage des 86 UNKNOWN",
+      "quota_before_pct": 100,
+      "quota_after_pct": 92,
+      "quota_used_points": 8,
+      "quota_approx": false,
+      "duration_seconds": 316,
+      "status": "success",
+      "commit_sha": null,
+      "quality": {
+        "summary": "Audit lecture seule livré, sans nouveau commit : présence et ordre des trois sous-lots A/B/C vérifiés (backend Remplacer/Enrichir, UI, documentation UNKNOWN). Aucun défaut fonctionnel bloquant à la relecture. Réserve tests : variations de path/SHA-256/taille non isolées du SHA-1 ; banc scanner rapporté 53 PASS et 9 erreurs de préparation de fixture. Hashes 9 fichiers, couverture manifeste 219 entrées et trailing whitespace PASS déclarés dans le run. Tests Linux antérieurs consignés dans WORK_STATE.md : 44/44 CurseForge, 288/288 régressions, 14/14 loader PASS ; réexécution dans ce run N/A. Chromium et suite Python complète encore à valider. Banc séparé refusé sous C:\\workspace (WinError 5). Gate 4 acquis, F non acquis."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "HEAD GamePanel confirmé 5c1aa58498fc3a3bc565ad0bde1e66fd74532d61, PR #22 Draft",
+        "Trois commits vérifiés : d7cbc76 backend Remplacer/Enrichir, 6ee5ffa UI, 5c1aa58 cadrage UNKNOWN",
+        "Aucun nouveau correctif ni commit/push ; audit seul demandé",
+        "Point de couverture : faire varier séparément path/SHA-256/taille avec SHA-1 constant puis SHA-1 différent",
+        "Tests Linux 44/44 CurseForge, 288/288 régressions, 14/14 loader rapportés comme antérieurs dans WORK_STATE.md",
+        "Banc scanner précédent 53 PASS et 9 erreurs de préparation de fixture",
+        "Hashes 9 fichiers/219 chemins manifeste/trailing whitespace PASS rapportés ; réexécution tests N/A",
+        "Chromium et suite Python complète non validés ici",
+        "Banc séparé refusé C:\\workspace WinError 5 ; aucun contournement",
+        "Validation Ubuntu préparée seulement, sans déploiement, gate réel ni Gate F ; Gate 4 ACQUIS, F NON ACQUIS"
       ]
     }
   ]
