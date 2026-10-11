@@ -1195,6 +1195,20 @@ Correctif UI rapporté uniquement **localement**, dans `web/app.js` et `tests/we
 
 ---
 
+## GP-084 — GPT-6.1 Sol Medium — audit des sous-lots CurseForge A/B/C
+
+- Date : 2026-10-11
+- Quota : 100 % → 92 % = **8 pts**
+- Durée : **5 min 16 s**
+- Statut : **succès d’audit** ; aucune modification ni commit/push GamePanel lors de ce run
+- HEAD GamePanel vérifié : `5c1aa58498fc3a3bc565ad0bde1e66fd74532d61`
+- Draft PR : **#22**
+- [Prompt et réponse complets](runs/GP-084-gpt61-sol-medium-curseforge-abc-audit.md)
+
+Trois commits livrés précédemment, `d7cbc76` (backend Remplacer/Enrichir), `6ee5ffa` (UI) et `5c1aa58` (cadrage UNKNOWN), vérifiés présents ; aucun défaut fonctionnel bloquant rapporté à la relecture. Réserve de couverture : variations path/SHA-256/taille non isolées d'un changement SHA-1 dans les tests. Validation du manifeste (9 fichiers, 219 chemins) PASS selon Work. Tests Linux antérieurs consignés dans WORK_STATE : **44/44 CurseForge**, **288/288 régressions**, **14/14 loader PASS** ; ces suites **non réexécutées** dans GP-084. Banc scanner antérieur : **53 PASS, 9 erreurs de préparation de fixtures**. Chromium et suite Python complète restent N/A. Tentative de banc isolé sous C:\workspace refusée (WinError 5), sans contournement. Validation Ubuntu préparée mais non exécutée. **Gate 4 ACQUIS ; F NON ACQUIS**.
+
+---
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
