@@ -4,24 +4,24 @@
 - Quota visible : 100 % → 82 % (**18 points**)
 - Durée : **23 min 23 s**
 - Résultat : **succès de livraison CP3**, avec workflows CI en échec et validation utilisateur non acquise
-- HEAD GamePanel confirmé : \`54ebe581ffd6729fbad4339e8012fb1fc4684ea2\`
-- Branche : \`work/0.3.5-windows-diagnostics\` ; PR #27 toujours Draft
-- Stable main/v0.3.4 référencé dans le prompt : \`bd52caf35748f52946686d8cfa7c9ff4f734469c\`
+- HEAD GamePanel confirmé : `54ebe581ffd6729fbad4339e8012fb1fc4684ea2`
+- Branche : `work/0.3.5-windows-diagnostics` ; PR #27 toujours Draft
+- Stable main/v0.3.4 référencé dans le prompt : `bd52caf35748f52946686d8cfa7c9ff4f734469c`
 
 ## Prompt exact
 
 ~~~text
 # GamePanel 0.3.5 — CP3 : Diagnostic interprété et recommandations
 
-Dépôt : \`MrMekouil/GamePanel\`
+Dépôt : `MrMekouil/GamePanel`
 
-Branche existante : \`work/0.3.5-windows-diagnostics\`
+Branche existante : `work/0.3.5-windows-diagnostics`
 
 PR existante : Draft #27
 
-HEAD de référence à vérifier : \`788006bc8849deeabe875ebf98dc6f58a8833d9e\`
+HEAD de référence à vérifier : `788006bc8849deeabe875ebf98dc6f58a8833d9e`
 
-Stable : \`main\` / \`v0.3.4\`, commit \`bd52caf35748f52946686d8cfa7c9ff4f734469c\`.
+Stable : `main` / `v0.3.4`, commit `bd52caf35748f52946686d8cfa7c9ff4f734469c`.
 
 ## Prévol
 
@@ -127,7 +127,7 @@ Version applicative stable et métadonnées restent 0.3.4 ; SQLite reste en vers
 
 Mettre à jour docs/WINDOWS_DIAGNOSTICS_035.md, WORK_STATE.md, ASSISTANT_STATE.md, MANIFEST.sha256 et les tests concernés.
 
-Commiter et pousser uniquement sur \`work/0.3.5-windows-diagnostics\`, actualiser la PR Draft #27.
+Commiter et pousser uniquement sur `work/0.3.5-windows-diagnostics`, actualiser la PR Draft #27.
 
 Fournir : HEAD final, nouvelles règles, résultats des tests, limites et préparation du CP4.
 ~~~
@@ -135,7 +135,7 @@ Fournir : HEAD final, nouvelles règles, résultats des tests, limites et prépa
 ## Réponse exacte
 
 ~~~text
-CP3 livré et poussé : **\`54ebe581ffd6729fbad4339e8012fb1fc4684ea2\`**. [PR #27 toujours Draft](https://github.com/MrMekouil/GamePanel/pull/27), \`main\` inchangé.
+CP3 livré et poussé : **`54ebe581ffd6729fbad4339e8012fb1fc4684ea2`**. [PR #27 toujours Draft](https://github.com/MrMekouil/GamePanel/pull/27), `main` inchangé.
 
 - **20 règles déterministes** : réseau, session, permissions, stockage, journal et incidents répétés. Preuves qualifiées, historique préservé, huit recommandations maximum et rapport limité à 32 Kio.
 - **PASS Work** : 179/179 .NET, dont les 150 existants ; DPAPI, release-docs et diff-check. Statiques : 39 PASS, 1 SKIP PowerShell.
