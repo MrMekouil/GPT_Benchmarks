@@ -1239,6 +1239,16 @@ Audit transversal sans régression fonctionnelle démontrée ; code produit inch
 
 ---
 
+## GP-088 — GPT-6 Luna Medium — GamePanel 0.3.5 clôture documentaire CP5 Windows
+
+- Date : 2026-10-19 ; quota **10 % → 8 % = 2 pts** ; durée **14:28** ; **succès de livraison documentaire**
+- HEAD GamePanel `5fb10c41b2f6116ccf95e07e402ff607140ad427` ; PR #27 Draft ; `main` inchangée selon Work.
+- [Prompt et réponse complets](runs/GP-088-gpt6-luna-medium-windows-diagnostics-cp5-documentary-close.md)
+
+Six fichiers d'état, validation et manifeste mis à jour selon Work. Parcours Windows 10 réels fournis par l'utilisateur consignés comme PASS **sur un Setup compilé localement**, distinct du build CI (383 fichiers et hash conforme). Tests **CI rapportés PASS** : 192/192 .NET, 46/46 statiques, DPAPI, WPF, release-docs, 300 hashes, bundle et Setup. **Workflows globaux FAIL à l'upload** pour quota GitHub Actions (`39243186004`, `39243179903`) ; aucun artifact téléchargeable. Hash périmé détecté sur une première révision documentaire puis corrigé. **N/A Work local :** aucun checkout pour status/diff ou tests. Les cas extrêmes, la distribution CI et la clôture stable 0.3.5 restent **NON ACQUIS** ; métadonnées 0.3.4 et SQLite 5 conservées.
+
+---
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -1258,19 +1268,19 @@ La moyenne brute mélange des tâches de tailles très différentes. GP-018, GP-
 
 ## GPT-6 Luna
 
-Vingt-huit observations au total, dont **deux incidents ont un effort non relevé** et sont séparés des runs Medium.
+Vingt-neuf observations au total, dont **deux incidents ont un effort non relevé** et sont séparés des runs Medium.
 
 ### Medium
 
-- observations : **26**
-- succès : **21**
+- observations : **27**
+- succès : **22**
 - partiel : **1**
 - blocages : **3**
 - échec avant audit : **1**
-- quota visible cumulé : **16 pts**
-- durée cumulée : **2 h 03 min 48 s**
-- production ciblée récente : **20 succès / 3 blocages / 1 partiel**, **16 pts visibles cumulés**, **2 h 02 min 37 s**
-- détail des succès ciblés : **~0 pt / 40 s** sur l'analyse locale 6/6, **1 pt / 3:42** sur le correctif palette Utilisateurs, **~0 pt / 7:47** sur le Journal d’audit, **~0 pt / 3:19** sur la validation documentaire finale, **1 pt / 3:29** sur le fixture B1c, **~0 pt / 3:32** sur la compatibilité installateur B1d, **~0 pt / 4:52** sur la clôture documentaire B2, **1 pt / 3:11** sur le cleanup du fixture installer marker, **~0 pt / 4:14** sur le contrat manuel E-C, **2 pts / 12:53** sur la clôture documentaire E-D, **1 pt / 13:59** sur la pré-clôture documentaire 0.3.1, **~0 pt / 3:19** sur la clôture Ubuntu de 0.3.2-B, **1 pt / 4:17** sur la clôture Ubuntu de 0.3.2-C, **~0 pt / 4:35** sur la clôture Ubuntu/Chromium de 0.3.2-D, **1 pt / 3:28** sur le correctif fixture staging E2, **~0 pt / 5:19** sur la clôture Ubuntu de 0.3.2-E2, **1 pt / 4:40** sur la clôture Ubuntu de 0.3.2-E3-A, **~0 pt / 2:15** sur le fixture timeout E3-B bloqué faute d’Ubuntu/WSL, puis **1 pt / 4:03** sur la reprise/push de ce correctif, puis **1 pt / 7:46** sur la clôture Ubuntu de 0.3.2-E3-B, puis **1 pt / 6:06** sur la clôture Ubuntu/Chromium de 0.3.2-E3-C avec E global acquis, puis **1 pt / 4:59** sur le correctif UI de regroupement effectif GP-074. GP-079 est **partiel à 3 pts / 9:56**, avec travail local non poussé et test triage FAIL.
+- quota visible cumulé : **18 pts**
+- durée cumulée : **2 h 18 min 16 s**
+- production ciblée récente : **21 succès / 3 blocages / 1 partiel**, **18 pts visibles cumulés**, **2 h 17 min 05 s**
+- détail des succès ciblés : **~0 pt / 40 s** sur l'analyse locale 6/6, **1 pt / 3:42** sur le correctif palette Utilisateurs, **~0 pt / 7:47** sur le Journal d’audit, **~0 pt / 3:19** sur la validation documentaire finale, **1 pt / 3:29** sur le fixture B1c, **~0 pt / 3:32** sur la compatibilité installateur B1d, **~0 pt / 4:52** sur la clôture documentaire B2, **1 pt / 3:11** sur le cleanup du fixture installer marker, **~0 pt / 4:14** sur le contrat manuel E-C, **2 pts / 12:53** sur la clôture documentaire E-D, **1 pt / 13:59** sur la pré-clôture documentaire 0.3.1, **~0 pt / 3:19** sur la clôture Ubuntu de 0.3.2-B, **1 pt / 4:17** sur la clôture Ubuntu de 0.3.2-C, **~0 pt / 4:35** sur la clôture Ubuntu/Chromium de 0.3.2-D, **1 pt / 3:28** sur le correctif fixture staging E2, **~0 pt / 5:19** sur la clôture Ubuntu de 0.3.2-E2, **1 pt / 4:40** sur la clôture Ubuntu de 0.3.2-E3-A, **~0 pt / 2:15** sur le fixture timeout E3-B bloqué faute d’Ubuntu/WSL, puis **1 pt / 4:03** sur la reprise/push de ce correctif, puis **1 pt / 7:46** sur la clôture Ubuntu de 0.3.2-E3-B, puis **1 pt / 6:06** sur la clôture Ubuntu/Chromium de 0.3.2-E3-C avec E global acquis, puis **1 pt / 4:59** sur le correctif UI de regroupement effectif GP-074. GP-079 est **partiel à 3 pts / 9:56**, avec travail local non poussé et test triage FAIL. GP-088 ajoute la clôture documentaire CP5 Windows à **2 pts / 14:28**, mais la distribution CI et la release 0.3.5 restent NON ACQUISES.
 
 ### Incidents à effort non relevé
 
@@ -1281,10 +1291,10 @@ Vingt-huit observations au total, dont **deux incidents ont un effort non relev�
 
 ### Total Luna, tous efforts confondus
 
-- observations : **28**
-- résultats : **21 succès · 1 échec · 5 blocages · 1 partiel**
-- quota connu : **≥21 pts**
-- durée cumulée : **3 h 38 min 48 s**
+- observations : **29**
+- résultats : **22 succès · 1 échec · 5 blocages · 1 partiel**
+- quota connu : **≥23 pts**
+- durée cumulée : **3 h 53 min 16 s**
 
 Les blocages GP-010/011 restent à interpréter comme incidents de fiabilité d'exécution possibles, pas comme une mesure pure des capacités de raisonnement de Luna.
 

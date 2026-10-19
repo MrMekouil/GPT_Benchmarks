@@ -2540,6 +2540,39 @@
         "Main, version 0.3.4 et SQLite 5 inchangés selon Work ; pas de merge/tag/release",
         "CP5 technique livré != CP5 global validé ; validation utilisateur réelle NON ACQUISE"
       ]
+    },
+    {
+      "run_id": "GP-088",
+      "date": "2026-10-19",
+      "project": "GamePanel",
+      "model": "GPT-6 Luna",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "windows_diagnostics_035_cp5_documentary_close",
+      "task_summary": "0.3.5 CP5 : clôture documentaire après validations réelles Windows 10, sans release",
+      "quota_before_pct": 10,
+      "quota_after_pct": 8,
+      "quota_used_points": 2,
+      "quota_approx": false,
+      "duration_seconds": 868,
+      "status": "success",
+      "commit_sha": "5fb10c41b2f6116ccf95e07e402ff607140ad427",
+      "quality": {
+        "summary": "Clôture documentaire CP5 livrée et commitée selon Work ; six fichiers de docs/état/manifeste modifiés et PR #27 Draft, sans code fonctionnel ni bump. Validations Windows 10 transmises par l’utilisateur : Setup local 383 fichiers, SHA-256, installation/surinstallation, session, Diagnostic, rapport/export TXT, annulation et navigation PASS observés (binaire distinct du CI). CI rapportée PASS jusqu’à publication : 192/192 .NET, 46/46 statiques, WPF, DPAPI, release-docs, manifeste 300 hashes, bundle et Setup ; workflows globaux FAIL à l’upload faute de quota Actions, aucun artifact téléchargeable. Premier hash documentaire périmé corrigé. Git status/diff et tests Work locaux N/A faute de checkout. Stable et métadonnées 0.3.4, SQLite 5 inchangés ; clôture release et cas extrêmes NON ACQUIS."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Début au HEAD GamePanel 95fac2b2a2b8e8cacf5386d62a94a584cdfe60da, fin au HEAD 5fb10c41b2f6116ccf95e07e402ff607140ad427 ; PR #27 Draft",
+        "Run documentaire uniquement ; six fichiers selon Work : WORK_STATE, ASSISTANT_STATE, VALIDATION_035, WINDOWS_DIAGNOSTICS_035, ROADMAP et MANIFEST.sha256",
+        "Validations réelles Windows 10 communiquées par l’utilisateur dans le prompt : Setup compilé localement sur CP5 (.NET 10.0.401, Inno Setup 6.7.3), 383 fichiers, hash conforme, parcours principaux PASS ; binaire local distinct du build CI",
+        "Tests CI rapportés par Work : 192/192 .NET, 46/46 statiques, DPAPI, WPF, release-docs, manifeste 300 entrées, bundle, compilation/cycle Setup PASS",
+        "Workflows GitHub globaux FAIL à l’upload : quota Actions ; runs 39243186004 et 39243179903 ; aucun artifact téléchargeable",
+        "Première vérification manifeste a trouvé un hash périmé de VALIDATION_035, corrigé avant tests finaux PASS",
+        "Tests locaux et git status/diff Work N/A : environnement sans checkout Git",
+        "Cas extrêmes et clôture 0.3.5 stable NON ACQUIS ; main/v0.3.4, métadonnées 0.3.4, SQLite 5 préservés ; aucun merge/tag/release",
+        "Statut success signifie succès de la demande documentaire, pas succès de publication CI"
+      ]
     }
   ]
 }
