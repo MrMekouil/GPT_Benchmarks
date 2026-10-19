@@ -2478,6 +2478,35 @@
         "Version 0.3.4 et SQLite version 5 maintenues selon Work ; chantier BeamMP PR #26 non touché",
         "Statut success signifie livraison de code, pas pipeline entièrement vert"
       ]
+    },
+    {
+      "run_id": "GP-086",
+      "date": "2026-10-19",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "windows_diagnostics_035_cp4_wpf_interface",
+      "task_summary": "0.3.5 CP4 : interface WPF de diagnostic Windows",
+      "quota_before_pct": 82,
+      "quota_after_pct": 57,
+      "quota_used_points": 25,
+      "quota_approx": false,
+      "duration_seconds": 2000,
+      "status": "success",
+      "commit_sha": "6381c572008263d8b0617efa63393db8014234bf",
+      "quality": {
+        "summary": "CP4 livré ; 189/189 .NET et 46/46 statiques PASS CI rapportés ; workflow FAIL à l’upload (quota d’artifacts), aucun nouvel artifact téléchargeable, validation utilisateur N/A."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Commits c0fa47a9 et 6381c572 confirmés ; PR #27 Draft",
+        "189 .NET, 46 statiques, DPAPI/release-docs, 298 hashes, 8 contrôles WPF, 8 images, Setup et installation PASS selon Work",
+        "Workflow CI 39219884515 failure confirmé ; upload quota selon Work",
+        "WPF local N/A MSB4184, un statique local SKIP",
+        "CP5 et validation utilisateur NON ACQUIS"
+      ]
     }
   ]
 }
