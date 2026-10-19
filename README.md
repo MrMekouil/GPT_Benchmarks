@@ -37,7 +37,7 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 | 6.0 | **GPT-6 Sol** | Medium | 7 | **7 succès** | **~73 pts** | **~10,43 pts** | **52:38** |
 | 6.0 | **GPT-6 Sol** | High | 1 | **1 partiel** | **~20 pts** | **~20,00 pts** | **12:07** |
 | 6.0 | **GPT-6 Astra** | Low | 2 | **2 succès** | **30 pts** | **15,00 pts** | **2:52** |
-| 6.1 | **GPT-6.1 Sol** | Medium | 43 | **35 succès · 7 bloqués · 1 partiel** | **394 pts** | **9,16 pts** | **9:30:57** |
+| 6.1 | **GPT-6.1 Sol** | Medium | 44 | **36 succès · 7 bloqués · 1 partiel** | **419 pts** | **9,52 pts** | **10:04:17** |
 | 6.1 | **GPT-6.1 Sol** | High | 3 | **2 succès · 1 partiel** | **51 pts** | **17,00 pts** | **2:04:17*** |
 
 \* Durée GPT-6.1 Sol High : GP-043 inclut une attente d’autorisation et n’est pas directement comparable aux durées normales.
