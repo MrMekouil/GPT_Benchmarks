@@ -2507,6 +2507,39 @@
         "WPF local N/A MSB4184, un statique local SKIP",
         "CP5 et validation utilisateur NON ACQUIS"
       ]
+    },
+    {
+      "run_id": "GP-087",
+      "date": "2026-10-19",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "windows_diagnostics_035_cp5_windows_reliability_prevalidation",
+      "task_summary": "0.3.5 CP5 : audit de fiabilité Windows, tests transversaux et préparation de validation réelle",
+      "quota_before_pct": 57,
+      "quota_after_pct": 44,
+      "quota_used_points": 13,
+      "quota_approx": false,
+      "duration_seconds": 760,
+      "status": "success",
+      "commit_sha": "95fac2b2a2b8e8cacf5386d62a94a584cdfe60da",
+      "quality": {
+        "summary": "CP5 technique livré et poussé, sans modification de code produit : audit transversal sans régression fonctionnelle démontrée, trois tests ajoutés, sonde WPF élargie à 12 contrôles et documentation/états/manifeste mis à jour. PASS CI selon Work : 192/192 .NET, 46/46 statiques, DPAPI, release-docs, 12/12 WPF Diagnostic, 8/8 images, 300/300 hashes, compilation Setup et installation native. Deux workflows globaux FAIL selon Work pour upload quota GitHub, run 39225658227 confirmed failure ; aucun nouvel artifact. N/A local build WPF MSB4184, un statique SKIP local passé en CI. CP5 global et validation utilisateur NON ACQUIS ; 0.3.4/SQLite 5 préservés."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "HEAD GamePanel confirmé 95fac2b2a2b8e8cacf5386d62a94a584cdfe60da ; PR #27 ouverte Draft",
+        "Audit CP1/CP2/CP3/CP4/Windows 0.3.4 : aucune régression fonctionnelle démontrée selon Work, code produit inchangé",
+        "Trois tests transversaux ajoutés, contrôles WPF Diagnostic étendus à 12",
+        "PASS CI rapportés : 192 .NET, 46 statiques, DPAPI, release-docs, 12 WPF, 8 images, 300 hashes, Setup et cycle installation",
+        "Deux workflows FAIL à l'upload selon Work (quota GitHub) ; workflow 39225658227 completed/failure confirmé",
+        "Aucun nouvel artifact ; build WPF local N/A MSB4184, un statique local SKIP mais PASS CI",
+        "Documentation de validation, WORK_STATE, ASSISTANT_STATE, MANIFEST mis à jour selon Work",
+        "Main, version 0.3.4 et SQLite 5 inchangés selon Work ; pas de merge/tag/release",
+        "CP5 technique livré != CP5 global validé ; validation utilisateur réelle NON ACQUISE"
+      ]
     }
   ]
 }
