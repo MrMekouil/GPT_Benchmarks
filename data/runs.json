@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-11",
+  "updated_at": "2026-10-19",
   "measurement_notes": [
     "quota_used_points correspond aux points de pourcentage visibles dans l'interface Work/ChatGPT, pas à un comptage exact de tokens",
     "quota_approx=true indique une valeur arrondie, déduite ou seulement observée comme delta approximatif",
@@ -2443,6 +2443,40 @@
         "Chromium et suite Python complète non validés ici",
         "Banc séparé refusé C:\\workspace WinError 5 ; aucun contournement",
         "Validation Ubuntu préparée seulement, sans déploiement, gate réel ni Gate F ; Gate 4 ACQUIS, F NON ACQUIS"
+      ]
+    },
+    {
+      "run_id": "GP-085",
+      "date": "2026-10-19",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "windows_diagnostics_035_cp3_interpretation",
+      "task_summary": "0.3.5 CP3 : moteur de diagnostics interprétés et recommandations, intégration rapport CP2",
+      "quota_before_pct": 100,
+      "quota_after_pct": 82,
+      "quota_used_points": 18,
+      "quota_approx": false,
+      "duration_seconds": 1403,
+      "status": "success",
+      "commit_sha": "54ebe581ffd6729fbad4339e8012fb1fc4684ea2",
+      "quality": {
+        "summary": "CP3 livré et poussé, 20 règles déterministes, 8 recommandations maximum, rapport 32 Kio. Tests Work déclarés : 179/179 .NET PASS, 39 statiques PASS et 1 SKIP PowerShell ; DPAPI, release-docs, diff-check PASS. CI Windows : 179/179 .NET, 40 statiques, WPF, 291 hashes, Setup et installation PASS selon Work, mais workflows GitHub en FAIL (PR quota d’artifacts, push erreur backend intermittente 41/42). Aucun artifact téléchargeable. WPF local N/A MSB4184 ; validation utilisateur CP3 non acquise. PR #27 Draft ; CP4 non commencé, CP5 non commencé."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "HEAD branche 0.3.5 Windows Diagnostics confirmé 54ebe581ffd6729fbad4339e8012fb1fc4684ea2 ; PR #27 ouverte Draft",
+        "Livraison CP3 : 20 règles interprétatives typées ; preuves courantes/historiques distinguées, huit recommandations au maximum",
+        "Rendu CP2 intégré, 32 Kio maximum, confidentialité et neutralisation de chemins maintenues",
+        "Tests Work rapportés : .NET 179/179 PASS (150 CP1/CP2 existants), statiques 39 PASS / 1 SKIP PowerShell ; DPAPI, release-docs, diff-check PASS",
+        "Tests CI Windows rapportés : .NET 179/179 PASS, 40 statiques PASS, WPF, 291 hashes, compilation Setup et cycle d’installation PASS",
+        "Workflows CI en échec : PR 39215564131 failure confirmé, upload quota artifacts ; push intermittent backend 41/42 déclaré",
+        "Aucun artifact téléchargeable ; build WPF local N/A (MSB4184)",
+        "Validation utilisateur CP3 non acquise ; CP4 préparé par diagnostics typés sans GUI, CP5 non commencé",
+        "Version 0.3.4 et SQLite version 5 maintenues selon Work ; chantier BeamMP PR #26 non touché",
+        "Statut success signifie livraison de code, pas pipeline entièrement vert"
       ]
     }
   ]
