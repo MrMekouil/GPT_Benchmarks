@@ -1,6 +1,6 @@
 # GPT Benchmarks
 
-Benchmarks empiriques de modèles OpenAI utilisés sur des tâches réelles du projet **GamePanel**.
+Benchmarks empiriques de modèles OpenAI utilisés sur des tâches réelles de **GamePanel** et **MeshtasticCalculator**. Les 88 premiers runs concernent GamePanel ; GP-089 inaugure MeshtasticCalculator.
 
 L'objectif n'est pas de produire un classement universel, mais de mesurer le **coût par tâche réellement réussie** dans Work/Codex : qualité, autonomie, fiabilité, durée et consommation visible du quota.
 
@@ -39,6 +39,7 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 | 6.0 | **GPT-6 Astra** | Low | 2 | **2 succès** | **30 pts** | **15,00 pts** | **2:52** |
 | 6.1 | **GPT-6.1 Sol** | Medium | 45 | **37 succès · 7 bloqués · 1 partiel** | **432 pts** | **9,60 pts** | **10:16:57** |
 | 6.1 | **GPT-6.1 Sol** | High | 3 | **2 succès · 1 partiel** | **51 pts** | **17,00 pts** | **2:04:17*** |
+| 6.1 | **GPT-6.1 Terra** | Medium | 1 | **1 succès** | **4 pts** | **4,00 pts** | **3:28** |
 
 \* Durée GPT-6.1 Sol High : GP-043 inclut une attente d’autorisation et n’est pas directement comparable aux durées normales.
 
@@ -51,6 +52,7 @@ Vue regroupée par modèle/effort, classée dans l'ordre logique des génératio
 - **GPT-6 Sol Medium en production :** trois gros checkpoints complets observés à **11 pts / 8:42** (pré-clôture), **22 pts / 14:13** (audit transversal 0.3.1-E-A) et **21 pts / 20:35** (correctif concurrence installer/recovery GP-028). Le coût varie fortement avec la profondeur et le périmètre.
 - **GPT-6.1 Sol Medium :** 37 tâches terminées sur 45 tentatives observées. Les gros checkpoints incluent B2 **16 pts / 21:37**, E-C UI **17 pts / 26:31**, 0.3.2-A **16 pts / 24:29**, 0.3.2-B **12 pts / 20:49**, 0.3.2-C **17 pts / 33:55**, 0.3.2-D **11 pts / 16:49**, E3-A **23 pts / 38:45**, E3-C **16 pts / 18:52** et le runbook réel F **17 pts / 22:13**. GP-055 ajoute un correctif de fixture ContentStore ciblé à **6 pts / 5:04** sans code de production ; GP-056 ajoute le correctif scanner O_PATH à **5 pts / 6:50** ; GP-057 ajoute l’adaptation de la policy JAR réelle à **5 pts / 7:02** ; GP-058 corrige les collisions ZIP case-sensitive après NFC à **4 pts / 4:57** ; GP-059 branche la qualification Modrinth optionnelle à **10 pts / 15:13** ; GP-060 refond l’UI Contenus client pour un vrai modpack à **9 pts / 14:13** ; GP-065 livre l’import CurseForge offline à **16 pts / 29:54** ; GP-066 corrige le format de hash CurseForge Desktop à **9 pts / 7:02 cumulés sur 2 exécutions** ; GP-067 documente la validation Aero réelle à **4 pts / 1:41** sans changement fonctionnel ; GP-068 relève les bornes ZIP Chipped à **3 pts / 2:47** ; GP-069 ajoute la preuve launcher systemd/statique à **8 pts / 7:36** ; GP-070 corrige uniquement la fixture/test loader à **3 pts / 2:29** après FAIL Ubuntu natif ; GP-071 ajoute la reconnaissance des JAR Forge support/library à **8 pts / 10:37** ; GP-072 ajoute la preuve CurseForge exacte → both/SUGGESTED et la watchlist Admin à **7 pts / 9:35**, avec Gate 4 désormais acquis sur preuve utilisateur ; GP-073 rend cette présence strictement advisory face aux autres preuves et compacte l’UI en six groupes exclusifs fermés à **5 pts / 8:22** ; GP-075 corrige le remplacement des preuves CurseForge locales lors d’un import explicite à **10 pts / 21:16** ; GP-076 borne les preuves local-jar au loader sélectionné à **9 pts / 15:50** ; GP-077 ajoute l’import facultatif AutoModpack hors-ligne à **17 pts / 34:04**, sans changement de classification ni validation Interstice réelle ; GP-078 ajoute l’assistance au tri client à **12 pts / 21:45**, sans publication implicite. GP-061 ajoute un STOP de pré-vol correct à **3 pts / 0:34** ; GP-062 est **partiel à 16 pts / 28:00** après travail local, interrompu par la limite de longueur de discussion ; GP-063 est bloqué à **3 pts / 0:21** car la nouvelle discussion Work ne disposait plus du clone GamePanel ; GP-064 est bloqué à **1 pt / 0:32** car le clone GitHub a échoué sur l’accès réseau `github.com:443`. GP-042 reste un audit de récupération ciblé à **1 pt / 4:02**. Sept blocages restent observés : GP-021 à **5 pts / 4:31**, GP-033 à **1 pt / 0:17**, GP-061 à **3 pts / 0:34**, GP-063 à **3 pts / 0:21**, GP-064 à **1 pt / 0:32**, GP-082 à **0 pt / 0:26** (pré-vol Work) et GP-083 à **8 pts / 5:25** (éditeur non autorisé, audit sans correctif).
 - **GPT-6.1 Sol High :** trois observations. GP-041 est **partiel à 20 pts / 53:27** sur E2 ; GP-043 reprend le travail récupéré et livre E2 candidat à **7 pts / 28:50 observés** ; GP-048 livre E3-B à **24 pts / 42:00** malgré un stall apparent de l’UI après exécution. La durée GP-043 reste biaisée par une attente d’autorisation.
+- **GPT-6.1 Terra Medium :** premier run MeshtasticCalculator, **GP-089**, **4 pts / 3:28**. Correctif test B09 livré ; Node 51/51 PASS, mais Firefox réel au nouveau SHA **NON EXÉCUTÉ**, V02-02 reste non acquise. Un seul run, aucune comparaison A/B possible.
 - **GPT-6 Luna Medium :** **27 runs Medium** observés : **22 succès / 1 échec / 3 blocages / 1 partiel**, **18 points visibles** et **2:18:16** cumulés. Les **25 checkpoints de production récents** sont à **21 succès / 3 blocages / 1 partiel**, **18 points visibles** et **2:17:05**. GP-088 ajoute la clôture documentaire CP5 Windows à **2 pts / 14:28** ; la publication CI reste bloquée par le quota GitHub Actions.
 
 ## Résultats actuellement observés
@@ -171,8 +173,17 @@ Cumul GPT-6.1 Sol Medium à ce stade : **432 points**, **10 h 16 min 57 s**, **3
 
 GP-041 a produit une implémentation locale avancée mais s’est interrompu avant livraison. Après l’audit de récupération GP-042, GP-043 a repris ce travail existant et livré E2 candidat. GP-048 livre E3-B malgré une capture Work sans handoff final ; le dépôt distant confirme le succès. Le coût visible High cumulé est désormais **51 pts** pour **3 observations** ; la durée cumulée observée **2:04:17** reste à lire avec prudence car GP-043 inclut une attente d’autorisation.
 
+### Runs réels GPT-6.1 Terra Medium
+
+| Run | Projet et tâche | Quota visible | Durée | Résultat |
+|---|---|---:|---:|---|
+| GP-089 | MeshtasticCalculator V02-02 : correction de l'instrumentation Firefox B09 | **4 pts** | **3:28** | correctif livré, commit `4bd2b88...` ; Node 51/51 PASS, Firefox nouveau SHA NON EXÉCUTÉ |
+
+Première observation Terra Medium, sur un autre projet que GamePanel. La validation utilisateur Firefox reste **NON ACQUISE** : ce succès indique uniquement la livraison du correctif de test.
+
 ## Lecture provisoire
 
+- **GPT-6.1 Terra Medium** : une seule observation MeshtasticCalculator à **4 pts / 3:28** ; livraison de correction de test réussie, Firefox réel sur le nouveau commit non exécuté. Aucune conclusion comparative solide sur le modèle.
 - **GPT-6 Luna Medium** : **22 succès / 1 échec / 3 blocages / 1 partiel** sur 27 runs Medium, pour **18 points visibles** cumulés. Les 25 checkpoints de production récents sont à **21 succès / 3 blocages / 1 partiel** ; GP-088 enregistre la clôture documentaire CP5 à **2 pts / 14:28**, après validations réelles Windows 10 rapportées, mais sans artifact CI téléchargeable ni release 0.3.5 acquise. Les deux blocages GP-010/011 à effort non relevé restent comptés séparément.
 - **GPT-6 Sol Medium** : sept succès observés. Les audits ciblés sont à 4 pts, les gros checkpoints se situent désormais à **11–22 pts**, et GP-028 confirme qu’un correctif de sûreté/concurrence transversal peut monter à **21 pts / 20:35**. La moyenne brute passe à **~10,43 pts/run**.
 - **GPT-6 Sol High** : un gros run multi-étapes a consommé ~20 points en 12:07 et s'est arrêté faute de quota avant la fin. Cela ne mesure pas son intelligence, mais montre le risque d'un effort High sur un long marathon.
@@ -185,7 +196,7 @@ GP-041 a produit une implémentation locale avancée mais s’est interrompu ava
 
 - `data/runs.json` est la source structurée canonique.
 - `data/runs.csv` est régénéré depuis le JSON pour éviter les décalages de colonnes.
-- État vérifié au 2026-10-19 : **88 runs JSON = 88 lignes CSV**, IDs uniques et champs communs cohérents.
+- État vérifié au 2026-10-29 : **89 runs JSON = 89 lignes CSV**, IDs uniques et champs communs cohérents.
 
 ## Méthode
 
@@ -202,7 +213,7 @@ Chaque run essaie de conserver au minimum :
 - prompt et réponse lorsque disponibles ;
 - limites de comparabilité.
 
-Les benchmarks historiques utilisent des états Git dont le résultat attendu était connu à l'avance mais non révélé au modèle dans le prompt.
+Les benchmarks historiques utilisent des états Git dont le résultat attendu était connu à l'avance mais non révélé au modèle dans le prompt. Le préfixe historique `GP-xxx` est conservé pour tous les runs, même hors GamePanel.
 
 ## Statut
 
