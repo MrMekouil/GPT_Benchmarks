@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-19",
+  "updated_at": "2026-10-29",
   "measurement_notes": [
     "quota_used_points correspond aux points de pourcentage visibles dans l'interface Work/ChatGPT, pas à un comptage exact de tokens",
     "quota_approx=true indique une valeur arrondie, déduite ou seulement observée comme delta approximatif",
@@ -2572,6 +2572,38 @@
         "Tests locaux et git status/diff Work N/A : environnement sans checkout Git",
         "Cas extrêmes et clôture 0.3.5 stable NON ACQUIS ; main/v0.3.4, métadonnées 0.3.4, SQLite 5 préservés ; aucun merge/tag/release",
         "Statut success signifie succès de la demande documentaire, pas succès de publication CI"
+      ]
+    },
+    {
+      "run_id": "GP-089",
+      "date": "2026-10-29",
+      "project": "MeshtasticCalculator",
+      "model": "GPT-6.1 Terra",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "meshtasticcalculator_v02_02_firefox_b09_test_instrumentation",
+      "task_summary": "V02-02 : correction du test Firefox B09 pour l'ancre d'export JSON détachée du DOM",
+      "quota_before_pct": 54,
+      "quota_after_pct": 50,
+      "quota_used_points": 4,
+      "quota_approx": false,
+      "duration_seconds": 208,
+      "status": "success",
+      "commit_sha": "4bd2b88464c4ec11367499ef61412fac3c08de3c",
+      "quality": {
+        "summary": "Correction B09 livrée et commit vérifié : seul tests/firefox/probe.js modifié, interception du click de l'ancre détachée, capture Blob/nom d'export et restauration dans finally. B01–B08 inchangés selon Work ; syntaxe PASS et Node 51/51 PASS. Firefox réel sur le nouveau SHA NON EXÉCUTÉ : tentative expirée après 180 s sans requête HTTP reçue. Firefox 158.0 B01–B08 PASS/B09 FAIL concernent le commit précédent. V02-02 et validation utilisateur NON ACQUIS ; V02-03 non démarré."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Date = date d’enregistrement 2026-10-29 ; date réelle du run non indiquée",
+        "Premier run MeshtasticCalculator et première observation GPT-6.1 Terra Medium ; convention d’ID GP-xxx conservée",
+        "HEAD initial attendu c43a2361cac74bd3d482ba87708c45a97099e0ac ; HEAD final GitHub vérifié 4bd2b88464c4ec11367499ef61412fac3c08de3c",
+        "Seul fichier modifié tests/firefox/probe.js, aucun changement produit web/ ou modèle RF dans ce commit",
+        "B09 capte le clic d'HTMLAnchorElement.prototype.click pour l'ancre détachée ; Blob JSON et filename meshtasticcalculator-projet.json vérifiés ; méthode restaurée par finally",
+        "B01–B08 inchangés selon Work, syntaxe PASS, suite Node 51/51 PASS",
+        "Firefox Windows 10 Firefox 158.0 B01–B08 PASS et B09 FAIL sur commit antérieur ; nouveau commit NON EXÉCUTÉ (timeout 180 s, aucune requête HTTP)",
+        "Livraison de correctif réussie ne signifie pas V02-02 validée, validation utilisateur toujours en attente ; V02-03 non démarré"
       ]
     }
   ]
