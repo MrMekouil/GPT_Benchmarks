@@ -1249,6 +1249,16 @@ Six fichiers d'état, validation et manifeste mis à jour selon Work. Parcours W
 
 ---
 
+## GP-089 — GPT-6.1 Terra Medium — MeshtasticCalculator V02-02 Firefox B09
+
+- Date d'enregistrement : 2026-10-29 ; quota **54 % → 50 % = 4 pts** ; durée **3:28** ; **succès de livraison du correctif de test**
+- Commit MeshtasticCalculator vérifié `4bd2b88464c4ec11367499ef61412fac3c08de3c` sur `work/v0.2` ; seul fichier modifié : `tests/firefox/probe.js`.
+- [Prompt et réponse complets](runs/GP-089-gpt61-terra-medium-meshtasticcalculator-firefox-b09.md)
+
+B09 intercepte désormais le clic d’une ancre `download` détachée du DOM, valide le Blob JSON et le nom du fichier puis restaure l'interception par `finally`. B01–B08 inchangés selon Work, **syntaxe PASS**, **Node 51/51 PASS**. **Firefox réel sur le nouveau SHA NON EXÉCUTÉ** : tentative expirée après 180 secondes sans requête HTTP reçue. Les B01–B08 PASS et B09 FAIL Firefox 158.0 transmis par l'utilisateur concernent le commit précédent. V02-02 reste **NON ACQUISE** jusqu'à validation utilisateur ; V02-03 non démarré.
+
+---
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -1308,6 +1318,17 @@ Quarante-cinq observations de production :
 - moyenne brute : **9,60 pts/observation**
 
 Les trente-sept tâches réussies représentent **395 pts**. Les sept blocages représentent **21 pts** : GP-021 à **5 pts / 4:31** sans livraison B1 faute d’environnement POSIX, GP-033 à **1 pt / 0:17** avec STOP correct sur miroir Work incohérent/dirty, GP-061 à **3 pts / 0:34** avec STOP correct sur checkout local désynchronisé, GP-063 à **3 pts / 0:21** car la nouvelle discussion Work ne contenait plus le clone GamePanel, puis GP-064 à **1 pt / 0:32** sur échec d’accès réseau à `github.com:443` lors du clone, GP-082 à **0 pt / 0:26** sur pré-vol Work impossible et GP-083 à **8 pts / 5:25** sur refus d’écriture du checkout (audit sans correctif). GP-062 reste **1 run partiel à 16 pts / 28:00** : travail local confirmé, puis limite maximale de longueur de discussion atteinte avant livraison distante. Les neuf gros checkpoints récents se situent à **16 pts / 21:37** pour B2 backend/root, **17 pts / 26:31** pour E-C UI, **16 pts / 24:29** pour le contrat 0.3.2-A, **12 pts / 20:49** pour le scanner Minecraft 0.3.2-B, **17 pts / 33:55** pour les providers/classification 0.3.2-C, **11 pts / 16:49** pour l’UI Admin 0.3.2-D, **23 pts / 38:45** pour l’API Admin/orchestration 0.3.2-E3-A, **16 pts / 18:52** pour l’UI réelle 0.3.2-E3-C et **17 pts / 22:13** pour le runbook réel 0.3.2-F ; GP-055 ajoute un correctif de fixture ciblé à **6 pts / 5:04**, GP-056 un correctif scanner de production ciblé à **5 pts / 6:50**, GP-057 une adaptation de policy JAR à **5 pts / 7:02**, GP-058 un correctif de collision ZIP case-sensitive à **4 pts / 4:57**, GP-059 le branchement Modrinth optionnel à **10 pts / 15:13**, GP-060 la refonte ergonomique UI Contenus client à **9 pts / 14:13**, GP-065 l’import CurseForge offline à **16 pts / 29:54** et GP-066 le correctif hash Desktop à **9 pts / 7:02 cumulés sur deux exécutions** et GP-067 la documentation de validation Aero réelle à **4 pts / 1:41** et GP-068 le relèvement des bornes ZIP Chipped à **3 pts / 2:47** et GP-069 la preuve launcher systemd/statique à **8 pts / 7:36** et GP-070 le correctif fixture/test loader à **3 pts / 2:29** et GP-071 la reconnaissance JAR Forge support/library à **8 pts / 10:37** et GP-072 la preuve CurseForge exacte → SUGGESTED/watchlist à **7 pts / 9:35** et GP-073 le correctif advisory/conflit + six groupes UI à **5 pts / 8:22** et GP-075 le remplacement des preuves CurseForge locales à **10 pts / 21:16** et GP-076 le scope local-jar selon loader à **9 pts / 15:50** et GP-077 l’import facultatif AutoModpack v4 hors-ligne à **17 pts / 34:04** et GP-078 l’assistance au tri client à **12 pts / 21:45**, avec Gate 4 acquis sur preuve utilisateur et F non acquis. GP-042 reste un audit de récupération à **1 pt / 4:02**.
+
+## GPT-6.1 Terra Medium
+
+Première observation, projet **MeshtasticCalculator** :
+
+- observations : **1**
+- résultat : **1 succès de livraison de correctif de test**
+- quota visible cumulé : **4 pts**
+- durée cumulée : **3 min 28 s**
+- vérifications : **51/51 Node PASS** selon Work ; **Firefox sur nouveau SHA NON EXÉCUTÉ**
+- limite : V02-02 en attente validation utilisateur ; aucune comparaison directe A/B avec GamePanel
 
 ## GPT-6.1 Sol High
 
