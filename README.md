@@ -4,7 +4,26 @@
 
 Observations de ChatGPT Work sur **GamePanel**, **MeshtasticCalculator** et **NomadProbe**. Les tâches sont réelles et différentes : **ce n'est pas un classement universel des modèles**.
 
-[Vue d'ensemble](#vue-densemble) · [Par modèle](#par-modèle-et-effort) · [Comparaisons directes](#comparaisons-directes) · [Derniers runs](#derniers-runs) · [Méthodologie](docs/METHODOLOGY.md) · [Analyse complète](docs/RESULTS.md)
+[Par modèle](#par-modèle-et-effort) · [Vue d'ensemble](#vue-densemble) · [Comparaisons directes](#comparaisons-directes) · [Derniers runs](#derniers-runs) · [Méthodologie](docs/METHODOLOGY.md) · [Analyse complète](docs/RESULTS.md)
+
+## Par modèle et effort
+
+| Modèle · effort | Runs | Livraisons | Quota médian¹ | Durée médiane¹ |
+|:---|---:|---:|---:|---:|
+| 6.0 Luna · Med | 27 | **22/27** | 1 pt | 04:26 |
+| 6.1 Terra · Med | 2 | **2/2** | 3 pt | 02:09 |
+| 5.6 Sol · Med | 1 | **1/1** | 6 pt | 01:50 |
+| 6.0 Sol · Med | 7 | **7/7** | 6 pt | 03:21 |
+| 6.0 Sol · High | 1 | **0/1** | — | — |
+| 6.1 Sol · Med | 45 | **37/45** | 10 pt | 14:13 |
+| 6.1 Sol · High | 3 | **2/3** | 15,5 pt | 35:25 |
+| 6.0 Astra · Low | 2 | **2/2** | 15 pt | 01:26 |
+
+¹ **Médianes sur les runs classés `success` uniquement**, et non sur toutes les tentatives. Le quota est en **points de pourcentage visibles**, pas en tokens ; les durées sont celles relevées par l'utilisateur. Un modèle à un ou deux runs n'est pas comparable statistiquement à celui qui en a des dizaines. Les tâches et projets sont hétérogènes ; ne pas déduire un classement de cette table.
+
+Les modèles sont rangés par famille **Luna → Terra → Sol → Astra**, puis par génération au sein d'une famille. C'est un ordre de présentation, **pas un classement mesuré**. Les deux incidents Luna à effort non relevé sont exclus de ce tableau, mais toujours conservés dans les [résultats détaillés](docs/RESULTS.md) et les totaux globaux.
+
+La **moyenne pts/run** est conservée comme mesure secondaire dans [l'analyse détaillée](docs/RESULTS.md). Pour comparer des modèles, consulter en priorité les [tests à prompt commun](docs/RESULTS.md#comparaisons-directes).
 
 ## Vue d'ensemble
 
@@ -15,27 +34,9 @@ Observations de ChatGPT Work sur **GamePanel**, **MeshtasticCalculator** et **No
 
 **À comprendre :** une livraison réussie ne prouve ni un fonctionnement sur machine réelle ni une validation utilisateur. La validation réelle n'est actuellement **pas calculable** sur l'ensemble des runs ; N/D ne signifie pas 0 %.
 
-## Par modèle et effort
-
-| Modèle · effort | Runs | Livraisons | Quota médian¹ | Durée médiane¹ |
-|:---|---:|---:|---:|---:|
-| 5.6 Sol · Med | 1 | **1/1** | 6 pt | 01:50 |
-| 6 Luna · Med | 27 | **22/27** | 1 pt | 04:26 |
-| 6 Luna · non relevé | 2 | **0/2** | — | — |
-| 6 Sol · Med | 7 | **7/7** | 6 pt | 03:21 |
-| 6 Sol · High | 1 | **0/1** | — | — |
-| 6 Astra · Low | 2 | **2/2** | 15 pt | 01:26 |
-| 6.1 Sol · Med | 45 | **37/45** | 10 pt | 14:13 |
-| 6.1 Sol · High | 3 | **2/3** | 15,5 pt | 35:25 |
-| 6.1 Terra · Med | 2 | **2/2** | 3 pt | 02:09 |
-
-¹ **Médianes sur les runs classés `success` uniquement**, et non sur toutes les tentatives. Le quota est en **points de pourcentage visibles**, pas en tokens ; les durées sont celles relevées par l'utilisateur. Un modèle à un ou deux runs n'est pas comparable statistiquement à celui qui en a des dizaines. Les tâches et projets sont hétérogènes ; ne pas déduire un classement de cette table.
-
-La **moyenne pts/run** est conservée comme mesure secondaire dans [l'analyse détaillée](docs/RESULTS.md). Pour comparer des modèles, consulter en priorité les [tests à prompt commun](docs/RESULTS.md#comparaisons-directes).
-
 ## Comparaisons directes
 
-| Même objectif / prompt | GPT-5.6 Sol Med | GPT-6 Luna Med | GPT-6 Sol Med | GPT-6 Astra Low |
+| Même objectif / prompt | GPT-5.6 Sol Med | GPT-6.0 Luna Med | GPT-6.0 Sol Med | GPT-6.0 Astra Low |
 |:---|:---|:---|:---|:---|
 | Deux bugs historiques | 6 pts · 2/2 | 0 pt visible · échec | 4 pts · 2/2 | 17 pts · 2/2 |
 | Lacune fonctionnelle | — | — | 4 pts · trouvée | 13 pts · trouvée |
@@ -48,7 +49,7 @@ Ces **petits échantillons** sont les comparaisons les mieux contrôlées du dé
 |:---|:---|:---|---:|---:|:---|
 | [GP-090](runs/GP-090-gpt61-terra-medium-nomadprobe-roadmap-v01.md) | NomadProbe · roadmap V0.1 | 6.1 Terra Med | 2 pts | 0:49 | Docs livrées ; validation B en attente |
 | [GP-089](runs/GP-089-gpt61-terra-medium-meshtasticcalculator-firefox-b09.md) | MeshtasticCalculator · Firefox B09 | 6.1 Terra Med | 4 pts | 3:28 | Correctif livré ; Firefox non exécuté sur nouveau SHA |
-| [GP-088](runs/GP-088-gpt6-luna-medium-windows-diagnostics-cp5-documentary-close.md) | GamePanel · clôture documentaire CP5 | 6 Luna Med | 2 pts | 14:28 | Docs livrées ; artifact CI bloqué |
+| [GP-088](runs/GP-088-gpt6-luna-medium-windows-diagnostics-cp5-documentary-close.md) | GamePanel · clôture documentaire CP5 | 6.0 Luna Med | 2 pts | 14:28 | Docs livrées ; artifact CI bloqué |
 | [GP-087](runs/GP-087-gpt61-sol-medium-windows-diagnostics-cp5.md) | GamePanel · fiabilité Windows CP5 | 6.1 Sol Med | 13 pts | 12:40 | Livraison technique ; validation terrain alors en attente |
 
 ## Comment lire les résultats
