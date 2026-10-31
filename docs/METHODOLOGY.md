@@ -22,10 +22,13 @@ La **médiane** est l'élément central de la série ordonnée ; avec un effecti
 
 Un sous-groupe sans run `success` affiche un tiret pour les médianes de succès, **pas zéro**.
 
+Les médianes et le taux de livraison sont affichés **avec le nombre d'observations**, car un pourcentage de 100 % sur une seule tentative n'établit aucune fiabilité générale. Dans le tableau de bord, le taux de livraison est arrondi au pourcentage entier, alors que le quota cumulé additionne les points de pourcentage visibles relevés. Le total n'est pas une métrique normalisée entre modèles, car les volumes de travaux sont différents.
+
 ## Indicateurs secondaires
 
 | Indicateur | Calcul | Interprétation |
 |:---|:---|:---|
+| **Quota visible cumulé** | Somme de `quota_used_points` de tous les runs avec quota connu, réussis ou non, pour un même modèle/effort | Mesure d'usage total observé, **pas un coût par tâche ni un prix**. `≈` signale au moins un relevé déclaré approximatif ; un quota manquant n'est jamais remplacé par zéro. |
 | **Moyenne pts/run** | Somme du quota visible chiffré / nombre de runs avec quota chiffré | Mesure descriptive brute, **non comparable** entre tâches de complexité différente. Les tentatives bloquées y entrent ; les données manquantes sont exclues du dénominateur. |
 | **Quota médian d'une livraison** | Médiane des seules tentatives `success` | Aide à résister aux valeurs extrêmes, mais **ne comptabilise pas les tentatives ratées avant réussite**. |
 | **Coût complet par objectif abouti** | Somme du quota visible de **toutes** les tentatives identifiées d'un même objectif jusqu'à la livraison/validation | **N/D actuellement** : les runs ne portent pas d'`objective_id` fiable, et les reprises ne sont pas systématiquement reliées. Ne pas regrouper par ressemblance de titre. |
