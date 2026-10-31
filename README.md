@@ -8,18 +8,20 @@ Observations de ChatGPT Work sur **GamePanel**, **MeshtasticCalculator** et **No
 
 ## Par modèle et effort
 
-| Modèle · effort | Runs | Livraisons | Quota médian¹ | Durée médiane¹ |
-|:---|---:|---:|---:|---:|
-| 5.6 Sol · Med | 1 | **1/1** | 6 pt | 01:50 |
-| 6.0 Luna · Med | 27 | **22/27** | 1 pt | 04:26 |
-| 6.0 Sol · Med | 7 | **7/7** | 6 pt | 03:21 |
-| 6.0 Sol · High | 1 | **0/1** | — | — |
-| 6.0 Astra · Low | 2 | **2/2** | 15 pt | 01:26 |
-| 6.1 Terra · Med | 2 | **2/2** | 3 pt | 02:09 |
-| 6.1 Sol · Med | 45 | **37/45** | 10 pt | 14:13 |
-| 6.1 Sol · High | 3 | **2/3** | 15,5 pt | 35:25 |
+| Modèle · effort | Runs | Livraisons | Taux livré | Quota médian¹ | Durée médiane¹ | Quota cumulé² |
+|:---|---:|---:|---:|---:|---:|---:|
+| 5.6 Sol · Med | 1 | **1/1** | **100 %** | 6 pt | 1:50 | 6 pts |
+| 6.0 Luna · Med | 27 | **22/27** | **81 %** | 1 pt | 4:26 | ≈18 pts |
+| 6.0 Sol · Med | 7 | **7/7** | **100 %** | 6 pt | 3:21 | ≈73 pts |
+| 6.0 Sol · High | 1 | **0/1** | **0 %** | — | — | ≈20 pts |
+| 6.0 Astra · Low | 2 | **2/2** | **100 %** | 15 pt | 1:26 | 30 pts |
+| 6.1 Terra · Med | 2 | **2/2** | **100 %** | 3 pt | 2:09 | 6 pts |
+| 6.1 Sol · Med | 45 | **37/45** | **82 %** | 10 pt | 14:13 | 432 pts |
+| 6.1 Sol · High | 3 | **2/3** | **67 %** | 15,5 pt | 35:25 | 51 pts |
 
-¹ **Médianes sur les runs classés `success` uniquement**, et non sur toutes les tentatives. Le quota est en **points de pourcentage visibles**, pas en tokens ; les durées sont celles relevées par l'utilisateur. Un modèle à un ou deux runs n'est pas comparable statistiquement à celui qui en a des dizaines. Les tâches et projets sont hétérogènes ; ne pas déduire un classement de cette table.
+¹ **Médianes calculées sur les livraisons `success` uniquement.** ² **Quota cumulé :** somme des points de pourcentage *visibles* de toutes les tentatives du groupe, y compris les échecs et blocages. Le signe ≈ signale qu'au moins un relevé était approximatif. Les deux incidents Luna à effort non relevé restent hors tableau et représentent **5 pts renseignés** supplémentaires (une consommation inconnue).
+
+Les pourcentages dépendent fortement du nombre de runs : **100 % sur 1 ou 2 tentatives ne prouve pas une fiabilité de 100 %**. Les tâches ne sont pas identiques entre modèles ; le quota visible n'est pas une mesure exacte de tokens ou de coût.
 
 Les modèles sont rangés **d'abord par version (5.6 → 6.0 → 6.1)**, puis par famille **Luna → Terra → Sol → Astra** à l'intérieur de chaque version. C'est un ordre de présentation, **pas un classement mesuré**. Les deux incidents Luna à effort non relevé sont exclus de ce tableau, mais toujours conservés dans les [résultats détaillés](docs/RESULTS.md) et les totaux globaux.
 
