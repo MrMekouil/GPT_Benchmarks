@@ -10,18 +10,18 @@ Observations de ChatGPT Work sur **GamePanel**, **MeshtasticCalculator** et **No
 
 | Modèle · effort | Runs | Livraisons | Quota médian¹ | Durée médiane¹ |
 |:---|---:|---:|---:|---:|
-| 6.0 Luna · Med | 27 | **22/27** | 1 pt | 04:26 |
-| 6.1 Terra · Med | 2 | **2/2** | 3 pt | 02:09 |
 | 5.6 Sol · Med | 1 | **1/1** | 6 pt | 01:50 |
+| 6.0 Luna · Med | 27 | **22/27** | 1 pt | 04:26 |
 | 6.0 Sol · Med | 7 | **7/7** | 6 pt | 03:21 |
 | 6.0 Sol · High | 1 | **0/1** | — | — |
+| 6.0 Astra · Low | 2 | **2/2** | 15 pt | 01:26 |
+| 6.1 Terra · Med | 2 | **2/2** | 3 pt | 02:09 |
 | 6.1 Sol · Med | 45 | **37/45** | 10 pt | 14:13 |
 | 6.1 Sol · High | 3 | **2/3** | 15,5 pt | 35:25 |
-| 6.0 Astra · Low | 2 | **2/2** | 15 pt | 01:26 |
 
 ¹ **Médianes sur les runs classés `success` uniquement**, et non sur toutes les tentatives. Le quota est en **points de pourcentage visibles**, pas en tokens ; les durées sont celles relevées par l'utilisateur. Un modèle à un ou deux runs n'est pas comparable statistiquement à celui qui en a des dizaines. Les tâches et projets sont hétérogènes ; ne pas déduire un classement de cette table.
 
-Les modèles sont rangés par famille **Luna → Terra → Sol → Astra**, puis par génération au sein d'une famille. C'est un ordre de présentation, **pas un classement mesuré**. Les deux incidents Luna à effort non relevé sont exclus de ce tableau, mais toujours conservés dans les [résultats détaillés](docs/RESULTS.md) et les totaux globaux.
+Les modèles sont rangés **d'abord par version (5.6 → 6.0 → 6.1)**, puis par famille **Luna → Terra → Sol → Astra** à l'intérieur de chaque version. C'est un ordre de présentation, **pas un classement mesuré**. Les deux incidents Luna à effort non relevé sont exclus de ce tableau, mais toujours conservés dans les [résultats détaillés](docs/RESULTS.md) et les totaux globaux.
 
 La **moyenne pts/run** est conservée comme mesure secondaire dans [l'analyse détaillée](docs/RESULTS.md). Pour comparer des modèles, consulter en priorité les [tests à prompt commun](docs/RESULTS.md#comparaisons-directes).
 
