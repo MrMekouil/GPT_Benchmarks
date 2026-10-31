@@ -75,4 +75,4 @@ Ces **petits échantillons** sont les comparaisons les mieux contrôlées du dé
 
 **Qualité de mesure actuelle :** 14 runs avec **0 point de quota visible** et 15 quotas notés approximatifs ; un run ne fournit aucun quota chiffré. Les statistiques sont descriptives, non une mesure de tokens ou de prix réel.
 
-<sub>Tableau de bord préparé le 31 octobre 2026 · 90 observations enregistrées · fusion dans main non effectuée.</sub>
+<sub>Tableau de bord préparé le 31 octobre 2026 · 90 observations enregistrées · historique et données reproductibles dans ce dépôt.</sub>
