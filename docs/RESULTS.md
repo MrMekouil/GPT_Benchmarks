@@ -32,14 +32,14 @@ Les colonnes « médiane », « dispersion » et « durée » sont calculées **
 | Modèle · effort | Runs | Livré | Quota médian / succès | Q1–Q3¹ (pts) | Durée médiane / succès | Moy. pts/run² |
 |:---|---:|---:|---:|---:|---:|---:|
 | 5.6 Sol Medium | 1 | 1/1 | 6 pt | — | 01:50 | 6 |
-| 6 Luna Medium | 27 | 22/27 | 1 pt | 0–1 | 04:26 | 0,7 |
-| 6 Luna (effort non relevé) | 2 | 0/2 | — | — | — | 5 (1/2) |
-| 6 Sol Medium | 7 | 7/7 | 6 pt | 4–21 | 03:21 | 10,4 |
-| 6 Sol High | 1 | 0/1 | — | — | — | 20 |
-| 6 Astra Low | 2 | 2/2 | 15 pt | — | 01:26 | 15 |
+| 6.0 Luna Medium | 27 | 22/27 | 1 pt | 0–1 | 04:26 | 0,7 |
+| 6.0 Luna (effort non relevé) | 2 | 0/2 | — | — | — | 5 (1/2) |
+| 6.0 Sol Medium | 7 | 7/7 | 6 pt | 4–21 | 03:21 | 10,4 |
+| 6.0 Sol High | 1 | 0/1 | — | — | — | 20 |
+| 6.0 Astra Low | 2 | 2/2 | 15 pt | — | 01:26 | 15 |
+| 6.1 Terra Medium | 2 | 2/2 | 3 pt | — | 02:09 | 3 |
 | 6.1 Sol Medium | 45 | 37/45 | 10 pt | 6–16 | 14:13 | 9,6 |
 | 6.1 Sol High | 3 | 2/3 | 15,5 pt | — | 35:25 | 17 |
-| 6.1 Terra Medium | 2 | 2/2 | 3 pt | — | 02:09 | 3 |
 
 ¹ Q1–Q3 : quartiles par rang (nearest-rank), affichés seulement si au moins **5 succès**. Un tiret signifie effectif insuffisant ou donnée absente, **pas zéro**. ² La moyenne brute comprend les tentatives infructueuses avec quota renseigné ; pour les runs à effort non relevé, le quota n'est connu que pour une partie des observations.
 
