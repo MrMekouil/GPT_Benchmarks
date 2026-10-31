@@ -74,4 +74,6 @@ Avant chaque publication de données :
 5. Effectuer les tests **locaux** ou les vérifications statiques utiles ; **aucune GitHub Actions automatique**.
 6. Ne fusionner la branche sur `main` qu'après validation explicite du propriétaire du dépôt.
 
+Commande locale depuis la racine du dépôt : `python scripts/verify_data.py` pour contrôler JSON/CSV et afficher les agrégats ; `python scripts/verify_data.py --write-csv` pour régénérer le CSV à partir du JSON. Aucun workflow GitHub n'est utilisé. Après un nouvel enregistrement, le README et `docs/RESULTS.md` doivent encore être actualisés avec les nouvelles valeurs.
+
 Les formules ne dépendent pas de l'identifiant `GP-xxx` : ce préfixe historique est conservé même pour les runs MeshtasticCalculator et NomadProbe.
