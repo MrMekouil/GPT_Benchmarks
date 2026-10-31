@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-29",
+  "updated_at": "2026-10-31",
   "measurement_notes": [
     "quota_used_points correspond aux points de pourcentage visibles dans l'interface Work/ChatGPT, pas à un comptage exact de tokens",
     "quota_approx=true indique une valeur arrondie, déduite ou seulement observée comme delta approximatif",
@@ -2604,6 +2604,37 @@
         "B01–B08 inchangés selon Work, syntaxe PASS, suite Node 51/51 PASS",
         "Firefox Windows 10 Firefox 158.0 B01–B08 PASS et B09 FAIL sur commit antérieur ; nouveau commit NON EXÉCUTÉ (timeout 180 s, aucune requête HTTP)",
         "Livraison de correctif réussie ne signifie pas V02-02 validée, validation utilisateur toujours en attente ; V02-03 non démarré"
+      ]
+    },
+    {
+      "run_id": "GP-090",
+      "date": "2026-10-29",
+      "project": "NomadProbe",
+      "model": "GPT-6.1 Terra",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "nomadprobe_v01_observation_first_documentary_reorganization",
+      "task_summary": "V0.1 : réorganisation documentaire observation-first des checkpoints A–F après audit CP0.1-B",
+      "quota_before_pct": 50,
+      "quota_after_pct": 48,
+      "quota_used_points": 2,
+      "quota_approx": false,
+      "duration_seconds": 49,
+      "status": "success",
+      "commit_sha": "366f5b9fa1360c2b3c8d84879d3b08b9ce8bfe12",
+      "quality": {
+        "summary": "Réorganisation documentaire livrée sur work/0.1-foundation : quatre fichiers documentaires modifiés. A validé Windows antérieurement ; B en attente de validation utilisateur ; C, D, E, F non démarrés. Ancien C→E, D→C, E→F, nouveau D Wi-Fi/BLE. Tableau permanent 19 versions conservé selon Work ; liens internes contrôlés selon Work. Aucun test logiciel ou matériel exécuté sur ce run ; aucun code ni preuve technique modifié au commit vérifié."
+      },
+      "prompt_capture": "local_saved",
+      "response_capture": "local_saved",
+      "notes": [
+        "Verbatim du prompt et de la réponse préservé dans la sauvegarde locale GP-090-NomadProbe-pending.zip, fiche GitHub résumée seulement",
+        "Date 2026-10-29 = date d'enregistrement de l'observation, date d'exécution Work inconnue",
+        "HEAD final confirmé via connecteur GitHub : 366f5b9fa1360c2b3c8d84879d3b08b9ce8bfe12, fichiers ROADMAP.md, WORK_STATE.md, docs/CONTEXT_INDEX.md, docs/VALIDATION.md seulement",
+        "CP0.1-A validé Windows précédemment, CP0.1-B validation utilisateur en attente, CP0.1-C/D/E/F non démarrés",
+        "24 tests PASS rapportés antérieurement sur CP0.1-B ; aucun test logiciel/matériel lancé pendant GP-090",
+        "Ancien C→nouveau E, ancien D→nouveau C, ancien E→nouveau F ; nouveau D consacré à découverte",
+        "Succès du livrable documentaire, pas validation de B ni V0.1 matériel"
       ]
     }
   ]
