@@ -1259,6 +1259,16 @@ B09 intercepte désormais le clic d’une ancre `download` détachée du DOM, va
 
 ---
 
+## GP-090 — GPT-6.1 Terra Medium — NomadProbe V0.1 observation-first
+
+- Date d'enregistrement : 2026-10-29 ; quota **50 % → 48 % = 2 pts** ; durée **0:49** ; **succès de livraison documentaire**
+- Commit NomadProbe vérifié `366f5b9fa1360c2b3c8d84879d3b08b9ce8bfe12` sur `work/0.1-foundation`.
+- [Fiche GP-090](runs/GP-090-gpt61-terra-medium-nomadprobe-roadmap-v01.md) · Verbatim complet préservé dans la sauvegarde locale `GP-090-NomadProbe-pending.zip`
+
+Réorganisation observation-first : A fondation validée Windows ; B décodage **VALIDATION UTILISATEUR EN ATTENTE** ; C acquisition USB, D découverte Wi-Fi/BLE, E Explorer et F stabilisation **NON DÉMARRÉS**. Correspondance ancien C→E, D→C, E→F ; 19 versions conservées selon Work. **Quatre fichiers documentaires** modifiés au commit vérifié : `ROADMAP.md`, `WORK_STATE.md`, `docs/CONTEXT_INDEX.md` et `docs/VALIDATION.md`. Aucune exécution de test logiciel ou matériel pendant le run ; les 24 tests de B mentionnés au prompt sont antérieurs. Code et preuves historiques inchangés.
+
+---
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -1321,14 +1331,13 @@ Les trente-sept tâches réussies représentent **395 pts**. Les sept blocages r
 
 ## GPT-6.1 Terra Medium
 
-Première observation, projet **MeshtasticCalculator** :
+Deux observations sur **deux projets distincts** :
 
-- observations : **1**
-- résultat : **1 succès de livraison de correctif de test**
-- quota visible cumulé : **4 pts**
-- durée cumulée : **3 min 28 s**
-- vérifications : **51/51 Node PASS** selon Work ; **Firefox sur nouveau SHA NON EXÉCUTÉ**
-- limite : V02-02 en attente validation utilisateur ; aucune comparaison directe A/B avec GamePanel
+- GP-089 — MeshtasticCalculator : **4 pts / 3:28**, correction du test Firefox B09 livrée ; Node 51/51 PASS ; Firefox réel sur nouveau SHA NON EXÉCUTÉ
+- GP-090 — NomadProbe : **2 pts / 0:49**, réorganisation documentaire livrée ; CP0.1-B en attente de validation utilisateur
+- **2 livraisons / 2 runs**, quota visible cumulé **6 pts**, durée cumulée **4 min 17 s**
+- médianes descriptives : **3 pts** et **2 min 09 s** (arrondie)
+- **Effectif insuffisant et tâches hétérogènes** : aucune conclusion sur le taux de succès ou la vitesse relative du modèle
 
 ## GPT-6.1 Sol High
 
