@@ -2625,10 +2625,10 @@
       "quality": {
         "summary": "Réorganisation documentaire livrée sur work/0.1-foundation : quatre fichiers documentaires modifiés. A validé Windows antérieurement ; B en attente de validation utilisateur ; C, D, E, F non démarrés. Ancien C→E, D→C, E→F, nouveau D Wi-Fi/BLE. Tableau permanent 19 versions conservé selon Work ; liens internes contrôlés selon Work. Aucun test logiciel ou matériel exécuté sur ce run ; aucun code ni preuve technique modifié au commit vérifié."
       },
-      "prompt_capture": "local_saved",
-      "response_capture": "local_saved",
+      "prompt_capture": "exact",
+      "response_capture": "exact",
       "notes": [
-        "Verbatim du prompt et de la réponse préservé dans la sauvegarde locale GP-090-NomadProbe-pending.zip, fiche GitHub résumée seulement",
+        "Verbatim du prompt et de la réponse intégralement restauré dans runs/GP-090-gpt61-terra-medium-nomadprobe-roadmap-v01.md depuis la sauvegarde GP-090-NomadProbe-pending.zip",
         "Date 2026-10-29 = date d'enregistrement de l'observation, date d'exécution Work inconnue",
         "HEAD final confirmé via connecteur GitHub : 366f5b9fa1360c2b3c8d84879d3b08b9ce8bfe12, fichiers ROADMAP.md, WORK_STATE.md, docs/CONTEXT_INDEX.md, docs/VALIDATION.md seulement",
         "CP0.1-A validé Windows précédemment, CP0.1-B validation utilisateur en attente, CP0.1-C/D/E/F non démarrés",
