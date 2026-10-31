@@ -1263,7 +1263,7 @@ B09 intercepte désormais le clic d’une ancre `download` détachée du DOM, va
 
 - Date d'enregistrement : 2026-10-29 ; quota **50 % → 48 % = 2 pts** ; durée **0:49** ; **succès de livraison documentaire**
 - Commit NomadProbe vérifié `366f5b9fa1360c2b3c8d84879d3b08b9ce8bfe12` sur `work/0.1-foundation`.
-- [Fiche GP-090](runs/GP-090-gpt61-terra-medium-nomadprobe-roadmap-v01.md) · Verbatim complet préservé dans la sauvegarde locale `GP-090-NomadProbe-pending.zip`
+- [Prompt et réponse exacts GP-090](runs/GP-090-gpt61-terra-medium-nomadprobe-roadmap-v01.md) · Verbatim restauré dans le dépôt depuis la sauvegarde
 
 Réorganisation observation-first : A fondation validée Windows ; B décodage **VALIDATION UTILISATEUR EN ATTENTE** ; C acquisition USB, D découverte Wi-Fi/BLE, E Explorer et F stabilisation **NON DÉMARRÉS**. Correspondance ancien C→E, D→C, E→F ; 19 versions conservées selon Work. **Quatre fichiers documentaires** modifiés au commit vérifié : `ROADMAP.md`, `WORK_STATE.md`, `docs/CONTEXT_INDEX.md` et `docs/VALIDATION.md`. Aucune exécution de test logiciel ou matériel pendant le run ; les 24 tests de B mentionnés au prompt sont antérieurs. Code et preuves historiques inchangés.
 
