@@ -68,6 +68,7 @@ Ces **petits échantillons** sont les comparaisons les mieux contrôlées du dé
 | [Journal chronologique](RUN_LOG.md) | Historique de tous les runs, sans suppression |
 | [Fiches de runs](runs/) | Prompts, réponses et contexte lorsqu'ils sont disponibles |
 | [JSON canonique](data/runs.json) · [CSV](data/runs.csv) | Données structurées réutilisables |
+| [Vérification locale](scripts/verify_data.py) | Contrôle des données et régénération CSV, sans GitHub Actions |
 
 **Qualité de mesure actuelle :** 14 runs avec **0 point de quota visible** et 15 quotas notés approximatifs ; un run ne fournit aucun quota chiffré. Les statistiques sont descriptives, non une mesure de tokens ou de prix réel.
 
