@@ -2769,6 +2769,41 @@
         "Compatibilité réelle Forge, capture backend authentifiée et révocations concurrentes encore à qualifier ; CP1-B et CP2 non entrepris",
         "Absence de GitHub Actions et d'intervention serveur, préservation du checkout et de PR #26 rapportées par Work ; vérification indépendante non exhaustive"
       ]
+    },
+    {
+      "run_id": "GP-095",
+      "date": "2026-11-01",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Terra",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "gamepanel_037_cp1b_beammp_server_content_requirements",
+      "task_summary": "GamePanel 0.3.7 CP1-B : projection en lecture seule des exigences BeamMP à partir d'un instantané fiable des ZIP actifs",
+      "quota_before_pct": 68,
+      "quota_after_pct": 57,
+      "quota_used_points": 11,
+      "quota_approx": false,
+      "duration_seconds": 297,
+      "status": "success",
+      "commit_sha": "96b72e529cb27cf224b452b40a556ccd3d1226ad",
+      "quality": {
+        "summary": "GamePanel CP1-B livré, commit vérifié sur work/0.3.7-content-comparison (six fichiers). Projection BeamMP en lecture seule distinguant ZIP Resources/Client actifs des copies de bibliothèque, occurrences et rôles global/map_required/ambiguous. Selon Work, exige preuve distincte de distribution et révisions cohérentes, maintient inconnus les rôles ambigus, collisions et inventaires partiels. Work rapporte 47 tests locaux PASS Windows Python 3.13.2 (25 CP0 + 13 nouveaux de projection + 9 tests existants de sélection isolés), non rejoués par le benchmark. Non-mutation des entrées, d'une SQLite temporaire et absence d'accès fichier/réseau pendant projection affirmées par Work. Cinq empreintes concernées vérifiées, manifeste complet non vérifié. Capture backend authentifiée et preuve réelle de distribution encore non acquises ; aucune comparaison avec les fichiers du client."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Date d'enregistrement 2026-11-01 ; date d'exécution Work non communiquée",
+        "Quota Work visible 68 % → 57 % = 11 points de pourcentage ; durée de 4 min 57 s = 297 secondes",
+        "Commit GamePanel 96b72e529cb27cf224b452b40a556ccd3d1226ad confirmé via GitHub sur work/0.3.7-content-comparison, sans mutation du dépôt source par le benchmark",
+        "Six fichiers source modifiés : gamepanel/beammp_requirements.py, tests/test_beammp_requirements_037.py, docs/CONTENT_COMPARISON_037.md, WORK_STATE.md, ASSISTANT_STATE.md, MANIFEST.sha256",
+        "Work rapporte 47 tests ciblés PASS sur Windows Python 3.13.2 : 25 CP0, 13 nouveaux BeamMP, 9 tests de politique de sélection isolés ; pas de réexécution indépendante dans le benchmark",
+        "Neuf tests de sélection isolés : ne remplacent pas la suite POSIX/API (non exécutée dans ce run selon Work)",
+        "Selon Work : vérification synthétique de non-mutation des entrées, d'une SQLite temporaire et d'absence d'accès fichier/réseau durant la projection, sans essai de serveur réel",
+        "Les cinq empreintes ajoutées/modifiées sont vérifiées selon Work ; manifeste complet non contrôlé",
+        "Projection CP1-B en lecture seule : ZIP actifs séparés de la bibliothèque, identité SHA-256+taille, sélection/révision, preuve indépendante de distribution et contradictions préservées",
+        "Capture backend authentifiée et preuve réelle de distribution restent à implémenter et qualifier ; ni comparaison client ni téléchargement",
+        "Work rapporte aucune GitHub Actions, aucune mutation du serveur, main et PR #26 préservés ; le commit seul ne vérifie pas exhaustivement ces déclarations"
+      ]
     }
   ]
 }
