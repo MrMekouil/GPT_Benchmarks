@@ -15,7 +15,7 @@ Observations de ChatGPT Work sur **GamePanel**, **MeshtasticCalculator** et **No
 | 6.0 Sol · Med | 7 | **7/7** | **100 %** | 6 pt | 3:21 | ≈73 pts |
 | 6.0 Sol · High | 1 | **0/1** | **0 %** | — | — | ≈20 pts |
 | 6.0 Astra · Low | 2 | **2/2** | **100 %** | 15 pt | 1:26 | 30 pts |
-| 6.1 Terra · Med | 2 | **2/2** | **100 %** | 3 pt | 2:09 | 6 pts |
+| 6.1 Terra · Med | 3 | **3/3** | **100 %** | 4 pt | 3:28 | 16 pts |
 | 6.1 Sol · Med | 45 | **37/45** | **82 %** | 10 pt | 14:13 | 432 pts |
 | 6.1 Sol · High | 3 | **2/3** | **67 %** | 15,5 pt | 35:25 | 51 pts |
 
@@ -31,7 +31,7 @@ La **moyenne pts/run** est conservée comme mesure secondaire dans [l'analyse d�
 
 | Tentatives | Livraisons rapportées | Sans livraison complète | Validation réelle |
 |:---:|:---:|:---:|:---:|
-| **90** | **73/90** (81,1 %) | **17/90** | **N/D** |
+| **91** | **74/91** (81,3 %) | **17/91** | **N/D** |
 | 3 projets | `status = success` | 10 bloqués · 2 incidents · 4 partiels · 1 échec | Pas encore structurée |
 
 **À comprendre :** une livraison réussie ne prouve ni un fonctionnement sur machine réelle ni une validation utilisateur. La validation réelle n'est actuellement **pas calculable** sur l'ensemble des runs ; N/D ne signifie pas 0 %.
@@ -49,6 +49,7 @@ Ces **petits échantillons** sont les comparaisons les mieux contrôlées du dé
 
 | Run | Projet et tâche | Modèle | Quota | Durée | Livraison / limite |
 |:---|:---|:---|---:|---:|:---|
+| [GP-091](runs/GP-091-gpt61-terra-medium-gamepanel-037-cp0a-requirements-contract.md) | GamePanel · contrat CP0-A 0.3.7 | 6.1 Terra Med | 10 pts | 4:05 | CP0-A livré ; CP0 global incomplet |
 | [GP-090](runs/GP-090-gpt61-terra-medium-nomadprobe-roadmap-v01.md) | NomadProbe · roadmap V0.1 | 6.1 Terra Med | 2 pts | 0:49 | Docs livrées ; validation B en attente |
 | [GP-089](runs/GP-089-gpt61-terra-medium-meshtasticcalculator-firefox-b09.md) | MeshtasticCalculator · Firefox B09 | 6.1 Terra Med | 4 pts | 3:28 | Correctif livré ; Firefox non exécuté sur nouveau SHA |
 | [GP-088](runs/GP-088-gpt6-luna-medium-windows-diagnostics-cp5-documentary-close.md) | GamePanel · clôture documentaire CP5 | 6.0 Luna Med | 2 pts | 14:28 | Docs livrées ; artifact CI bloqué |
@@ -75,4 +76,4 @@ Ces **petits échantillons** sont les comparaisons les mieux contrôlées du dé
 
 **Qualité de mesure actuelle :** 14 runs avec **0 point de quota visible** et 15 quotas notés approximatifs ; un run ne fournit aucun quota chiffré. Les statistiques sont descriptives, non une mesure de tokens ou de prix réel.
 
-<sub>Tableau de bord préparé le 31 octobre 2026 · 90 observations enregistrées · historique et données reproductibles dans ce dépôt.</sub>
+<sub>Tableau de bord actualisé le 1er novembre 2026 · 91 observations enregistrées · historique et données reproductibles dans ce dépôt.</sub>
