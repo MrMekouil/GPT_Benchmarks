@@ -1305,6 +1305,18 @@ Six fichiers modifiés au commit source : `gamepanel/minecraft_requirements.py`,
 
 ---
 
+## GP-094 — GPT-6.1 Terra Medium — GamePanel 0.3.7 CP1-A/R Forge et AutoModpack
+
+- Date d'enregistrement : 2026-11-01 ; quota **72 % → 68 % = 4 pts** ; durée **2:06** ; **correction ciblée CP1-A/R livrée**
+- Commit GamePanel `d4de42f4cf820f803fdebde7c79f84e1af16ce42`, vérifié sur `work/0.3.7-content-comparison`.
+- [Prompt et réponse exacts GP-094](runs/GP-094-gpt61-terra-medium-gamepanel-037-cp1ar-forge-automodpack.md)
+
+Six fichiers modifiés : `gamepanel/minecraft_requirements.py`, `tests/test_minecraft_requirements_037.py`, `docs/CONTENT_COMPARISON_037.md`, `WORK_STATE.md`, `ASSISTANT_STATE.md`, `MANIFEST.sha256`. R1 : qualification Forge avec identité établie, version exploitable et absence de contradiction entre loaders. R2 : assertions historiques AutoModpack ignorées avant analyse ; contradictions authentiques entre sources admissibles conservées.
+
+**Work rapporte 46 tests locaux PASS sous Windows/Python 3.13.2, dont 25 tests CP0**, non rejoués pour ce benchmark. Cinq empreintes concernées vérifiées selon Work, **sans contrôle du manifeste complet**. Compatibilité réelle de Forge, capture backend authentifiée et révocation concurrente restent à qualifier. Arrêt après CP1-A/R ; pas de CP1-B ni CP2 démarré.
+
+---
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -1367,16 +1379,17 @@ Les trente-sept tâches réussies représentent **395 pts**. Les sept blocages r
 
 ## GPT-6.1 Terra Medium
 
-Cinq observations sur **trois projets**, dont trois checkpoints successifs GamePanel. **Ce n'est pas une comparaison A/B directe.**
+Six observations sur **trois projets**, dont quatre checkpoints successifs GamePanel. **Ce n'est pas une comparaison A/B directe.**
 
 - GP-089 — MeshtasticCalculator : **4 pts / 3:28**, correctif de test B09 livré ; Node 51/51 PASS ; Firefox sur nouveau SHA NON EXÉCUTÉ
 - GP-090 — NomadProbe : **2 pts / 0:49**, documentation observation-first livrée ; CP0.1-B en attente de validation utilisateur
 - GP-091 — GamePanel CP0-A : **10 pts / 4:05**, contrat de besoins livré ; 12/12 tests synthétiques PASS selon Work
 - GP-092 — GamePanel CP0-B : **7 pts / 4:45**, renforcement des preuves et de leur fraîcheur ; 25/25 tests ciblés PASS selon Work
 - GP-093 — GamePanel CP1-A : **11 pts / 5:13**, projection Minecraft/Forge livrée ; 42/42 tests ciblés PASS selon Work, capture backend réelle non validée
-- **5 livraisons / 5 runs**, quota visible cumulé **34 pts**, durée cumulée **18 min 20 s**
-- médianes descriptives : **7 pts** et **4 min 05 s** ; quartiles du quota Q1–Q3 **4–10 pts**
-- **Échantillon limité et tâches hétérogènes** : ne pas conclure à une fiabilité ou vitesse relative générales
+- GP-094 — GamePanel CP1-A/R : **4 pts / 2:06**, qualification Forge corrigée et assertions AutoModpack écartées ; 46/46 tests ciblés PASS selon Work, backend réel non validé
+- **6 livraisons / 6 runs**, quota visible cumulé **38 pts**, durée cumulée **20 min 26 s**
+- médianes descriptives : **5,5 pts** et **3 min 47 s** (arrondie) ; quartiles du quota Q1–Q3 **4–10 pts**
+- **Échantillon limité, tâches hétérogènes et checkpoints enchaînés** : aucune conclusion générale sur la fiabilité ou la vitesse relative du modèle
 
 ## GPT-6.1 Sol High
 
