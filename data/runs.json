@@ -2669,6 +2669,39 @@
         "CP0-A livré uniquement : CP0 dans son ensemble non terminé ; politiques par jeu et fraîcheur/authenticité de preuve à poursuivre ; pas de CP0-B ni CP1",
         "Pas de GitHub Actions ni PR/merge dans le travail source selon réponse Work, déclaration non vérifiée de façon exhaustive par le benchmark"
       ]
+    },
+    {
+      "run_id": "GP-092",
+      "date": "2026-11-01",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Terra",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "gamepanel_037_cp0b_evidence_qualification_reliability",
+      "task_summary": "GamePanel 0.3.7 CP0-B : fiabilisation des déclarations et preuves, identité exacte des fichiers et fraîcheur",
+      "quota_before_pct": 90,
+      "quota_after_pct": 83,
+      "quota_used_points": 7,
+      "quota_approx": false,
+      "duration_seconds": 285,
+      "status": "success",
+      "commit_sha": "db5864d3484d089a22734ab74ff71a62f4d2fe1a",
+      "quality": {
+        "summary": "GamePanel CP0-B livré et commit vérifié sur work/0.3.7-content-comparison (six fichiers). Frontière de confiance externe aux déclarations, capacité générale du jeu non suffisante pour qualifier un besoin serveur ; contenus sans version admissibles avec SHA-256 et taille, preuves contradictoires conservées, règle de fraîcheur explicite sans horloge implicite selon Work. Tests locaux Windows Python 3.13.2 : 25 PASS déclarés, dont 12 scénarios hérités de CP0-A ; non rejoués dans le benchmark. Cinq empreintes modifiées du manifeste vérifiées selon Work ; vérification complète du manifeste NON faite. Authentification des sources et politiques de validité restent aux futurs adaptateurs ; CP1 NON commencé."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Date 2026-11-01 = date d'enregistrement, date effective de la session Work non précisée",
+        "Quota 90 % → 83 % = 7 points de pourcentage visibles, pas des tokens ; durée relevée 4 min 45 s = 285 secondes",
+        "Commit source vérifié sur GitHub db5864d3484d089a22734ab74ff71a62f4d2fe1a, branche work/0.3.7-content-comparison ; aucune modification de GamePanel lors de ce benchmark",
+        "Six fichiers source modifiés : gamepanel/content_requirements.py, tests/test_content_requirements_037.py, docs/CONTENT_COMPARISON_037.md, WORK_STATE.md, ASSISTANT_STATE.md, MANIFEST.sha256",
+        "Work déclare 25 tests ciblés PASS sur Windows Python 3.13.2, incluant les 12 cas CP0-A ; tests non rejoués par le gestionnaire de benchmarks",
+        "Cinq entrées modifiées du manifeste vérifiées selon Work, sans revérification intégrale du manifeste",
+        "Capacité générale de jeu insuffisante pour besoin serveur ; frontière de confiance explicitée ; preuve SHA-256+taille sans version ; contradiction et fraîcheur évaluées sans décision arbitraire",
+        "CP0-B livré, pas de CP1 ni comparateur ni adaptateurs métier ; authentification réelle des sources et durée de validité par jeu restent hors mission",
+        "Work indique absence de GitHub Actions et intervention Ubuntu, main et PR Votes #26 préservés ; ces déclarations ne sont pas toutes vérifiées indépendamment"
+      ]
     }
   ]
 }
