@@ -2735,6 +2735,40 @@
         "Limites : capture backend authentifiée, cohérence en révocation concurrente et vérification locale des fichiers client restent non validées",
         "Work rapporte absence de GitHub Actions, d'intervention Ubuntu et d'effet sur main/PR #26 ; ces points ne sont pas tous vérifiés indépendamment"
       ]
+    },
+    {
+      "run_id": "GP-094",
+      "date": "2026-11-01",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Terra",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "gamepanel_037_cp1ar_forge_automodpack_fixes",
+      "task_summary": "GamePanel 0.3.7 CP1-A/R : fiabilisation Forge runtime et neutralité des assertions AutoModpack",
+      "quota_before_pct": 72,
+      "quota_after_pct": 68,
+      "quota_used_points": 4,
+      "quota_approx": false,
+      "duration_seconds": 126,
+      "status": "success",
+      "commit_sha": "d4de42f4cf820f803fdebde7c79f84e1af16ce42",
+      "quality": {
+        "summary": "Correction ciblée CP1-A/R livrée sur GamePanel work/0.3.7-content-comparison, six fichiers modifiés au commit vérifié. Qualification Forge exige identité non ambiguë et version exploitable ; loaders contradictoires ne doivent pas autoriser runtime_status=known. Assertions historiques AutoModpack écartées de la base de preuves avant qualification et résolution des conflits ; contradictions réelles conservées. Work rapporte 46 tests locaux PASS sous Windows Python 3.13.2, dont 25 CP0, non rejoués indépendamment par le benchmark. Cinq empreintes concernées vérifiées selon Work, pas le manifeste entier. Compatibilité Forge réelle, capture backend authentifiée et révocation concurrente non qualifiées ; arrêt après CP1-A/R."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Date 2026-11-01 = date d'enregistrement ; date effective de la session Work non fournie",
+        "Quota Work visible 72 % → 68 %, soit 4 points ; durée de 2 min 06 s = 126 secondes",
+        "Commit GamePanel d4de42f4cf820f803fdebde7c79f84e1af16ce42 vérifié sur GitHub, branche source work/0.3.7-content-comparison",
+        "Six fichiers source modifiés : gamepanel/minecraft_requirements.py, tests/test_minecraft_requirements_037.py, docs/CONTENT_COMPARISON_037.md, WORK_STATE.md, ASSISTANT_STATE.md, MANIFEST.sha256",
+        "Work rapporte 46 tests locaux PASS sous Windows Python 3.13.2, dont 25 CP0 ; pas de réexécution indépendante dans ce benchmark",
+        "Cinq empreintes modifiées du manifeste contrôlées selon Work ; contrôle intégral du manifeste non effectué",
+        "R1 : Forge runtime_status=known impossible lorsque version inconnue/inexploitable, loader contradictoire ou identité indéterminée selon Work",
+        "R2 : AutoModpack historique retiré des assertions avant analyse des preuves ; pas de qualification, conflit ou invalidation arbitraire par cette source",
+        "Compatibilité réelle Forge, capture backend authentifiée et révocations concurrentes encore à qualifier ; CP1-B et CP2 non entrepris",
+        "Absence de GitHub Actions et d'intervention serveur, préservation du checkout et de PR #26 rapportées par Work ; vérification indépendante non exhaustive"
+      ]
     }
   ]
 }
