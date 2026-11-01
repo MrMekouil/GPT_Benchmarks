@@ -2702,6 +2702,39 @@
         "CP0-B livré, pas de CP1 ni comparateur ni adaptateurs métier ; authentification réelle des sources et durée de validité par jeu restent hors mission",
         "Work indique absence de GitHub Actions et intervention Ubuntu, main et PR Votes #26 préservés ; ces déclarations ne sont pas toutes vérifiées indépendamment"
       ]
+    },
+    {
+      "run_id": "GP-093",
+      "date": "2026-11-01",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Terra",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "gamepanel_037_cp1a_minecraft_read_only_requirements",
+      "task_summary": "GamePanel 0.3.7 CP1-A : projection en lecture seule des exigences Minecraft/Forge à partir de publications validées",
+      "quota_before_pct": 83,
+      "quota_after_pct": 72,
+      "quota_used_points": 11,
+      "quota_approx": false,
+      "duration_seconds": 313,
+      "status": "success",
+      "commit_sha": "80658645d95a76571fb13c3bcef4c8eccd89c56a",
+      "quality": {
+        "summary": "CP1-A GamePanel livré et commit vérifié (six fichiers) : projection Minecraft/Forge en lecture seule des exigences de publication sélectionnée, avec vérification d'identité/provenance, prise en compte séparée des preuves, décisions Admin, dépendances et distributions selon Work ; pas de conclusion 'aucun besoin' pour publication absente, révoquée ou périmée. Work rapporte 42 tests PASS sous Windows/Python 3.13.2 (25 CP0 + 17 CP1-A synthétiques), non rejoués indépendamment dans ce benchmark. Les empreintes de cinq fichiers changés vérifiées selon Work, pas le manifeste complet. Intégration backend avec capture authentifiée/cohérente et révocation concurrente non validée en conditions réelles ; pas d'inventaire des fichiers du client."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Date d'enregistrement 2026-11-01 ; date exacte d'exécution Work non communiquée",
+        "Quota visible 83 % → 72 % = 11 points de pourcentage ; durée 5 min 13 s = 313 secondes",
+        "Commit source 80658645d95a76571fb13c3bcef4c8eccd89c56a vérifié via GitHub sur GamePanel, six fichiers modifiés ; aucune intervention sur GamePanel par le benchmark",
+        "Fichiers source : gamepanel/minecraft_requirements.py, tests/test_minecraft_requirements_037.py, docs/CONTENT_COMPARISON_037.md, WORK_STATE.md, ASSISTANT_STATE.md, MANIFEST.sha256",
+        "Work indique 42 tests synthétiques PASS (25 CP0 et 17 CP1-A) sur Windows Python 3.13.2 ; tests non rejoués pour le benchmark",
+        "Cinq empreintes ajoutées/modifiées vérifiées selon Work ; aucune vérification de l'intégralité de MANIFEST.sha256 ni du dépôt",
+        "Publication sélectionnée : provenance et identité vérifiées selon Work, sans convertir automatiquement l'absence/révocation/péremption en besoins vides certains",
+        "Limites : capture backend authentifiée, cohérence en révocation concurrente et vérification locale des fichiers client restent non validées",
+        "Work rapporte absence de GitHub Actions, d'intervention Ubuntu et d'effet sur main/PR #26 ; ces points ne sont pas tous vérifiés indépendamment"
+      ]
     }
   ]
 }
