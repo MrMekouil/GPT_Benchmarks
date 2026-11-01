@@ -4,22 +4,22 @@
 
 ## État de la collecte — 1er novembre 2026
 
-Les **95 runs** couvrent 3 projets. Ils ne constituent **pas** un protocole expérimental équilibré : les modèles, efforts, dates, projets et tailles de missions varient.
+Les **96 runs** couvrent 3 projets. Ils ne constituent **pas** un protocole expérimental équilibré : les modèles, efforts, dates, projets et tailles de missions varient.
 
 | Statut du run | Nombre | Signification |
 |:---|---:|:---|
-| `success` | **78** | Livrable du prompt terminé ; validation réelle pas forcément acquise |
+| `success` | **79** | Livrable du prompt terminé ; validation réelle pas forcément acquise |
 | `blocked` | 10 | STOP sans livraison complète, souvent dû à une limite d'environnement |
 | `stalled` | 2 | Session bloquée, sans résultat confirmé |
 | `partial` | 4 | Travail commencé mais objectif non entièrement livré |
 | `failure` | 1 | Objectif raté |
-| **Total** | **95** | **82,1 % de livraisons** |
+| **Total** | **96** | **82,3 % de livraisons** |
 
 ### Répartition par projet
 
 | Projet | Runs | Livraisons du prompt |
 |:---|---:|---:|
-| GamePanel | 93 | 76 |
+| GamePanel | 94 | 77 |
 | MeshtasticCalculator | 1 | 1 |
 | NomadProbe | 1 | 1 |
 
@@ -37,15 +37,15 @@ Les colonnes « médiane », « dispersion » et « durée » sont calculées **
 | 6.0 Sol Medium | 7 | 7/7 | 6 pt | 4–21 | 03:21 | 10,4 |
 | 6.0 Sol High | 1 | 0/1 | — | — | — | 20 |
 | 6.0 Astra Low | 2 | 2/2 | 15 pt | — | 01:26 | 15 |
-| 6.1 Terra Medium | 7 | 7/7 | 7 pt | 4–11 | 04:05 | 7,0 |
+| 6.1 Terra Medium | 8 | 8/8 | 8,5 pt | 4–10 | 04:00 | 7,4 |
 | 6.1 Sol Medium | 45 | 37/45 | 10 pt | 6–16 | 14:13 | 9,6 |
 | 6.1 Sol High | 3 | 2/3 | 15,5 pt | — | 35:25 | 17 |
 
 ¹ Q1–Q3 : quartiles par rang (nearest-rank), affichés seulement si au moins **5 succès**. Un tiret signifie effectif insuffisant ou donnée absente, **pas zéro**. ² La moyenne brute comprend les tentatives infructueuses avec quota renseigné ; pour les runs à effort non relevé, le quota n'est connu que pour une partie des observations.
 
-**Périmètre des relevés :** 94/95 quotas chiffrés, 684 points de pourcentage visibles cumulés, 14 runs à 0 point **affiché**, 15 mesures signalées approximatives. Les points visibles ne sont ni une somme de tokens ni une unité tarifaire.
+**Périmètre des relevés :** 95/96 quotas chiffrés, 694 points de pourcentage visibles cumulés, 14 runs à 0 point **affiché**, 15 mesures signalées approximatives. Les points visibles ne sont ni une somme de tokens ni une unité tarifaire.
 
-La médiane et la moyenne sont décrites comme des **observations de charge** ; les comparer entre modèles serait trompeur sans travaux de difficulté semblable. En particulier, **GPT-6.1 Terra Medium n'a que sept observations sur trois projets différents (dont cinq checkpoints successifs de GamePanel)**, alors que GPT-6.1 Sol Medium possède surtout des missions GamePanel de production plus larges.
+La médiane et la moyenne sont décrites comme des **observations de charge** ; les comparer entre modèles serait trompeur sans travaux de difficulté semblable. En particulier, **GPT-6.1 Terra Medium n'a que huit observations sur trois projets différents (dont six checkpoints successifs de GamePanel)**, alors que GPT-6.1 Sol Medium possède surtout des missions GamePanel de production plus larges.
 
 ## Comparaisons directes
 
