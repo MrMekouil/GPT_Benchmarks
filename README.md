@@ -15,7 +15,7 @@ Observations de ChatGPT Work sur **GamePanel**, **MeshtasticCalculator** et **No
 | 6.0 Sol · Med | 7 | **7/7** | **100 %** | 6 pt | 3:21 | ≈73 pts |
 | 6.0 Sol · High | 1 | **0/1** | **0 %** | — | — | ≈20 pts |
 | 6.0 Astra · Low | 2 | **2/2** | **100 %** | 15 pt | 1:26 | 30 pts |
-| 6.1 Terra · Med | 6 | **6/6** | **100 %** | 5,5 pt | 3:47 | 38 pts |
+| 6.1 Terra · Med | 7 | **7/7** | **100 %** | 7 pt | 4:05 | 49 pts |
 | 6.1 Sol · Med | 45 | **37/45** | **82 %** | 10 pt | 14:13 | 432 pts |
 | 6.1 Sol · High | 3 | **2/3** | **67 %** | 15,5 pt | 35:25 | 51 pts |
 
@@ -31,7 +31,7 @@ La **moyenne pts/run** est conservée comme mesure secondaire dans [l'analyse d�
 
 | Tentatives | Livraisons rapportées | Sans livraison complète | Validation réelle |
 |:---:|:---:|:---:|:---:|
-| **94** | **77/94** (81,9 %) | **17/94** | **N/D** |
+| **95** | **78/95** (82,1 %) | **17/95** | **N/D** |
 | 3 projets | `status = success` | 10 bloqués · 2 incidents · 4 partiels · 1 échec | Pas encore structurée |
 
 **À comprendre :** une livraison réussie ne prouve ni un fonctionnement sur machine réelle ni une validation utilisateur. La validation réelle n'est actuellement **pas calculable** sur l'ensemble des runs ; N/D ne signifie pas 0 %.
@@ -49,11 +49,11 @@ Ces **petits échantillons** sont les comparaisons les mieux contrôlées du dé
 
 | Run | Projet et tâche | Modèle | Quota | Durée | Livraison / limite |
 |:---|:---|:---|---:|---:|:---|
+| [GP-095](runs/GP-095-gpt61-terra-medium-gamepanel-037-cp1b-beammp-requirements.md) | GamePanel · BeamMP CP1-B 0.3.7 | 6.1 Terra Med | 11 pts | 4:57 | Projection livrée ; distribution réelle non qualifiée |
 | [GP-094](runs/GP-094-gpt61-terra-medium-gamepanel-037-cp1ar-forge-automodpack.md) | GamePanel · Forge/AutoModpack CP1-A/R | 6.1 Terra Med | 4 pts | 2:06 | Correctif livré ; backend non qualifié |
 | [GP-093](runs/GP-093-gpt61-terra-medium-gamepanel-037-cp1a-minecraft-requirements.md) | GamePanel · Minecraft CP1-A 0.3.7 | 6.1 Terra Med | 11 pts | 5:13 | CP1-A livré ; backend réel non qualifié |
 | [GP-092](runs/GP-092-gpt61-terra-medium-gamepanel-037-cp0b-evidence-qualification.md) | GamePanel · preuves CP0-B 0.3.7 | 6.1 Terra Med | 7 pts | 4:45 | CP0-B livré ; adaptateurs encore à qualifier |
 | [GP-091](runs/GP-091-gpt61-terra-medium-gamepanel-037-cp0a-requirements-contract.md) | GamePanel · contrat CP0-A 0.3.7 | 6.1 Terra Med | 10 pts | 4:05 | CP0-A livré ; CP0 global incomplet |
-| [GP-090](runs/GP-090-gpt61-terra-medium-nomadprobe-roadmap-v01.md) | NomadProbe · roadmap V0.1 | 6.1 Terra Med | 2 pts | 0:49 | Docs livrées ; validation B en attente |
 
 ## Comment lire les résultats
 
@@ -76,4 +76,4 @@ Ces **petits échantillons** sont les comparaisons les mieux contrôlées du dé
 
 **Qualité de mesure actuelle :** 14 runs avec **0 point de quota visible** et 15 quotas notés approximatifs ; un run ne fournit aucun quota chiffré. Les statistiques sont descriptives, non une mesure de tokens ou de prix réel.
 
-<sub>Tableau de bord actualisé le 1er novembre 2026 · 94 observations enregistrées · historique et données reproductibles dans ce dépôt.</sub>
+<sub>Tableau de bord actualisé le 1er novembre 2026 · 95 observations enregistrées · historique et données reproductibles dans ce dépôt.</sub>
