@@ -1269,6 +1269,18 @@ Réorganisation observation-first : A fondation validée Windows ; B décodage *
 
 ---
 
+## GP-091 — GPT-6.1 Terra Medium — GamePanel 0.3.7 CP0-A contrat de qualification
+
+- Date d'enregistrement : 2026-11-01 ; quota **100 % → 90 % = 10 pts** ; durée **4:05** ; **succès de livraison CP0-A**
+- Commit GamePanel `d0e3ba304758723e3d804f2705801ba2effec318`, confirmé sur `work/0.3.7-content-comparison`.
+- [Prompt et réponse exacts GP-091](runs/GP-091-gpt61-terra-medium-gamepanel-037-cp0a-requirements-contract.md)
+
+Six fichiers modifiés dans le commit source : `gamepanel/content_requirements.py`, `tests/test_content_requirements_037.py`, `docs/CONTENT_COMPARISON_037.md`, `WORK_STATE.md`, `ASSISTANT_STATE.md` et `MANIFEST.sha256`. Contrat distinct de pertinence, obtention et preuves, avec inconnus/conflits préservés, ZIP BeamMP bibliothèque vs actif/distribué, absence de constat local et exclusion d'AutoModpack.
+
+**Work rapporte 12/12 tests synthétiques PASS sous Windows Python 3.13.2**, plus contrôle syntaxique. Non rejoués dans ce benchmark. Les cinq empreintes ajoutées/modifiées ont été vérifiées selon Work, **sans vérification intégrale du manifeste**. **CP0-A livré, CP0 global NON TERMINÉ** : politiques par jeu et contrôle d'authenticité/fraîcheur des preuves restent à développer. Aucun CP0-B ni CP1 entrepris selon Work.
+
+---
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -1331,13 +1343,14 @@ Les trente-sept tâches réussies représentent **395 pts**. Les sept blocages r
 
 ## GPT-6.1 Terra Medium
 
-Deux observations sur **deux projets distincts** :
+Trois observations sur **trois projets différents**, sans comparabilité directe :
 
-- GP-089 — MeshtasticCalculator : **4 pts / 3:28**, correction du test Firefox B09 livrée ; Node 51/51 PASS ; Firefox réel sur nouveau SHA NON EXÉCUTÉ
-- GP-090 — NomadProbe : **2 pts / 0:49**, réorganisation documentaire livrée ; CP0.1-B en attente de validation utilisateur
-- **2 livraisons / 2 runs**, quota visible cumulé **6 pts**, durée cumulée **4 min 17 s**
-- médianes descriptives : **3 pts** et **2 min 09 s** (arrondie)
-- **Effectif insuffisant et tâches hétérogènes** : aucune conclusion sur le taux de succès ou la vitesse relative du modèle
+- GP-089 — MeshtasticCalculator : **4 pts / 3:28**, correctif de test B09 livré ; Node 51/51 PASS ; Firefox sur nouveau SHA NON EXÉCUTÉ
+- GP-090 — NomadProbe : **2 pts / 0:49**, documentation observation-first livrée ; CP0.1-B en attente de validation utilisateur
+- GP-091 — GamePanel : **10 pts / 4:05**, contrat de besoins CP0-A livré ; 12/12 tests synthétiques PASS selon Work ; CP0 global non terminé
+- **3 livraisons / 3 runs**, quota visible cumulé **16 pts**, durée cumulée **8 min 22 s**
+- médianes descriptives : **4 pts** et **3 min 28 s**
+- **Échantillon très limité et tâches hétérogènes** : ne pas inférer une fiabilité ni une vitesse relative générales
 
 ## GPT-6.1 Sol High
 
