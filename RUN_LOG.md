@@ -1329,6 +1329,18 @@ Six fichiers modifiés dans le commit source : `gamepanel/beammp_requirements.py
 
 ---
 
+## GP-096 — GPT-6.1 Terra Medium — GamePanel 0.3.7 CP1-B/R ZIP actifs BeamMP
+
+- Date d'enregistrement : 2026-11-01 ; quota **57 % → 47 % = 10 pts** ; durée **3:55** ; **succès de correction ciblée CP1-B/R**
+- Commit GamePanel `67fb1060ad6868da1ad3e754679a4e6e464350bf`, vérifié sur `work/0.3.7-content-comparison`.
+- [Prompt et réponse exacts GP-096](runs/GP-096-gpt61-terra-medium-gamepanel-037-cp1br-active-beammp-requirements.md)
+
+Six fichiers modifiés au commit source : `gamepanel/beammp_requirements.py`, `tests/test_beammp_requirements_037.py`, `docs/CONTENT_COMPARISON_037.md`, `WORK_STATE.md`, `ASSISTANT_STATE.md` et `MANIFEST.sha256`. R1 : complétude du Client actif distinguée de la bibliothèque, erreurs inactives conservées comme diagnostics ; le futur backend doit attester explicitement `active_inventory_complete`, l'ancien `inventory_complete` global n'étant plus admissible. R2 : conflits exclusivement inactifs diagnostiques, vrais conflits entre ZIP actifs conservés, compatibilité inconnue si preuves insuffisantes.
+
+**Work rapporte 57 tests locaux PASS sous Windows/Python 3.13.2 (25 CP0 + 23 projection BeamMP + 9 tests de sélection isolés)** ; tests non rejoués indépendamment dans le benchmark. La suite POSIX/API complète n'a pas été qualifiée par les neuf tests isolés. Cinq empreintes modifiées vérifiées selon Work, sans revérification du manifeste complet. La capture backend authentifiée et la preuve réelle de distribution restent en attente de qualification, sans essai sur serveur réel.
+
+---
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -1391,7 +1403,7 @@ Les trente-sept tâches réussies représentent **395 pts**. Les sept blocages r
 
 ## GPT-6.1 Terra Medium
 
-Sept observations sur **trois projets**, dont cinq checkpoints successifs GamePanel. **Ce n'est pas une comparaison A/B directe.**
+Huit observations sur **trois projets**, dont six checkpoints successifs GamePanel. **Ce n'est pas une comparaison A/B directe.**
 
 - GP-089 — MeshtasticCalculator : **4 pts / 3:28**, correctif de test B09 livré ; Node 51/51 PASS ; Firefox sur nouveau SHA NON EXÉCUTÉ
 - GP-090 — NomadProbe : **2 pts / 0:49**, documentation observation-first livrée ; CP0.1-B en attente de validation utilisateur
@@ -1399,9 +1411,10 @@ Sept observations sur **trois projets**, dont cinq checkpoints successifs GamePa
 - GP-092 — GamePanel CP0-B : **7 pts / 4:45**, renforcement des preuves et de leur fraîcheur ; 25/25 tests ciblés PASS selon Work
 - GP-093 — GamePanel CP1-A : **11 pts / 5:13**, projection Minecraft/Forge livrée ; 42/42 tests ciblés PASS selon Work, capture backend réelle non validée
 - GP-094 — GamePanel CP1-A/R : **4 pts / 2:06**, qualification Forge corrigée et assertions AutoModpack écartées ; 46/46 tests ciblés PASS selon Work, backend réel non validé
-- GP-095 — GamePanel CP1-B : **11 pts / 4:57**, projection BeamMP livrée ; 47/47 tests ciblés PASS selon Work, capture backend et preuve réelle de distribution non qualifiées
-- **7 livraisons / 7 runs**, quota visible cumulé **49 pts**, durée cumulée **25 min 23 s**
-- médianes descriptives : **7 pts** et **4 min 05 s** ; quartiles du quota Q1–Q3 **4–11 pts**
+- GP-095 — GamePanel CP1-B : **11 pts / 4:57**, projection BeamMP livrée ; 47/47 tests ciblés PASS selon Work, capture backend et distribution réelle non qualifiées
+- GP-096 — GamePanel CP1-B/R : **10 pts / 3:55**, exigences actives isolées de la bibliothèque BeamMP ; 57/57 tests ciblés PASS selon Work, capture backend réelle non validée
+- **8 livraisons / 8 runs**, quota visible cumulé **59 pts**, durée cumulée **29 min 18 s**
+- médianes descriptives : **8,5 pts** et **4 min 00 s** ; quartiles du quota Q1–Q3 **4–10 pts**
 - **Échantillon limité, tâches hétérogènes et checkpoints enchaînés** : aucune conclusion générale sur la fiabilité ou la vitesse relative du modèle
 
 ## GPT-6.1 Sol High
