@@ -1281,6 +1281,18 @@ Six fichiers modifiés dans le commit source : `gamepanel/content_requirements.p
 
 ---
 
+## GP-092 — GPT-6.1 Terra Medium — GamePanel 0.3.7 CP0-B fiabilisation des preuves
+
+- Date d'enregistrement : 2026-11-01 ; quota **90 % → 83 % = 7 pts** ; durée **4:45** ; **succès de livraison CP0-B**
+- Commit GamePanel `db5864d3484d089a22734ab74ff71a62f4d2fe1a`, confirmé sur `work/0.3.7-content-comparison`.
+- [Prompt et réponse exacts GP-092](runs/GP-092-gpt61-terra-medium-gamepanel-037-cp0b-evidence-qualification.md)
+
+Six fichiers modifiés au commit source : `gamepanel/content_requirements.py`, `tests/test_content_requirements_037.py`, `docs/CONTENT_COMPARISON_037.md`, `WORK_STATE.md`, `ASSISTANT_STATE.md`, `MANIFEST.sha256`. CP0-B renforce la frontière de confiance des preuves, interdit de déduire un besoin serveur d'une capacité générale du jeu, accepte une identité de fichier SHA-256 + taille sans version, conserve les contradictions et demande une fraîcheur explicite.
+
+**Work rapporte 25 tests ciblés PASS sous Windows Python 3.13.2**, dont les 12 scénarios CP0-A ; non rejoués dans ce benchmark. Cinq empreintes modifiées du manifeste vérifiées selon Work, mais **aucune validation exhaustive du manifeste**. **CP0-B livré**, CP1 non commencé ; l'authentification des sources et les durées de validité adaptées restent à la charge des futurs adaptateurs.
+
+---
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -1343,14 +1355,15 @@ Les trente-sept tâches réussies représentent **395 pts**. Les sept blocages r
 
 ## GPT-6.1 Terra Medium
 
-Trois observations sur **trois projets différents**, sans comparabilité directe :
+Quatre observations sur **trois projets** (deux checkpoints GamePanel), sans comparaison A/B directe :
 
 - GP-089 — MeshtasticCalculator : **4 pts / 3:28**, correctif de test B09 livré ; Node 51/51 PASS ; Firefox sur nouveau SHA NON EXÉCUTÉ
 - GP-090 — NomadProbe : **2 pts / 0:49**, documentation observation-first livrée ; CP0.1-B en attente de validation utilisateur
-- GP-091 — GamePanel : **10 pts / 4:05**, contrat de besoins CP0-A livré ; 12/12 tests synthétiques PASS selon Work ; CP0 global non terminé
-- **3 livraisons / 3 runs**, quota visible cumulé **16 pts**, durée cumulée **8 min 22 s**
-- médianes descriptives : **4 pts** et **3 min 28 s**
-- **Échantillon très limité et tâches hétérogènes** : ne pas inférer une fiabilité ni une vitesse relative générales
+- GP-091 — GamePanel CP0-A : **10 pts / 4:05**, contrat de besoins livré ; 12/12 tests synthétiques PASS selon Work
+- GP-092 — GamePanel CP0-B : **7 pts / 4:45**, renforcement des preuves et de leur fraîcheur ; 25/25 tests ciblés PASS selon Work ; CP1 non commencé
+- **4 livraisons / 4 runs**, quota visible cumulé **23 pts**, durée cumulée **13 min 07 s**
+- médianes descriptives : **5,5 pts** et **3 min 47 s** (arrondie)
+- **Effectif limité et tâches hétérogènes** : ne pas déduire une fiabilité ou vitesse relative générale
 
 ## GPT-6.1 Sol High
 
