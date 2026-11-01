@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-31",
+  "updated_at": "2026-11-01",
   "measurement_notes": [
     "quota_used_points correspond aux points de pourcentage visibles dans l'interface Work/ChatGPT, pas à un comptage exact de tokens",
     "quota_approx=true indique une valeur arrondie, déduite ou seulement observée comme delta approximatif",
@@ -2635,6 +2635,39 @@
         "24 tests PASS rapportés antérieurement sur CP0.1-B ; aucun test logiciel/matériel lancé pendant GP-090",
         "Ancien C→nouveau E, ancien D→nouveau C, ancien E→nouveau F ; nouveau D consacré à découverte",
         "Succès du livrable documentaire, pas validation de B ni V0.1 matériel"
+      ]
+    },
+    {
+      "run_id": "GP-091",
+      "date": "2026-11-01",
+      "project": "GamePanel",
+      "model": "GPT-6.1 Terra",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "gamepanel_037_cp0a_content_requirements_contract",
+      "task_summary": "GamePanel 0.3.7 CP0-A : contrat versionné de qualification des besoins client et tests synthétiques",
+      "quota_before_pct": 100,
+      "quota_after_pct": 90,
+      "quota_used_points": 10,
+      "quota_approx": false,
+      "duration_seconds": 245,
+      "status": "success",
+      "commit_sha": "d0e3ba304758723e3d804f2705801ba2effec318",
+      "quality": {
+        "summary": "GamePanel CP0-A livré et commit vérifié sur work/0.3.7-content-comparison (six fichiers). Contrat indépendant séparant pertinence, obtention et preuves ; inconnus/conflits conservés, bibliothèque BeamMP distincte du contenu actif, aucun constat de présence locale, AutoModpack exclu. Work rapporte 12/12 tests synthétiques PASS sous Windows Python 3.13.2 et contrôle syntaxique, non rejoués dans ce benchmark. Cinq empreintes concernées contrôlées selon Work, manifeste complet NON vérifié. CP0 global NON terminé : politiques par jeu et validation authenticité/fraîcheur des preuves à faire. Pas de CP0-B/CP1 livré."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Date 2026-11-01 = date d'enregistrement ; date effective du run Work non fournie",
+        "Quota visible 100 % → 90 % : 10 points affichés ; durée observée 4 min 05 s, 245 secondes",
+        "Commit GitHub d0e3ba304758723e3d804f2705801ba2effec318 confirmé sur branche source work/0.3.7-content-comparison, aucune mutation du dépôt GamePanel par cet enregistrement",
+        "Six fichiers modifiés sur le commit source : gamepanel/content_requirements.py, tests/test_content_requirements_037.py, docs/CONTENT_COMPARISON_037.md, WORK_STATE.md, ASSISTANT_STATE.md, MANIFEST.sha256",
+        "Work rapporte 12 tests synthétiques PASS et contrôle de syntaxe sous Windows Python 3.13.2 ; non rejoués indépendamment dans le benchmark",
+        "Cinq empreintes modifiées ou ajoutées vérifiées selon Work ; aucun audit exhaustif du manifeste ou du dépôt allégué",
+        "Contrat de qualification sans comparaison avec la présence locale ; états inconnus/conflits conservés ; distinction BeamMP bibliothèque ZIP et contenu actif ; AutoModpack exclu",
+        "CP0-A livré uniquement : CP0 dans son ensemble non terminé ; politiques par jeu et fraîcheur/authenticité de preuve à poursuivre ; pas de CP0-B ni CP1",
+        "Pas de GitHub Actions ni PR/merge dans le travail source selon réponse Work, déclaration non vérifiée de façon exhaustive par le benchmark"
       ]
     }
   ]
