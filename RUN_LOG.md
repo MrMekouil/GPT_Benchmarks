@@ -1353,6 +1353,18 @@ Diagnostic avant correctif : banc WPF Découverte R2 **22/22 PASS** et R3 **1/15
 
 ---
 
+## GP-098 — GPT-6.2 Sol Medium — MeshtasticCalculator 0.2.4 CP23 Grille Firefox
+
+- Date d'enregistrement : 2026-11-18 ; quota **40 % → 21 % = 19 pts** ; durée **19:59** ; **CP23 livré, HGT MainPC non encore testés**.
+- Commit MeshtasticCalculator `de1506d4f8d0045ac560fc52b1c1f75ec9c9acec` confirmé sur `work/v0.2` ; [rapport CP23](https://github.com/MrMekouil/MeshtasticCalculator/blob/de1506d4f8d0045ac560fc52b1c1f75ec9c9acec/docs/GRID_COVERAGE_CP23.md).
+- [Prompt et réponse exacts GP-098](runs/GP-098-gpt62-sol-medium-meshtasticcalculator-024-cp23-grid-firefox.md).
+
+La Grille progressive CP22 est raccordée à Firefox sur **1–25 km sous limites**, avec réglages rayon/maille RF/pas terrain indépendants, cellules calculées par blocs, progression, NoData, Heatmap/Contours, pause/reprise pendant une session ouverte, annulation et sauvegarde/restauration sur demande d'une grille terminée via IndexedDB.
+
+**Work annonce 177/177 tests Node PASS, 6/6 Firefox PASS et secours SVG PASS** ; parité RF des cinq modèles sur scénarios comparés. Ces résultats ne sont pas rejoués par le benchmark. **L'essai CP23 avec HGT originaux MainPC reste en attente**, et le rejeu du banc radial historique n'a pas produit de verdict final. Un calcul interrompu ne reprend pas après fermeture du navigateur. Chuwi différé, CP24/25 non entrepris, commande MainPC archivée dans la réponse.
+
+---
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -1443,11 +1455,13 @@ GP-041 a consommé **20 pts / 53:27** et s’est interrompu avant commit/push ma
 
 ## GPT-6.2 Sol Medium
 
-Une observation (**GP-097 — GamePanel CP20**) : **7 points de quota visible**, **4 min 23 s**, correction responsive WPF de « Mes jeux » livrée au commit `5dcfa5b`.
+Deux observations sur **deux projets** différents ; ces résultats ne sont pas un test à prompt commun.
 
-- **1 livraison / 1 run**, quota médian **7 points** et durée médiane **4 min 23 s** (une seule valeur).
-- La compilation croisée WPF est annoncée PASS et le filtre Linux CP20 indique 4 PASS, 0 FAIL, 1 SKIP ; **validation native Windows R3 encore non effectuée après correction**.
-- **Effectif d'une seule observation** : aucune conclusion sur la fiabilité ni sur une comparaison de vitesse entre modèles.
+- GP-097 — GamePanel CP20 : **7 pts / 4:23**, correction WPF livrée ; compilation croisée et filtre Linux PASS selon Work, mesures natives Windows après correctif en attente.
+- GP-098 — MeshtasticCalculator CP23 : **19 pts / 19:59**, Grille progressive Firefox livrée ; 177 Node / 6 Firefox / secours SVG PASS selon Work, test HGT réel MainPC en attente.
+- **2 livraisons / 2 runs**, quota visible cumulé **26 pts**, durée cumulée **24 min 22 s**.
+- Médianes descriptives : **13 pts** et **12 min 11 s**.
+- **Deux tâches hétérogènes et validations terrain encore en attente** : pas de conclusion générale de fiabilité ou de vitesse entre modèles.
 
 ## Comparaison directe historique
 

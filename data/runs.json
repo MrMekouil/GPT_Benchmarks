@@ -2872,6 +2872,40 @@
         "Les fenêtres 640×560 et 1180×820, 100 % et 125 %, panneaux ouverts/repliés sont des cas prévus par le banc, pas des validations Windows après correctif",
         "Aucune exécution GitHub Actions pour ce benchmark, aucune modification du projet GamePanel ; CP21 non entrepris selon la réponse"
       ]
+    },
+    {
+      "run_id": "GP-098",
+      "date": "2026-11-18",
+      "project": "MeshtasticCalculator",
+      "model": "GPT-6.2 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "meshtasticcalculator_024_cp23_progressive_grid_firefox_integration",
+      "task_summary": "MeshtasticCalculator 0.2.4 CP23 : intégrer la Grille progressive CP22 dans Firefox, 1–25 km, pause/reprise et sauvegarde locale",
+      "quota_before_pct": 40,
+      "quota_after_pct": 21,
+      "quota_used_points": 19,
+      "quota_approx": false,
+      "duration_seconds": 1199,
+      "status": "success",
+      "commit_sha": "de1506d4f8d0045ac560fc52b1c1f75ec9c9acec",
+      "quality": {
+        "summary": "Livraison CP23 confirmée au commit MeshtasticCalculator et rapport CP23 consulté. Grille progressive Firefox de 1 à 25 km sous budgets, réglages séparés rayon/maille RF/pas terrain, blocs et progression, NoData, annulation, pause/reprise en session et sauvegarde IndexedDB sur demande d'une grille terminée. Work rapporte 177/177 tests Node PASS, 6/6 contrôles Firefox PASS, secours SVG PASS et parité des cinq modèles RF sur fixtures, sans réexécution indépendante pour ce benchmark. Validation CP23 sur les HGT originaux MainPC encore en attente ; banc radial historique rejoué sans verdict final. Reprise d'un calcul interrompu après fermeture non prévue. CP24/25 non entamés."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Date d'enregistrement 2026-11-18 ; date exacte d'exécution Work non communiquée",
+        "Quota visible 40 % → 21 % = 19 points de pourcentage ; durée 19 min 59 s = 1199 secondes",
+        "Commit source de1506d4f8d0045ac560fc52b1c1f75ec9c9acec vérifié sur GitHub, branche work/v0.2 ; rapport docs/GRID_COVERAGE_CP23.md consulté à ce SHA",
+        "Commit source contenant 19 fichiers modifiés, incluant Worker de Grille, UI, tests, lanceur Firefox et documentation",
+        "Work annonce 177/177 Node PASS, 6/6 Firefox PASS, secours SVG PASS et parité des cinq modèles RF sur scénarios comparés ; tests non rejoués indépendamment",
+        "Grille progressive Firefox 1–25 km plafonnée, rayon/maille RF/pas terrain indépendants, progression et NoData, Heatmap/Contours, pause/reprise et annulation",
+        "IndexedDB sauvegarde explicitement un résultat terminé ; calcul interrompu non repris après fermeture Firefox",
+        "CP23 non validé sur les HGT réels du MainPC au terme du run ; banc radial historique complet sans verdict final",
+        "Commande de lancement MainPC et recette de test 1 km, 5 km, 25 km conservées dans la fiche GP-098",
+        "Chuwi différé ; CP24/25 non démarrés ; aucune GitHub Actions déclenchée par le benchmark"
+      ]
     }
   ]
 }
