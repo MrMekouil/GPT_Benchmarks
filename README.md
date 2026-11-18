@@ -18,7 +18,7 @@ Observations de ChatGPT Work sur **GamePanel**, **MeshtasticCalculator** et **No
 | 6.1 Terra · Med | 8 | **8/8** | **100 %** | 8,5 pt | 4:00 | 59 pts |
 | 6.1 Sol · Med | 45 | **37/45** | **82 %** | 10 pt | 14:13 | 432 pts |
 | 6.1 Sol · High | 3 | **2/3** | **67 %** | 15,5 pt | 35:25 | 51 pts |
-| 6.2 Sol · Med | 2 | **2/2** | **100 %** | 13 pt | 12:11 | 26 pts |
+| 6.2 Sol · Med | 3 | **3/3** | **100 %** | 14 pt | 10:08 | 40 pts |
 
 ¹ **Médianes calculées sur les livraisons `success` uniquement.** ² **Quota cumulé :** somme des points de pourcentage *visibles* de toutes les tentatives du groupe, y compris les échecs et blocages. Le signe ≈ signale qu'au moins un relevé était approximatif. Les deux incidents Luna à effort non relevé restent hors tableau et représentent **5 pts renseignés** supplémentaires (une consommation inconnue).
 
@@ -32,7 +32,7 @@ La **moyenne pts/run** est conservée comme mesure secondaire dans [l'analyse d�
 
 | Tentatives | Livraisons rapportées | Sans livraison complète | Validation réelle |
 |:---:|:---:|:---:|:---:|
-| **98** | **81/98** (82,7 %) | **17/98** | **N/D** |
+| **99** | **82/99** (82,8 %) | **17/99** | **N/D** |
 | 3 projets | `status = success` | 10 bloqués · 2 incidents · 4 partiels · 1 échec | Pas encore structurée |
 
 **À comprendre :** une livraison réussie ne prouve ni un fonctionnement sur machine réelle ni une validation utilisateur. La validation réelle n'est actuellement **pas calculable** sur l'ensemble des runs ; N/D ne signifie pas 0 %.
@@ -50,11 +50,11 @@ Ces **petits échantillons** sont les comparaisons les mieux contrôlées du dé
 
 | Run | Projet et tâche | Modèle | Quota | Durée | Livraison / limite |
 |:---|:---|:---|---:|---:|:---|
+| [GP-099](runs/GP-099-gpt62-sol-medium-gamepanel-037-cp20-ergonomic-finalization.md) | GamePanel · ergonomie CP20 « Mes jeux » | 6.2 Sol Med | 14 pts | 10:08 | Correctif livré ; 1 FAIL existant, validation pilote attendue |
 | [GP-098](runs/GP-098-gpt62-sol-medium-meshtasticcalculator-024-cp23-grid-firefox.md) | MeshtasticCalculator · Grille CP23 Firefox | 6.2 Sol Med | 19 pts | 19:59 | Grille livrée ; HGT MainPC à tester |
 | [GP-097](runs/GP-097-gpt62-sol-medium-gamepanel-037-cp20-responsive-mes-jeux.md) | GamePanel · CP20 Mes jeux responsive | 6.2 Sol Med | 7 pts | 4:23 | Correctif livré ; WPF natif à valider |
 | [GP-096](runs/GP-096-gpt61-terra-medium-gamepanel-037-cp1br-active-beammp-requirements.md) | GamePanel · BeamMP CP1-B/R 0.3.7 | 6.1 Terra Med | 10 pts | 3:55 | Correction livrée ; backend réel à qualifier |
 | [GP-095](runs/GP-095-gpt61-terra-medium-gamepanel-037-cp1b-beammp-requirements.md) | GamePanel · BeamMP CP1-B 0.3.7 | 6.1 Terra Med | 11 pts | 4:57 | Projection livrée ; distribution réelle non qualifiée |
-| [GP-094](runs/GP-094-gpt61-terra-medium-gamepanel-037-cp1ar-forge-automodpack.md) | GamePanel · Forge/AutoModpack CP1-A/R | 6.1 Terra Med | 4 pts | 2:06 | Correctif livré ; backend non qualifié |
 
 ## Comment lire les résultats
 
@@ -77,4 +77,4 @@ Ces **petits échantillons** sont les comparaisons les mieux contrôlées du dé
 
 **Qualité de mesure actuelle :** 14 runs avec **0 point de quota visible** et 15 quotas notés approximatifs ; un run ne fournit aucun quota chiffré. Les statistiques sont descriptives, non une mesure de tokens ou de prix réel.
 
-<sub>Tableau de bord actualisé le 18 novembre 2026 · 98 observations enregistrées · historique et données reproductibles dans ce dépôt.</sub>
+<sub>Tableau de bord actualisé le 18 novembre 2026 · 99 observations enregistrées · historique et données reproductibles dans ce dépôt.</sub>

@@ -4,22 +4,22 @@
 
 ## État de la collecte — 18 novembre 2026
 
-Les **98 runs** couvrent 3 projets. Ils ne constituent **pas** un protocole expérimental équilibré : les modèles, efforts, dates, projets et tailles de missions varient.
+Les **99 runs** couvrent 3 projets. Ils ne constituent **pas** un protocole expérimental équilibré : les modèles, efforts, dates, projets et tailles de missions varient.
 
 | Statut du run | Nombre | Signification |
 |:---|---:|:---|
-| `success` | **81** | Livrable du prompt terminé ; validation réelle pas forcément acquise |
+| `success` | **82** | Livrable du prompt terminé ; validation réelle pas forcément acquise |
 | `blocked` | 10 | STOP sans livraison complète, souvent dû à une limite d'environnement |
 | `stalled` | 2 | Session bloquée, sans résultat confirmé |
 | `partial` | 4 | Travail commencé mais objectif non entièrement livré |
 | `failure` | 1 | Objectif raté |
-| **Total** | **98** | **82,7 % de livraisons** |
+| **Total** | **99** | **82,8 % de livraisons** |
 
 ### Répartition par projet
 
 | Projet | Runs | Livraisons du prompt |
 |:---|---:|---:|
-| GamePanel | 95 | 78 |
+| GamePanel | 96 | 79 |
 | MeshtasticCalculator | 2 | 2 |
 | NomadProbe | 1 | 1 |
 
@@ -40,13 +40,13 @@ Les colonnes « médiane », « dispersion » et « durée » sont calculées **
 | 6.1 Terra Medium | 8 | 8/8 | 8,5 pt | 4–10 | 04:00 | 7,4 |
 | 6.1 Sol Medium | 45 | 37/45 | 10 pt | 6–16 | 14:13 | 9,6 |
 | 6.1 Sol High | 3 | 2/3 | 15,5 pt | — | 35:25 | 17 |
-| 6.2 Sol Medium | 2 | 2/2 | 13 pt | — | 12:11 | 13 |
+| 6.2 Sol Medium | 3 | 3/3 | 14 pt | — | 10:08 | 13,3 |
 
 ¹ Q1–Q3 : quartiles par rang (nearest-rank), affichés seulement si au moins **5 succès**. Un tiret signifie effectif insuffisant ou donnée absente, **pas zéro**. ² La moyenne brute comprend les tentatives infructueuses avec quota renseigné ; pour les runs à effort non relevé, le quota n'est connu que pour une partie des observations.
 
-**Périmètre des relevés :** 97/98 quotas chiffrés, 720 points de pourcentage visibles cumulés, 14 runs à 0 point **affiché**, 15 mesures signalées approximatives. Les points visibles ne sont ni une somme de tokens ni une unité tarifaire.
+**Périmètre des relevés :** 98/99 quotas chiffrés, 734 points de pourcentage visibles cumulés, 14 runs à 0 point **affiché**, 15 mesures signalées approximatives. Les points visibles ne sont ni une somme de tokens ni une unité tarifaire.
 
-La médiane et la moyenne sont décrites comme des **observations de charge** ; les comparer entre modèles serait trompeur sans travaux de difficulté semblable. En particulier, **GPT-6.1 Terra Medium n'a que huit observations sur trois projets différents (dont six checkpoints successifs de GamePanel)**, alors que GPT-6.1 Sol Medium possède surtout des missions GamePanel de production plus larges. **GPT-6.2 Sol Medium n'a que deux observations**, sur GamePanel et MeshtasticCalculator : la première attend les mesures WPF natives après correction et la seconde l'essai Grille CP23 avec les HGT réels du MainPC.
+La médiane et la moyenne sont décrites comme des **observations de charge** ; les comparer entre modèles serait trompeur sans travaux de difficulté semblable. En particulier, **GPT-6.1 Terra Medium n'a que huit observations sur trois projets différents (dont six checkpoints successifs de GamePanel)**, alors que GPT-6.1 Sol Medium possède surtout des missions GamePanel de production plus larges. **GPT-6.2 Sol Medium n'a que trois observations**, dont deux correctifs CP20 de GamePanel sans validation visuelle finale sur Windows, et une livraison Grille CP23 de MeshtasticCalculator dont l'essai HGT réel MainPC reste en attente. Le dernier run CP20 rapporte également un FAIL de fixture Windows préexistant selon Work.
 
 ## Comparaisons directes
 

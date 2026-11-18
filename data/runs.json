@@ -2906,6 +2906,41 @@
         "Commande de lancement MainPC et recette de test 1 km, 5 km, 25 km conservées dans la fiche GP-098",
         "Chuwi différé ; CP24/25 non démarrés ; aucune GitHub Actions déclenchée par le benchmark"
       ]
+    },
+    {
+      "run_id": "GP-099",
+      "date": "2026-11-18",
+      "project": "GamePanel",
+      "model": "GPT-6.2 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "gamepanel_037_cp20_ergonomic_finalization_installed_games",
+      "task_summary": "GamePanel 0.3.7 CP20 : ergonomie de Mes jeux, visibilité Minecraft, recherche Steam explicite et choix direct des instances",
+      "quota_before_pct": 21,
+      "quota_after_pct": 7,
+      "quota_used_points": 14,
+      "quota_approx": false,
+      "duration_seconds": 608,
+      "status": "success",
+      "commit_sha": "eeed6093f2c09076ab3192788e19284a0139e59d",
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "quality": {
+        "summary": "Correctif ergonomique GamePanel CP20 committé sur work/0.3.7-content-comparison, 18 fichiers modifiés vérifiés sur GitHub. Work rapporte bibliothèque Mes jeux directe avec profils/instances identifiables, trois actions distinctes recherche/filtre/analyse, état Steam non recherché et scan explicite, changement de source Minecraft affichant les profils connus sans recherche préalable tout en préservant contrôles d'identité. Validation Linux rapportée : 3 compilations PASS (deux bancs WPF), tests ciblés 15 PASS/1 FAIL/8 SKIP ; FAIL de fixture identité physique Windows reproduit au HEAD de départ selon Work, reste un FAIL. Tests non rejoués dans le benchmark ; WPF natif et ergonomie 125% NON TESTÉS. CP20 RESTE OUVERT jusqu'à validation visuelle pilote ; CP21 non commencé."
+      },
+      "notes": [
+        "Date d'enregistrement 2026-11-18 ; date d'exécution de Work non précisée",
+        "Quota visible 21 % → 7 % = 14 points de pourcentage ; durée 10 min 08 s = 608 secondes",
+        "Commit GamePanel eeed6093f2c09076ab3192788e19284a0139e59d confirmé via GitHub, 18 fichiers modifiés ; benchmark ne modifie pas le projet source",
+        "Work rapporte accès direct aux installations, jeux et profils dans Mes jeux, noms réels et statuts partiels conservés ; filtres/recherche/analyse distincts",
+        "Work rapporte statut Steam jamais recherché distingué de relevé vide ou partiel, recherche Steam complémentaire explicite",
+        "Work rapporte choix des instances Minecraft connues affiché immédiatement dans Changer la source, admission explicite et gardes conservés",
+        "Linux selon Work : trois compilations PASS dont deux bancs WPF ; 15 tests PASS, 1 FAIL, 8 SKIP, résultats non rejoués par le benchmark",
+        "Le FAIL concerne une fixture d'identité physique Windows, reproduit au HEAD de départ selon Work ; reste un FAIL ; ne pas compter 16 PASS",
+        "Tests WPF natifs et validation visuelle à 125% NON TESTÉS après le correctif ; CP20 reste ouvert en attente retour pilote",
+        "Commande PowerShell unique avec contrôle du SHA, trois suites ciblées et journal %TEMP% conservée dans la réponse archivée",
+        "CP21 non commencé et règles Minecraft Aero non modifiées selon mandat ; pas de GitHub Actions dans le benchmark"
+      ]
     }
   ]
 }

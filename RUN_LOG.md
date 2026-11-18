@@ -1365,6 +1365,18 @@ La Grille progressive CP22 est raccordée à Firefox sur **1–25 km sous limite
 
 ---
 
+## GP-099 — GPT-6.2 Sol Medium — GamePanel 0.3.7 CP20 finalisation ergonomique
+
+- Date d'enregistrement : 2026-11-18 ; quota **21 % → 7 % = 14 pts** ; durée **10:08** ; **correctif ergonomique CP20 livré, validation visuelle pilote en attente**.
+- Commit GamePanel `eeed6093f2c09076ab3192788e19284a0139e59d`, confirmé sur `work/0.3.7-content-comparison`, **18 fichiers modifiés**.
+- [Prompt et réponse exacts GP-099](runs/GP-099-gpt62-sol-medium-gamepanel-037-cp20-ergonomic-finalization.md).
+
+Work rapporte que « Mes jeux » affiche directement les profils, jeux et installations connus ; filtres, découverte et analyse disposent d'actions séparées. L'état Steam jamais recherché est distinct d'un catalogue vide/partiel ; « Changer la source » Minecraft affiche directement les instances connues, en conservant le choix explicite et les contrôles d'identité.
+
+**Trois compilations Linux PASS** selon Work, dont deux bancs WPF. **Tests ciblés : 15 PASS, 1 FAIL, 8 SKIP** ; le FAIL de fixture d'identité physique Windows aurait été reproduit au HEAD de départ et demeure **FAIL**. Aucun test n'a été rejoué indépendamment pour le benchmark. Les mesures WPF natives, navigation au clavier et ergonomie à 125 % restent **NON TESTÉES** après ce correctif. La réponse archivée contient une commande Windows isolée et journalisée. **CP20 reste ouvert** jusqu'au retour visuel du pilote ; CP21 non commencé.
+
+---
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -1455,13 +1467,14 @@ GP-041 a consommé **20 pts / 53:27** et s’est interrompu avant commit/push ma
 
 ## GPT-6.2 Sol Medium
 
-Deux observations sur **deux projets** différents ; ces résultats ne sont pas un test à prompt commun.
+Trois observations sur **deux projets**, avec des périmètres et validations distincts :
 
-- GP-097 — GamePanel CP20 : **7 pts / 4:23**, correction WPF livrée ; compilation croisée et filtre Linux PASS selon Work, mesures natives Windows après correctif en attente.
-- GP-098 — MeshtasticCalculator CP23 : **19 pts / 19:59**, Grille progressive Firefox livrée ; 177 Node / 6 Firefox / secours SVG PASS selon Work, test HGT réel MainPC en attente.
-- **2 livraisons / 2 runs**, quota visible cumulé **26 pts**, durée cumulée **24 min 22 s**.
-- Médianes descriptives : **13 pts** et **12 min 11 s**.
-- **Deux tâches hétérogènes et validations terrain encore en attente** : pas de conclusion générale de fiabilité ou de vitesse entre modèles.
+- GP-097 — GamePanel CP20 responsive : **7 pts / 4:23**, correctif WPF livré, tests Linux rapportés, validation WPF native en attente.
+- GP-098 — MeshtasticCalculator CP23 : **19 pts / 19:59**, Grille progressive Firefox livrée, 177 tests Node et 6 Firefox PASS selon Work ; essai réel MainPC HGT en attente.
+- GP-099 — GamePanel CP20 ergonomie : **14 pts / 10:08**, correctif de bibliothèque et choix d'instance livré ; **3 compilations Linux PASS, tests ciblés 15 PASS/1 FAIL/8 SKIP** selon Work ; validation visuelle WPF à 125 % en attente. FAIL de fixture Windows rapporté comme présent au HEAD initial.
+- **3 livraisons / 3 runs**, quota visible cumulé **40 pts**, durée cumulée **34 min 30 s**.
+- Médianes descriptives : **14 pts** et **10 min 08 s**.
+- **Échantillon très réduit, deux runs CP20 liés et validations terrain non acquises** : ces observations ne permettent pas un classement général des modèles.
 
 ## Comparaison directe historique
 
