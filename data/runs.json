@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-01",
+  "updated_at": "2026-11-18",
   "measurement_notes": [
     "quota_used_points correspond aux points de pourcentage visibles dans l'interface Work/ChatGPT, pas à un comptage exact de tokens",
     "quota_approx=true indique une valeur arrondie, déduite ou seulement observée comme delta approximatif",
@@ -2838,6 +2838,39 @@
         "Work rapporte cinq empreintes modifiées vérifiées, manifeste complet non contrôlé",
         "Capture backend authentifiée et distribution BeamMP réelle à qualifier ; aucun banc serveur réel selon Work ; arrêt après CP1-B/R",
         "Work rapporte aucune GitHub Actions, aucune intervention sur le serveur et main GamePanel/PR #26 préservés ; ces éléments ne sont pas tous vérifiés indépendamment"
+      ]
+    },
+    {
+      "run_id": "GP-097",
+      "date": "2026-11-18",
+      "project": "GamePanel",
+      "model": "GPT-6.2 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "gamepanel_037_cp20_windows_installed_games_responsive_fix",
+      "task_summary": "GamePanel 0.3.7 CP20 : correction responsive de Mes jeux, liste de contenus Assetto Corsa à 640×560 DIP",
+      "quota_before_pct": 47,
+      "quota_after_pct": 40,
+      "quota_used_points": 7,
+      "quota_approx": false,
+      "duration_seconds": 263,
+      "status": "success",
+      "commit_sha": "5dcfa5b68975eeddf3ce50bdce6f00514263a344",
+      "quality": {
+        "summary": "Correctif responsive WPF Mes jeux CP20 livré, commit GamePanel vérifié (six fichiers). L'en-tête défilable, plafonné à 60 % de l'espace vertical, vise à préserver une liste de contenus utilisable à 640×560 DIP / 125 %, sans réduire le seuil de 50 DIP et en conservant défilement propre et virtualisation. Avant correction, R2 22/22 PASS, R3 1/15 avant interruption, ContentRows.ActualHeight=27,6 DIP. Work rapporte compilation croisée WPF PASS et Linux CP20 4 PASS, 0 FAIL, 1 SKIP, non rejoués indépendamment. Validation WPF native après correction, hauteurs, clavier et virtualisation NON TESTÉS. Réexécution Windows demandée, aucune preuve d'un PASS R3 natif. CP21 non démarré selon le prompt/réponse."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Date 2026-11-18 = date de saisie du benchmark ; date réelle de la session Work non donnée",
+        "Quota visible 47 % → 40 % = 7 points de pourcentage ; durée 4 min 23 s = 263 secondes",
+        "Commit source 5dcfa5b68975eeddf3ce50bdce6f00514263a344 vérifié via GitHub ; six fichiers : windows/InstalledGamesPage.xaml, windows/InstalledGamesPage.xaml.cs, tests/windows-discovery-ui/Program.cs, WORK_STATE.md, ASSISTANT_STATE.md, MANIFEST.sha256",
+        "Mesure Windows AVANT correctif : fenêtre 640×560 DIP, facteur 125 %, ContentRows.ActualHeight=27,6 DIP inférieur au minimum 50 DIP ; R2 22/22 PASS, R3 1/15 avant interruption",
+        "Work indique en-tête scrollable plafonné à 60 % de la hauteur pour dégager la liste, virtualisation et défilement de la liste conservés ; seuil WPF 50 DIP préservé",
+        "Compilation croisée WPF PASS rapportée par Work, filtre Linux CP20 : 4 PASS, 0 FAIL, 1 SKIP ; non rejoués indépendamment dans le benchmark",
+        "R3 WPF natif Windows après correction NON TESTÉ : hauteur, disposition, clavier, virtualisation à revalider via la commande fournie dans la réponse",
+        "Les fenêtres 640×560 et 1180×820, 100 % et 125 %, panneaux ouverts/repliés sont des cas prévus par le banc, pas des validations Windows après correctif",
+        "Aucune exécution GitHub Actions pour ce benchmark, aucune modification du projet GamePanel ; CP21 non entrepris selon la réponse"
       ]
     }
   ]

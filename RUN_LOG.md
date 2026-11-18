@@ -1341,6 +1341,18 @@ Six fichiers modifiés au commit source : `gamepanel/beammp_requirements.py`, `t
 
 ---
 
+## GP-097 — GPT-6.2 Sol Medium — GamePanel 0.3.7 CP20 responsive « Mes jeux »
+
+- Date d'enregistrement : **2026-11-18** (date d'exécution Work non communiquée) ; quota visible **47 % → 40 % = 7 pts** ; durée **4:23** ; **correctif CP20 livré, validation WPF native post-correctif en attente**.
+- Commit GamePanel `5dcfa5b68975eeddf3ce50bdce6f00514263a344` confirmé, branche source `work/0.3.7-content-comparison`.
+- [Prompt et réponse exacts GP-097](runs/GP-097-gpt62-sol-medium-gamepanel-037-cp20-responsive-mes-jeux.md).
+
+Diagnostic avant correctif : banc WPF Découverte R2 **22/22 PASS** et R3 **1/15 avant interruption** ; à **640 × 560 DIP et 125 %**, `ContentRows.ActualHeight` était de **27,6 DIP** (minimum **50 DIP**). Selon Work, la correction transforme les commandes et l'en-tête en zone défilable plafonnée à **60 %** de la hauteur disponible ; elle préserve la liste, son défilement et sa virtualisation.
+
+**Compilation croisée WPF PASS ; filtre Linux CP20 : 4 PASS, 0 FAIL, 1 SKIP**, résultats rapportés par Work et non rejoués pour le benchmark. **Mesures natives Windows après correction NON EXÉCUTÉES**, de même que la validation native clavier et virtualisation. Le prompt complet et la réponse archivée fournissent une unique commande Windows pour relancer le banc. Six fichiers modifiés au commit : `windows/InstalledGamesPage.xaml`, `windows/InstalledGamesPage.xaml.cs`, `tests/windows-discovery-ui/Program.cs`, `WORK_STATE.md`, `ASSISTANT_STATE.md` et `MANIFEST.sha256`. CP21 non entrepris selon la réponse.
+
+---
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -1428,6 +1440,14 @@ Trois observations :
 - livrables distants : **E2 candidat `c3f335a...`**, puis **E3-B candidat `5d4b030...`**
 
 GP-041 a consommé **20 pts / 53:27** et s’est interrompu avant commit/push malgré un travail local avancé. GP-043 a repris l’existant et finalisé E2 pour **7 pts / 28:50 observés**. GP-048 a livré E3-B pour **24 pts / 42:00** malgré un stall apparent de l’UI après exécution ; le succès est confirmé par le commit et la PR distante. *La durée GP-043 inclut une attente d’autorisation ; le total temporel n’est donc pas directement comparable aux autres runs.*
+
+## GPT-6.2 Sol Medium
+
+Une observation (**GP-097 — GamePanel CP20**) : **7 points de quota visible**, **4 min 23 s**, correction responsive WPF de « Mes jeux » livrée au commit `5dcfa5b`.
+
+- **1 livraison / 1 run**, quota médian **7 points** et durée médiane **4 min 23 s** (une seule valeur).
+- La compilation croisée WPF est annoncée PASS et le filtre Linux CP20 indique 4 PASS, 0 FAIL, 1 SKIP ; **validation native Windows R3 encore non effectuée après correction**.
+- **Effectif d'une seule observation** : aucune conclusion sur la fiabilité ni sur une comparaison de vitesse entre modèles.
 
 ## Comparaison directe historique
 
