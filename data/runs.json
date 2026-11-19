@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-18",
+  "updated_at": "2026-11-19",
   "measurement_notes": [
     "quota_used_points correspond aux points de pourcentage visibles dans l'interface Work/ChatGPT, pas à un comptage exact de tokens",
     "quota_approx=true indique une valeur arrondie, déduite ou seulement observée comme delta approximatif",
@@ -2940,6 +2940,40 @@
         "Tests WPF natifs et validation visuelle à 125% NON TESTÉS après le correctif ; CP20 reste ouvert en attente retour pilote",
         "Commande PowerShell unique avec contrôle du SHA, trois suites ciblées et journal %TEMP% conservée dans la réponse archivée",
         "CP21 non commencé et règles Minecraft Aero non modifiées selon mandat ; pas de GitHub Actions dans le benchmark"
+      ]
+    },
+    {
+      "run_id": "GP-100",
+      "date": "2026-11-19",
+      "project": "GamePanel",
+      "model": "GPT-6.2 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "gamepanel_037_beammp_three_web_blockers_toml_delete_refresh",
+      "task_summary": "GamePanel 0.3.7 : correctif candidat pour CONFIG_ACCESS_DENIED, lenteur de suppression ZIP et rafraîchissement Web BeamMP sans F5",
+      "quota_before_pct": 72,
+      "quota_after_pct": 53,
+      "quota_used_points": 19,
+      "quota_approx": false,
+      "duration_seconds": 1116,
+      "status": "partial",
+      "commit_sha": "17b057c34c198c4b604e19d96f06f3d78a471978",
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "quality": {
+        "summary": "Correctif candidat GamePanel pour trois blocages Web BeamMP, commit vérifié (19 fichiers), mais qualification complète NON ACQUISE. Droits TOML : exécuteur sous UID du jeu et préservation UID/GID/ACL selon Work ; aucun test natif Linux à deux UID gamepanel/serveur, WSL indisponible et errno fchown réel inconnu. Suppression : phase instrumentée sur 704 Mio, 1355 ms avant contre 0,95 ms à chaud après et 1386 ms à froid, pas de mesure représentative sur 43 Go de transactions. F5 : Chrome 6/6 PASS sur banc isolé, sans parcours réel serveur. Autres tests rapportés : Python 52 PASS/18 SKIP ; Node 156 PASS et 3 FAIL préexistants ; manifeste 596/596. Non rejoués par le benchmark. Déploiement bloqué jusqu'à qualification Linux native, aucune mise à jour Ubuntu. Statut partial car objectif de correction définitive des trois blocages et qualification réelle non atteint."
+      },
+      "notes": [
+        "Date d'enregistrement benchmark 2026-11-19 ; date d'exécution Work non communiquée",
+        "Quota 72%→53%=19 points visibles ; durée 18min36=1116 secondes ; ne pas confondre points de quota et tokens",
+        "Commit source 17b057c34c198c4b604e19d96f06f3d78a471978 confirmé sur GitHub (19 fichiers) et documents BEAMMP_CONFIG_ACCESS.md / BEAMMP_UI_0361.md consultés",
+        "CONFIG_ACCESS_DENIED : correctif candidat exécuteur sous UID du jeu mais essais Linux natifs sous deux UID NON ACQUIS (WSL refusé) ; fchown suspecté, errno de l'incident réel non prouvé",
+        "Suppression : phase sur 704 Mio avant 1355 ms, après à chaud 0,95 ms, à froid 1386 ms ; transactions réelles environ 43 Go non mesurées et aucun gain froid démontré",
+        "Rafraîchissement après suppression : 6/6 Chrome PASS sur banc isolé rapportés par Work ; pas de preuve serveur réel sans F5",
+        "Python 52 PASS/18 SKIP ; Node 156 PASS/3 FAIL préexistants ; manifeste 596/596 selon Work, sans réexécution indépendante du benchmark",
+        "Déploiement Ubuntu NON FAIT et BLOQUÉ avant validation native deux UID ; future mise à jour doit inclure l'exécuteur, managed-upgrade code seul ne le remplace pas",
+        "Autres sujets Web documentés séparément : miniatures vanilla, réduction des textes, refonte de longue liste de mods",
+        "Statut partial : livraison de code candidate ne remplit pas la qualification native, la démonstration du correctif définitif ni les mesures réelles demandées ; aucune GitHub Actions lancée dans cette opération"
       ]
     }
   ]

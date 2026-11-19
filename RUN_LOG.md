@@ -1377,6 +1377,18 @@ Work rapporte que « Mes jeux » affiche directement les profils, jeux et instal
 
 ---
 
+## GP-100 — GPT-6.2 Sol Medium — GamePanel 0.3.7 trois blocages Web BeamMP
+
+- Date d'enregistrement : **2026-11-19** ; quota **72 % → 53 % = 19 pts** ; durée **18:36** ; statut **PARTIAL** — correctif candidat livré mais validation des trois blocages NON ACQUISE.
+- Commit GamePanel `17b057c34c198c4b604e19d96f06f3d78a471978` vérifié sur `work/0.3.7-content-comparison`, 19 fichiers modifiés.
+- [Prompt et réponse exacts GP-100](runs/GP-100-gpt62-sol-medium-gamepanel-037-beammp-three-web-blockers.md) ; [incident droits TOML](https://github.com/MrMekouil/GamePanel/blob/17b057c34c198c4b604e19d96f06f3d78a471978/docs/BEAMMP_CONFIG_ACCESS.md) ; [mesures suppression et Web](https://github.com/MrMekouil/GamePanel/blob/17b057c34c198c4b604e19d96f06f3d78a471978/docs/BEAMMP_UI_0361.md).
+
+**Droits TOML :** exécuteur sous UID du jeu et préservation UID/GID, mode et ACL proposés selon Work, mais **aucun test Linux natif sous `gamepanel` et `serveur` distincts** ; WSL indisponible, `fchown` évoqué, errno réel non établi. **Suppression :** phase instrumentée sur 704 Mio, **1 355 ms avant, 0,95 ms après à chaud, 1 386 ms à froid** ; le serveur avec **43 Go de transactions** n'a pas été mesuré. **F5 :** Chrome sur banc isolé **6/6 PASS**, pas de qualification réelle serveur.
+
+**Autres contrôles rapportés par Work : Python 52 PASS / 18 SKIP ; Node 156 PASS / 3 FAIL préexistants ; manifeste 596/596 vérifié.** Non rejoués indépendamment. Aucune mise à jour Ubuntu ; **déploiement bloqué** jusqu'à qualification native et nécessité de mettre à jour l'exécuteur. Les miniatures vanilla, la réduction des textes et la longue liste de gestion des mods restent ouverts.
+
+---
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -1467,14 +1479,15 @@ GP-041 a consommé **20 pts / 53:27** et s’est interrompu avant commit/push ma
 
 ## GPT-6.2 Sol Medium
 
-Trois observations sur **deux projets**, avec des périmètres et validations distincts :
+Quatre observations sur **deux projets**, avec des périmètres et validations distincts :
 
-- GP-097 — GamePanel CP20 responsive : **7 pts / 4:23**, correctif WPF livré, tests Linux rapportés, validation WPF native en attente.
-- GP-098 — MeshtasticCalculator CP23 : **19 pts / 19:59**, Grille progressive Firefox livrée, 177 tests Node et 6 Firefox PASS selon Work ; essai réel MainPC HGT en attente.
-- GP-099 — GamePanel CP20 ergonomie : **14 pts / 10:08**, correctif de bibliothèque et choix d'instance livré ; **3 compilations Linux PASS, tests ciblés 15 PASS/1 FAIL/8 SKIP** selon Work ; validation visuelle WPF à 125 % en attente. FAIL de fixture Windows rapporté comme présent au HEAD initial.
-- **3 livraisons / 3 runs**, quota visible cumulé **40 pts**, durée cumulée **34 min 30 s**.
-- Médianes descriptives : **14 pts** et **10 min 08 s**.
-- **Échantillon très réduit, deux runs CP20 liés et validations terrain non acquises** : ces observations ne permettent pas un classement général des modèles.
+- GP-097 — GamePanel CP20 responsive : **7 pts / 4:23**, correctif WPF livré, mesures natives Windows après correctif en attente.
+- GP-098 — MeshtasticCalculator CP23 : **19 pts / 19:59**, Grille progressive Firefox livrée, tests Node/Firefox PASS selon Work ; essai HGT réel MainPC en attente.
+- GP-099 — GamePanel CP20 ergonomie : **14 pts / 10:08**, correctif livré ; 3 compilations Linux PASS et tests 15 PASS/1 FAIL/8 SKIP selon Work, validation visuelle 125 % en attente.
+- GP-100 — GamePanel blocages BeamMP : **19 pts / 18:36**, **PARTIAL** ; correctif candidat, Linux deux UID NON ACQUIS, 43 Go non mesurés ; Chrome 6/6 PASS sur banc isolé, Python 52 PASS/18 SKIP, Node 156 PASS/3 FAIL selon Work.
+- **3 livraisons / 4 runs**, quota visible cumulé **59 pts**, durée totale des quatre tentatives **53 min 06 s**.
+- Médianes **sur les 3 livraisons** : **14 pts** et **10 min 08 s** ; moyenne brute du quota pour les quatre runs **14,8 pts/run**.
+- **Petits effectifs, missions non comparables et validations terrain ouvertes** : ne pas interpréter 3/4 comme taux de fiabilité intrinsèque du modèle.
 
 ## Comparaison directe historique
 
