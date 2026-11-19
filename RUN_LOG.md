@@ -1389,6 +1389,16 @@ Work rapporte que « Mes jeux » affiche directement les profils, jeux et instal
 
 ---
 
+## GP-101 — GPT-6.2 Sol Medium — MeshtasticCalculator 0.2.4 clôture CP23 MainPC
+
+- Date d'enregistrement : 2026-11-19 ; quota **53 % → 48 % = 5 pts** ; durée **2:02** ; **succès de livraison documentaire**, CP23 officiellement validé sur MainPC.
+- Commit MeshtasticCalculator `19235ccc017b8acce44e837efb5dc05fb1cf3162` vérifié sur `work/v0.2` ; **huit fichiers Markdown seulement**, aucun moteur changé.
+- [Prompt et réponse exacts GP-101](runs/GP-101-gpt62-sol-medium-meshtasticcalculator-024-cp23-mainpc-closure.md) · [rapport de validation](https://github.com/MrMekouil/MeshtasticCalculator/blob/19235ccc017b8acce44e837efb5dc05fb1cf3162/docs/VALIDATION.md) · [roadmap](https://github.com/MrMekouil/MeshtasticCalculator/blob/19235ccc017b8acce44e837efb5dc05fb1cf3162/docs/ROADMAP.md).
+
+Preuves **fournies par le propriétaire et consignées** : couvertures jusqu'à **350 km** PASS MainPC ; grilles **60/100 km à 250 × 125 m** PASS ; cinq modèles RF et NoData PASS ; Firefox **7/7**, incluant reprise après fermeture ; benchmark HGT réels **20 km / 75 × 90 m : 43,86 → 23,91 secondes**, résultats identiques. Le benchmark GitHub ne rejoue pas les essais. **Chuwi différé**, CP24 **conditionnel**, CP25 **différé**. Aucun checkpoint suivant.
+
+---
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -1479,15 +1489,16 @@ GP-041 a consommé **20 pts / 53:27** et s’est interrompu avant commit/push ma
 
 ## GPT-6.2 Sol Medium
 
-Quatre observations sur **deux projets**, avec des périmètres et validations distincts :
+Cinq observations sur **deux projets** et des missions de nature différente :
 
-- GP-097 — GamePanel CP20 responsive : **7 pts / 4:23**, correctif WPF livré, mesures natives Windows après correctif en attente.
-- GP-098 — MeshtasticCalculator CP23 : **19 pts / 19:59**, Grille progressive Firefox livrée, tests Node/Firefox PASS selon Work ; essai HGT réel MainPC en attente.
-- GP-099 — GamePanel CP20 ergonomie : **14 pts / 10:08**, correctif livré ; 3 compilations Linux PASS et tests 15 PASS/1 FAIL/8 SKIP selon Work, validation visuelle 125 % en attente.
-- GP-100 — GamePanel blocages BeamMP : **19 pts / 18:36**, **PARTIAL** ; correctif candidat, Linux deux UID NON ACQUIS, 43 Go non mesurés ; Chrome 6/6 PASS sur banc isolé, Python 52 PASS/18 SKIP, Node 156 PASS/3 FAIL selon Work.
-- **3 livraisons / 4 runs**, quota visible cumulé **59 pts**, durée totale des quatre tentatives **53 min 06 s**.
-- Médianes **sur les 3 livraisons** : **14 pts** et **10 min 08 s** ; moyenne brute du quota pour les quatre runs **14,8 pts/run**.
-- **Petits effectifs, missions non comparables et validations terrain ouvertes** : ne pas interpréter 3/4 comme taux de fiabilité intrinsèque du modèle.
+- GP-097 — GamePanel CP20 responsive : **7 pts / 4:23**, correctif WPF livré, validation native Windows en attente.
+- GP-098 — MeshtasticCalculator CP23 : **19 pts / 19:59**, Grille progressive Firefox livrée ; tests Work Node/Firefox PASS, essais MainPC ultérieurement confirmés par le propriétaire.
+- GP-099 — GamePanel CP20 ergonomie : **14 pts / 10:08**, correctif livré ; tests Linux 15 PASS/1 FAIL/8 SKIP selon Work ; validation visuelle 125 % en attente.
+- GP-100 — GamePanel blocages Web BeamMP : **19 pts / 18:36**, **PARTIAL** ; Linux deux UID non qualifié et 43 Go non mesurés.
+- GP-101 — MeshtasticCalculator CP23 clôture MainPC : **5 pts / 2:02**, **succès documentaire** ; validation propriétaire jusqu'à 350 km, Firefox 7/7 et HGT réels consignés ; Chuwi différé.
+- **4 livraisons / 5 runs**, quota visible cumulé **64 pts**, durée totale des cinq tentatives **55 min 08 s**.
+- Médianes **sur les 4 livraisons** : **10,5 pts** et **7 min 16 s** (arrondie) ; moyenne quota brute des cinq runs **12,8 pts/run**.
+- **Échantillon réduit, tâches différentes et validations de nature distincte** : ne pas déduire de classement général de fiabilité ou de vitesse.
 
 ## Comparaison directe historique
 

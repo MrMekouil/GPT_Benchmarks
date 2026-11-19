@@ -2975,6 +2975,40 @@
         "Autres sujets Web documentés séparément : miniatures vanilla, réduction des textes, refonte de longue liste de mods",
         "Statut partial : livraison de code candidate ne remplit pas la qualification native, la démonstration du correctif définitif ni les mesures réelles demandées ; aucune GitHub Actions lancée dans cette opération"
       ]
+    },
+    {
+      "run_id": "GP-101",
+      "date": "2026-11-19",
+      "project": "MeshtasticCalculator",
+      "model": "GPT-6.2 Sol",
+      "effort": "Medium",
+      "run_type": "production",
+      "comparison_group": "meshtasticcalculator_024_cp23_mainpc_formal_closure",
+      "task_summary": "MeshtasticCalculator 0.2.4 CP23 : officialiser la validation MainPC dans les documents, préserver Chuwi différé et CP24/CP25",
+      "quota_before_pct": 53,
+      "quota_after_pct": 48,
+      "quota_used_points": 5,
+      "quota_approx": false,
+      "duration_seconds": 122,
+      "status": "success",
+      "commit_sha": "19235ccc017b8acce44e837efb5dc05fb1cf3162",
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "quality": {
+        "summary": "Clôture documentaire de CP23 sur MainPC livrée sur MeshtasticCalculator work/v0.2 : commit vérifié, huit fichiers Markdown seulement et moteur inchangé. docs/VALIDATION.md et ROADMAP.md consignent les preuves du propriétaire : couvertures jusqu'à 350 km, grilles 60/100 km à 250 m RF / 125 m terrain, cinq modèles et NoData, Firefox 7/7 avec reprise après fermeture, benchmark HGT 20 km 75×90 m avec temps médian 43,86→23,91 s et résultats identiques. Preuves MainPC fournies par propriétaire et consignées, non rejouées dans ce benchmark. Chuwi différé et non qualifié, CP24 conditionnel, CP25 différé. Arrêt après CP23."
+      },
+      "notes": [
+        "Date d'enregistrement 2026-11-19 ; date réelle de Work non indiquée",
+        "Quota 53% → 48% = 5 points de pourcentage visibles ; durée 2 min 02 s = 122 secondes",
+        "Commit MeshtasticCalculator 19235ccc017b8acce44e837efb5dc05fb1cf3162 vérifié sur GitHub, huit fichiers Markdown sans changement de moteur",
+        "Validation MainPC du propriétaire consignée dans docs/VALIDATION.md au SHA source et confirmée par ROADMAP.md",
+        "Couvertures jusqu'à 350 km PASS et grilles 60/100 km avec maille RF 250 m et pas terrain 125 m PASS selon propriétaire",
+        "Parité cinq modèles RF et masques NoData PASS, Firefox 7/7 avec pause, fermeture, restauration et reprise selon validation propriétaire",
+        "Benchmark HGT réel 20 km, RF 75 m × terrain 90 m : médianes 43,86 à 23,91 secondes, trois paires de résultats identiques selon rapport ; pas de benchmark nouveau dans cette session",
+        "Chuwi différé et non qualifié, CP24 conditionnel, CP25 différé, aucun checkpoint suivant commencé",
+        "Statut success du travail de documentation et clôture MainPC, ne signifie pas validation indépendante des essais par le gestionnaire du benchmark",
+        "Aucune GitHub Actions déclenchée par le gestionnaire de benchmark et aucun changement du dépôt MeshtasticCalculator au cours de cet enregistrement"
+      ]
     }
   ]
 }

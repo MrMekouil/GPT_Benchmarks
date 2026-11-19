@@ -4,23 +4,23 @@
 
 ## État de la collecte — 19 novembre 2026
 
-Les **100 runs** couvrent 3 projets. Ils ne constituent **pas** un protocole expérimental équilibré : les modèles, efforts, dates, projets et tailles de missions varient.
+Les **101 runs** couvrent 3 projets. Ils ne constituent **pas** un protocole expérimental équilibré : les modèles, efforts, dates, projets et tailles de missions varient.
 
 | Statut du run | Nombre | Signification |
 |:---|---:|:---|
-| `success` | **82** | Livrable du prompt terminé ; validation réelle pas forcément acquise |
+| `success` | **83** | Livrable du prompt terminé ; validation réelle pas forcément acquise |
 | `blocked` | 10 | STOP sans livraison complète, souvent dû à une limite d'environnement |
 | `stalled` | 2 | Session bloquée, sans résultat confirmé |
 | `partial` | 5 | Travail commencé mais objectif non entièrement livré |
 | `failure` | 1 | Objectif raté |
-| **Total** | **100** | **82,0 % de livraisons** |
+| **Total** | **101** | **82,2 % de livraisons** |
 
 ### Répartition par projet
 
 | Projet | Runs | Livraisons du prompt |
 |:---|---:|---:|
 | GamePanel | 97 | 79 |
-| MeshtasticCalculator | 2 | 2 |
+| MeshtasticCalculator | 3 | 3 |
 | NomadProbe | 1 | 1 |
 
 **Attention :** pour les runs documentaires, un succès peut être la mise à jour des documents, même quand le produit reste en attente de validation utilisateur. Les validations réelles ne sont pas représentées par un champ homogène : **taux de validation N/D**.
@@ -40,13 +40,13 @@ Les colonnes « médiane », « dispersion » et « durée » sont calculées **
 | 6.1 Terra Medium | 8 | 8/8 | 8,5 pt | 4–10 | 04:00 | 7,4 |
 | 6.1 Sol Medium | 45 | 37/45 | 10 pt | 6–16 | 14:13 | 9,6 |
 | 6.1 Sol High | 3 | 2/3 | 15,5 pt | — | 35:25 | 17 |
-| 6.2 Sol Medium | 4 | 3/4 | 14 pt | — | 10:08 | 14,8 |
+| 6.2 Sol Medium | 5 | 4/5 | 10,5 pt | — | 07:16 | 12,8 |
 
 ¹ Q1–Q3 : quartiles par rang (nearest-rank), affichés seulement si au moins **5 succès**. Un tiret signifie effectif insuffisant ou donnée absente, **pas zéro**. ² La moyenne brute comprend les tentatives infructueuses avec quota renseigné ; pour les runs à effort non relevé, le quota n'est connu que pour une partie des observations.
 
-**Périmètre des relevés :** 99/100 quotas chiffrés, 753 points de pourcentage visibles cumulés, 14 runs à 0 point **affiché**, 15 mesures signalées approximatives. Les points visibles ne sont ni une somme de tokens ni une unité tarifaire.
+**Périmètre des relevés :** 100/101 quotas chiffrés, 758 points de pourcentage visibles cumulés, 14 runs à 0 point **affiché**, 15 mesures signalées approximatives. Les points visibles ne sont ni une somme de tokens ni une unité tarifaire.
 
-La médiane et la moyenne sont décrites comme des **observations de charge** ; les comparer entre modèles serait trompeur sans travaux de difficulté semblable. En particulier, **GPT-6.1 Terra Medium n'a que huit observations sur trois projets différents (dont six checkpoints successifs de GamePanel)**, alors que GPT-6.1 Sol Medium possède surtout des missions GamePanel de production plus larges. **GPT-6.2 Sol Medium n'a que quatre observations**, dont deux correctifs CP20 de GamePanel sans validation visuelle finale sur Windows, une Grille CP23 MeshtasticCalculator en attente d'essai HGT réel, et **GP-100 partiel** : code candidat BeamMP livré, mais essais Linux natifs à deux UID et mesures sur 43 Go non acquis. Le run CP20 GP-099 rapporte également un FAIL de fixture Windows préexistant selon Work.
+La médiane et la moyenne sont décrites comme des **observations de charge** ; les comparer entre modèles serait trompeur sans travaux de difficulté semblable. En particulier, **GPT-6.1 Terra Medium n'a que huit observations sur trois projets différents (dont six checkpoints successifs de GamePanel)**, alors que GPT-6.1 Sol Medium possède surtout des missions GamePanel de production plus larges. **GPT-6.2 Sol Medium n'a que cinq observations** : deux correctifs CP20 GamePanel dont les validations Windows restent attendues, la livraison Grille CP23 puis sa clôture documentaire MainPC par MeshtasticCalculator, et **GP-100 partiel** : correctif BeamMP candidat sans qualification Linux à deux UID ni mesure sur 43 Go. La validation propriétaire MainPC CP23 est désormais consignée, tandis que Chuwi reste différé. GP-099 rapportait un FAIL de fixture Windows préexistant selon Work.
 
 ## Comparaisons directes
 
