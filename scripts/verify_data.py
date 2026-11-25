@@ -6,6 +6,7 @@ import argparse
 import csv
 import io
 import json
+import math
 import re
 import statistics
 from collections import Counter
@@ -70,6 +71,24 @@ def verify(runs: list[dict]) -> None:
             raise ValueError(f"{key}: invalid visible quota")
 
 
+def quota_per_minute(runs: list[dict]) -> tuple[float | None, int, bool]:
+    """Visible points per elapsed minute, using paired quota/time observations."""
+    def finite_number(value):
+        return isinstance(value, (int, float)) and not isinstance(value, bool) and math.isfinite(value)
+
+    paired = [
+        r for r in runs
+        if finite_number(r.get("quota_used_points"))
+        and r["quota_used_points"] >= 0
+        and finite_number(r.get("duration_seconds"))
+        and r["duration_seconds"] > 0
+    ]
+    seconds = sum(r["duration_seconds"] for r in paired)
+    points = sum(r["quota_used_points"] for r in paired)
+    rate = 60 * points / seconds if seconds else None
+    return rate, len(paired), any(r.get("quota_approx") for r in paired)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--write-csv", action="store_true", help="Regenerate CSV from JSON")
@@ -94,8 +113,11 @@ def main() -> int:
         times = [r["duration_seconds"] for r in ok if isinstance(r.get("duration_seconds"), (int, float))]
         median_quota = str(statistics.median(quotas)) if quotas else "N/D"
         median_seconds = str(statistics.median(times)) if times else "N/D"
+        rate, measured, approx = quota_per_minute(group)
+        rate_text = "N/D" if rate is None else f"{'~' if approx else ''}{rate:.2f}"
         print(f"  {model} / {effort}: {len(ok)}/{len(group)} delivered,"
-              f" quota median={median_quota}, time median={median_seconds}s")
+              f" quota median={median_quota}, time median={median_seconds}s,"
+              f" quota/min={rate_text} ({measured}/{len(group)} paired runs)")
     print("Real-world validation rate: N/D (not reliably structured in the historical JSON)")
     return 0
 

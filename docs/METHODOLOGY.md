@@ -30,10 +30,13 @@ Les médianes et le taux de livraison sont affichés **avec le nombre d'observat
 |:---|:---|:---|
 | **Quota visible cumulé** | Somme de `quota_used_points` de tous les runs avec quota connu, réussis ou non, pour un même modèle/effort | Mesure d'usage total observé, **pas un coût par tâche ni un prix**. `≈` signale au moins un relevé déclaré approximatif ; un quota manquant n'est jamais remplacé par zéro. |
 | **Moyenne pts/run** | Somme du quota visible chiffré / nombre de runs avec quota chiffré | Mesure descriptive brute, **non comparable** entre tâches de complexité différente. Les tentatives bloquées y entrent ; les données manquantes sont exclues du dénominateur. |
+| **Quota/min (pts/min)** | `60 × somme(quota_used_points) / somme(duration_seconds)` sur les mêmes runs, tous statuts confondus, avec quota numérique fini ≥ 0 et durée numérique finie > 0 | Rythme de consommation **visible** par minute de temps écoulé. Inclut les zéros visibles, exclut les données absentes et les durées nulles des deux sommes ; `—` sans paire exploitable, `≈` si au moins une mesure retenue est approximative. Affichage à deux décimales, effectif `n/N` si incomplet. |
 | **Quota médian d'une livraison** | Médiane des seules tentatives `success` | Aide à résister aux valeurs extrêmes, mais **ne comptabilise pas les tentatives ratées avant réussite**. |
 | **Coût complet par objectif abouti** | Somme du quota visible de **toutes** les tentatives identifiées d'un même objectif jusqu'à la livraison/validation | **N/D actuellement** : les runs ne portent pas d'`objective_id` fiable, et les reprises ne sont pas systématiquement reliées. Ne pas regrouper par ressemblance de titre. |
 | **Temps complet par objectif abouti** | Somme des durées des tentatives liées, avec prise en compte des attentes si connues | Même limite que le coût complet ; ne pas présenter de chiffre artificiel. |
 | **Dispersion** | Quartiles Q1/Q3 des coûts ou durées de livraison | À afficher avec `n` et seulement lorsque l'échantillon est assez grand pour être utile. |
+
+Le **Quota/min** est un rapport de sommes (pondéré par les durées), pas une moyenne simple des ratios de chaque run. Les tests, compilations, attentes et interruptions sont compris dans la durée observée ; un rythme plus faible n'implique ni une meilleure efficacité ni une consommation réelle de tokens moindre. Les 0 points affichés ne signifient pas un coût nul.
 
 ## Deux axes de réussite différents
 

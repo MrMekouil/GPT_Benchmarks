@@ -8,20 +8,22 @@ Observations de ChatGPT Work sur **GamePanel**, **MeshtasticCalculator** et **No
 
 ## Par modèle et effort
 
-| Modèle · effort | Runs | Livraisons | Taux livré | Quota médian¹ | Durée médiane¹ | Quota cumulé² |
-|:---|---:|---:|---:|---:|---:|---:|
-| 5.6 Sol · Med | 1 | **1/1** | **100 %** | 6 pt | 1:50 | 6 pts |
-| 6.0 Luna · Med | 27 | **22/27** | **81 %** | 1 pt | 4:26 | ≈18 pts |
-| 6.0 Sol · Med | 7 | **7/7** | **100 %** | 6 pt | 3:21 | ≈73 pts |
-| 6.0 Sol · High | 1 | **0/1** | **0 %** | — | — | ≈20 pts |
-| 6.0 Astra · Low | 2 | **2/2** | **100 %** | 15 pt | 1:26 | 30 pts |
-| 6.1 Terra · Med | 8 | **8/8** | **100 %** | 8,5 pt | 4:00 | 59 pts |
-| 6.1 Sol · Med | 45 | **37/45** | **82 %** | 10 pt | 14:13 | 432 pts |
-| 6.1 Sol · High | 3 | **2/3** | **67 %** | 15,5 pt | 35:25 | 51 pts |
-| 6.2 Sol · Med | 5 | **4/5** | **80 %** | 10,5 pt | 7:16 | 64 pts |
-| 6.2 Sol · Very High | 1 | **1/1** | **100 %** | 24 pt | 28:47 | 24 pts |
+| Modèle · effort | Runs | Livraisons | Taux livré | Quota médian¹ | Durée médiane¹ | Quota cumulé² | Quota/min³ |
+|:---|---:|---:|---:|---:|---:|---:|---:|
+| 5.6 Sol · Med | 1 | **1/1** | **100 %** | 6 pt | 1:50 | 6 pts | 3,27 |
+| 6.0 Luna · Med | 27 | **22/27** | **81 %** | 1 pt | 4:26 | ≈18 pts | ≈0,13 |
+| 6.0 Sol · Med | 7 | **7/7** | **100 %** | 6 pt | 3:21 | ≈73 pts | ≈1,39 |
+| 6.0 Sol · High | 1 | **0/1** | **0 %** | — | — | ≈20 pts | ≈1,65 |
+| 6.0 Astra · Low | 2 | **2/2** | **100 %** | 15 pt | 1:26 | 30 pts | 10,47 |
+| 6.1 Terra · Med | 8 | **8/8** | **100 %** | 8,5 pt | 4:00 | 59 pts | 2,01 |
+| 6.1 Sol · Med | 45 | **37/45** | **82 %** | 10 pt | 14:13 | 432 pts | 0,70 |
+| 6.1 Sol · High | 3 | **2/3** | **67 %** | 15,5 pt | 35:25 | 51 pts | 0,41 |
+| 6.2 Sol · Med | 5 | **4/5** | **80 %** | 10,5 pt | 7:16 | 64 pts | 1,16 |
+| 6.2 Sol · Very High | 1 | **1/1** | **100 %** | 24 pt | 28:47 | 24 pts | 0,83 |
 
 ¹ **Médianes calculées sur les livraisons `success` uniquement.** ² **Quota cumulé :** somme des points de pourcentage *visibles* de toutes les tentatives du groupe, y compris les échecs et blocages. Le signe ≈ signale qu'au moins un relevé était approximatif. Les deux incidents Luna à effort non relevé restent hors tableau et représentent **5 pts renseignés** supplémentaires (une consommation inconnue).
+
+³ **Quota/min (pts/min) :** `60 × somme des points / somme des secondes`, sur les mêmes tentatives (tous statuts, quota connu et durée positive). Les zéros visibles sont inclus ; les données manquantes et durées nulles sont exclues des deux sommes. `≈` signale au moins une mesure approximative incluse. Arrondi à deux décimales ; rythme observé, pas débit de tokens ni efficacité.
 
 Les pourcentages dépendent fortement du nombre de runs : **100 % sur 1 ou 2 tentatives ne prouve pas une fiabilité de 100 %**. Les tâches ne sont pas identiques entre modèles ; le quota visible n'est pas une mesure exacte de tokens ou de coût.
 

@@ -27,23 +27,25 @@ Les **102 runs** couvrent 3 projets. Ils ne constituent **pas** un protocole exp
 
 ## Coûts et durées par modèle
 
-Les colonnes « médiane », « dispersion » et « durée » sont calculées **uniquement sur les livraisons `success`**. La dernière colonne conserve, à titre historique, la **moyenne pts/run** sur *tous les runs dont le quota est connu*, y compris les blocages.
+Les colonnes « médiane », « dispersion » et « durée » sont calculées **uniquement sur les livraisons `success`**. La colonne **moyenne pts/run** conserve la moyenne historique sur *tous les runs dont le quota est connu*. La colonne **Quota/min** utilise toutes les tentatives ayant une mesure de quota et une durée positive, indépendamment du statut.
 
-| Modèle · effort | Runs | Livré | Quota médian / succès | Q1–Q3¹ (pts) | Durée médiane / succès | Moy. pts/run² |
-|:---|---:|---:|---:|---:|---:|---:|
-| 5.6 Sol Medium | 1 | 1/1 | 6 pt | — | 01:50 | 6 |
-| 6.0 Luna Medium | 27 | 22/27 | 1 pt | 0–1 | 04:26 | 0,7 |
-| 6.0 Luna (effort non relevé) | 2 | 0/2 | — | — | — | 5 (1/2) |
-| 6.0 Sol Medium | 7 | 7/7 | 6 pt | 4–21 | 03:21 | 10,4 |
-| 6.0 Sol High | 1 | 0/1 | — | — | — | 20 |
-| 6.0 Astra Low | 2 | 2/2 | 15 pt | — | 01:26 | 15 |
-| 6.1 Terra Medium | 8 | 8/8 | 8,5 pt | 4–10 | 04:00 | 7,4 |
-| 6.1 Sol Medium | 45 | 37/45 | 10 pt | 6–16 | 14:13 | 9,6 |
-| 6.1 Sol High | 3 | 2/3 | 15,5 pt | — | 35:25 | 17 |
-| 6.2 Sol Medium | 5 | 4/5 | 10,5 pt | — | 07:16 | 12,8 |
-| 6.2 Sol Very High | 1 | 1/1 | 24 pt | — | 28:47 | 24 |
+| Modèle · effort | Runs | Livré | Quota médian / succès | Q1–Q3¹ (pts) | Durée médiane / succès | Moy. pts/run² | Quota/min³ |
+|:---|---:|---:|---:|---:|---:|---:|---:|
+| 5.6 Sol Medium | 1 | 1/1 | 6 pt | — | 01:50 | 6 | 3,27 |
+| 6.0 Luna Medium | 27 | 22/27 | 1 pt | 0–1 | 04:26 | 0,7 | ≈0,13 |
+| 6.0 Luna (effort non relevé) | 2 | 0/2 | — | — | — | 5 (1/2) | ≈0,11 (1/2) |
+| 6.0 Sol Medium | 7 | 7/7 | 6 pt | 4–21 | 03:21 | 10,4 | ≈1,39 |
+| 6.0 Sol High | 1 | 0/1 | — | — | — | 20 | ≈1,65 |
+| 6.0 Astra Low | 2 | 2/2 | 15 pt | — | 01:26 | 15 | 10,47 |
+| 6.1 Terra Medium | 8 | 8/8 | 8,5 pt | 4–10 | 04:00 | 7,4 | 2,01 |
+| 6.1 Sol Medium | 45 | 37/45 | 10 pt | 6–16 | 14:13 | 9,6 | 0,70 |
+| 6.1 Sol High | 3 | 2/3 | 15,5 pt | — | 35:25 | 17 | 0,41 |
+| 6.2 Sol Medium | 5 | 4/5 | 10,5 pt | — | 07:16 | 12,8 | 1,16 |
+| 6.2 Sol Very High | 1 | 1/1 | 24 pt | — | 28:47 | 24 | 0,83 |
 
 ¹ Q1–Q3 : quartiles par rang (nearest-rank), affichés seulement si au moins **5 succès**. Un tiret signifie effectif insuffisant ou donnée absente, **pas zéro**. ² La moyenne brute comprend les tentatives infructueuses avec quota renseigné ; pour les runs à effort non relevé, le quota n'est connu que pour une partie des observations.
+
+³ **Quota/min (pts/min) :** `60 × somme des points / somme des secondes`, sur les mêmes tentatives (tous statuts, quota connu et durée positive). Les zéros visibles sont inclus ; les données manquantes et durées nulles sont exclues des deux sommes. `≈` signale au moins une mesure approximative incluse. Arrondi à deux décimales ; rythme observé, pas débit de tokens ni efficacité. Un effectif partiel est indiqué par `(n/N)` : GP-010 (quota inconnu) est exclu du calcul, y compris sa durée. Ce rapport de sommes pondéré par la durée n'est pas la moyenne des ratios individuels.
 
 **Périmètre des relevés :** 101/102 quotas chiffrés, 782 points de pourcentage visibles cumulés, 14 runs à 0 point **affiché**, 15 mesures signalées approximatives. Les points visibles ne sont ni une somme de tokens ni une unité tarifaire.
 
