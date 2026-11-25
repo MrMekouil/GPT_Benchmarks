@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-19",
+  "updated_at": "2026-11-25",
   "measurement_notes": [
     "quota_used_points correspond aux points de pourcentage visibles dans l'interface Work/ChatGPT, pas à un comptage exact de tokens",
     "quota_approx=true indique une valeur arrondie, déduite ou seulement observée comme delta approximatif",
@@ -3008,6 +3008,41 @@
         "Chuwi différé et non qualifié, CP24 conditionnel, CP25 différé, aucun checkpoint suivant commencé",
         "Statut success du travail de documentation et clôture MainPC, ne signifie pas validation indépendante des essais par le gestionnaire du benchmark",
         "Aucune GitHub Actions déclenchée par le gestionnaire de benchmark et aucun changement du dépôt MeshtasticCalculator au cours de cet enregistrement"
+      ]
+    },
+    {
+      "run_id": "GP-102",
+      "date": "2026-11-25",
+      "project": "MeshtasticCalculator",
+      "model": "GPT-6.2 Sol",
+      "effort": "Very High",
+      "run_type": "production",
+      "comparison_group": "meshtasticcalculator_026_cp02_native_engine_construction",
+      "task_summary": "MeshtasticCalculator 0.2.6 CP02 : construction du moteur natif C++ CPU/CUDA et hybride expérimental, contrats, stockage et recettes de qualification",
+      "quota_before_pct": 93,
+      "quota_after_pct": 69,
+      "quota_used_points": 24,
+      "quota_approx": false,
+      "duration_seconds": 1727,
+      "status": "success",
+      "commit_sha": "4fa78b8ca364a0329577bcd3de3792128f12bb52",
+      "quality": {
+        "summary": "Moteur natif C++ et CLI livrés au commit confirmé de 42 fichiers, CMake CPU autonome/CUDA facultatif et hybride expérimental, contrat versionné, budgets, contrôles de travaux et reprise CP22. Rapport Work du 25/11 : CPU Windows Release/Debug PASS, compilation CUDA PASS, recette complète RTX 2060 Super code 0 et parité stricte sur 5 témoins, 17 blocs réutilisés par moteur, Node 212/212 PASS. Plusieurs autres exécutions GPU/hybrides sans verdict terminal, considérées en échec par le banc malgré code 0 éventuel ; stabilité GPU non acquise. Chuwi Windows/MX Linux NON EXÉCUTÉS, qualification propriétaire restante. CP01 clôturé sur recherche et architecture, CP03 reçoit validations scientifiques et politique numérique ; CP02 reste ouvert explicitement. Succès de livraison, non clôture ou validation indépendante."
+      },
+      "prompt_capture": "exact",
+      "response_capture": "exact",
+      "notes": [
+        "Date d'enregistrement 2026-11-25, concordante avec le rapport Work daté du 25 novembre 2026",
+        "Quota visible 93 % → 69 % = 24 points ; durée 28 min 47 s = 1727 secondes",
+        "Commit source vérifié sur GitHub : 42 fichiers modifiés ; rapport docs/V02_06_CP02.md consulté à ce SHA",
+        "CPU autonome Windows Release/Debug PASS selon Work ; CUDA facultatif compilé, mode hybride expérimental ; Node 212/212 PASS",
+        "Recette complète CUDA RTX 2060 Super code 0 et cinq témoins strictement égaux, 17/17 blocs réutilisés par moteur selon rapport",
+        "Plusieurs exécutions Work sans verdict terminal après 13 blocs GPU et 13 hybrides, échec du banc même si code 0 ; cause non confirmée, stabilité GPU à qualifier",
+        "Chuwi Windows et MX Linux NON EXÉCUTÉS ; recettes bornées fournies, propriétaire doit qualifier",
+        "Référence canonique C++ CPU FP64 ; identités CPU/GPU distinctes ; politique numérique 1 ULP et 0,00002 dB proposée pour CP03 uniquement",
+        "Stockage CP22 maintenu, étude conteneurs segmentés documentaire ; aucune migration imposée",
+        "CP01 clôturé sur recherche/performance/architecture, validations scientifiques et numériques reportées CP03, .NET différé ; CP02 ouvert",
+        "Tests Work rapportés, pas rejoués indépendamment ; succès de livraison moteur, pas qualification finale. Aucun GitHub Actions lancé par le benchmark"
       ]
     }
   ]

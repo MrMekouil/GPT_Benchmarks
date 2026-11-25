@@ -1399,6 +1399,15 @@ Preuves **fournies par le propriétaire et consignées** : couvertures jusqu'à 
 
 ---
 
+## GP-102 — GPT-6.2 Sol Very High — MeshtasticCalculator 0.2.6 CP02 moteur natif
+
+- Date : 2026-11-25 ; quota **93 % → 69 % = 24 pts** ; durée **28:47** ; **succès de livraison**, CP02 toujours ouvert.
+- Commit [`4fa78b8ca364a0329577bcd3de3792128f12bb52`](https://github.com/MrMekouil/MeshtasticCalculator/commit/4fa78b8ca364a0329577bcd3de3792128f12bb52) confirmé ; 42 fichiers modifiés. [Prompt et réponse exacts GP-102](runs/GP-102-gpt62-sol-very-high-meshtasticcalculator-026-cp02-native-engine.md) · [rapport CP02](https://github.com/MrMekouil/MeshtasticCalculator/blob/4fa78b8ca364a0329577bcd3de3792128f12bb52/docs/V02_06_CP02.md).
+
+Bibliothèque C++ et CLI, CMake, CPU autonome, CUDA facultatif et hybride expérimental, budgets, progression, pause/annulation/reprise et stockage CP22. Selon Work : CPU Windows Release/Debug PASS, CUDA compilation PASS, une recette complète GPU/hybride code 0, cinq témoins strictement identiques et 17 blocs réutilisés par moteur, Node 212/212 PASS. **Plusieurs autres exécutions sans verdict terminal sont signalées en échec par le banc**, même avec code 0 éventuel. Stabilité GPU à confirmer ; Chuwi Windows/MX Linux non exécutés. Aucun test rejoué par le gestionnaire du benchmark. CP01 clos sur le périmètre autorisé ; validations scientifiques et numériques transférées CP03. CP02 reste ouvert conformément au prompt.
+
+---
+
 # Agrégats provisoires
 
 ## GPT-6 Sol Medium
@@ -1499,6 +1508,12 @@ Cinq observations sur **deux projets** et des missions de nature différente :
 - **4 livraisons / 5 runs**, quota visible cumulé **64 pts**, durée totale des cinq tentatives **55 min 08 s**.
 - Médianes **sur les 4 livraisons** : **10,5 pts** et **7 min 16 s** (arrondie) ; moyenne quota brute des cinq runs **12,8 pts/run**.
 - **Échantillon réduit, tâches différentes et validations de nature distincte** : ne pas déduire de classement général de fiabilité ou de vitesse.
+
+## GPT-6.2 Sol Very High
+
+- GP-102 — MeshtasticCalculator CP02 moteur natif : **24 pts / 28:47**, livraison réussie ; CPU Windows et compilation CUDA PASS, recette complète CUDA PASS, Node 212/212 PASS selon Work ; répétitions GPU sans verdict terminal, stabilité et qualification Chuwi en attente.
+- **1 livraison / 1 run**, quota visible cumulé **24 pts**, durée cumulée **28 min 47 s**.
+- Médianes descriptives : **24 pts** et **28 min 47 s** ; effectif unique, aucune comparaison directe avec Medium.
 
 ## Comparaison directe historique
 
